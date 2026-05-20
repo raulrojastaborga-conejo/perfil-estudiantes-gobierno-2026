@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGDEL | Memoria de acreditación</title>
+<style>
+:root {
+  --azul:#0b3d91; --azul2:#1559c7; --rojo:#b21f2d; --gris:#f4f7fb; --texto:#172033; --muted:#657085; --line:#d9e1ef;
+  --ok:#0f766e; --warn:#a16207; --bg:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--texto);background:linear-gradient(180deg,#eef4ff 0,#fff 290px);}
+header{padding:34px 28px 20px;max-width:1280px;margin:auto;}
+.badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--azul);font-weight:700;font-size:13px;box-shadow:0 4px 16px #0b3d9117}
+h1{font-size:clamp(28px,5vw,54px);line-height:1;margin:18px 0 10px;color:#08245a;letter-spacing:-1.5px}
+.lead{font-size:18px;max-width:920px;color:#34405a;line-height:1.45}
+.source{font-size:12px;color:var(--muted);margin-top:10px}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-top:1px solid #e7edf7;border-bottom:1px solid #dfe7f3;}
+.tabs{display:flex;gap:8px;overflow:auto;max-width:1280px;margin:auto;padding:10px 20px}
+.tab-btn{border:1px solid var(--line);background:#fff;color:#23304a;border-radius:999px;padding:10px 14px;font-weight:700;white-space:nowrap;cursor:pointer}
+.tab-btn.active{background:var(--azul);color:#fff;border-color:var(--azul)}
+main{max-width:1280px;margin:auto;padding:22px 20px 60px}
+.tab{display:none;animation:fade .22s ease}
+.tab.active{display:block}
+@keyframes fade{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 10px 26px #0b3d9111}
+.kpi{grid-column:span 3;min-height:120px}
+.kpi .n{font-size:34px;font-weight:900;color:var(--azul);line-height:1.1}
+.kpi .l{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:800}
+.kpi .s{font-size:13px;color:#44506a;margin-top:8px}
+.wide{grid-column:span 8} .half{grid-column:span 6} .third{grid-column:span 4} .full{grid-column:1/-1}
+h2{margin:4px 0 14px;color:#08245a;font-size:28px}
+h3{margin:0 0 10px;color:#08245a}
+p{line-height:1.55}
+ul{padding-left:20px;line-height:1.55}
+.callout{border-left:5px solid var(--rojo);background:#fff7f8;padding:14px 16px;border-radius:14px;margin:12px 0}
+.ok{border-left-color:var(--ok);background:#f0fdfa}
+.warn{border-left-color:var(--warn);background:#fffbeb}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;background:#fff}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th,td{padding:10px 12px;border-bottom:1px solid #e8eef7;text-align:left;vertical-align:top;font-size:14px}
+th{background:#f0f5ff;color:#08245a;font-size:12px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
+tr:hover td{background:#fbfdff}
+.search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:14px;margin:0 0 12px;font-size:15px}
+.svgchart{width:100%;height:300px;display:block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}
+.pill{display:inline-block;border:1px solid var(--line);background:#f8fbff;border-radius:999px;padding:6px 10px;margin:4px 6px 4px 0;font-size:13px;font-weight:700;color:#243b68}
+.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.check{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}
+.check b{color:#08245a}
+.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:34px}
+@media(max-width:900px){.kpi,.wide,.half,.third{grid-column:1/-1}.checklist{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="badge">Facultad de Gobierno · Universidad de Chile</div>
+  <h1>MAGDEL · Memoria de acreditación</h1>
+  <p class="lead">Página interna para que profesores/as y funcionarios/as manejen rápidamente la estructura del programa, sus datos principales y los puntos clave para procesos de acreditación.</p>
+  <div class="source">Fuentes de trabajo: Ficha de datos MAGDEL, Reglamento y Plan de Formación MAGDEL 2021, Reglamento General de Estudios de Magíster y Doctor.</div>
+</header>
+
+<nav><div class="tabs">
+  <button class="tab-btn active" data-tab="inicio">Inicio</button>
+  <button class="tab-btn" data-tab="programa">Programa</button>
+  <button class="tab-btn" data-tab="acreditacion">Acreditación: lo que deben manejar</button>
+  <button class="tab-btn" data-tab="datos">Datos clave</button>
+  <button class="tab-btn" data-tab="academicos">Cuerpo académico</button>
+  <button class="tab-btn" data-tab="gestion">Gestión y normativa</button>
+  <button class="tab-btn" data-tab="vinculacion">Vinculación</button>
+  <button class="tab-btn" data-tab="biblioteca">Biblioteca</button>
+</div></nav>
+
+<main>
+<section class="tab active" id="inicio">
+  <div class="grid">
+    <div class="card kpi"><div class="l">Créditos</div><div class="n">90</div><div class="s">Plan de formación completo.</div></div>
+    <div class="card kpi"><div class="l">Duración formal</div><div class="n">8</div><div class="s">Trimestres académicos.</div></div>
+    <div class="card kpi"><div class="l">Modalidad</div><div class="n">Mixta</div><div class="s">Jornada ejecutiva.</div></div>
+    <div class="card kpi"><div class="l">Cuerpo académico</div><div class="n">18</div><div class="s">Académicos/as de núcleo; 18 colaboradores/as.</div></div>
+    <div class="card wide">
+      <h2>MAGDEL en una mirada</h2>
+      <p><b>Magíster en Gestión y Desarrollo Regional y Local </b>, impartido por la Escuela de Postgrado de la Facultad de Gobierno. El programa tiene dedicación parcial y horario de clases: <b>Viernes 09:00 a 18:15 hrs
+Sábados 08:30 a 17:45 hrs</b>.</p>
+      <div class="callout ok"><b>Para acreditación:</b> lo más importante no es memorizar todo el reglamento, sino poder explicar coherentemente perfil de egreso, malla, progresión estudiantil, claustro/núcleo, AFE y mecanismos de mejora.</div>
+    </div>
+    <div class="card third">
+      <h3>Dirección / coordinación</h3>
+      <p><b>Coordinadora:</b><br>Francisca Bogolasky Fliman</p>
+      <p><b>Correo:</b><br></p>
+    </div>
+    <div class="card half"><h3>Postulación y matrícula</h3><svg id="chartAdmissions" class="svgchart"></svg><div class="legend"><span><i class="dot" style="background:#0b3d91"></i>Postulantes</span><span><i class="dot" style="background:#b21f2d"></i>Matriculados</span></div></div>
+    <div class="card half"><h3>Graduación y deserción</h3><svg id="chartProgress" class="svgchart"></svg><div class="legend"><span><i class="dot" style="background:#0f766e"></i>Tasa graduación</span><span><i class="dot" style="background:#a16207"></i>Tasa deserción</span></div></div>
+  </div>
+</section>
+
+<section class="tab" id="programa">
+  <div class="grid">
+    <div class="card full">
+      <h2>Programa, perfil y plan de formación</h2>
+      <div class="callout"><b>Objetivo general reglamentario:</b> aportar al mejoramiento de la gestión y al desarrollo de los niveles subnacionales de gobierno, formando egresados/as como factor de cambio en gobiernos subnacionales más democráticos, eficientes y orientados a resolver problemas de la comunidad.</div>
+    </div>
+    <div class="card half">
+      <h3>Competencias que conviene manejar</h3>
+      <ul>
+        <li>Identificar demandas de la comunidad en contexto democrático y participativo.</li>
+        <li>Gestionar recursos físicos y humanos en el territorio.</li>
+        <li>Comprender gestión financiera del Estado y su vínculo con gobiernos subnacionales.</li>
+        <li>Promover desarrollo territorial.</li>
+        <li>Analizar y proponer mejoras sobre gestión de gobiernos subnacionales.</li>
+      </ul>
+    </div>
+    <div class="card half">
+      <h3>Reglas rápidas del plan</h3>
+      <p><span class="pill">90 créditos</span><span class="pill">8 trimestres</span><span class="pill">AFE</span><span class="pill">Examen de grado</span><span class="pill">Máximo 3 años</span></p>
+      <ul>
+        <li>El plan se organiza en régimen trimestral.</li>
+        <li>El/la estudiante debe tomar mínimo 8 y máximo 12 créditos trimestrales.</li>
+        <li>La obtención del grado exige aprobar actividades lectivas, AFE y examen de grado.</li>
+      </ul>
+    </div>
+    <div class="card full">
+      <h3>Líneas formativas</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Línea</th><th>Créditos</th><th>Cursos asociados</th></tr></thead><tbody><tr><td>Gestión y Políticas Públicas</td><td>24</td><td>Introducción a las Políticas Públicas, Introducción a la Gestión Pública, Marco Normativo, Planificación Regional y Local, Gestión de Servicios Locales, Gestión Ambiental</td></tr><tr><td>Economía y Finanzas</td><td>17</td><td>Finanzas Subnacionales, Economía Regional y Local, Evaluación de Proyectos</td></tr><tr><td>Desarrollo Territorial</td><td>8</td><td>Desarrollo Regional y Local, Descentralización y Desarrollo</td></tr><tr><td>Métodos Cuantitativos</td><td>12</td><td>Análisis Cuantitativo I, Análisis Cuantitativo II</td></tr><tr><td>Seminarios de Graduación (AFE)</td><td>23</td><td>Seminario de Graduación I, Seminario de Graduación II, Taller de Finalización</td></tr><tr><td>Electivos</td><td>6</td><td>Electivo I, Electivo II, Electivo III</td></tr></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="acreditacion">
+  <div class="grid">
+    <div class="card full">
+      <h2>Lo que académicos/as MAGDEL deberían manejar sí o sí</h2>
+      <p>Esta pestaña está pensada como “chuleta” para reuniones, entrevistas o visitas de pares evaluadores.</p>
+      <div class="checklist">
+        <div class="check"><b>1. Identidad del programa</b><br>Objetivo general, orientación territorial/subnacional, carácter profesional y aporte a gobiernos regionales/locales.</div>
+        <div class="check"><b>2. Perfil de egreso</b><br>Capacidades esperadas: gestión, planificación, asesoría, estudios aplicados y conocimiento del sector subnacional.</div>
+        <div class="check"><b>3. Coherencia malla ↔ perfil</b><br>Explicar qué cursos sostienen cada competencia: gestión pública, finanzas, métodos, desarrollo territorial y AFE.</div>
+        <div class="check"><b>4. AFE</b><br>Trabajo individual aplicado, máximo 12.000 palabras, estructura tipo artículo y orientado a resolver un problema complejo.</div>
+        <div class="check"><b>5. Evaluación y progresión</b><br>Nota mínima 4,0 por asignatura, promedio anual 4,5, asistencia mínima 75%, y causales de eliminación.</div>
+        <div class="check"><b>6. Comité Académico</b><br>Selecciona estudiantes, aprueba planes, profesores guía, comisiones evaluadoras, reconoce actividades y monitorea rendimiento.</div>
+        <div class="check"><b>7. Evidencias docentes</b><br>Programas actualizados, evaluaciones, rúbricas, retroalimentación, asistencia y trazabilidad de cambios.</div>
+        <div class="check"><b>8. Mejora continua</b><br>Poder mencionar ajustes realizados, problemas detectados, acciones correctivas y seguimiento.</div>
+        <div class="check"><b>9. Productividad académica</b><br>Conocer líneas, publicaciones, consultorías, vínculo territorial y relación con la docencia/AFE.</div>
+        <div class="check"><b>10. Vinculación con el medio</b><br>Convenios, redes, actividades con instituciones públicas y pertinencia para desarrollo regional/local.</div>
+      </div>
+    </div>
+    <div class="card half">
+      <h3>Preguntas probables en acreditación</h3>
+      <ul>
+        <li>¿Qué diferencia al MAGDEL de otros magísteres de gestión pública?</li>
+        <li>¿Cómo se verifica que el perfil de egreso se logra?</li>
+        <li>¿Cómo se asignan profesores guía de AFE?</li>
+        <li>¿Qué se ha mejorado a partir de evaluación docente o seguimiento de estudiantes?</li>
+        <li>¿Cómo se articula el programa con necesidades de gobiernos subnacionales?</li>
+      </ul>
+    </div>
+    <div class="card half">
+      <h3>Documentos/evidencias que conviene tener a mano</h3>
+      <ul>
+        <li>Programas de cursos y bibliografía vigente.</li>
+        <li>Actas del Comité Académico.</li>
+        <li>Rúbricas/evaluaciones de AFE y examen.</li>
+        <li>Encuestas docentes y acciones de mejora.</li>
+        <li>CV y productividad del núcleo.</li>
+        <li>Convenios y actividades de vinculación.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="datos">
+  <div class="grid">
+    <div class="card kpi"><div class="l">Postulantes 2022-2026</div><div class="n">195</div><div class="s">Según ficha de datos.</div></div>
+    <div class="card kpi"><div class="l">Aceptados 2022-2026</div><div class="n">157</div><div class="s">Promedio aceptación: 84.1%.</div></div>
+    <div class="card kpi"><div class="l">Matriculados 2022-2026</div><div class="n">126</div><div class="s">Cohortes recientes.</div></div>
+    <div class="card kpi"><div class="l">Graduados 2021-2024</div><div class="n">68</div><div class="s">Cohortes con mayor avance observable.</div></div>
+    <div class="card full">
+      <h3>Relación postulantes, aceptados y matriculados</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Año</th><th>Postulantes</th><th>Aceptados</th><th>Matriculados</th><th>Mujeres matriculadas</th><th>Tasa aceptación</th></tr></thead><tbody><tr><td>2022</td><td>32</td><td>32</td><td>25</td><td>56.0%</td><td>100.0%</td></tr><tr><td>2023</td><td>20</td><td>20</td><td>18</td><td>66.7%</td><td>100.0%</td></tr><tr><td>2024</td><td>47</td><td>38</td><td>31</td><td>51.6%</td><td>80.9%</td></tr><tr><td>2025</td><td>47</td><td>34</td><td>27</td><td>51.9%</td><td>72.3%</td></tr><tr><td>2026</td><td>49</td><td>33</td><td>25</td><td>60.0%</td><td>67.3%</td></tr></tbody></table></div>
+    </div>
+    <div class="card full">
+      <h3>Progresión estudiantil</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Año</th><th>Ingresados</th><th>Vigentes</th><th>Ciclo final</th><th>Retirados</th><th>Eliminados</th><th>Tasa deserción</th><th>Graduados</th><th>Tasa graduación</th></tr></thead><tbody><tr><td>2021</td><td>29</td><td>0</td><td>0</td><td>3</td><td>7</td><td>34.5%</td><td>19</td><td>65.5%</td></tr><tr><td>2022</td><td>25</td><td>0</td><td>1</td><td>2</td><td>2</td><td>16.0%</td><td>20</td><td>80.0%</td></tr><tr><td>2023</td><td>18</td><td>0</td><td>1</td><td>0</td><td>3</td><td>16.7%</td><td>14</td><td>77.8%</td></tr><tr><td>2024</td><td>31</td><td>1</td><td>9</td><td>3</td><td>3</td><td>19.4%</td><td>15</td><td>48.4%</td></tr><tr><td>2025</td><td>27</td><td>24</td><td>0</td><td>3</td><td>0</td><td>11.1%</td><td>0</td><td>0.0%</td></tr><tr><td>2026</td><td>25</td><td>25</td><td>0</td><td>0</td><td>0</td><td>0.0%</td><td>0</td><td>0.0%</td></tr></tbody></table></div>
+    </div>
+    <div class="card half">
+      <h3>Origen disciplinar más frecuente</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Formación previa</th><th>N</th></tr></thead><tbody><tr><td>Administración Pública</td><td>59</td></tr><tr><td>Administrador Público</td><td>11</td></tr><tr><td>Ciencia Política</td><td>6</td></tr><tr><td>Ingeniero Comercial</td><td>3</td></tr><tr><td>Geógrafo</td><td>2</td></tr><tr><td>Ingeniera Comercial</td><td>2</td></tr><tr><td>Cientista Política</td><td>2</td></tr><tr><td>Cientista Político</td><td>2</td></tr></tbody></table></div>
+    </div>
+    <div class="card half">
+      <h3>Instituciones de procedencia más frecuentes</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Institución</th><th>N</th></tr></thead><tbody><tr><td>Universidad de Chile</td><td>78</td></tr><tr><td>Pontificia Universidad Católica de Chile</td><td>6</td></tr><tr><td>Universidad de Valparaíso</td><td>5</td></tr><tr><td>Universidad de Concepción</td><td>3</td></tr><tr><td>Universidad de Talca</td><td>3</td></tr><tr><td>Universidad Central </td><td>3</td></tr><tr><td>Universidad del Bio-Bio</td><td>2</td></tr><tr><td>Universidad de La Serena</td><td>2</td></tr></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="academicos">
+  <div class="grid">
+    <div class="card kpi"><div class="l">Núcleo</div><div class="n">18</div><div class="s">13 con grado de doctorado.</div></div>
+    <div class="card kpi"><div class="l">Mujeres núcleo</div><div class="n">7</div><div class="s">38.9% del núcleo.</div></div>
+    <div class="card kpi"><div class="l">Colaboradores</div><div class="n">18</div><div class="s">Según ficha de datos.</div></div>
+    <div class="card kpi"><div class="l">WOS/Scopus/ERIH</div><div class="n">670</div><div class="s">Productividad del núcleo, 2021-2025.</div></div>
+    <div class="card half">
+      <h3>Productividad del núcleo</h3>
+      <svg id="chartProd" class="svgchart"></svg>
+    </div>
+    <div class="card half">
+      <h3>Líneas y temas a enfatizar</h3>
+      <ul>
+        <li>Gestión pública y políticas públicas.</li>
+        <li>Desarrollo territorial, regional y local.</li>
+        <li>Finanzas subnacionales y evaluación de proyectos.</li>
+        <li>Métodos cuantitativos aplicados.</li>
+        <li>Gestión local, ambiental y servicios locales.</li>
+      </ul>
+    </div>
+    <div class="card full">
+      <h3>Caracterización de académicos/as</h3>
+      <input class="search" placeholder="Buscar por nombre, clasificación, grado o unidad..." data-filter="acadTable">
+      <div class="table-wrap"><table class="filterable acadTable"><thead><tr><th>Nombre</th><th>Clasificación</th><th>Sexo</th><th>Grado académico</th><th>Unidad</th><th>Horas U</th><th>Gestión</th><th>Docencia</th><th>Tesis/AFE</th><th>Investigación</th></tr></thead><tbody><tr><td>Francisca Bogolasky Fliman</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en Políticas Públicas</td><td>Facultad de Gobierno</td><td>44</td><td>15</td><td>4</td><td>15</td><td>34</td></tr><tr><td>Gladys Camacho Cépeda</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en Derecho</td><td>Facultad de Derecho</td><td>44</td><td>7</td><td>4</td><td>15</td><td>26</td></tr><tr><td>Eduardo Contreras</td><td>Núcleo</td><td>Masculino</td><td>Doctorado en Ciencias Empresariales</td><td>Facultad de Ciencias Físicas y Matemáticas</td><td>20</td><td>2</td><td>3</td><td>5</td><td>10</td></tr><tr><td>Rodrigo Egaña Baraona</td><td>Núcleo</td><td>Masculino</td><td>Licenciado en CIencias Económicas y Sociales</td><td>Facultad de Gobierno</td><td>12</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Sergio Galilea Ocón</td><td>Núcleo</td><td>Masculino</td><td>Magíster en Planificación del Desarrollo Urbano y Regional</td><td>Facultad de Gobierno</td><td>20</td><td>7</td><td>8</td><td>4</td><td>19</td></tr><tr><td>Cecilia Ibarra</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en política científica y tecnológica </td><td>Facultad de Gobierno</td><td>44</td><td>7</td><td>4</td><td>15</td><td>26</td></tr><tr><td>Leonardo Letelier Saavedra</td><td>Núcleo</td><td>Masculino</td><td>Doctorado en Economía </td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Héctor Ormeño Campos</td><td>Núcleo</td><td>Masculino</td><td>Doctorado en Economía </td><td>Facultad de Gobierno</td><td>6</td><td>2</td><td>4</td><td>0</td><td>6</td></tr><tr><td>Cecilia Osorio Gonnet</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en Ciencias Políticas y Sociales</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Ariel Ramírez Orrego</td><td>Núcleo</td><td>Masculino</td><td>Máster en Políticas Públicas</td><td>Facultad de Gobierno</td><td>12</td><td>2</td><td>4</td><td>0</td><td>6</td></tr><tr><td>René Saa Vidal</td><td>Núcleo</td><td>Masculino</td><td>Máster of Arts</td><td>Facultad de Gobierno</td><td>6</td><td>0</td><td>3</td><td>3</td><td>6</td></tr><tr><td>José Viacava Gática</td><td>Núcleo</td><td>Masculino</td><td>Magíster en Ciencia Política</td><td>Facultad de Gobierno</td><td>20</td><td>2</td><td>4</td><td>7</td><td>13</td></tr><tr><td>Gerardo Ubilla Bravo</td><td>Núcleo</td><td>Masculino</td><td>Doctorado en Géographie et aménagement de l’espace </td><td>Facultad de Ciencias Agronómicas</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Verónica Figueroa Huencho</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en Ciencias de la Gestión </td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>3</td><td>15</td><td>20</td></tr><tr><td>Jaime Fierro Carrasco</td><td>Núcleo</td><td>Masculino</td><td>Doctorado en filosofía</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Grettel Navas Obando</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en Ciencia y Tecnología Ambiental</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Karina Retamal Soto</td><td>Núcleo</td><td>Femenino</td><td>Doctorado en Sociología</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Felipe Bucci Ancapi</td><td>Núcleo</td><td>Masculino</td><td>Doctor en Filosofía</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr><tr><td>Sebastián Flores</td><td>Colaborador</td><td>Masculino</td><td>Magíster en derecho con mención en derecho público</td><td>Facultad de Gobierno</td><td>2</td><td>2</td><td>4</td><td>0</td><td>6</td></tr><tr><td>Óscar Figueroa</td><td>Colaborador</td><td>Masculino</td><td>Doctorado en Urbanismo</td><td>Instituto de Estudios Urbanos y Territoriales, Pontificia Universidad Católica de Chile</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Jorge Larenas</td><td>Colaborador</td><td>Masculino</td><td>Doctorado en Arquitectura</td><td>Facultad de Arquitectura y Urbanismo</td><td>44</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Egon Montecinos</td><td>Colaborador</td><td>Masculino</td><td>Doctorado en Investigación en Ciencias Sociales con Especialización en Ciencia Política</td><td>Universidad Austral</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>César Morales</td><td>Colaborador</td><td>Masculino</td><td>Doctorado en el Estudio de las Sociedades Latinoamericanas, Mención Economía Ambiental</td><td>Facultad de Gobierno</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Andrea Ruiz</td><td>Colaborador</td><td>Femenino</td><td>Magíster en Derecho Público</td><td>Facultad de Derecho, Universidad Alberto Hurtado</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Reinaldo Ruiz</td><td>Colaborador</td><td>Masculino</td><td>Doctor en Economía</td><td>Facultad de Gobierno</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Iván Silva</td><td>Colaborador</td><td>Masculino</td><td>Master Economic Policy and Planning</td><td>Comisión Económica para América Latina y El Caribe</td><td>3</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Carlos Rungruansakorn</td><td>Colaborador</td><td>Masculino</td><td>Doctorado en Ciencias Sociales, mención en Ciencia Política</td><td>Ministerio del Medio Ambiente</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Leandro Espíndola Vergara</td><td>Colaborador</td><td>Masculino</td><td>Magíster en Gobierno y Gerencia Pública</td><td>Facultad de Gobierno</td><td>44</td><td>37</td><td>4</td><td>3</td><td>44</td></tr><tr><td>Gustavo Orrego</td><td>Colaborador</td><td>Masculino</td><td>Magíster en Gestión Territorial de Recursos Naturales</td><td>Ministerio del Medio Ambiente</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Maria Trinidad Vidal</td><td>Colaborador</td><td>Femenino</td><td>Máster en Política Social y Mediación Comunitaria</td><td>Corporación Privada</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Maria Ignacia Jimenez</td><td>Colaborador</td><td>Femenino</td><td>Magíster en Asentamientos Humanos y Medio Ambiente </td><td>Fundación Chile Descentralizado</td><td>2</td><td>2</td><td>4</td><td>0</td><td>6</td></tr><tr><td>Diego Camilo</td><td>Colaborador</td><td>Masculino</td><td>Magíster en Gobierno y Gerencia Pública</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Christian Quinteros Flores</td><td>Colaborador</td><td>Masculino</td><td>Doctor en Ordenamiento Territorial y Desarrollo Sostenible</td><td>Universidad Católica del Maule</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Valentina Paz Abufhele Milad</td><td>Colaborador</td><td>Femenino</td><td>Doctora en Sociología</td><td>Facultad de Ciencias Sociales</td><td>44</td><td>2</td><td>4</td><td>0</td><td>6</td></tr><tr><td>Carlos Francisco Sandoval Escudero</td><td>Colaborador</td><td>Masculino</td><td>Magíster en Urbanismo</td><td>Comisión Económica para América Latina y El Caribe</td><td>2</td><td>2</td><td>3</td><td>0</td><td>5</td></tr><tr><td>Joaquín Prieto</td><td>Colaborador</td><td>Masculino</td><td>Doctor en Política Social</td><td>Facultad de Gobierno</td><td>44</td><td>2</td><td>4</td><td>15</td><td>21</td></tr></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="gestion">
+  <div class="grid">
+    <div class="card half">
+      <h3>Autoridades y jefaturas</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Nombre</th><th>Sexo</th><th>Cargo</th><th>Año nombramiento</th><th>Título/grado</th><th>Contrato</th></tr></thead><tbody><tr><td>Alejandro Olivares Lavados</td><td>Masculino</td><td>Director Escuela de Postgrado</td><td>2025</td><td>Doctor en Ciencias Sociales</td><td>Planta</td></tr><tr><td>Francisca Bogolasky Fliman</td><td>Femenino</td><td>Coordinadora Académica</td><td>2024</td><td>Doctora en Políticas Públicas</td><td>Contrata</td></tr></tbody></table></div>
+    </div>
+    <div class="card half">
+      <h3>Comité Académico</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Nombre</th><th>Rol</th><th>Sexo</th><th>Inicio actividades</th><th>Nombramiento</th></tr></thead><tbody><tr><td>Francisca Bogolasky Fliman</td><td>Coordinadora del Programa</td><td>Femenino</td><td>2023</td><td>2024</td></tr><tr><td>Sergio Galilea Ocón</td><td>Miembro Comité Académico</td><td>Masculino</td><td>2021</td><td>2021</td></tr><tr><td>Gladys Camacho Cépeda</td><td>Miembro Comité Académico</td><td>Femenino</td><td>2021</td><td>2021</td></tr><tr><td>Cecilia Ibarra Mendoza</td><td>Miembro Comité Académico</td><td>Femenino</td><td>2022</td><td>2022</td></tr><tr><td>Leonardo Letelier Saavedra</td><td>Miembro Comité Académico</td><td>Masculino</td><td>2021</td><td>2021</td></tr></tbody></table></div>
+    </div>
+    <div class="card full">
+      <h3>Funciones del Comité Académico que conviene recordar</h3>
+      <div class="callout ok">Selecciona estudiantes, aprueba planes de formación, elige tutores/profesores, aprueba guía de AFE, propone comisiones evaluadoras, informa estado del programa, resguarda aspectos éticos, propone reconocimientos y conoce rendimiento/situaciones académicas.</div>
+    </div>
+    <div class="card full">
+      <h3>Normativa y documentos vigentes registrados en la ficha</h3>
+      <input class="search" placeholder="Buscar documento..." data-filter="regTable">
+      <div class="table-wrap"><table class="filterable regTable"><thead><tr><th>Tipo</th><th>Documento</th><th>Año creación</th><th>Última actualización</th><th>Enlace/Anexo</th></tr></thead><tbody><tr><td>Reglamento </td><td>Reglamento General de Estudios conducentes a los Grados Académico de Magíster y Doctor. Decreto Exento N°0028011</td><td>2010</td><td>2010</td><td>https://drive.google.com/file/d/1QeqCbcPx_hL3AE0kWXH_FqLCQlKugXny/view?usp=sharing</td></tr><tr><td>Reglamento y plan </td><td>Reglamento y plan de formación del programa de Magíster en Gestión y Desarrollo Regional y Local. Decreto Universitario Nº002054.-</td><td>2021</td><td>2021</td><td>https://drive.google.com/file/d/1wRia1S12nyf1NBY-K0qHfG6HGsWzXC67/view?usp=sharing</td></tr><tr><td>Reglamento</td><td>Reglamento de Estudiantes de la Universidad de Chile</td><td>1993</td><td>2016</td><td>https://drive.google.com/file/d/1SfPgCAMUMAEe2vq3g8InhwTlK4IW1WL2/view?usp=sharing</td></tr><tr><td>Reglamento</td><td>Reglamento General de Facultades</td><td>2009</td><td>2009</td><td>https://drive.google.com/file/d/1gx1SYrEGEK6qFAGA4i7F2R5YI0O1swhX/view?usp=sharing</td></tr><tr><td>Plan</td><td>Modelo educativo de la Universidad - 2021</td><td>2021</td><td>2021</td><td>https://drive.google.com/file/d/1C8NnI3G5LjiqwvJrUYfRKy-PRpcVAUPc/view?usp=sharing</td></tr><tr><td>Plan</td><td>Plan de Desarrollo Institucional 2017-2026</td><td>2017</td><td>2017</td><td>https://drive.google.com/file/d/1zqFoefufO74Fjh9lXcQytdLmIqiHCQEz/view?usp=sharing</td></tr><tr><td>Plan</td><td>Plan de Desarrollo Institucional Facultad de Gobierno 2021-2025</td><td>2021</td><td>2021</td><td>https://drive.google.com/file/d/1ACtw65qLksUxdTuyLPrlQbHE3YNPnADI/view?usp=sharing</td></tr><tr><td>Reglamento</td><td>Reglamento de autoevaluación de la Universidad de Chile</td><td>2017</td><td>2017</td><td>https://drive.google.com/file/d/1b67_69sGOL14_dL3z0magkOf7F0gSuDw/view?usp=sharing</td></tr><tr><td>Reglamento</td><td>Reglamento del Departamento de Postgrado y Postítulo</td><td>2017</td><td>2020</td><td>https://drive.google.com/file/d/1jeHpMFRCuCyf_gCEEC5wFFFz_QDUE9KZ/view?usp=sharing</td></tr><tr><td>Política </td><td>Política de Igualdad de Género</td><td>2022</td><td>2022</td><td>https://drive.google.com/file/d/11GQSo6I5GuzGYOr_QI9VEoucejjyCa1v/view?usp=sharing</td></tr><tr><td>Política </td><td>Política de Equidad e Inclusión estudiantil</td><td>2014</td><td>2014</td><td>https://drive.google.com/file/d/1OCM1Sz2TsYBpIQIAGEId5nlTbKbVTpP6/view?usp=sharing</td></tr><tr><td>Política</td><td>Política para Prevenir el Acoso Sexual en la Universidad de Chile</td><td>2017</td><td>2017</td><td>https://drive.google.com/file/d/19DhHIIAatzEv4tB97S3r-a5ILgFhWHd5/view?usp=sharing</td></tr><tr><td>Decreto</td><td>Aprueba reglamento de presupuesto</td><td>2014</td><td>2023</td><td>https://drive.google.com/file/d/1W8qmX3D_JQKP0Hx0MJ4IUx5VRon-Nlyg/view?usp=sharing</td></tr><tr><td>Protocolo</td><td>Protocolo de Actuación ante denuncias de acoso sexual, acoso laboral y discriminiación arbitraria 2019</td><td>2019</td><td>2019</td><td>https://drive.google.com/file/d/1JTNI2V0-ElWZiwA-9YAS7OaMThFCVQEI/view?usp=sharing</td></tr><tr><td>Política</td><td>Política de Corresponsabilidad Social en la conciliación de las responsabilidades familiarias y las actividades universitarias</td><td>2017</td><td>2017</td><td>https://drive.google.com/file/d/1YnQeeNv54uVeOPMtAbJJxBm-VOjCEIu7/view?usp=sharing</td></tr><tr><td>Reglamento</td><td>Reglamento de Corresponsabilidad Social en el cuidado de hijas e hijos de estudiantes</td><td>2018</td><td>2018</td><td>https://drive.google.com/drive/folders/1k15feo5NckLIrY5IX9NGTBbKxLkp4j6L</td></tr><tr><td>Política</td><td>Política de DIversidades y Disidencias sexuales y de Género de la Universidad de Chile</td><td>2023</td><td>2023</td><td>https://drive.google.com/file/d/12X_73fOwNZEz4zjDD709rHJeYhH2OXx4/view?usp=sharing</td></tr><tr><td>Instructivo</td><td>Instructivo Mara Rita Nombre social e Identidad de Género en la Universidad de Chile</td><td>2018</td><td>2021</td><td>https://drive.google.com/file/d/1HSP52bp2e11eKinnEMwlFrJSwqPhCnj6/view?usp=sharing</td></tr><tr><td>Instructivo</td><td>Instructivo Entrega de AFE/Tesis y Exámen de Grado</td><td>2023</td><td>2023</td><td>https://drive.google.com/file/d/1mSntdHXtjo2M9i1z16FJztJpHuD6RM-q/view?usp=sharing</td></tr><tr><td>Protocolo</td><td>Protocolo sobre Faltas Académicas, Escuela de Postgrado. Facultad de Gobierno de la Universidad de Chile</td><td>2016</td><td>2023</td><td>https://drive.google.com/file/d/1BTnJclYqpB0vgOT2JLyqz5ut6h4XuvH0/view?usp=sharing</td></tr><tr><td>Protocolo</td><td>Protocolo de corresponsabilidad. Escuela de Postgrado y Dirección de Género, Equidad e Inclusión</td><td>2025</td><td>2025</td><td>https://drive.google.com/file/d/1fhsEOD2LgpEud5xcJRfkvnu3J5MnsxFI/view?usp=sharing</td></tr><tr><td>Protocolo</td><td>Protocolo de corresponsabilidad social para estudiantes de Postgrado: Salud Mental</td><td>2025</td><td>2025</td><td>https://drive.google.com/file/d/1hmAklO_quLn2VhIm_sSk_83LsJzt7Q7q/view?usp=sharing</td></tr><tr><td>Circular</td><td>Circular Informativa N°1, Fuero Maternal estudiantes de magíster</td><td>2023</td><td>2023</td><td>https://drive.google.com/file/d/1Tbulao3Z0Afdf8frLIq7fWN_dAaNVwB4/view?usp=sharing</td></tr><tr><td>Circular</td><td>Circular Informativa N°2, Procedimiento para la eliminación y reconsideración de eliminación de estudiantes de Postgrado, conforme a lo indicado por el Reglamento General de Estudios Conducentes a los Grados Académicos de Magíster y Doctor.</td><td>2024</td><td>2024</td><td>https://drive.google.com/file/d/1u1iQMSQtwZ3vYImLGwA5vuW4_8GjgUD8/view?usp=sharing</td></tr><tr><td>Circular</td><td>Circular Infirmativa N°3, Proceso para la inscripción de asignatura en otra Facultad</td><td>2024</td><td>2024</td><td>https://drive.google.com/file/d/1qq7o8PgeDt1JXI4oCgiMVPrEnQ87la6p/view?usp=sharing</td></tr><tr><td>Política</td><td>Política de Aseguramiento de la Calidad de Postgrado</td><td>2024</td><td>2024</td><td>https://drive.google.com/file/d/101vrzkPFoBUQEOEHL4FjK82iTVEzRdO5/view?usp=sharing</td></tr></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="vinculacion">
+  <div class="grid">
+    <div class="card full">
+      <h2>Vinculación con el medio</h2>
+      <p>La evidencia de vinculación debe conectarse con el carácter del programa: gestión y desarrollo regional/local, gobiernos subnacionales, políticas públicas y fortalecimiento de capacidades.</p>
+    </div>
+    <div class="card full">
+      <h3>Convenios vigentes registrados</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Institución</th><th>Convenio/acuerdo</th><th>Propósito</th><th>Año</th><th>Estado</th><th>Est. beneficiados</th><th>Acad. beneficiados</th></tr></thead><tbody><tr><td>Instituto de Previsión Social - IPS</td><td>Convenio de colaboración IPS - U. de Chile </td><td>Becas funcionarios IPS en programas de postítulo U. de Chile. </td><td>2017</td><td>Vigente</td><td>1</td><td>0</td></tr><tr><td>Escuela Superior Administración Pública -ESAP</td><td>Memorandume de entendimiento ESAP -Inap.</td><td>Intercambios, asesorías, movilidad, fortalecimiento de capacidades </td><td>2024</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Servicio Local de Educación Santa Rosa </td><td>Convenio Marco de Colaboración</td><td>Prestación de servicios (cursos, capacitaciones, etc) y colaboraciones académicas</td><td>2024</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Universidad de Brasília-Facultad de Economía, Administración, Contabilidad y Gestión de Políticas Públicas</td><td>Convenio Específico de Intercambio de estudiantes entre la Universidad de Chile y la Universidad de Brasília</td><td>Intercambio académico de el estudiante en el nivel académico de licenciatura y posgrado </td><td>2022</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Subsecretaría para Las Fuerzas Armadas</td><td>Convenio de colaboración entre la Subsecretaría para Las Fuerzas Armadas y La Universidad de Chile</td><td>Colaboración, cooperación y apoyo mutuo de ambas organizaciones </td><td>2023</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Fundación Internacional para el Desarrollo Local </td><td>Convenio marco de cooperación </td><td>fortalecer actividades de investigación, estudio, asesorías, desarrollo de proyectos y otras actividades de colaboración entre las partes. </td><td>2023</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Universidad de Heidelberg </td><td>Memorandum of understanding for collaboration in the fields of reserach, research-oriented teaching, and the training of young researchers</td><td>Colaboración en áreas de investigación asociada a gobernanza y la política; cooperación en programas de postgrado (master y doctiorados); actividades de investigación de académicos(as) - movilidad, co-supervisión de proyectos de tesis de magister y doctorales, etc.  </td><td>2023</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Carabineros de Chile</td><td>Convenio Marco de colaboración entre La Carabineros de Chile y la Universidad de Chile</td><td>Facilitar el trabajo conjunto que fomenten la colaboración académica, investigativa y desarrollo científico</td><td>2023</td><td>Vigente</td><td>0</td><td>0</td></tr><tr><td>Asociación Chilena de Municipalidades (ACHM)</td><td>Convenio de colaboración</td><td>Impulsar acciones conjuntas en los ámbitos de docencia, investigación, extensión y vinulación con el medio</td><td>2026</td><td>Vigente</td><td>0</td><td>0</td></tr></tbody></table></div>
+    </div>
+    <div class="card full">
+      <h3>Actividades de estudiantes en congresos, coloquios y seminarios</h3>
+      <div class="table-wrap"><table class=""><thead><tr><th>Tipo</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026</th></tr></thead><tbody><tr><td>Exponentes</td><td>1</td><td>0</td><td>1</td><td>2</td><td>0</td></tr><tr><td>Oyentes</td><td>2</td><td>5</td><td>5</td><td>4</td><td>0</td></tr><tr><td>Lugar donde se realiza la actividad</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Nacional</td><td>3</td><td>5</td><td>3</td><td>6</td><td>0</td></tr><tr><td>Internacional</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><tr><td>Organización de la actividad</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Interna</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Externa</td><td>3</td><td>5</td><td>4</td><td>6</td><td>0</td></tr></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="biblioteca">
+  <div class="grid">
+    <div class="card full">
+      <h2>Biblioteca documental sugerida</h2>
+      <p>Para GitHub Pages, lo ideal es crear una carpeta <b>docs/</b> o <b>assets/</b> y subir ahí los PDF. Luego los botones pueden apuntar a esos archivos.</p>
+      <div class="callout warn"><b>Nota:</b> dejé botones de ejemplo. Cuando subas los PDF al repositorio, basta cambiar los enlaces <code>#</code> por las rutas reales, por ejemplo <code>assets/MAGDEL2021.pdf</code>.</div>
+      <p>
+        <a class="tab-btn" href="#" onclick="alert('Reemplazar por assets/MAGDEL2021.pdf')">Reglamento MAGDEL</a>
+        <a class="tab-btn" href="#" onclick="alert('Reemplazar por assets/reglamento-general-magister-doctor.pdf')">Reglamento general Magíster/Doctor</a>
+        <a class="tab-btn" href="#" onclick="alert('Reemplazar por assets/ficha-magdel.xlsx')">Ficha de datos MAGDEL</a>
+      </p>
+    </div>
+    <div class="card half">
+      <h3>Carpetas recomendadas</h3>
+      <ul>
+        <li><b>Normativa:</b> reglamentos y decretos.</li>
+        <li><b>Acreditación:</b> ficha de datos, autoevaluación, planes de mejora.</li>
+        <li><b>Docencia:</b> programas, rúbricas, evaluaciones.</li>
+        <li><b>AFE:</b> instructivos, formatos, actas y pautas.</li>
+      </ul>
+    </div>
+    <div class="card half">
+      <h3>Control mínimo de actualización</h3>
+      <ul>
+        <li>Responsable de actualización.</li>
+        <li>Fecha de última revisión.</li>
+        <li>Fuente de cada dato.</li>
+        <li>Versión del documento usado.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="footer">Versión de trabajo generada para revisión interna · MAGDEL · Facultad de Gobierno · Universidad de Chile</div>
+</main>
+
+<script>
+const DATA = {"admissions": [{"year": 2022, "postulantes": 32, "aceptados": 32, "matriculados": 25, "mujeres_matriculados": 56.0, "tasa_aceptacion": 100.0}, {"year": 2023, "postulantes": 20, "aceptados": 20, "matriculados": 18, "mujeres_matriculados": 66.66666667, "tasa_aceptacion": 100.0}, {"year": 2024, "postulantes": 47, "aceptados": 38, "matriculados": 31, "mujeres_matriculados": 51.61290323, "tasa_aceptacion": 80.85106383}, {"year": 2025, "postulantes": 47, "aceptados": 34, "matriculados": 27, "mujeres_matriculados": 51.85185185, "tasa_aceptacion": 72.34042553}, {"year": 2026, "postulantes": 49, "aceptados": 33, "matriculados": 25, "mujeres_matriculados": 60.0, "tasa_aceptacion": 67.34693878}], "progression": [{"year": 2021, "ingresados": 29, "vigentes": 0, "ciclo_final": 0, "retirados": 3, "eliminados": 7, "desercion": 34.48275862, "graduados": 19, "graduacion": 65.51724138}, {"year": 2022, "ingresados": 25, "vigentes": 0, "ciclo_final": 1, "retirados": 2, "eliminados": 2, "desercion": 16.0, "graduados": 20, "graduacion": 80.0}, {"year": 2023, "ingresados": 18, "vigentes": 0, "ciclo_final": 1, "retirados": 0, "eliminados": 3, "desercion": 16.666666669999998, "graduados": 14, "graduacion": 77.77777778000001}, {"year": 2024, "ingresados": 31, "vigentes": 1, "ciclo_final": 9, "retirados": 3, "eliminados": 3, "desercion": 19.35483871, "graduados": 15, "graduacion": 48.38709677}, {"year": 2025, "ingresados": 27, "vigentes": 24, "ciclo_final": 0, "retirados": 3, "eliminados": 0, "desercion": 11.111111110000001, "graduados": 0, "graduacion": 0.0}, {"year": 2026, "ingresados": 25, "vigentes": 25, "ciclo_final": 0, "retirados": 0, "eliminados": 0, "desercion": 0.0, "graduados": 0, "graduacion": 0.0}], "plan": [{"linea": "Gestión y Políticas Públicas", "creditos": 24}, {"linea": "Economía y Finanzas", "creditos": 17}, {"linea": "Desarrollo Territorial", "creditos": 8}, {"linea": "Métodos Cuantitativos", "creditos": 12}, {"linea": "Seminarios de Graduación (AFE)", "creditos": 23}, {"linea": "Electivos", "creditos": 6}], "productivity": [{"tipo": "Libro en editorial con referato …", "valor": 96}, {"tipo": "Publicación en revista indexada …", "valor": 670}, {"tipo": "Publicación en revistas indexada…", "valor": 48}, {"tipo": "Capítulo de libro con referato e…", "valor": 220}, {"tipo": "Publicación en revistas indexada…", "valor": 39}, {"tipo": "Participación en Consultorías, A…", "valor": 33}], "discipline": [{"nombre": "Administración Pública", "valor": 59}, {"nombre": "Administrador Público", "valor": 11}, {"nombre": "Ciencia Política", "valor": 6}, {"nombre": "Ingeniero Comercial", "valor": 3}, {"nombre": "Geógrafo", "valor": 2}, {"nombre": "Ingeniera Comercial", "valor": 2}, {"nombre": "Cientista Política", "valor": 2}, {"nombre": "Cientista Político", "valor": 2}]};
+
+document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn[data-tab]').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+document.querySelectorAll('.search').forEach(input => {
+  input.addEventListener('input', () => {
+    const cls = input.dataset.filter;
+    const table = document.querySelector('table.'+cls);
+    const q = input.value.toLowerCase();
+    table.querySelectorAll('tbody tr').forEach(tr => {
+      tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+});
+
+function svgLineChart(id, series, opts={}) {
+  const svg = document.getElementById(id); if(!svg) return;
+  const w=720,h=300,p=42;
+  svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  const xs = series[0].values.map(d=>d.x);
+  const allY = series.flatMap(s=>s.values.map(d=>d.y));
+  const maxY = Math.max(...allY, opts.maxY||0)*1.12 || 1;
+  const minY = opts.minY ?? 0;
+  const x = i => p + i*(w-2*p)/(xs.length-1 || 1);
+  const y = v => h-p - (v-minY)*(h-2*p)/(maxY-minY);
+  let g = `<rect x="0" y="0" width="${w}" height="${h}" fill="white"/>`;
+  for(let t=0;t<=4;t++) {
+    const yy=p+t*(h-2*p)/4;
+    g += `<line x1="${p}" y1="${yy}" x2="${w-p}" y2="${yy}" stroke="#e7edf7"/>`;
+  }
+  xs.forEach((label,i)=>{g+=`<text x="${x(i)}" y="${h-10}" text-anchor="middle" font-size="12" fill="#657085">${label}</text>`;});
+  series.forEach(s=>{
+    const pts=s.values.map((d,i)=>`${x(i)},${y(d.y)}`).join(' ');
+    g+=`<polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
+    s.values.forEach((d,i)=>{g+=`<circle cx="${x(i)}" cy="${y(d.y)}" r="5" fill="${s.color}"/>`;});
+  });
+  svg.innerHTML=g;
+}
+function svgBarChart(id, values, labelKey, valueKey, color="#0b3d91") {
+  const svg=document.getElementById(id); if(!svg) return;
+  const w=720,h=300,p=42; svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  const maxV=Math.max(...values.map(d=>d[valueKey]))*1.15 || 1;
+  const bw=(w-2*p)/values.length*0.65;
+  let g=`<rect x="0" y="0" width="${w}" height="${h}" fill="white"/>`;
+  values.forEach((d,i)=>{
+    const x=p+i*(w-2*p)/values.length+(w-2*p)/values.length*0.18;
+    const bh=(d[valueKey]/maxV)*(h-2*p);
+    const y=h-p-bh;
+    g+=`<rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="8" fill="${color}" opacity=".88"/>`;
+    g+=`<text x="${x+bw/2}" y="${y-7}" text-anchor="middle" font-size="12" fill="#172033" font-weight="700">${d[valueKey]}</text>`;
+    g+=`<text x="${x+bw/2}" y="${h-10}" text-anchor="middle" font-size="11" fill="#657085">${String(d[labelKey]).slice(0,13)}</text>`;
+  });
+  svg.innerHTML=g;
+}
+
+svgLineChart('chartAdmissions', [
+  {color:'#0b3d91', values: DATA.admissions.map(d=>({x:d.year,y:d.postulantes}))},
+  {color:'#b21f2d', values: DATA.admissions.map(d=>({x:d.year,y:d.matriculados}))}
+]);
+svgLineChart('chartProgress', [
+  {color:'#0f766e', values: DATA.progression.map(d=>({x:d.year,y:d.graduacion}))},
+  {color:'#a16207', values: DATA.progression.map(d=>({x:d.year,y:d.desercion}))}
+], {maxY:100});
+svgBarChart('chartProd', DATA.productivity, 'tipo', 'valor', '#0b3d91');
+</script>
+</body>
+</html>
