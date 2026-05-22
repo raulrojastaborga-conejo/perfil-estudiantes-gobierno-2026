@@ -25,7 +25,7 @@ body{margin:0;background:var(--facgob-bg);color:var(--facgob-text);font-family:"
 .panel{padding:18px}
 .panel h2{margin:0 0 10px;color:var(--facgob-navy);font-size:1.15rem}
 .panel p{margin:8px 0;color:var(--facgob-muted);line-height:1.45}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
 .step{border:1px solid var(--facgob-line);border-radius:14px;padding:12px;background:#fff}
 .step strong{display:block;color:var(--facgob-navy);font-size:.83rem;text-transform:uppercase;letter-spacing:.05em}
 .step span{font-size:.9rem;color:var(--facgob-muted)}
@@ -113,7 +113,8 @@ summary{cursor:pointer;font-weight:900;color:var(--facgob-navy)}
 .modalContent .period{min-width:210px}
 @media (max-width:760px){.modalBox{width:100vw;height:100vh;border-radius:0}.modalOverlay{padding:0}.modalContent .periodGrid{grid-template-columns:1fr}.fullBtn{width:100%}}
 
-  </style>
+  @media (max-width: 760px){.steps{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header class="hero">
