@@ -99,6 +99,20 @@ summary{cursor:pointer;font-weight:900;color:var(--facgob-navy)}
     .groupBoxTitle{font-size:.62rem;font-weight:900;color:var(--muted);text-transform:uppercase;text-align:center;margin:2px 0 6px;letter-spacing:.03em}
     @media (max-width:760px){.groupGrid{grid-template-columns:1fr}}
 
+  
+.fullBtn{border:1px solid var(--facgob-line);background:var(--facgob-navy);color:white;padding:10px 14px;border-radius:999px;font-weight:900;cursor:pointer;box-shadow:0 8px 18px rgba(14,42,66,.18)}
+.fullBtn:hover{filter:brightness(1.08)}
+.modalOverlay{position:fixed;inset:0;background:rgba(8,23,38,.78);z-index:9999;display:none;align-items:center;justify-content:center;padding:18px}
+.modalOverlay.open{display:flex}
+.modalBox{background:var(--facgob-bg);border-radius:22px;width:min(96vw,1500px);height:min(92vh,940px);box-shadow:0 30px 80px rgba(0,0,0,.35);display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(255,255,255,.18)}
+.modalTop{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;background:linear-gradient(135deg,var(--facgob-navy),var(--facgob-navy-2));color:white}
+.modalTop h2{margin:0;font-size:1.05rem}
+.closeBtn{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:white;padding:9px 13px;border-radius:999px;font-weight:900;cursor:pointer}
+.modalContent{padding:16px;overflow:auto}
+.modalContent .periodGrid{display:grid !important;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.modalContent .period{min-width:210px}
+@media (max-width:760px){.modalBox{width:100vw;height:100vh;border-radius:0}.modalOverlay{padding:0}.modalContent .periodGrid{grid-template-columns:1fr}.fullBtn{width:100%}}
+
   </style>
 </head>
 <body>
@@ -151,7 +165,10 @@ summary{cursor:pointer;font-weight:900;color:var(--facgob-navy)}
     <div class="card roadmap">
       <div class="roadmapHead">
         <div><h2 id="pathTitle">Ruta de continuidad</h2><div class="small" id="pathSchedule"></div></div>
-        <span class="tag" id="pathTag">AP → MGGP</span>
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
+          <button class="fullBtn" id="openFull" type="button">Ver en pantalla completa</button>
+          <span class="tag" id="pathTag">AP → MGGP</span>
+        </div>
       </div>
       <div class="pathNote" id="pathNote"></div>
       <div class="mobilePeriods"><select id="periodSelect" aria-label="Seleccionar periodo"></select></div>
@@ -190,6 +207,20 @@ summary{cursor:pointer;font-weight:900;color:var(--facgob-navy)}
   <b>Visualizador de continuidad elaborado por la Secretaría de Estudios de la Facultad de Gobierno de la Universidad de Chile</b><br>
   Para fines informativos y de apoyo a la gestión académica. Para efectos oficiales prevalecen los reglamentos, resoluciones, actos administrativos y programación académica vigente. © Universidad de Chile.
 </footer>
+
+<div class="modalOverlay" id="fullModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modalBox">
+    <div class="modalTop">
+      <h2 id="modalTitle">Ruta de continuidad</h2>
+      <button class="closeBtn" id="closeFull" type="button">Cerrar</button>
+    </div>
+    <div class="modalContent">
+      <div class="pathNote" id="modalNote"></div>
+      <div class="periodGrid" id="modalGrid"></div>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA = {"AP_MGGP": {"career": "Administración Pública", "program": "MGGP", "title": "Administración Pública → Magíster en Gobierno y Gerencia Pública", "note": "Los Electivos MGGP son actividades del magíster cursadas anticipadamente por continuidad, aunque se cursen durante el tramo final de pregrado.", "schedule": "Según programación del programa.", "periods": [{"label": "IX semestre con continuidad", "pregrado": ["Evaluación de Proyectos Sociales", "Dirección y Ética Pública", "CFG"], "magister": [], "magisterGroups": [{"title": "Trimestre 1", "items": ["Electivo MGGP 1", "Electivo MGGP 2", "Electivo MGGP 3", "Electivo MGGP 4"]}, {"title": "Trimestre 2", "items": ["Electivo MGGP 5", "Electivo MGGP 6", "Electivo MGGP 7", "Electivo MGGP 8"]}]}, {"label": "X semestre con continuidad", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Innovación en la Gestión Pública"]}, {"label": "XI semestre con continuidad", "pregrado": [], "magister": ["Seminario de Grado Introductorio", "Seminario de Grado Temático"]}, {"label": "XII semestre con continuidad", "pregrado": [], "magister": ["Trabajo de Graduación"]}]}, "CIPOL_MGGP": {"career": "Ciencia Política", "program": "MGGP", "title": "Ciencia Política → Magíster en Gobierno y Gerencia Pública", "note": "Distingue actividades terminales de Ciencia Política y actividades del MGGP cursadas por continuidad.", "schedule": "Según programación del programa.", "periods": [{"label": "IX semestre con continuidad", "pregrado": ["Investigación Aplicada", "Práctica Profesional"], "magister": [], "magisterGroups": [{"title": "Trimestre 1", "items": ["Electivo 1 trimestral", "Electivo 2 trimestral", "Electivo 3 trimestral", "Electivo 4 trimestral"]}, {"title": "Trimestre 2", "items": ["Electivo 5 trimestral", "Electivo 6 trimestral", "Electivo 7 trimestral", "Electivo 8 trimestral"]}]}, {"label": "X semestre con continuidad", "pregrado": ["Examen de Título"], "magister": ["Innovación en la Gestión Pública", "Desarrollo de Habilidades Directivas", "Economía del Sector Público"]}, {"label": "XI semestre con continuidad", "pregrado": [], "magister": ["Seminario de Grado Preparatorio trimestral", "Seminario de Grado Temático trimestral"]}, {"label": "XII semestre con continuidad", "pregrado": [], "magister": ["Trabajo de Campo trimestral", "Gestión Estratégica del Sector Público trimestral", "Presupuesto y Finanzas Públicas trimestral", "Taller de Finalización trimestral", "Innovación en la Gestión Pública o Desarrollo de Habilidades Directivas trimestral"]}]}, "AP_MCP": {"career": "Administración Pública", "program": "MCP", "title": "Administración Pública → Magíster en Ciencia Política", "note": "Las actividades azules corresponden al MCP y las verdes al tramo final de Administración Pública.", "schedule": "Según programación del programa.", "periods": [{"label": "IX semestre con continuidad", "pregrado": ["Evaluación de Proyectos Sociales", "Dirección y Ética Pública", "CFG"], "magister": ["Política Comparada", "Teoría Política Clásica y Moderna", "Teoría de la Democracia", "Economía Política"]}, {"label": "X semestre con continuidad", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Sistema Político", "Teoría Política Contemporánea"]}, {"label": "XI semestre con continuidad", "pregrado": [], "magister": ["Seminario de Tesis I", "Electivo 1"]}, {"label": "XII semestre con continuidad", "pregrado": [], "magister": ["Seminario de Tesis II", "Electivo 2"]}]}, "CIPOL_MCP": {"career": "Ciencia Política", "program": "MCP", "title": "Ciencia Política → Magíster en Ciencia Política", "note": "El estudiante cursa actividades del MCP en paralelo al tramo terminal de Ciencia Política.", "schedule": "Según programación del programa.", "periods": [{"label": "IX semestre con continuidad", "pregrado": ["Investigación Aplicada"], "magister": ["Electivo I de postgrado", "Electivo II de postgrado", "Electivo III de postgrado"]}, {"label": "X semestre con continuidad", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Electivo IV de postgrado"]}, {"label": "XI semestre con continuidad", "pregrado": [], "magister": ["Seminario de Tesis I"]}, {"label": "XII semestre con continuidad", "pregrado": [], "magister": ["Seminario de Tesis II"]}]}, "AP_MCGSC": {"career": "Administración Pública", "program": "MCGSC", "title": "Administración Pública → Magíster en Criminología y Gestión de la Seguridad Ciudadana", "note": "El MCGSC se organiza por trimestres; parte de esos trimestres se superpone con los semestres finales de pregrado.", "schedule": "Régimen trimestral.", "periods": [{"label": "I semestre pregrado / I trimestre MCGSC", "pregrado": ["Dirección y Ética Pública", "Evaluación de Proyectos Sociales"], "magister": ["Teorías Criminológicas", "P.P. y Gobernanza de la Seguridad", "P.P. de Prevención y Gestión Local"]}, {"label": "Entre semestres / II trimestre MCGSC", "pregrado": [], "magister": ["Victimología, violencia y DD.HH.", "Institución Policial: Modelos, P.P. y Gestión"], "pregradoGroups": [{"title": "Cierre IX semestre", "items": ["Dirección y Ética Pública", "Evaluación de Proyectos Sociales"]}, {"title": "Inicio X semestre", "items": ["Práctica Profesional"]}]}, {"label": "II semestre pregrado / III trimestre MCGSC", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Política Criminal y Gestión Penal", "Métodos de Investigación II"]}, {"label": "Segundo año / IV trimestre", "pregrado": [], "magister": ["Política Penitenciaria y Reinserción Social", "Seminario de Actividad Formativa Equivalente I / Preparación del Proyecto"]}, {"label": "Segundo año / V trimestre", "pregrado": [], "magister": ["Seminario de Actividad Formativa Equivalente II / Ejecución del Proyecto", "Curso Electivo II", "Taller Electivo I", "Taller Electivo II"]}, {"label": "Segundo año / VI trimestre", "pregrado": [], "magister": ["Informe final de Actividad Formativa Equivalente / Examen de Defensa"]}]}, "CIPOL_MCGSC": {"career": "Ciencia Política", "program": "MCGSC", "title": "Ciencia Política → Magíster en Criminología y Gestión de la Seguridad Ciudadana", "note": "El MCGSC se organiza por trimestres; el calendario se muestra como superposición con el tramo final de Ciencia Política.", "schedule": "Régimen trimestral.", "periods": [{"label": "I semestre pregrado / I trimestre MCGSC", "pregrado": ["Investigación Aplicada"], "magister": ["Teorías Criminológicas", "P.P. y Gobernanza de la Seguridad", "P.P. de Prevención y Gestión Local"]}, {"label": "Entre semestres / II trimestre MCGSC", "pregrado": [], "magister": ["Victimología, violencia y DD.HH.", "Institución Policial: Modelos, Políticas y Gestión"], "pregradoGroups": [{"title": "Cierre IX semestre", "items": ["Investigación Aplicada"]}, {"title": "Inicio X semestre", "items": ["Práctica Profesional"]}]}, {"label": "II semestre pregrado / III trimestre MCGSC", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Política Criminal y Gestión Penal", "Métodos de Investigación II"]}, {"label": "Segundo año / IV trimestre", "pregrado": [], "magister": ["Política Penitenciaria y Reinserción Social", "Herramientas de Gestión y Evaluación de Programas", "Seminario de Actividad Formativa Equivalente I / Preparación del Proyecto"]}, {"label": "Segundo año / V trimestre", "pregrado": [], "magister": ["Seminario de Actividad Formativa Equivalente II / Ejecución del Proyecto", "Curso Electivo II", "Taller Electivo II"]}, {"label": "Segundo año / VI trimestre", "pregrado": [], "magister": ["Informe final de Actividad Formativa Equivalente / Examen de Defensa"]}]}, "AP_MAGDEL": {"career": "Administración Pública", "program": "MAGDEL", "title": "Administración Pública → Magíster en Gestión y Desarrollo Regional y Local", "note": "MAGDEL se presenta en dos años de continuidad con clases viernes y sábado de 09:00 a 13:15 hrs, según la malla entregada.", "schedule": "Viernes y sábados 09:00 a 13:15 hrs.", "periods": [{"label": "Primer año / I trimestre", "pregrado": ["Evaluación de Proyectos Sociales", "Dirección y Ética Pública"], "magister": ["Planificación Regional y Local", "Electivo I", "Electivo II"]}, {"label": "Primer año / II trimestre", "pregrado": ["Evaluación de Proyectos Sociales", "Dirección y Ética Pública"], "magister": ["Economía Regional y Local", "Finanzas Subnacionales"]}, {"label": "Primer año / III trimestre", "pregrado": ["Práctica Profesional"], "magister": ["Desarrollo Regional y Local"]}, {"label": "Primer año / IV trimestre", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Descentralización y Desarrollo"]}, {"label": "Segundo año / V trimestre", "pregrado": [], "magister": ["Electivo III"]}, {"label": "Segundo año / VI trimestre", "pregrado": [], "magister": ["Seminario de Graduación I", "Gestión de Servicios Locales"]}, {"label": "Segundo año / VII trimestre", "pregrado": [], "magister": ["Seminario de Graduación II", "Gestión Ambiental"]}, {"label": "Segundo año / VIII trimestre", "pregrado": [], "magister": ["Taller de Finalización"]}]}, "CIPOL_MAGDEL": {"career": "Ciencia Política", "program": "MAGDEL", "title": "Ciencia Política → Magíster en Gestión y Desarrollo Regional y Local", "note": "MAGDEL se presenta en dos años de continuidad con clases viernes y sábado de 09:00 a 13:15 hrs, según la malla entregada.", "schedule": "Viernes y sábados 09:00 a 13:15 hrs.", "periods": [{"label": "Primer año / I trimestre", "pregrado": ["Investigación Aplicada"], "magister": ["Introducción a la Gestión Pública", "Planificación Regional y Local", "Electivo I", "Electivo II"]}, {"label": "Primer año / II trimestre", "pregrado": ["Investigación Aplicada"], "magister": ["Economía Regional y Local", "Finanzas Subnacionales"]}, {"label": "Primer año / III trimestre", "pregrado": ["Práctica Profesional"], "magister": ["Desarrollo Regional y Local"]}, {"label": "Primer año / IV trimestre", "pregrado": ["Práctica Profesional", "Examen de Título"], "magister": ["Descentralización y Desarrollo"]}, {"label": "Segundo año / V trimestre", "pregrado": [], "magister": ["Electivo III", "Evaluación de Proyectos"]}, {"label": "Segundo año / VI trimestre", "pregrado": [], "magister": ["Seminario de Graduación I", "Gestión de Servicios Locales"]}, {"label": "Segundo año / VII trimestre", "pregrado": [], "magister": ["Seminario de Graduación II", "Gestión Ambiental"]}, {"label": "Segundo año / VIII trimestre", "pregrado": [], "magister": ["Taller de Finalización"]}]}};
 let currentCareer = 'AP';
@@ -210,6 +241,14 @@ function render(){
   const periods = window.matchMedia('(max-width: 900px)').matches ? [data.periods[mobileIndex]] : data.periods;
   grid.innerHTML = periods.map(period => periodHTML(period)).join('');
 }
+function renderModal(){
+  const data = DATA[getKey()];
+  const title = `${data.title}`;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalNote').textContent = data.note;
+  document.getElementById('modalGrid').innerHTML = data.periods.map(period => periodHTML(period)).join('');
+}
+
 function periodHTML(period){
   const pre = renderLane(period.pregrado, 'pre', period.pregradoGroups);
   const mag = renderLane(period.magister, 'mag', period.magisterGroups);
@@ -232,6 +271,19 @@ document.querySelectorAll('[data-program]').forEach(btn=>btn.addEventListener('c
 }));
 document.getElementById('periodSelect').addEventListener('change', e=>{mobileIndex = parseInt(e.target.value,10)||0; render();});
 window.addEventListener('resize', render);
+document.getElementById('openFull').addEventListener('click', ()=>{
+  renderModal();
+  document.getElementById('fullModal').classList.add('open');
+});
+document.getElementById('closeFull').addEventListener('click', ()=>{
+  document.getElementById('fullModal').classList.remove('open');
+});
+document.getElementById('fullModal').addEventListener('click', (e)=>{
+  if(e.target.id === 'fullModal') document.getElementById('fullModal').classList.remove('open');
+});
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape') document.getElementById('fullModal').classList.remove('open');
+});
 render();
 </script>
 </body>
