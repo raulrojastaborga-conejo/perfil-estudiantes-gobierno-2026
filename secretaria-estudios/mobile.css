@@ -1,0 +1,90 @@
+/* Ajustes móviles complementarios para Secretaría de Estudios */
+
+@media (max-width: 850px) {
+  header {
+    padding: 24px 16px 46px;
+  }
+
+  header p {
+    font-size: 0.98rem;
+  }
+
+  .wrap {
+    padding: 22px 12px 44px;
+  }
+
+  .hero-grid {
+    margin-top: -52px;
+  }
+
+  .tab-labels {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-labels label {
+    flex: 0 0 auto;
+    min-width: 150px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.92rem;
+  }
+
+  .panel,
+  .tabs[style] {
+    padding: 18px !important;
+  }
+
+  .metric-card,
+  .small-card,
+  .profile {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    min-width: 160px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+  }
+
+  .close {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-placeholder {
+    width: 100%;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
