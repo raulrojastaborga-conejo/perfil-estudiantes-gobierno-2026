@@ -25,6 +25,10 @@ function slugify(filePath) {
     .join('/');
 }
 
+function normalizeTarget(target) {
+  return slugify(target.replace(/\.md$/i, '').replace(/^wiki\//, ''));
+}
+
 function escapeHtml(text) {
   return text
     .replace(/&/g, '&amp;')
@@ -32,22 +36,46 @@ function escapeHtml(text) {
     .replace(/>/g, '&gt;');
 }
 
-function convertObsidianLinks(text) {
+function stripFrontmatter(text) {
+  return text.replace(/^---[\s\S]*?---\s*/, '');
+}
+
+function extractTitle(markdown, fallback) {
+  return markdown.match(/^#\s+(.+)$/m)?.[1] || fallback;
+}
+
+function extractObsidianLinks(markdown) {
+  const links = [];
+  const re = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
+  let match;
+
+  while ((match = re.exec(markdown)) !== null) {
+    links.push(normalizeTarget(match[1]));
+  }
+
+  return links;
+}
+
+function convertObsidianLinks(text, currentSlug = '') {
   return text.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, target, label) => {
     const cleanTarget = target.replace(/\.md$/i, '');
-    const href = `${slugify(cleanTarget)}.html`;
+    const targetSlug = normalizeTarget(cleanTarget);
+    const href = relativeHref(currentSlug, targetSlug);
     const linkText = label || cleanTarget.split('/').pop();
     return `<a href="${href}">${escapeHtml(linkText)}</a>`;
   });
 }
 
-function stripFrontmatter(text) {
-  return text.replace(/^---[\s\S]*?---\s*/, '');
+function relativeHref(fromSlug, toSlug) {
+  const fromDir = path.posix.dirname(fromSlug);
+  let href = path.posix.relative(fromDir === '.' ? '' : fromDir, `${toSlug}.html`);
+  if (!href.startsWith('.')) href = `./${href}`;
+  return href;
 }
 
-function markdownToHtml(markdown) {
+function markdownToHtml(markdown, currentSlug) {
   let text = stripFrontmatter(markdown);
-  text = convertObsidianLinks(text);
+  text = convertObsidianLinks(text, currentSlug);
 
   const lines = text.split(/\r?\n/);
   let html = '';
@@ -89,6 +117,25 @@ function markdownToHtml(markdown) {
   return html;
 }
 
+function backlinksHtml(currentSlug, backlinks, pages) {
+  const incoming = backlinks.get(currentSlug) || [];
+  if (incoming.length === 0) return '';
+
+  const items = incoming
+    .sort((a, b) => pages.get(a).title.localeCompare(pages.get(b).title, 'es'))
+    .map(sourceSlug => {
+      const source = pages.get(sourceSlug);
+      return `<li><a href="${relativeHref(currentSlug, sourceSlug)}">${escapeHtml(source.title)}</a></li>`;
+    })
+    .join('\n');
+
+  return `
+      <h2>Mencionada en</h2>
+      <ul>
+        ${items}
+      </ul>`;
+}
+
 function walk(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   const files = [];
@@ -102,14 +149,24 @@ function walk(dir) {
   return files;
 }
 
-function pageTemplate(title, body) {
+function stylesheetHref(currentSlug) {
+  const depth = currentSlug.split('/').length;
+  return `${'../'.repeat(depth)}${SITE_ROOT}/styles.css`.replace(/\/\.\//g, '');
+}
+
+function wikiHomeHref(currentSlug) {
+  const depth = currentSlug.split('/').length;
+  return `${'../'.repeat(depth)}../../wiki-reglamentos.html`;
+}
+
+function pageTemplate(title, body, currentSlug, backlinksBlock) {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${title} — Wiki normativa</title>
-  <link rel="stylesheet" href="${SITE_ROOT}/styles.css" />
+  <title>${escapeHtml(title)} — Wiki normativa</title>
+  <link rel="stylesheet" href="${stylesheetHref(currentSlug)}" />
 </head>
 <body>
   <header>
@@ -117,14 +174,15 @@ function pageTemplate(title, body) {
       <div class="logo-placeholder">Universidad de Chile</div>
       <div class="logo-placeholder">Facultad de Gobierno</div>
     </div>
-    <h1>${title}</h1>
+    <h1>${escapeHtml(title)}</h1>
     <p>Wiki normativa de Secretaría de Estudios.</p>
   </header>
 
   <main class="wrap">
     <section class="tabs" style="padding:28px;">
-      <p><a class="btn" href="../../wiki-reglamentos.html">Volver a Wiki de Reglamentos</a></p>
+      <p><a class="btn" href="${wikiHomeHref(currentSlug)}">Volver a Wiki de Reglamentos</a></p>
       ${body}
+      ${backlinksBlock}
       <div class="notice"><strong>Nota:</strong> página generada desde markdown Obsidian. Revisar fuente normativa antes de usar en decisiones formales.</div>
     </section>
   </main>
@@ -132,24 +190,49 @@ function pageTemplate(title, body) {
 </html>`;
 }
 
+function buildBacklinks(pages) {
+  const backlinks = new Map();
+
+  for (const [sourceSlug, page] of pages) {
+    for (const targetSlug of page.links) {
+      if (!backlinks.has(targetSlug)) backlinks.set(targetSlug, []);
+      if (!backlinks.get(targetSlug).includes(sourceSlug)) {
+        backlinks.get(targetSlug).push(sourceSlug);
+      }
+    }
+  }
+
+  return backlinks;
+}
+
 function build() {
   ensureDir(OUT_DIR);
 
   const files = walk(SOURCE_DIR);
+  const pages = new Map();
 
   for (const file of files) {
     const relative = path.relative(SOURCE_DIR, file).replace(/\\/g, '/');
-    const outputRelative = `${slugify(relative)}.html`;
-    const outputPath = path.join(OUT_DIR, outputRelative);
+    const slug = slugify(relative);
+    const markdown = fs.readFileSync(file, 'utf8');
+    const title = extractTitle(markdown, path.basename(relative, '.md'));
+    const links = extractObsidianLinks(markdown);
+    pages.set(slug, { file, relative, slug, markdown, title, links });
+  }
+
+  const backlinks = buildBacklinks(pages);
+
+  for (const page of pages.values()) {
+    const outputPath = path.join(OUT_DIR, `${page.slug}.html`);
     ensureDir(path.dirname(outputPath));
 
-    const markdown = fs.readFileSync(file, 'utf8');
-    const firstHeading = markdown.match(/^#\s+(.+)$/m)?.[1] || path.basename(relative, '.md');
-    const html = markdownToHtml(markdown);
-    fs.writeFileSync(outputPath, pageTemplate(firstHeading, html), 'utf8');
+    const html = markdownToHtml(page.markdown, page.slug);
+    const backlinksBlock = backlinksHtml(page.slug, backlinks, pages);
+    fs.writeFileSync(outputPath, pageTemplate(page.title, html, page.slug, backlinksBlock), 'utf8');
   }
 
   console.log(`Wiki generada: ${files.length} páginas HTML en ${OUT_DIR}`);
+  console.log(`Backlinks calculados para ${backlinks.size} páginas referenciadas.`);
 }
 
 build();
