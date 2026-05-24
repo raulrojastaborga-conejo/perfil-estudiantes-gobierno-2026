@@ -50,14 +50,24 @@
   }
 
   table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: table;
+    width: max-content;
+    min-width: 100%;
+    white-space: normal;
   }
 
   th,
   td {
-    min-width: 160px;
+    min-width: 180px;
+    max-width: 260px;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .quick-section div[style*="overflow-x:auto"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   .modal-header {
