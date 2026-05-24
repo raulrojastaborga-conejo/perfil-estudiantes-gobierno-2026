@@ -1,8 +1,10 @@
 [
+  {"title":"Índice de trámites","url":"indice-tramites.html","tags":"indice tramites mapa rapido solicitudes certificados toma de ramos tui tne reconocimiento transferencias admision especial licenciatura bachiller titulo postgrado calendario derivaciones"},
   {"title":"Admisión especial Pregrado","url":"pregrado-admision-especial.html","tags":"admision especial transferencia externa ingreso especial titulo profesional postulacion cupos paes secretaria estudios escuela pregrado"},
   {"title":"Transferencia externa","url":"pregrado-admision-especial.html","tags":"transferencia externa universidad chilena extranjera acreditada ingreso especial septiembre octubre cupos administracion publica ciencia politica"},
   {"title":"Ingreso especial con título profesional","url":"pregrado-admision-especial.html","tags":"titulo profesional grado academico ingreso especial admision especial certificado titulo notas curriculum carta decano"},
-  {"title":"Rutas por perfil de estudiante","url":"perfiles.html","tags":"perfil estudiante soy estudiante rutas mechon toma de ramos causal titulación postgrado etapa situacion academica"},
+  {"title":"Rutas por perfil de estudiante","url":"perfiles.html","tags":"perfil estudiante soy estudiante rutas mechon toma de ramos causal titulación postgrado etapa situacion academica admision especial postulante"},
+  {"title":"Ruta postulante por admisión especial","url":"pregrado-admision-especial.html","tags":"postulante admision especial transferencia externa titulo profesional ingreso especial pregrado"},
   {"title":"Ruta estudiante nuevo o mechon","url":"perfiles.html","tags":"mechon mechona primer año estudiante nuevo bienvenida induccion ruta perfil pregrado"},
   {"title":"Ruta estudiante en toma de ramos","url":"perfiles.html","tags":"toma de ramos inscripcion academica modifica prioridades ruta perfil pregrado"},
   {"title":"Ruta estudiante en causal o riesgo de atraso","url":"perfiles.html","tags":"causal eliminacion permanencia atraso curricular ruta perfil pregrado"},
