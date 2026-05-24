@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 190" role="img" aria-label="Facultad de Gobierno Universidad de Chile">
+  <rect width="620" height="190" fill="none"/>
+  <g fill="none" stroke="#003c71" stroke-width="5" stroke-linecap="round">
+    <path d="M72 8v52M46 18l52 32M98 18L46 50M34 36h76M42 8l60 52M102 8L42 60" opacity=".9"/>
+    <rect x="8" y="72" width="128" height="108" rx="3"/>
+    <path d="M72 72v108M8 126h128"/>
+    <path d="M35 92v25M24 117h22M35 92l-18 29M35 92l18 29"/>
+    <path d="M100 90c-12 12-5 25 7 29M96 100c13 9 7 25-4 32"/>
+    <circle cx="74" cy="127" r="16"/>
+    <path d="M31 154l-13 23h35l-12-23M104 153v24M92 177h28M94 158h20"/>
+  </g>
+  <text x="170" y="85" font-family="Georgia, 'Times New Roman', serif" font-size="43" letter-spacing="7" fill="#003c71">FACULTAD DE</text>
+  <text x="170" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="57" letter-spacing="3" font-weight="700" fill="#003c71">GOBIERNO</text>
+  <rect x="172" y="154" width="330" height="26" rx="4" fill="#003c71"/>
+  <text x="188" y="174" font-family="Georgia, 'Times New Roman', serif" font-size="18" letter-spacing="3" fill="#fff">UNIVERSIDAD DE CHILE</text>
+</svg>
