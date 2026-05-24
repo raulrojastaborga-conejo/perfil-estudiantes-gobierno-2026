@@ -1,10 +1,13 @@
 [
-  {"title":"Índice de trámites","url":"indice-tramites.html","tags":"indice tramites mapa rapido solicitudes certificados toma de ramos tui tne reconocimiento transferencias admision especial licenciatura bachiller titulo postgrado calendario derivaciones"},
+  {"title":"Postítulo y Educación Continua","url":"postitulo-educacion-continua.html","tags":"postitulo educacion continua diploma curso alumnos cuenta uchile pasaporte certificados ucampus no tui no tne no grado no titulo"},
+  {"title":"Cuenta UChile y Pasaporte","url":"cuenta-uchile-pasaporte.html","tags":"cuenta uchile pasaporte acceso clave sistemas institucionales postitulo educacion continua diploma duplicidad ucampus"},
+  {"title":"Índice de trámites","url":"indice-tramites.html","tags":"indice tramites mapa rapido solicitudes certificados toma de ramos tui tne reconocimiento transferencias admision especial licenciatura bachiller titulo postgrado calendario derivaciones postitulo educacion continua"},
   {"title":"Admisión especial Pregrado","url":"pregrado-admision-especial.html","tags":"admision especial transferencia externa ingreso especial titulo profesional postulacion cupos paes secretaria estudios escuela pregrado"},
   {"title":"Transferencia externa","url":"pregrado-admision-especial.html","tags":"transferencia externa universidad chilena extranjera acreditada ingreso especial septiembre octubre cupos administracion publica ciencia politica"},
   {"title":"Ingreso especial con título profesional","url":"pregrado-admision-especial.html","tags":"titulo profesional grado academico ingreso especial admision especial certificado titulo notas curriculum carta decano"},
-  {"title":"Rutas por perfil de estudiante","url":"perfiles.html","tags":"perfil estudiante soy estudiante rutas mechon toma de ramos causal titulación postgrado etapa situacion academica admision especial postulante"},
+  {"title":"Rutas por perfil de estudiante","url":"perfiles.html","tags":"perfil estudiante alumno rutas mechon toma de ramos causal titulación postgrado postitulo educacion continua diploma etapa situacion academica admision especial postulante"},
   {"title":"Ruta postulante por admisión especial","url":"pregrado-admision-especial.html","tags":"postulante admision especial transferencia externa titulo profesional ingreso especial pregrado"},
+  {"title":"Ruta postítulo y educación continua","url":"postitulo-educacion-continua.html","tags":"postitulo educacion continua alumno diploma curso cuenta uchile pasaporte certificados ucampus no matricula no tui no tne"},
   {"title":"Ruta estudiante nuevo o mechon","url":"perfiles.html","tags":"mechon mechona primer año estudiante nuevo bienvenida induccion ruta perfil pregrado"},
   {"title":"Ruta estudiante en toma de ramos","url":"perfiles.html","tags":"toma de ramos inscripcion academica modifica prioridades ruta perfil pregrado"},
   {"title":"Ruta estudiante en causal o riesgo de atraso","url":"perfiles.html","tags":"causal eliminacion permanencia atraso curricular ruta perfil pregrado"},
@@ -47,6 +50,5 @@
   {"title":"Derivacion guiada","url":"derivacion-guiada.html","tags":"derivacion guia no se donde consultar unidad tramite consulta"},
   {"title":"Avisos","url":"avisos.html","tags":"avisos noticias novedades recordatorios comunicaciones plazos"},
   {"title":"FAQ interactivo","url":"faq-interactivo.html","tags":"faq preguntas frecuentes dudas orientacion estudiantes"},
-  {"title":"Cuenta UChile y Pasaporte","url":"cuenta-uchile-pasaporte.html","tags":"cuenta uchile pasaporte acceso clave sistemas institucionales"},
   {"title":"Wiki publica","url":"wiki.html","tags":"wiki orientacion informacion secretaria estudios"}
 ]
