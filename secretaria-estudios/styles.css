@@ -1,399 +1,64 @@
-:root {
-  --uchile-blue: #002f6c;
-  --uchile-red: #d52b1e;
-  --facgob-dark: #1f2937;
-  --facgob-gold: #c79a3b;
-  --soft-blue: #eef4fb;
-  --soft-red: #fff1ef;
-  --soft-gray: #f3f4f6;
-  --text: #1f2933;
-  --muted: #5f6b7a;
-  --card: #ffffff;
-  --border: #d6dbe3;
+:root{
+--uchile-blue:#003c71;
+--uchile-blue-dark:#00264a;
+--uchile-red:#d52b1e;
+--soft-blue:#e8f1f8;
+--soft-red:#fff0ee;
+--soft-gray:#f6f6f6;
+--text:#222;
+--muted:#555;
+--card:#fff;
+--border:#d0d0d0;
 }
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-body::before {
-  content: "Universidad de Chile · Facultad de Gobierno";
-  display: block;
-  background: #111827;
-  color: #ffffff;
-  font-size: .82rem;
-  font-weight: 700;
-  letter-spacing: .02em;
-  padding: 8px 24px;
-  text-align: center;
-}
-
-header {
-  background: linear-gradient(90deg, var(--uchile-blue) 0%, #064a8f 70%, var(--uchile-red) 70%, var(--uchile-red) 100%);
-  color: white;
-  padding: 28px 24px 52px;
-  text-align: center;
-  border-bottom: 6px solid var(--facgob-gold);
-}
-
-.brand {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
-.logo-placeholder {
-  border: 1px solid rgba(255,255,255,.55);
-  border-radius: 0;
-  padding: 9px 14px;
-  color: #ffffff;
-  font-weight: 800;
-  font-size: .86rem;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  background: rgba(0,0,0,.18);
-}
-
-header h1 {
-  margin: 0 0 10px;
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  letter-spacing: -.02em;
-  font-weight: 800;
-}
-
-header p {
-  margin: 0 auto;
-  max-width: 880px;
-  color: #eef4fb;
-  font-size: 1.05rem;
-}
-
-.wrap {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 28px 18px 56px;
-}
-
-.hero-grid,
-.cards3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.hero-grid { margin-top: -58px; }
-
-.cards2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.metric-card,
-.small-card,
-.profile {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 20px;
-  box-shadow: 0 8px 18px rgba(17,24,39,.08);
-}
-
-.metric-card {
-  border-top: 5px solid var(--uchile-red);
-}
-
-.metric-card h3,
-.small-card h3 {
-  margin: 0 0 8px;
-  color: var(--uchile-blue);
-  font-size: .92rem;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-.metric-card .big {
-  font-size: 1.55rem;
-  font-weight: 800;
-  color: #111827;
-}
-
-.metric-card p,
-.small-card p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: .95rem;
-}
-
-.tabs {
-  margin-top: 28px;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(17,24,39,.07);
-}
-
-input[type=radio] { display: none; }
-
-.tab-labels {
-  display: flex;
-  flex-wrap: wrap;
-  background: #e8edf3;
-  border-bottom: 1px solid var(--border);
-}
-
-.tab-labels label {
-  cursor: pointer;
-  padding: 15px 18px;
-  font-weight: 800;
-  color: #334155;
-  border-right: 1px solid var(--border);
-  transition: .2s;
-}
-
-.tab-labels label:hover {
-  background: #ffffff;
-  color: var(--uchile-blue);
-}
-
-#tab1:checked ~ .tab-labels label[for=tab1],
-#tab2:checked ~ .tab-labels label[for=tab2],
-#tab3:checked ~ .tab-labels label[for=tab3],
-#tab4:checked ~ .tab-labels label[for=tab4],
-#tab5:checked ~ .tab-labels label[for=tab5],
-#tab6:checked ~ .tab-labels label[for=tab6],
-#tab7:checked ~ .tab-labels label[for=tab7] {
-  background: white;
-  color: var(--uchile-blue);
-  box-shadow: inset 0 -4px 0 var(--uchile-red);
-}
-
-.panel {
-  display: none;
-  padding: 28px;
-}
-
-#tab1:checked ~ .panels #panel1,
-#tab2:checked ~ .panels #panel2,
-#tab3:checked ~ .panels #panel3,
-#tab4:checked ~ .panels #panel4,
-#tab5:checked ~ .panels #panel5,
-#tab6:checked ~ .panels #panel6,
-#tab7:checked ~ .panels #panel7 {
-  display: block;
-}
-
-h2 {
-  margin-top: 0;
-  color: var(--uchile-blue);
-  font-size: 1.65rem;
-  border-left: 6px solid var(--uchile-red);
-  padding-left: 10px;
-}
-
-.lead {
-  font-size: 1.08rem;
-  color: #344054;
-  max-width: 920px;
-}
-
-.cards3 { margin-top: 20px; }
-
-.tag {
-  display: inline-block;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 6px 10px;
-  margin: 4px 5px 4px 0;
-  font-size: .9rem;
-  font-weight: 700;
-  color: #344054;
-}
-
-.blue { background: var(--soft-blue); }
-.red { background: var(--soft-red); }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 18px;
-  border-radius: 3px;
-  overflow: hidden;
-  font-size: .96rem;
-  border: 1px solid var(--border);
-}
-
-th, td {
-  padding: 12px 10px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background: var(--uchile-blue);
-  color: white;
-}
-
-tr:nth-child(even) td { background: #f8fafc; }
-
-.notice {
-  margin-top: 22px;
-  padding: 18px 20px;
-  background: #fff8e6;
-  border: 1px solid #d7b15c;
-  border-left: 6px solid var(--facgob-gold);
-  border-radius: 3px;
-  color: #4b3b0b;
-}
-
-.danger {
-  margin-top: 16px;
-  padding: 16px 18px;
-  background: #fff1ef;
-  border: 1px solid #efb0aa;
-  border-left: 6px solid var(--uchile-red);
-  border-radius: 3px;
-  color: #7a1f1f;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 15px;
-  border-radius: 3px;
-  background: var(--uchile-blue);
-  color: white;
-  text-decoration: none;
-  font-weight: 800;
-  border-bottom: 3px solid #001f47;
-}
-
-.btn:hover { background: #064a8f; }
-.btn.alt { background: var(--uchile-red); border-bottom-color: #9f1f15; }
-
-details {
-  margin-top: 12px;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  background: white;
-  overflow: hidden;
-}
-
-summary {
-  cursor: pointer;
-  padding: 15px 18px;
-  font-weight: 800;
-  color: var(--uchile-blue);
-  background: #f3f4f6;
-}
-
-details[open] summary {
-  border-bottom: 1px solid var(--border);
-  box-shadow: inset 0 -3px 0 var(--uchile-red);
-}
-
-.details-body { padding: 18px; }
-
-.timeline,
-.flow {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 14px;
-}
-
-.period,
-.step {
-  border: 1px solid var(--border);
-  border-top: 4px solid var(--uchile-blue);
-  border-radius: 3px;
-  padding: 16px;
-  background: var(--soft-blue);
-}
-
-.period strong,
-.step strong {
-  display: block;
-  color: var(--uchile-blue);
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: rgba(0, 25, 48, .72);
-  padding: 28px;
-  overflow: auto;
-}
-
-.modal:target { display: block; }
-
-.modal-card {
-  max-width: 1050px;
-  margin: 40px auto;
-  background: white;
-  border-radius: 3px;
-  padding: 28px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.25);
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.close {
-  text-decoration: none;
-  background: var(--uchile-red);
-  color: white;
-  padding: 10px 14px;
-  border-radius: 3px;
-  font-weight: 800;
-}
-
-footer {
-  color: #ffffff;
-  text-align: center;
-  font-size: .88rem;
-  margin-top: 30px;
-  background: #111827;
-  padding: 18px;
-  border-top: 5px solid var(--uchile-red);
-}
-
-@media (max-width: 850px) {
-  .hero-grid,
-  .cards3,
-  .cards2,
-  .timeline,
-  .flow {
-    grid-template-columns: 1fr;
-  }
-
-  .tab-labels label {
-    flex: 1 1 50%;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .panel { padding: 20px; }
-
-  .modal { padding: 10px; }
-  .modal-card { margin: 20px auto; padding: 20px; }
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--text);line-height:1.55}
+body::before{content:"Universidad de Chile | Facultad de Gobierno";display:block;background:#222;color:#fff;font-size:.82rem;font-weight:700;padding:9px 24px;text-align:left}
+header{background:#fff;color:var(--text);padding:0;text-align:left;border-bottom:1px solid var(--border)}
+header::before{content:"";display:block;height:12px;background:linear-gradient(90deg,var(--uchile-blue) 0%,var(--uchile-blue) 72%,var(--uchile-red) 72%,var(--uchile-red) 100%)}
+.brand{display:flex;justify-content:flex-start;gap:6px;flex-wrap:wrap;padding:18px 24px 0;max-width:1180px;margin:0 auto}
+.logo-placeholder{border:none;border-radius:0;padding:8px 12px;color:#fff;font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;background:var(--uchile-blue)}
+.logo-placeholder+.logo-placeholder{background:var(--uchile-red)}
+header h1{margin:0 auto;max-width:1180px;padding:22px 24px 4px;font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.03em;font-weight:800;color:var(--uchile-blue)}
+header p{margin:0 auto;max-width:1180px;padding:0 24px 28px;color:#333;font-size:1.08rem}
+.wrap{max-width:1180px;margin:0 auto;padding:26px 18px 56px}
+.hero-grid,.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.hero-grid{margin-top:0;padding:18px 0 4px;border-top:4px solid var(--uchile-blue)}
+.cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+.metric-card,.small-card,.profile{background:var(--card);border:1px solid var(--border);border-radius:0;padding:22px;box-shadow:none}
+.metric-card{border-top:6px solid var(--uchile-red)}
+.metric-card h3,.small-card h3{margin:0 0 8px;color:var(--uchile-red);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.metric-card .big{font-size:1.55rem;font-weight:800;color:var(--uchile-blue)}
+.metric-card p,.small-card p{margin:8px 0 0;color:var(--muted);font-size:.96rem}
+.tabs{margin-top:30px;background:white;border:1px solid var(--border);border-radius:0;overflow:hidden;box-shadow:none}
+input[type=radio]{display:none}
+.tab-labels{display:flex;flex-wrap:wrap;background:var(--uchile-blue);border-bottom:4px solid var(--uchile-red)}
+.tab-labels label{cursor:pointer;padding:15px 18px;font-weight:800;color:#fff;border-right:1px solid rgba(255,255,255,.25);transition:.2s}
+.tab-labels label:hover{background:var(--uchile-blue-dark)}
+#tab1:checked~.tab-labels label[for=tab1],#tab2:checked~.tab-labels label[for=tab2],#tab3:checked~.tab-labels label[for=tab3],#tab4:checked~.tab-labels label[for=tab4],#tab5:checked~.tab-labels label[for=tab5],#tab6:checked~.tab-labels label[for=tab6],#tab7:checked~.tab-labels label[for=tab7]{background:var(--uchile-red);color:#fff;box-shadow:none}
+.panel{display:none;padding:30px}
+#tab1:checked~.panels #panel1,#tab2:checked~.panels #panel2,#tab3:checked~.panels #panel3,#tab4:checked~.panels #panel4,#tab5:checked~.panels #panel5,#tab6:checked~.panels #panel6,#tab7:checked~.panels #panel7{display:block}
+h2{margin-top:0;color:var(--uchile-blue);font-size:1.7rem;border-bottom:3px solid var(--uchile-red);padding-bottom:8px}
+.lead{font-size:1.08rem;color:#333;max-width:920px}
+.cards3{margin-top:20px}
+.tag{display:inline-block;background:#fff;border:1px solid var(--border);border-radius:0;padding:6px 10px;margin:4px 5px 4px 0;font-size:.9rem;font-weight:700;color:#333}
+.blue{background:var(--soft-blue)}.red{background:var(--soft-red)}
+table{width:100%;border-collapse:collapse;margin-top:18px;border-radius:0;overflow:hidden;font-size:.96rem;border:1px solid var(--border)}
+th,td{padding:12px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{background:var(--uchile-blue);color:#fff}
+tr:nth-child(even) td{background:#f7f7f7}
+.notice{margin-top:22px;padding:18px 20px;background:#fff8e8;border:1px solid #d8b65d;border-left:8px solid #c99a2e;border-radius:0;color:#4b3b0b}
+.danger{margin-top:16px;padding:16px 18px;background:#fff0ee;border:1px solid #efb0aa;border-left:8px solid var(--uchile-red);border-radius:0;color:#7a1f1f}
+.btn{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:0;background:var(--uchile-blue);color:#fff;text-decoration:none;font-weight:800;border-bottom:4px solid var(--uchile-red)}
+.btn:hover{background:var(--uchile-blue-dark)}.btn.alt{background:var(--uchile-red);border-bottom-color:var(--uchile-blue)}
+details{margin-top:12px;border:1px solid var(--border);border-radius:0;background:#fff;overflow:hidden}
+summary{cursor:pointer;padding:15px 18px;font-weight:800;color:#fff;background:var(--uchile-blue)}
+details[open] summary{border-bottom:4px solid var(--uchile-red);box-shadow:none}
+.details-body{padding:18px}
+.timeline,.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.period,.step{border:1px solid var(--border);border-top:6px solid var(--uchile-blue);border-radius:0;padding:16px;background:var(--soft-blue)}
+.period strong,.step strong{display:block;color:var(--uchile-blue);font-size:1.05rem;margin-bottom:6px}
+.modal{display:none;position:fixed;inset:0;z-index:50;background:rgba(0,25,48,.72);padding:28px;overflow:auto}
+.modal:target{display:block}.modal-card{max-width:1050px;margin:40px auto;background:#fff;border-radius:0;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal-header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.close{text-decoration:none;background:var(--uchile-red);color:#fff;padding:10px 14px;border-radius:0;font-weight:800}
+footer{color:#fff;text-align:center;font-size:.88rem;margin-top:30px;background:#222;padding:20px;border-top:8px solid var(--uchile-red)}
+@media(max-width:850px){body::before{text-align:center}.brand{justify-content:center}header h1,header p{text-align:center}.hero-grid,.cards3,.cards2,.timeline,.flow{grid-template-columns:1fr}.tab-labels label{flex:1 1 50%;border-bottom:1px solid rgba(255,255,255,.25)}.panel{padding:20px}.modal{padding:10px}.modal-card{margin:20px auto;padding:20px}}
