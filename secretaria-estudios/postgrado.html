@@ -8,18 +8,75 @@
   <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a class="site-nav-title" href="index.html">Secretaría de Estudios</a>
+    <div class="site-nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="pregrado.html">Pregrado</a>
+      <a href="postgrado.html">Postgrado</a>
+      <a href="postitulo-educacion-continua.html">Postítulo y Educación Continua</a>
+      <a href="no-se-donde-ir.html">Derivaciones</a>
+      <a href="normativa.html">Normativa</a>
+    </div>
+  </nav>
+
   <header>
+    <div class="brand">
+      <a class="logo-placeholder" href="index.html" aria-label="Ir al inicio de Secretaría de Estudios">Facultad de Gobierno</a>
+      <div class="logo-placeholder">Universidad de Chile</div>
+    </div>
     <h1>Postgrado</h1>
-    <p>Orientación simple para estudiantes de magíster de la Facultad de Gobierno.</p>
+    <p>Orientación para estudiantes de magíster de la Facultad de Gobierno.</p>
   </header>
 
   <main class="wrap">
-    <section class="tabs" style="padding:28px;">
-      <p><a class="btn" href="index.html">Volver al sitio principal</a></p>
+    <section class="intro-panel">
+      <div>
+        <span class="eyebrow">Magísteres</span>
+        <h2>Información académica y administrativa de postgrado</h2>
+        <p class="lead">Esta sección reúne orientación general sobre matrícula, solicitudes, permanencia, reconocimiento, defensas y expediente de grado.</p>
+      </div>
+      <div class="intro-actions">
+        <a class="btn" href="postgrado-solicitudes.html">Solicitudes académicas</a>
+        <a class="btn alt" href="postgrado-defensas.html">Defensas y grado</a>
+      </div>
+    </section>
 
-      <div class="danger"><strong>Importante:</strong> esta sección reúne orientación general sobre matrícula, solicitudes, defensas y expediente de grado.</div>
+    <section class="notice-board" aria-label="Avisos de postgrado">
+      <article class="notice-card primary">
+        <span class="badge">Importante</span>
+        <h3>Orientación general</h3>
+        <p>Esta sección no reemplaza reglamentos, resoluciones ni instrucciones oficiales de los programas.</p>
+      </article>
+      <article class="notice-card">
+        <span class="badge">Graduación</span>
+        <h3>Ventana crítica</h3>
+        <p>Si el estudiante defiende en marzo del tercer año y realiza el trámite de grado durante las primeras semanas de abril, normalmente no necesita pagar una nueva matrícula.</p>
+      </article>
+      <article class="notice-card">
+        <span class="badge">Atención</span>
+        <h3>Matrícula vigente</h3>
+        <p>No formalizar matrícula puede afectar la calidad de estudiante y continuidad en el programa.</p>
+      </article>
+    </section>
 
-      <h2>Temas principales</h2>
+    <section class="quick-section">
+      <div class="section-heading">
+        <span class="eyebrow">Matrícula postgrado 2026</span>
+        <h2>Períodos de matrícula</h2>
+      </div>
+      <div class="timeline">
+        <div class="period"><strong>Primer período</strong>12/01/2026 al 23/01/2026.</div>
+        <div class="period"><strong>Segundo período</strong>04/03/2026 al 01/04/2026.</div>
+        <div class="period"><strong>Tercer y último período</strong>15/04/2026 al 24/04/2026.</div>
+      </div>
+    </section>
+
+    <section class="quick-section">
+      <div class="section-heading">
+        <span class="eyebrow">Temas principales</span>
+        <h2>Trámites y orientación</h2>
+      </div>
       <div class="cards3">
         <article class="small-card"><h3>Matrícula</h3><p>Formalización de matrícula de postgrado y períodos oficiales.</p><a class="btn" href="postgrado-matricula.html">Ver guía</a></article>
         <article class="small-card"><h3>Solicitudes académicas</h3><p>Postergación, reincorporación, permanencia y prestaciones de servicios.</p><a class="btn" href="postgrado-solicitudes.html">Ver guía</a></article>
@@ -32,19 +89,17 @@
         <article class="small-card"><h3>¿Con quién hablar?</h3><p>Mapa simple de derivaciones.</p><a class="btn" href="postgrado-derivaciones.html">Ver derivaciones</a></article>
         <article class="small-card"><h3>Contactos de programas</h3><p>Correos de coordinación de cada magíster.</p><a class="btn" href="postgrado-contactos.html">Ver contactos</a></article>
       </div>
-
-      <h2>Ventana crítica de graduación</h2>
-      <div class="danger"><strong>Muy importante:</strong> si el estudiante defiende en marzo del tercer año y realiza el trámite de grado durante las primeras semanas de abril, normalmente no necesita pagar una nueva matrícula.</div>
-
-      <h2>Matrícula postgrado 2026</h2>
-      <div class="timeline">
-        <div class="period"><strong>Primer período</strong>12/01/2026 al 23/01/2026.</div>
-        <div class="period"><strong>Segundo período</strong>04/03/2026 al 01/04/2026.</div>
-        <div class="period"><strong>Tercer y último período</strong>15/04/2026 al 24/04/2026.</div>
-      </div>
-
-      <div class="danger"><strong>Atención:</strong> no formalizar matrícula puede afectar la calidad de estudiante y continuidad en el programa.</div>
     </section>
+
+    <footer class="mega-footer">
+      <div class="footer-grid">
+        <section><h2>Secretaría de Estudios</h2><p>Unidad de apoyo técnico-administrativo para procesos académicos de la Facultad de Gobierno de la Universidad de Chile.</p></section>
+        <section><h3>Accesos principales</h3><a href="index.html">Inicio</a><a href="pregrado.html">Pregrado</a><a href="postgrado.html">Postgrado</a><a href="calendarios.html">Calendarios académicos</a></section>
+        <section><h3>Trámites de postgrado</h3><a href="postgrado-matricula.html">Matrícula</a><a href="postgrado-solicitudes.html">Solicitudes académicas</a><a href="postgrado-defensas.html">Defensas</a><a href="postgrado-expediente-grado.html">Expediente de grado</a></section>
+        <section><h3>Institucional</h3><a href="normativa.html">Normativa</a><a href="wiki.html">Wiki pública</a><a href="https://gobierno.uchile.cl/" target="_blank" rel="noopener">Facultad de Gobierno</a><a href="https://www.uchile.cl/" target="_blank" rel="noopener">Universidad de Chile</a></section>
+      </div>
+      <div class="footer-bottom"><span>Secretaría de Estudios · Facultad de Gobierno · Universidad de Chile</span><span>Esta página entrega orientación general y no reemplaza la normativa universitaria vigente.</span></div>
+    </footer>
   </main>
 </body>
 </html>
