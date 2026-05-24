@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar — Secretaría de Estudios</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a class="site-nav-title" href="index.html">Secretaría de Estudios</a>
+    <div class="site-nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="pregrado.html">Pregrado</a>
+      <a href="postgrado.html">Postgrado</a>
+      <a href="derivacion-guiada.html">Derivación guiada</a>
+      <a href="avisos.html">Avisos</a>
+      <a href="normativa.html">Normativa</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="brand">
+      <a class="logo-placeholder" href="index.html" aria-label="Ir al inicio de Secretaría de Estudios">Facultad de Gobierno</a>
+      <div class="logo-placeholder">Universidad de Chile</div>
+    </div>
+    <h1>Buscar</h1>
+    <p>Busca páginas y temas frecuentes dentro del portal de Secretaría de Estudios.</p>
+  </header>
+
+  <main class="wrap">
+    <nav class="breadcrumb" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span>Buscar</span></nav>
+
+    <section class="intro-panel">
+      <div>
+        <span class="eyebrow">Buscador institucional</span>
+        <h2>Encuentra páginas por palabra clave</h2>
+        <p class="lead">Este buscador revisa las secciones principales del portal y su temática general.</p>
+      </div>
+    </section>
+
+    <section class="quick-section">
+      <div class="section-heading">
+        <span class="eyebrow">Buscar</span>
+        <h2>¿Qué necesitas encontrar?</h2>
+      </div>
+
+      <input id="site-search" type="text" placeholder="Ejemplo: postergación, defensa, licenciatura, TNE..." style="width:100%;padding:18px 20px;border-radius:18px;border:1px solid #d9e1ea;font-size:1rem;margin-bottom:24px;">
+
+      <p id="search-empty" class="lead"></p>
+
+      <div id="search-results" class="cards3"></div>
+    </section>
+
+    <a href="#" class="back-to-top" aria-label="Volver arriba">↑</a>
+
+    <footer class="mega-footer">
+      <div class="footer-grid">
+        <section><h2>Secretaría de Estudios</h2><p>Unidad de apoyo técnico-administrativo para procesos académicos de la Facultad de Gobierno de la Universidad de Chile.</p></section>
+        <section><h3>Accesos principales</h3><a href="index.html">Inicio</a><a href="pregrado.html">Pregrado</a><a href="postgrado.html">Postgrado</a><a href="buscar.html">Buscar</a></section>
+        <section><h3>Orientación</h3><a href="derivacion-guiada.html">Derivación guiada</a><a href="avisos.html">Avisos</a><a href="normativa.html">Normativa</a></section>
+        <section><h3>Institucional</h3><a href="https://gobierno.uchile.cl/" target="_blank" rel="noopener">Facultad de Gobierno</a><a href="https://www.uchile.cl/" target="_blank" rel="noopener">Universidad de Chile</a></section>
+      </div>
+      <div class="footer-bottom"><span>Secretaría de Estudios · Facultad de Gobierno · Universidad de Chile</span><span>Esta página entrega orientación general y no reemplaza la normativa universitaria vigente.</span></div>
+    </footer>
+  </main>
+
+  <script src="search.js"></script>
+</body>
+</html>
