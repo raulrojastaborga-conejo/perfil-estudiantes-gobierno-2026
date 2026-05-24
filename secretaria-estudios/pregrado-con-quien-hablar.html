@@ -8,51 +8,48 @@
   <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a class="site-nav-title" href="index.html">Secretaría de Estudios</a>
+    <div class="site-nav-links"><a href="index.html">Inicio</a><a href="buscar.html">Buscar</a><a href="pregrado.html">Pregrado</a><a href="perfiles.html">Perfiles</a><a href="normativa.html">Normativa</a></div>
+  </nav>
+
   <header>
+    <div class="brand"><a class="logo-placeholder" href="index.html">Facultad de Gobierno</a><div class="logo-placeholder">Universidad de Chile</div></div>
     <h1>¿Con quién hablar?</h1>
     <p>Guía rápida para dirigir tu consulta a la unidad correcta.</p>
   </header>
 
   <main class="wrap">
-    <section class="tabs" style="padding:28px;">
-      <p><a class="btn" href="index.html">Volver al sitio principal</a></p>
+    <nav class="breadcrumb" aria-label="Ruta de navegación"><a href="index.html">Inicio</a><span>Pregrado</span><span>¿Con quién hablar?</span></nav>
 
-      <div class="danger"><strong>Idea clave:</strong> no todas las consultas las ve Secretaría de Estudios. Dirigir bien la consulta ayuda a recibir respuesta más rápido.</div>
+    <section class="intro-panel">
+      <div><span class="eyebrow">Derivación pregrado</span><h2>Ubica la unidad adecuada antes de escribir</h2><p class="lead">Dirigir bien la consulta ayuda a recibir respuesta más rápido. Esta guía distingue qué ve Secretaría de Estudios y qué corresponde a otras unidades.</p></div>
+      <div class="intro-actions"><a class="btn" href="buscar.html">Buscar</a><a class="btn alt" href="derivacion-guiada.html">Derivación guiada</a></div>
+    </section>
 
-      <h2>Mapa rápido</h2>
-      <table>
-        <thead><tr><th>Necesito...</th><th>Unidad recomendada</th><th>Ubicación / canal</th></tr></thead>
-        <tbody>
-          <tr><td>Solicitud académica, certificado, justificación de evaluación, postergación, renuncia o permanencia</td><td>Secretaría de Estudios</td><td>Vicuña Mackenna 20 / Ramón Carnicer 15, segundo piso</td></tr>
-          <tr><td>Problemas con clases, profesores, docencia o criterios académicos del curso</td><td>Escuela de Pregrado</td><td>Tercer piso</td></tr>
-          <tr><td>Crisis vocacional o dudas sobre continuar la carrera</td><td>Jefatura de carrera y luego Bienestar/Asistencia Social</td><td>Escuela de Pregrado / Asuntos Estudiantiles</td></tr>
-          <tr><td>Becas, gratuidad, beneficios o impacto socioeconómico</td><td>Bienestar / Asistencia Social</td><td>Asuntos Estudiantiles, tercer piso</td></tr>
-          <tr><td>Aranceles, deuda, pagos o CAE</td><td>Oficina de Aranceles y Deudas</td><td>Torre 15, Diagonal Paraguay 265</td></tr>
-          <tr><td>Práctica, intercambio, seguros o alianzas externas</td><td>Unidad de Práctica y de Alianzas Externas</td><td>Escuela de Pregrado, tercer piso</td></tr>
-          <tr><td>Atención psicológica</td><td>Unidad de Psicología</td><td>Asuntos Estudiantiles, tercer piso</td></tr>
-          <tr><td>Flexibilidad académica, inclusión, género o denuncias</td><td>Unidad de Equidad, Inclusión y Género</td><td>Asuntos Estudiantiles, tercer piso</td></tr>
-          <tr><td>Documento físico de título o grado</td><td>Oficina de Títulos y Grados</td><td>Diagonal Paraguay 265</td></tr>
-          <tr><td>Solicitud de espacios o actividades estudiantiles</td><td>Asuntos Estudiantiles</td><td>Tercer piso</td></tr>
-        </tbody>
-      </table>
+    <section class="notice-board">
+      <article class="notice-card primary"><span class="badge">Idea clave</span><h3>No todo lo ve Secretaría de Estudios</h3><p>Secretaría de Estudios lleva el registro académico, pero hay consultas docentes, socioeconómicas o técnicas que corresponden a otras unidades.</p></article>
+      <article class="notice-card"><span class="badge">Certificados</span><h3>Académicos vs. títulos/grados</h3><p>Los certificados académicos se obtienen en UCampus. Los certificados de títulos y grados se obtienen mediante certificados.uchile.cl.</p></article>
+      <article class="notice-card"><span class="badge">Salas</span><h3>Secretaría Docente</h3><p>Salas, apertura, implementación para clases y cambios de sala no los ve Secretaría de Estudios.</p></article>
+    </section>
 
-      <h2>Qué ve Secretaría de Estudios</h2>
-      <p>Secretaría de Estudios apoya procesos administrativos vinculados a la vida académica: solicitudes, certificados, situaciones curriculares, toma de ramos, expedientes y trámites de grados o títulos.</p>
-
-      <h2>Qué NO ve Secretaría de Estudios</h2>
+    <section class="quick-section">
+      <div class="section-heading"><span class="eyebrow">Mapa rápido</span><h2>Según tu consulta</h2></div>
       <div class="cards3">
-        <article class="small-card"><h3>No ve pagos</h3><p>Aranceles, deudas, CAE y pagos se ven con Aranceles y Deudas.</p></article>
-        <article class="small-card"><h3>No ve docencia</h3><p>Problemas con clases o profesores se ven con Escuela de Pregrado.</p></article>
-        <article class="small-card"><h3>No ve práctica/intercambio</h3><p>Eso corresponde a la Unidad de Práctica y de Alianzas Externas.</p></article>
-      </div>
-
-      <h2>Ubicaciones principales</h2>
-      <div class="cards3">
-        <article class="small-card"><h3>Secretaría de Estudios</h3><p>Vicuña Mackenna 20 / Ramón Carnicer 15, segundo piso.</p></article>
-        <article class="small-card"><h3>Escuela y Asuntos Estudiantiles</h3><p>Tercer piso. Ahí están Escuela de Pregrado, Bienestar, Psicología y Equidad.</p></article>
-        <article class="small-card"><h3>Torre 15</h3><p>Diagonal Paraguay 265. Aranceles y Deudas, y Oficina de Títulos y Grados.</p></article>
+        <article class="small-card"><h3>Secretaría de Estudios</h3><p>Registro académico en UCampus, certificados académicos, solicitudes académicas de pregrado, justificación de inasistencias a evaluaciones, postergación, reincorporación, renuncia, reconocimiento de asignaturas, Bachiller General, licenciatura, título y entrega de TUI/TNE.</p></article>
+        <article class="small-card"><h3>Escuela de Pregrado</h3><p>Gestión docente general, decisiones académicas de carrera, programación docente, lineamientos curriculares y resolución de solicitudes cuando corresponda.</p></article>
+        <article class="small-card"><h3>Coordinación de Gestión e Innovación Docente</h3><p>Depende de la Dirección de Escuela de Pregrado. Ve programación docente, gestión docente general, revisión técnica curricular y coordinación de salas mediante Secretaría Docente.</p><p><strong>Contacto:</strong> coordinaciondocente@gobierno.uchile.cl. Atención solo por correo.</p></article>
+        <article class="small-card"><h3>Secretaría Docente</h3><p>No es Secretaría de Estudios. Ve salas de clases, apertura de salas, implementación para clases, cambios de sala y apoyo logístico docente.</p></article>
+        <article class="small-card"><h3>Jefaturas de carrera</h3><p>Orientación disciplinar y curricular, revisión académica de trayectorias y criterios específicos de carrera. Participan en la Comisión Deliberativa que apoya a la Dirección de Pregrado en solicitudes de excepción y permanencia.</p></article>
+        <article class="small-card"><h3>Asuntos Estudiantiles</h3><p>Incluye Bienestar, Psicología y Deportes. Ve salud mental, apoyo socioeconómico, beneficios, becas y acompañamiento estudiantil.</p></article>
+        <article class="small-card"><h3>Soporte de plataformas</h3><p>Problemas técnicos de acceso, claves, errores de sistema o funcionamiento de UCampus/U-Cursos deben revisarse con los canales técnicos correspondientes.</p></article>
+        <article class="small-card"><h3>Títulos y Grados</h3><p>Los certificados de títulos y grados no los emite Secretaría de Estudios. Se obtienen mediante certificados.uchile.cl o los canales de Títulos y Grados.</p></article>
+        <article class="small-card"><h3>Postítulo y Educación Continua</h3><p>No tienen TUI/TNE, grado ni título. Tampoco realizan postergación, reincorporación o reconocimiento a través de Secretaría de Estudios.</p></article>
       </div>
     </section>
+
+    <section class="notice"><strong>Nota:</strong> esta página orienta la derivación inicial. La unidad competente puede depender del caso concreto y de los antecedentes.</section>
+    <a href="#" class="back-to-top" aria-label="Volver arriba">↑</a>
   </main>
 </body>
 </html>
