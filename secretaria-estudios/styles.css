@@ -15,48 +15,11 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
 body::before{content:"Universidad de Chile · Facultad de Gobierno";display:block;background:linear-gradient(90deg,#004b8d,#0069aa);color:#fff;padding:10px 28px;font-size:.82rem;letter-spacing:.08em;font-weight:700}
-
-.site-nav{
-position:sticky;
-top:0;
-z-index:40;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:24px;
-padding:14px 28px;
-background:rgba(255,255,255,.94);
-backdrop-filter:blur(10px);
-border-bottom:1px solid var(--border);
-box-shadow:0 6px 18px rgba(0,0,0,.04)
-}
-
-.site-nav-title{
-font-weight:900;
-font-size:1rem;
-letter-spacing:-.03em;
-color:var(--uchile-blue);
-text-decoration:none
-}
-
-.site-nav-links{
-display:flex;
-flex-wrap:wrap;
-gap:18px
-}
-
-.site-nav-links a{
-text-decoration:none;
-color:var(--muted);
-font-weight:700;
-font-size:.95rem;
-transition:.2s ease
-}
-
-.site-nav-links a:hover{
-color:var(--uchile-blue)
-}
-
+.site-nav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:14px 28px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 6px 18px rgba(0,0,0,.04)}
+.site-nav-title{font-weight:900;font-size:1rem;letter-spacing:-.03em;color:var(--uchile-blue);text-decoration:none}
+.site-nav-links{display:flex;flex-wrap:wrap;gap:18px}
+.site-nav-links a{text-decoration:none;color:var(--muted);font-weight:700;font-size:.95rem;transition:.2s ease}
+.site-nav-links a:hover{color:var(--uchile-blue)}
 header{position:relative;background:linear-gradient(135deg,#ffffff 0%,#f7fbff 100%);border-bottom:1px solid var(--border);overflow:hidden}
 header::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(29,117,189,.10),transparent 38%);pointer-events:none}
 header::after{content:"";display:block;height:5px;background:linear-gradient(90deg,var(--uchile-blue),var(--uchile-light-blue))}
@@ -66,11 +29,12 @@ header::after{content:"";display:block;height:5px;background:linear-gradient(90d
 header h1{max-width:1240px;margin:0 auto;padding:10px 28px 10px;font-size:clamp(2.8rem,5vw,4.6rem);line-height:1;letter-spacing:-.06em;font-weight:900;color:var(--uchile-blue)}
 header p{max-width:1240px;margin:0 auto;padding:0 28px 52px;font-size:1.12rem;color:var(--muted)}
 .wrap{max-width:1240px;margin:0 auto;padding:42px 22px 70px}
-.hero-grid,.cards3,.cards2,.timeline,.flow{display:grid;gap:24px}
+.hero-grid,.cards3,.cards2,.timeline,.flow,.footer-grid{display:grid;gap:24px}
 .hero-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:38px}
 .hero-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
 .cards3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .cards2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}
 .metric-card,.small-card,.profile,.period,.step,.intro-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:.25s ease}
 .intro-panel{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:34px}
 .intro-actions{display:flex;flex-direction:column;gap:12px;min-width:260px}
@@ -96,7 +60,12 @@ h2{margin:0 0 10px;font-size:2rem;line-height:1.1;letter-spacing:-.04em;color:va
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding:12px 18px;background:var(--uchile-blue);color:#fff;text-decoration:none;font-weight:800;border-radius:999px;transition:.2s ease;box-shadow:0 8px 18px rgba(0,59,111,.16)}
 .btn:hover{background:var(--uchile-blue-dark);transform:translateY(-2px)}
 .btn.alt{background:var(--uchile-light-blue)}
-footer{margin-top:36px;padding:28px;text-align:center;background:var(--uchile-blue);color:#fff;border-radius:24px;font-size:.92rem}
-@media(max-width:1100px){.hero-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.intro-panel{flex-direction:column;align-items:flex-start}.intro-actions{width:100%}}
-@media(max-width:980px){.hero-grid,.cards3,.cards2,.timeline,.flow,.hero-grid.four{grid-template-columns:1fr}.panel{padding:24px}.brand{padding-top:26px}.logo-placeholder{width:250px;height:78px}header h1{font-size:clamp(2.4rem,8vw,3.4rem)}.tab-labels{gap:8px}.tab-labels label{flex:1 1 calc(50% - 8px);text-align:center}.site-nav{flex-direction:column;align-items:flex-start}.site-nav-links{gap:12px}}
-@media(max-width:640px){body::before{text-align:center;padding:10px 14px}.brand,header h1,header p{text-align:center;justify-content:center}.logo-placeholder{background-position:center}.wrap{padding:24px 14px 50px}.panel{border-radius:22px;padding:20px}.tab-labels label{flex:1 1 100%}.site-nav{padding:14px 16px}.site-nav-links{display:grid;grid-template-columns:1fr 1fr;width:100%}}
+.mega-footer{margin-top:42px;background:linear-gradient(180deg,var(--uchile-blue),var(--uchile-blue-dark));color:#fff;border-radius:28px;padding:42px 34px 24px}
+.mega-footer h2,.mega-footer h3{color:#fff;margin-top:0}
+.mega-footer p{color:rgba(255,255,255,.82)}
+.mega-footer a{display:block;color:#fff;text-decoration:none;margin-bottom:10px;font-weight:600;opacity:.92}
+.mega-footer a:hover{opacity:1;text-decoration:underline}
+.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.92rem;color:rgba(255,255,255,.75)}
+@media(max-width:1100px){.hero-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.intro-panel{flex-direction:column;align-items:flex-start}.intro-actions{width:100%}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:980px){.hero-grid,.cards3,.cards2,.timeline,.flow,.hero-grid.four,.footer-grid{grid-template-columns:1fr}.panel{padding:24px}.brand{padding-top:26px}.logo-placeholder{width:250px;height:78px}header h1{font-size:clamp(2.4rem,8vw,3.4rem)}.tab-labels{gap:8px}.tab-labels label{flex:1 1 calc(50% - 8px);text-align:center}.site-nav{flex-direction:column;align-items:flex-start}.site-nav-links{gap:12px}}
+@media(max-width:640px){body::before{text-align:center;padding:10px 14px}.brand,header h1,header p{text-align:center;justify-content:center}.logo-placeholder{background-position:center}.wrap{padding:24px 14px 50px}.panel{border-radius:22px;padding:20px}.tab-labels label{flex:1 1 100%}.site-nav{padding:14px 16px}.site-nav-links{display:grid;grid-template-columns:1fr 1fr;width:100%}.footer-bottom{flex-direction:column}}
