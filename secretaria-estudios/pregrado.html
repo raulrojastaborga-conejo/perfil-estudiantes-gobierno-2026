@@ -8,29 +8,77 @@
   <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a class="site-nav-title" href="index.html">Secretaría de Estudios</a>
+    <div class="site-nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="pregrado.html">Pregrado</a>
+      <a href="postgrado.html">Postgrado</a>
+      <a href="postitulo-educacion-continua.html">Postítulo y Educación Continua</a>
+      <a href="no-se-donde-ir.html">Derivaciones</a>
+      <a href="normativa.html">Normativa</a>
+    </div>
+  </nav>
+
   <header>
+    <div class="brand">
+      <a class="logo-placeholder" href="index.html" aria-label="Ir al inicio de Secretaría de Estudios">Facultad de Gobierno</a>
+      <div class="logo-placeholder">Universidad de Chile</div>
+    </div>
     <h1>Pregrado</h1>
-    <p>Orientación simple para estudiantes de Administración Pública y Ciencia Política.</p>
+    <p>Orientación para estudiantes de Administración Pública y Ciencia Política.</p>
   </header>
 
   <main class="wrap">
-    <section class="tabs" style="padding:28px;">
-      <p><a class="btn" href="index.html">Volver al sitio principal</a></p>
+    <section class="intro-panel">
+      <div>
+        <span class="eyebrow">Administración Pública y Ciencia Política</span>
+        <h2>Información académica de pregrado</h2>
+        <p class="lead">Esta sección reúne accesos y orientaciones sobre toma de ramos, solicitudes académicas, permanencia, reconocimiento de asignaturas, TUI/TNE, licenciatura y título.</p>
+      </div>
+      <div class="intro-actions">
+        <a class="btn" href="pregrado-solicitudes.html">Solicitudes académicas</a>
+        <a class="btn alt" href="calendarios.html">Calendario académico</a>
+      </div>
+    </section>
 
-      <div class="danger">
-        <strong>Idea clave:</strong> esta sección reúne información pública para ayudarte a saber qué hacer, dónde hacerlo y con quién hablar.</div>
+    <section class="notice-board" aria-label="Avisos de pregrado">
+      <article class="notice-card primary">
+        <span class="badge">Idea clave</span>
+        <h3>Orientación general</h3>
+        <p>Esta sección ayuda a saber qué hacer, dónde hacerlo y con quién hablar.</p>
+      </article>
+      <article class="notice-card">
+        <span class="badge">Sistema oficial</span>
+        <h3>Ucampus</h3>
+        <p>Solicitudes, certificados, toma de ramos y trámites de títulos/grados.</p>
+        <a href="https://ucampus.uchile.cl" target="_blank" rel="noopener noreferrer">Ir a Ucampus</a>
+      </article>
+      <article class="notice-card">
+        <span class="badge">Apoyo docente</span>
+        <h3>U-Cursos</h3>
+        <p>Novedades, materiales docentes, notas parciales y comunidades.</p>
+        <a href="https://www.u-cursos.cl" target="_blank" rel="noopener noreferrer">Ir a U-Cursos</a>
+      </article>
+    </section>
 
-      <h2>Accesos rápidos</h2>
+    <section class="quick-section">
+      <div class="section-heading">
+        <span class="eyebrow">Accesos rápidos</span>
+        <h2>Herramientas principales</h2>
+      </div>
       <div class="cards3">
         <article class="small-card"><h3>Malla AP</h3><p>Visualiza la malla animada de Administración Pública.</p><a class="btn" href="https://raulrojastaborga-conejo.github.io/perfil-estudiantes-gobierno-2026/malla_ap_plan27206_responsive.html" target="_blank" rel="noopener noreferrer">Abrir malla AP</a></article>
         <article class="small-card"><h3>Malla Ciencia Política</h3><p>Visualiza la malla animada de Ciencia Política.</p><a class="btn" href="https://raulrojastaborga-conejo.github.io/perfil-estudiantes-gobierno-2026/malla_ciencia_politica_2019_responsive.html" target="_blank" rel="noopener noreferrer">Abrir malla CIPOL</a></article>
-        <article class="small-card"><h3>Calendario académico</h3><p>Revisa fechas relevantes para solicitudes y procesos.</p><a class="btn" href="calendarios.html">Ver calendario</a></article>
-        <article class="small-card"><h3>Ucampus</h3><p>Solicitudes, certificados, toma de ramos y títulos/grados.</p><a class="btn" href="https://ucampus.uchile.cl" target="_blank" rel="noopener noreferrer">Ir a Ucampus</a></article>
-        <article class="small-card"><h3>U-Cursos</h3><p>Novedades, materiales docentes, notas y comunidades.</p><a class="btn" href="https://www.u-cursos.cl" target="_blank" rel="noopener noreferrer">Ir a U-Cursos</a></article>
         <article class="small-card"><h3>Preguntas frecuentes</h3><p>Respuestas cortas a dudas comunes.</p><a class="btn" href="pregrado-faq.html">Abrir FAQ</a></article>
       </div>
+    </section>
 
-      <h2>Temas principales</h2>
+    <section class="quick-section">
+      <div class="section-heading">
+        <span class="eyebrow">Temas principales</span>
+        <h2>Trámites y orientación</h2>
+      </div>
       <div class="cards3">
         <article class="small-card"><h3>Primer año y mechones</h3><p>Lo más importante para comenzar en la Facultad de Gobierno.</p><a class="btn" href="pregrado-mechones.html">Abrir</a></article>
         <article class="small-card"><h3>Toma de Ramos</h3><p>Etapas, índice de felicidad, modifica, prioridades y consejos.</p><a class="btn" href="pregrado-toma-ramos.html">Abrir</a></article>
@@ -49,6 +97,16 @@
         <article class="small-card"><h3>¿Con quién hablar?</h3><p>Mapa de unidades, derivaciones y temas que no ve Secretaría.</p><a class="btn" href="pregrado-con-quien-hablar.html">Abrir</a></article>
       </div>
     </section>
+
+    <footer class="mega-footer">
+      <div class="footer-grid">
+        <section><h2>Secretaría de Estudios</h2><p>Unidad de apoyo técnico-administrativo para procesos académicos de la Facultad de Gobierno de la Universidad de Chile.</p></section>
+        <section><h3>Accesos principales</h3><a href="index.html">Inicio</a><a href="pregrado.html">Pregrado</a><a href="postgrado.html">Postgrado</a><a href="calendarios.html">Calendarios académicos</a></section>
+        <section><h3>Trámites de pregrado</h3><a href="pregrado-solicitudes.html">Solicitudes académicas</a><a href="pregrado-reconocimiento.html">Reconocimiento de asignaturas</a><a href="pregrado-licenciatura-titulo.html">Licenciatura y título</a><a href="pregrado-con-quien-hablar.html">Con quién hablar</a></section>
+        <section><h3>Institucional</h3><a href="normativa.html">Normativa</a><a href="wiki.html">Wiki pública</a><a href="https://gobierno.uchile.cl/" target="_blank" rel="noopener">Facultad de Gobierno</a><a href="https://www.uchile.cl/" target="_blank" rel="noopener">Universidad de Chile</a></section>
+      </div>
+      <div class="footer-bottom"><span>Secretaría de Estudios · Facultad de Gobierno · Universidad de Chile</span><span>Esta página entrega orientación general y no reemplaza la normativa universitaria vigente.</span></div>
+    </footer>
   </main>
 </body>
 </html>
