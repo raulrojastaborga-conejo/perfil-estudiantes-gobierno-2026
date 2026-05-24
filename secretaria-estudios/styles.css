@@ -24,6 +24,7 @@ body::before{content:"Universidad de Chile · Facultad de Gobierno";display:bloc
 .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:22px;font-size:.92rem;color:var(--muted)}
 .breadcrumb a{text-decoration:none;color:var(--uchile-blue);font-weight:700}
 .breadcrumb span::before{content:'›';margin-right:10px;color:#9aa7b3}
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:52px;height:52px;border-radius:999px;background:var(--uchile-blue);color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-weight:900;box-shadow:0 12px 28px rgba(0,59,111,.28);transition:.2s ease}.back-to-top:hover{background:var(--uchile-blue-dark);transform:translateY(-3px)}
 header{position:relative;background:linear-gradient(135deg,#ffffff 0%,#f7fbff 100%);border-bottom:1px solid var(--border);overflow:hidden}
 header::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(29,117,189,.10),transparent 38%);pointer-events:none}
 header::after{content:"";display:block;height:5px;background:linear-gradient(90deg,var(--uchile-blue),var(--uchile-light-blue))}
@@ -63,4 +64,4 @@ h2{margin:0 0 10px;font-size:2rem;line-height:1.1;letter-spacing:-.04em;color:va
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding:12px 18px;background:var(--uchile-blue);color:#fff;text-decoration:none;font-weight:800;border-radius:999px}.btn.alt{background:var(--uchile-light-blue)}
 .mega-footer{margin-top:42px;background:linear-gradient(180deg,var(--uchile-blue),var(--uchile-blue-dark));color:#fff;border-radius:28px;padding:42px 34px 24px}.mega-footer h2,.mega-footer h3{color:#fff}.mega-footer a{display:block;color:#fff;text-decoration:none;margin-bottom:10px}.footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.92rem;color:rgba(255,255,255,.75)}
 @media(max-width:1100px){.hero-grid.four,.action-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.notice-board,.footer-grid{grid-template-columns:1fr 1fr}.intro-panel{flex-direction:column;align-items:flex-start}.intro-actions{width:100%}}
-@media(max-width:980px){.hero-grid,.cards3,.hero-grid.four,.footer-grid,.notice-board,.action-grid{grid-template-columns:1fr}.site-nav{flex-direction:column;align-items:flex-start}}
+@media(max-width:980px){.hero-grid,.cards3,.hero-grid.four,.footer-grid,.notice-board,.action-grid{grid-template-columns:1fr}.site-nav{flex-direction:column;align-items:flex-start}.back-to-top{right:14px;bottom:14px;width:46px;height:46px}}
