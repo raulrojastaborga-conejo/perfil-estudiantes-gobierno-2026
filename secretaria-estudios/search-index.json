@@ -1,9 +1,9 @@
 [
   {"title":"Permanencia y eliminación académica","url":"permanencia-eliminacion.html","tags":"permanencia eliminacion academica causal causales avance creditos carga reprobacion asistencia abandono interrupcion permanencia maxima afe tesis examen grado administracion publica ciencia politica mggp mcgsc mcp magdel tabla comparativa"},
   {"title":"Nosotros — Secretaría de Estudios","url":"nosotros.html","tags":"nosotros equipo secretaria estudios raul rojas maria teresa leon romina brancalis contactos pregrado postgrado titulos grados informes reportes estadisticos"},
-  {"title":"Contactos de apoyo estudiantil y género","url":"nosotros.html","tags":"tamara mardones ana casivillo paola calbullanca jordanna piaggio marina martinez direccion genero asuntos estudiantiles bienestar acoso denuncias corresponsabilidad social reuniones"},
-  {"title":"Buscar por palabra clave","url":"buscar.html","tags":"buscar palabra clave buscador tramite tema postergacion certificado tne toma ramos tesis"},
-  {"title":"Ver todos los trámites","url":"indice-tramites.html","tags":"indice tramites ver todos mapa rapido solicitudes certificados toma de ramos tui tne reconocimiento admision especial licenciatura bachiller titulo postgrado calendario derivaciones"},
+  {"title":"Contactos de apoyo estudiantil y género","url":"nosotros.html","tags":"tamara mardones ana casivillo paola calbullanca jordanna piaggio marina martinez direccion genero asuntos estudiantiles bienestar acoso denuncias corresponsabilidad social reuniones salud mental apoyo psicologico"},
+  {"title":"Buscar por palabra clave","url":"buscar.html","tags":"buscar palabra clave buscador tramite tema postergacion certificado tne toma ramos tesis salud mental apoyo psicologico bienestar conciencia saludable"},
+  {"title":"Ver todos los trámites","url":"indice-tramites.html","tags":"indice tramites ver todos mapa rapido solicitudes certificados toma de ramos tui tne reconocimiento admision especial licenciatura bachiller titulo postgrado calendario derivaciones apoyo psicologico salud mental"},
   {"title":"Admisión especial Pregrado","url":"pregrado-admision-especial.html","tags":"admision especial postulantes externos transferencia externa ingreso especial titulo profesional postulacion pago derecho no devolucion cupos paes"},
   {"title":"Pregrado","url":"pregrado.html","tags":"pregrado administracion publica ciencia politica toma de ramos solicitudes tui tne licenciatura titulo admision especial permanencia eliminacion causal"},
   {"title":"Solicitudes académicas Pregrado","url":"pregrado-solicitudes.html","tags":"solicitudes academicas justificacion postergacion reincorporacion renuncia abandono permanencia excepcion pregrado ucampus"},
@@ -19,7 +19,9 @@
   {"title":"Expediente de grado Postgrado","url":"postgrado-expediente-grado.html","tags":"expediente grado cedula ucampus titulos postgrado archivos acentos biblioteca revision curricular firmas rectoria diplomas"},
   {"title":"Normativa","url":"normativa.html","tags":"reglamentos normativa estudiantes facultades magister doctor carrera programa universidad chile links oficiales"},
   {"title":"Calendarios académicos","url":"calendarios.html","tags":"calendario fechas plazos solicitudes matricula toma de ramos transferencia admision especial"},
-  {"title":"Derivación guiada","url":"derivacion-guiada.html","tags":"derivacion guia no se donde consultar unidad tramite contactos coordinacion docente genero postgrado secretarias permanencia eliminacion"},
+  {"title":"Derivación guiada","url":"derivacion-guiada.html","tags":"derivacion guia no se donde consultar unidad tramite contactos coordinacion docente genero postgrado secretarias permanencia eliminacion salud mental apoyo psicologico bienestar conciencia saludable psicoeducacion redes de apoyo canales de ayuda"},
+  {"title":"¿Necesitas apoyo psicológico o emocional?","url":"no-se-donde-ir.html","tags":"apoyo psicologico apoyo emocional salud mental bienestar conciencia saludable psicoeducacion redes de apoyo canales de ayuda estudiantes universidad de chile no se donde ir derivacion guiada"},
+  {"title":"Conciencia Saludable U. de Chile","url":"https://concienciasaludable.uchile.cl/","tags":"conciencia saludable universidad de chile salud mental apoyo psicologico apoyo emocional bienestar autocuidado psicoeducacion redes de apoyo canales de ayuda estudiantes"},
   {"title":"Postítulo y Educación Continua","url":"postitulo-educacion-continua.html","tags":"postitulo educacion continua diploma curso alumnos cuenta uchile pasaporte certificados ucampus no tui no tne"},
   {"title":"FAQ interactivo","url":"faq-interactivo.html","tags":"faq preguntas frecuentes dudas orientacion estudiantes"}
 ]
