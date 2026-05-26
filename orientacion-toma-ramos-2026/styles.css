@@ -5,6 +5,11 @@ background:#eef5fb;
 color:#003b6f;
 }
 
+.btn.white{
+background:#fff;
+color:#003b6f;
+}
+
 .faq-list{
 display:grid;
 gap:14px;
@@ -30,7 +35,142 @@ margin-top:14px;
 color:var(--muted);
 }
 
-.btn.white{
+.case-grid{
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:18px;
+margin:28px 0 34px;
+}
+
+.case-card{
+appearance:none;
+border:1px solid var(--border);
 background:#fff;
-color:#003b6f;
+border-radius:22px;
+padding:24px;
+text-align:left;
+box-shadow:var(--shadow);
+cursor:pointer;
+min-height:170px;
+display:flex;
+flex-direction:column;
+gap:12px;
+transition:.22s ease;
+font-family:inherit;
+color:var(--text);
+}
+
+.case-card:hover,
+.case-card:focus{
+transform:translateY(-5px);
+border-color:#bddcf4;
+box-shadow:0 16px 36px rgba(0,59,111,.12);
+outline:none;
+}
+
+.case-card span{
+width:44px;
+height:44px;
+border-radius:999px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+background:#e8f2fb;
+color:var(--uchile-blue);
+font-weight:900;
+font-size:.92rem;
+}
+
+.case-card strong{
+font-size:1.08rem;
+line-height:1.15;
+color:var(--uchile-blue);
+font-weight:900;
+}
+
+.case-card small{
+color:var(--muted);
+line-height:1.35;
+font-size:.92rem;
+}
+
+.modal{
+position:fixed;
+inset:0;
+z-index:200;
+background:rgba(0,20,40,.58);
+display:none;
+align-items:center;
+justify-content:center;
+padding:28px;
+backdrop-filter:blur(6px);
+}
+
+.modal.open{
+display:flex;
+}
+
+.modal-box{
+position:relative;
+max-width:860px;
+width:min(860px,100%);
+max-height:88vh;
+overflow:auto;
+background:#fff;
+border-radius:28px;
+padding:38px;
+box-shadow:0 30px 80px rgba(0,0,0,.25);
+border:1px solid var(--border);
+}
+
+.modal-close{
+position:absolute;
+top:18px;
+right:18px;
+width:44px;
+height:44px;
+border:none;
+border-radius:999px;
+background:#eef5fb;
+color:var(--uchile-blue);
+font-size:1.6rem;
+font-weight:900;
+cursor:pointer;
+line-height:1;
+}
+
+.modal-box h2{
+margin-right:48px;
+}
+
+.modal-box ol{
+margin:24px 0 0;
+padding-left:24px;
+}
+
+.modal-box li{
+margin-bottom:14px;
+padding-left:6px;
+color:var(--text);
+font-size:1.05rem;
+}
+
+.modal-note{
+margin-top:22px;
+padding:16px 18px;
+border-radius:16px;
+background:#eef7ff;
+border:1px solid #bddcf4;
+color:#123f63;
+font-weight:700;
+}
+
+@media(max-width:1100px){
+.case-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+@media(max-width:680px){
+.case-grid{grid-template-columns:1fr;}
+.modal{padding:14px;}
+.modal-box{padding:28px 22px;}
 }
