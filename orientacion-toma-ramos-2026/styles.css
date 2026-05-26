@@ -1,0 +1,36 @@
+@import url('../secretaria-estudios/styles.css');
+
+.btn.light{
+background:#eef5fb;
+color:#003b6f;
+}
+
+.faq-list{
+display:grid;
+gap:14px;
+margin-top:24px;
+}
+
+.faq-list details{
+background:#fff;
+border:1px solid var(--border);
+border-radius:18px;
+padding:18px 20px;
+box-shadow:0 6px 18px rgba(0,0,0,.03);
+}
+
+.faq-list summary{
+cursor:pointer;
+font-weight:800;
+color:var(--uchile-blue);
+}
+
+.faq-list p{
+margin-top:14px;
+color:var(--muted);
+}
+
+.btn.white{
+background:#fff;
+color:#003b6f;
+}
