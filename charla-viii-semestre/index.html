@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruta VIII semestre | AP y Ciencia Política</title>
+  <style>
+    :root {
+      --azul: #0b2e59;
+      --azul-2: #114b8b;
+      --rojo: #c8102e;
+      --gris: #f3f5f8;
+      --texto: #1d2733;
+      --borde: #d8dee8;
+      --verde: #0f766e;
+      --amarillo: #fff7d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      background: linear-gradient(135deg, var(--azul), var(--azul-2));
+      color: white;
+      padding: 48px 24px 42px;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: 13px; opacity: .9; }
+    h1 { margin: 10px 0 12px; font-size: clamp(32px, 5vw, 56px); line-height: 1.05; }
+    .lead { max-width: 850px; font-size: 19px; opacity: .96; }
+    nav.quick {
+      background: white;
+      border-bottom: 1px solid var(--borde);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    .buttons {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .buttons a {
+      text-decoration: none;
+      color: var(--azul);
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      background: #fff;
+    }
+    .buttons a:hover { border-color: var(--azul); background: #f6f9ff; }
+    main { padding: 34px 20px 56px; }
+    section { scroll-margin-top: 90px; margin-bottom: 34px; }
+    h2 { font-size: 30px; margin: 0 0 16px; color: var(--azul); }
+    h3 { font-size: 21px; margin: 0 0 8px; color: var(--azul); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card {
+      border: 1px solid var(--borde);
+      border-radius: 18px;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 8px 24px rgba(11, 46, 89, .06);
+    }
+    .card.highlight { border-left: 6px solid var(--rojo); }
+    .card.common { border-left: 6px solid var(--verde); }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--rojo);
+      margin-bottom: 8px;
+    }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    li { margin: 6px 0; }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .moment {
+      background: var(--gris);
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid var(--borde);
+    }
+    .alert {
+      background: var(--amarillo);
+      border: 1px solid #ecd27a;
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-top: 14px;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--azul);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .small { font-size: 14px; color: #526070; }
+    footer {
+      border-top: 1px solid var(--borde);
+      padding: 24px 20px;
+      background: var(--gris);
+      color: #526070;
+    }
+    @media (max-width: 820px) {
+      .grid, .timeline { grid-template-columns: 1fr; }
+      nav.quick { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Charla para estudiantes de 4° año</div>
+      <h1>Ruta del VIII semestre</h1>
+      <p class="lead">Guía práctica para estudiantes de Administración Pública y Ciencia Política: qué hacer al inicio, a mitad y al final del VIII semestre.</p>
+    </div>
+  </header>
+
+  <nav class="quick" aria-label="Accesos rápidos">
+    <div class="buttons">
+      <a href="#ap">Soy de Administración Pública</a>
+      <a href="#cipol">Soy de Ciencia Política</a>
+      <a href="#inicio">Inicio VIII semestre</a>
+      <a href="#mitad">Mitad VIII semestre</a>
+      <a href="#final">Final VIII semestre</a>
+      <a href="#excepciones">Excepciones</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="mapa">
+      <h2>Mapa general</h2>
+      <div class="timeline">
+        <div class="moment" id="inicio">
+          <h3>Inicio del VIII semestre</h3>
+          <p>Inscripción de seminarios, mención de AP, Simulación de Asesoría y eventuales excepciones.</p>
+          <p class="small">Periodo aproximado: segunda a tercera semana de julio. Mención AP: mediados de julio.</p>
+        </div>
+        <div class="moment" id="mitad">
+          <h3>Mitad del VIII semestre</h3>
+          <p>Postulación al programa de continuidad de estudios.</p>
+          <p class="small">Postulación en octubre, entrevistas en noviembre y resultados en diciembre.</p>
+        </div>
+        <div class="moment" id="final">
+          <h3>Final del VIII semestre</h3>
+          <p>Trámite de licenciatura, si el plan de licenciatura está completamente aprobado y con notas cerradas.</p>
+          <p class="small">Duración promedio del trámite: 3 semanas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ap">
+      <h2>Ruta Administración Pública</h2>
+      <div class="grid">
+        <article class="card highlight">
+          <span class="tag">Inicio VIII semestre</span>
+          <h3>Pack de mención</h3>
+          <p>En Administración Pública, la mención aplica a la licenciatura. Por eso, al inicio del VIII semestre deben quedar alineados tres elementos:</p>
+          <ul>
+            <li>Escoger la mención en Ucampus: <strong>Solicitudes → Escoger especialidad</strong>.</li>
+            <li>Inscribir el <strong>Seminario de Investigación Aplicada</strong> de la misma mención.</li>
+            <li>Inscribir <strong>Simulación de Asesoría</strong> de la misma mención.</li>
+          </ul>
+          <div class="alert"><strong>Clave:</strong> si el Seminario o Simulación no corresponden a la mención elegida, esos cursos no sirven para completar correctamente esa línea.</div>
+        </article>
+        <article class="card">
+          <span class="tag">Menciones AP</span>
+          <h3>Opciones disponibles</h3>
+          <ul>
+            <li><strong>Ciencia Política</strong></li>
+            <li><strong>Gestión Pública</strong></li>
+          </ul>
+          <p>El trámite de escoger mención en Ucampus es simple y demora aproximadamente 2 minutos.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Seminario AP</span>
+          <h3>Seminario de Investigación Aplicada</h3>
+          <ul>
+            <li>Se solicita mediante <strong>formulario en Ucampus</strong>.</li>
+            <li>Las fechas y el formulario estarán disponibles en Ucampus.</li>
+            <li>No se acepta otro mecanismo ni fuera de plazo.</li>
+            <li>En el formulario se informan intereses de investigación.</li>
+            <li>La Escuela asigna profesores/as en base a esos intereses.</li>
+            <li>Luego aparecerá inscrito en Ucampus.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="tag">Simulación AP</span>
+          <h3>Simulación de Asesoría</h3>
+          <p>Se inscribe en la toma de ramos normal de Ucampus, al inicio del VIII semestre.</p>
+          <p>Debe corresponder a la misma mención escogida.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cipol">
+      <h2>Ruta Ciencia Política</h2>
+      <div class="grid">
+        <article class="card highlight">
+          <span class="tag">Inicio VIII semestre</span>
+          <h3>Mención</h3>
+          <p>Ciencia Política no escoge mención. La carrera tiene una mención, por lo que los/as estudiantes vienen con esa mención por defecto desde primer año.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Seminario CIPOL</span>
+          <h3>Seminario de Investigación</h3>
+          <ul>
+            <li>Se solicita mediante <strong>formulario en Ucampus</strong>.</li>
+            <li>En el formulario se informan intereses de investigación.</li>
+            <li>La Escuela asigna profesores/as en base a esos intereses.</li>
+            <li>Luego aparecerá inscrito en Ucampus.</li>
+            <li>No se inscribe mediante la toma de ramos para ese ramo específico.</li>
+          </ul>
+        </article>
+        <article class="card common">
+          <span class="tag">Proyección IX semestre</span>
+          <h3>Investigación Aplicada</h3>
+          <p>Los/as profesores/as asignados para Seminario de Investigación seguirán vinculados al ramo Investigación Aplicada del IX semestre.</p>
+          <p>Por eso, tampoco deben tomar Investigación Aplicada en la toma de ramos del IX semestre.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="continuidad">
+      <h2>Continuidad de estudios</h2>
+      <div class="card common">
+        <span class="tag">Mitad VIII semestre · AP y CIPOL</span>
+        <h3>Postulación</h3>
+        <ul>
+          <li>En octubre se postula mediante formulario en Ucampus.</li>
+          <li>En noviembre se realizan las entrevistas.</li>
+          <li>En diciembre estarían los resultados.</li>
+        </ul>
+        <a class="cta" href="https://raulrojastaborga-conejo.github.io/perfil-estudiantes-gobierno-2026/continuidad_estudios.html" target="_blank" rel="noopener">Ver página de continuidad</a>
+      </div>
+    </section>
+
+    <section id="excepciones">
+      <h2>Excepciones para seminarios</h2>
+      <div class="grid">
+        <article class="card highlight">
+          <span class="tag">AP</span>
+          <h3>Seminario de Investigación Aplicada</h3>
+          <p>La excepción se centra en estudiantes que no hayan aprobado algún ramo hasta el VII semestre inclusive, excepto CFG y cursos libres.</p>
+          <ul>
+            <li>Se solicita por formulario Ucampus.</li>
+            <li>Periodo aproximado: segunda a tercera semana de julio.</li>
+            <li>También deben completar el formulario de inscripción del seminario para enviar preferencias.</li>
+          </ul>
+        </article>
+        <article class="card highlight">
+          <span class="tag">CIPOL</span>
+          <h3>Seminario de Investigación</h3>
+          <p>La excepción se centra en estudiantes que no hayan aprobado <strong>Método Mixto</strong>.</p>
+          <ul>
+            <li>Se solicita por formulario Ucampus.</li>
+            <li>Periodo aproximado: segunda a tercera semana de julio.</li>
+            <li>También deben completar el formulario de inscripción del seminario para enviar preferencias.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="alert"><strong>Importante:</strong> solicitar una excepción no garantiza su aprobación. Si se pide excepción para inscribir seminario, igual se debe completar el formulario de inscripción de seminarios.</div>
+    </section>
+
+    <section id="licenciatura">
+      <h2>Licenciatura</h2>
+      <div class="grid">
+        <article class="card common">
+          <span class="tag">Final VIII semestre · Administración Pública</span>
+          <h3>Antes de solicitar</h3>
+          <ul>
+            <li>Todas las notas deben estar cerradas en Ucampus.</li>
+            <li>Todo aprobado hasta el VIII semestre inclusive.</li>
+            <li>Incluye inglés, cursos libres y 1 CFG.</li>
+          </ul>
+        </article>
+        <article class="card common">
+          <span class="tag">Final VIII semestre · Ciencia Política</span>
+          <h3>Antes de solicitar</h3>
+          <ul>
+            <li>Todas las notas deben estar cerradas en Ucampus.</li>
+            <li>Todo aprobado hasta el VIII semestre inclusive.</li>
+            <li>Incluye inglés y 2 CFG.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <h3>Cómo iniciar el trámite</h3>
+        <p>Cuando el plan de licenciatura esté aprobado y con notas cerradas, el/la estudiante puede solicitar la gestión escribiendo a <strong>raul.rojas@gobierno.uchile.cl</strong>.</p>
+        <p>Luego deberá cargar su cédula en el módulo <strong>Títulos y Grados</strong> de Ucampus. El proceso toma en promedio <strong>3 semanas</strong>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Material de apoyo para charla a estudiantes de IV año. Esta página orienta los hitos del VIII semestre y no reemplaza la información oficial publicada en Ucampus ni las instrucciones específicas de cada proceso.</p>
+    </div>
+  </footer>
+</body>
+</html>
