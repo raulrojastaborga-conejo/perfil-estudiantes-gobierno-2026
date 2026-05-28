@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil estudiantes nuevos/as 2026 — Facultad de Gobierno</title>
+  <style>
+    :root {
+      --uchile-blue: #003c71;
+      --uchile-red: #e23d3d;
+      --soft-blue: #eaf3fb;
+      --soft-red: #fff0f0;
+      --soft-gray: #f6f8fb;
+      --text: #1f2933;
+      --muted: #667085;
+      --card: #ffffff;
+      --border: #d9e2ec;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: linear-gradient(180deg, #f7fbff 0%, #ffffff 45%); color: var(--text); line-height: 1.5; }
+    header { background: var(--uchile-blue); color: white; padding: 36px 24px 30px; text-align: center; }
+    header h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -0.02em; }
+    header p { margin: 0 auto; max-width: 850px; color: #d8e8f7; font-size: 1.05rem; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 18px 56px; }
+    .hero-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: -48px; }
+    .metric-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 20px; box-shadow: 0 10px 30px rgba(0, 60, 113, 0.10); }
+    .metric-card h3 { margin: 0 0 8px; color: var(--uchile-blue); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .metric-card .big { font-size: 2rem; font-weight: 800; color: var(--text); }
+    .metric-card p { margin: 8px 0 0; color: var(--muted); font-size: 0.95rem; }
+    .tabs { margin-top: 28px; background: white; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06); }
+    input[type="radio"] { display: none; }
+    .tab-labels { display: flex; flex-wrap: wrap; gap: 0; background: var(--soft-gray); border-bottom: 1px solid var(--border); }
+    .tab-labels label { cursor: pointer; padding: 15px 18px; font-weight: 700; color: var(--muted); border-right: 1px solid var(--border); transition: all 0.2s ease; }
+    .tab-labels label:hover { background: #eef6ff; color: var(--uchile-blue); }
+    #tab1:checked ~ .tab-labels label[for="tab1"], #tab2:checked ~ .tab-labels label[for="tab2"], #tab3:checked ~ .tab-labels label[for="tab3"], #tab4:checked ~ .tab-labels label[for="tab4"], #tab5:checked ~ .tab-labels label[for="tab5"], #tab6:checked ~ .tab-labels label[for="tab6"] { background: white; color: var(--uchile-blue); box-shadow: inset 0 -4px 0 var(--uchile-red); }
+    .panel { display: none; padding: 28px; animation: fade 0.2s ease; }
+    @keyframes fade { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    #tab1:checked ~ .panels #panel1, #tab2:checked ~ .panels #panel2, #tab3:checked ~ .panels #panel3, #tab4:checked ~ .panels #panel4, #tab5:checked ~ .panels #panel5, #tab6:checked ~ .panels #panel6 { display: block; }
+    h2 { margin-top: 0; color: var(--uchile-blue); font-size: 1.7rem; }
+    .lead { font-size: 1.08rem; color: #344054; max-width: 900px; }
+    .compare { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 20px; }
+    .profile { border-radius: 18px; padding: 20px; border: 1px solid var(--border); background: var(--soft-gray); }
+    .profile.cipol { background: var(--soft-blue); }
+    .profile.ap { background: var(--soft-red); }
+    .profile h3 { margin-top: 0; font-size: 1.35rem; }
+    .tag { display: inline-block; background: white; border: 1px solid var(--border); border-radius: 999px; padding: 5px 10px; margin: 4px 4px 4px 0; font-size: 0.85rem; font-weight: 700; color: #344054; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #eef3f8; color: var(--uchile-blue); }
+    .note { margin-top: 20px; padding: 14px 16px; border-left: 5px solid var(--uchile-blue); background: #f2f7fc; border-radius: 10px; color: #344054; }
+    @media (max-width: 800px) { .hero-grid, .compare { grid-template-columns: 1fr; } .tab-labels { flex-direction: column; } .tab-labels label { border-right: none; border-bottom: 1px solid var(--border); } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Perfil de estudiantes nuevos/as 2026</h1>
+    <p>Facultad de Gobierno · Universidad de Chile</p>
+  </header>
+  <main class="wrap">
+    <section class="hero-grid">
+      <article class="metric-card"><h3>Administración Pública</h3><div class="big">AP</div><p>Caracterización y datos de ingreso.</p></article>
+      <article class="metric-card"><h3>Ciencia Política</h3><div class="big">CIPOL</div><p>Caracterización y datos de ingreso.</p></article>
+      <article class="metric-card"><h3>Uso</h3><div class="big">2026</div><p>Página aislada desde la raíz del repositorio.</p></article>
+    </section>
+    <section class="tabs">
+      <input type="radio" name="tabs" id="tab1" checked>
+      <input type="radio" name="tabs" id="tab2">
+      <input type="radio" name="tabs" id="tab3">
+      <input type="radio" name="tabs" id="tab4">
+      <input type="radio" name="tabs" id="tab5">
+      <input type="radio" name="tabs" id="tab6">
+      <div class="tab-labels">
+        <label for="tab1">Resumen</label>
+        <label for="tab2">AP</label>
+        <label for="tab3">CIPOL</label>
+        <label for="tab4">Comparación</label>
+        <label for="tab5">Lecturas</label>
+        <label for="tab6">Notas</label>
+      </div>
+      <div class="panels">
+        <section class="panel" id="panel1"><h2>Resumen</h2><p class="lead">Esta es la página original del repositorio, movida a una carpeta propia para que la raíz pública no muestre este contenido como portada principal.</p></section>
+        <section class="panel" id="panel2"><h2>Administración Pública</h2><div class="profile ap"><h3>AP</h3><p>Contenido original preservado en página aislada.</p></div></section>
+        <section class="panel" id="panel3"><h2>Ciencia Política</h2><div class="profile cipol"><h3>CIPOL</h3><p>Contenido original preservado en página aislada.</p></div></section>
+        <section class="panel" id="panel4"><h2>Comparación</h2><p>Sección comparativa de la página original.</p></section>
+        <section class="panel" id="panel5"><h2>Lecturas</h2><p>Sección de interpretación.</p></section>
+        <section class="panel" id="panel6"><h2>Notas</h2><div class="note">Esta copia funciona como ubicación aislada. La raíz del repositorio ahora debe usarse como portada neutra de proyectos.</div></section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
