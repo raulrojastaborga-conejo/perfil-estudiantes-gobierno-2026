@@ -3,437 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perfil estudiantes nuevos/as 2026 — Facultad de Gobierno</title>
+  <title>FACGOB — Sitios y recursos</title>
   <style>
-    :root {
-      --uchile-blue: #003c71;
-      --uchile-red: #e23d3d;
-      --soft-blue: #eaf3fb;
-      --soft-red: #fff0f0;
-      --soft-gray: #f6f8fb;
-      --text: #1f2933;
-      --muted: #667085;
-      --card: #ffffff;
-      --border: #d9e2ec;
+    :root{
+      --uchile-blue:#003b6f;
+      --uchile-blue-dark:#00284b;
+      --uchile-light-blue:#1d75bd;
+      --bg:#f4f7fb;
+      --surface:#ffffff;
+      --text:#13202c;
+      --muted:#5c6975;
+      --border:#d9e1ea;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+      --radius:22px;
     }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #f7fbff 0%, #ffffff 45%);
-      color: var(--text);
-      line-height: 1.5;
-    }
-
-    header {
-      background: var(--uchile-blue);
-      color: white;
-      padding: 36px 24px 30px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 10px;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      letter-spacing: -0.02em;
-    }
-
-    header p {
-      margin: 0 auto;
-      max-width: 850px;
-      color: #d8e8f7;
-      font-size: 1.05rem;
-    }
-
-    .wrap {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 28px 18px 56px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: -48px;
-    }
-
-    .metric-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0, 60, 113, 0.10);
-    }
-
-    .metric-card h3 {
-      margin: 0 0 8px;
-      color: var(--uchile-blue);
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .metric-card .big {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--text);
-    }
-
-    .metric-card p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .tabs {
-      margin-top: 28px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-    }
-
-    input[type="radio"] { display: none; }
-
-    .tab-labels {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-      background: var(--soft-gray);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .tab-labels label {
-      cursor: pointer;
-      padding: 15px 18px;
-      font-weight: 700;
-      color: var(--muted);
-      border-right: 1px solid var(--border);
-      transition: all 0.2s ease;
-    }
-
-    .tab-labels label:hover { background: #eef6ff; color: var(--uchile-blue); }
-
-    #tab1:checked ~ .tab-labels label[for="tab1"],
-    #tab2:checked ~ .tab-labels label[for="tab2"],
-    #tab3:checked ~ .tab-labels label[for="tab3"],
-    #tab4:checked ~ .tab-labels label[for="tab4"],
-    #tab5:checked ~ .tab-labels label[for="tab5"],
-    #tab6:checked ~ .tab-labels label[for="tab6"] {
-      background: white;
-      color: var(--uchile-blue);
-      box-shadow: inset 0 -4px 0 var(--uchile-red);
-    }
-
-    .panel { display: none; padding: 28px; animation: fade 0.2s ease; }
-    @keyframes fade { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
-    #tab1:checked ~ .panels #panel1,
-    #tab2:checked ~ .panels #panel2,
-    #tab3:checked ~ .panels #panel3,
-    #tab4:checked ~ .panels #panel4,
-    #tab5:checked ~ .panels #panel5,
-    #tab6:checked ~ .panels #panel6 { display: block; }
-
-    h2 {
-      margin-top: 0;
-      color: var(--uchile-blue);
-      font-size: 1.7rem;
-    }
-
-    .lead {
-      font-size: 1.08rem;
-      color: #344054;
-      max-width: 900px;
-    }
-
-    .compare {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .profile {
-      border-radius: 18px;
-      padding: 20px;
-      border: 1px solid var(--border);
-      background: var(--soft-gray);
-    }
-
-    .profile.cipol { background: var(--soft-blue); }
-    .profile.ap { background: var(--soft-red); }
-
-    .profile h3 {
-      margin-top: 0;
-      font-size: 1.35rem;
-    }
-
-    .tag {
-      display: inline-block;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 6px 10px;
-      margin: 4px 5px 4px 0;
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .data-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .data {
-      padding: 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: white;
-    }
-
-    .data .num {
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: var(--uchile-blue);
-    }
-
-    .data .label {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 18px;
-      overflow: hidden;
-      border-radius: 14px;
-      font-size: 0.96rem;
-    }
-
-    th, td {
-      padding: 12px 10px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-    }
-
-    th {
-      background: var(--uchile-blue);
-      color: white;
-    }
-
-    tr:nth-child(even) td { background: #f8fafc; }
-
-    .insight {
-      margin-top: 22px;
-      padding: 18px 20px;
-      background: #fffbea;
-      border: 1px solid #f7d070;
-      border-radius: 16px;
-      color: #533f04;
-    }
-
-    .cards3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    .small-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      background: white;
-    }
-
-    .small-card h3 { margin-top: 0; color: var(--uchile-blue); }
-
-    footer {
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.88rem;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 850px) {
-      .hero-grid, .compare, .data-grid, .cards3 { grid-template-columns: 1fr; }
-      .tab-labels label { flex: 1 1 50%; border-bottom: 1px solid var(--border); }
-      .panel { padding: 20px; }
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    body::before{content:"Universidad de Chile · Facultad de Gobierno";display:block;background:linear-gradient(90deg,#004b8d,#0069aa);color:#fff;padding:10px 28px;font-size:.82rem;letter-spacing:.08em;font-weight:700}
+    header{background:linear-gradient(135deg,#ffffff 0%,#f7fbff 100%);border-bottom:1px solid var(--border);padding:54px 24px 48px}
+    .wrap{max-width:1120px;margin:0 auto;padding:38px 22px 70px}
+    .hero{max-width:1120px;margin:0 auto}
+    .eyebrow{display:inline-block;margin-bottom:10px;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--uchile-light-blue)}
+    h1{margin:0;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1;letter-spacing:-.06em;color:var(--uchile-blue)}
+    header p{max-width:780px;margin:18px 0 0;color:var(--muted);font-size:1.08rem}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .card h2{margin:0 0 12px;color:var(--uchile-blue);font-size:1.45rem;letter-spacing:-.03em}
+    .card p{margin:0;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;padding:12px 18px;background:var(--uchile-blue);color:#fff;text-decoration:none;font-weight:800;border-radius:999px}
+    .btn.alt{background:var(--uchile-light-blue)}
+    .notice{margin-top:28px;padding:20px 22px;border-radius:18px;background:#eef7ff;border:1px solid #bddcf4;color:#123f63}
+    footer{max-width:1120px;margin:30px auto 0;padding:22px;color:var(--muted);font-size:.92rem}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header>
-    <h1>Perfil estudiantes nuevos/as 2026</h1>
-    <p>Comparación amigable entre Ciencia Política, Administración Pública y el promedio de estudiantes nuevos/as de la Universidad de Chile.</p>
+    <div class="hero">
+      <span class="eyebrow">FACGOB</span>
+      <h1>Sitios y recursos</h1>
+      <p>Portada general del repositorio. Esta página funciona como entrada neutra para evitar que la raíz pública muestre directamente un recurso específico.</p>
+    </div>
   </header>
-
   <main class="wrap">
-    <section class="hero-grid" aria-label="Resumen ejecutivo">
-      <article class="metric-card">
-        <h3>Ciencia Política</h3>
-        <div class="big">80</div>
-        <p>Estudiantes nuevos/as. Perfil más académico-humanista y competitivo en PAES.</p>
+    <section class="grid" aria-label="Sitios disponibles">
+      <article class="card">
+        <h2>Secretaría de Estudios</h2>
+        <p>Sitio de orientación para estudiantes de pregrado, postgrado, postítulo y educación continua de la Facultad de Gobierno.</p>
+        <a class="btn" href="secretaria-estudios/">Entrar</a>
       </article>
-      <article class="metric-card">
-        <h3>Administración Pública</h3>
-        <div class="big">185</div>
-        <p>Estudiantes nuevos/as. Perfil más diverso socialmente y con trayectorias menos lineales.</p>
+      <article class="card">
+        <h2>Perfil estudiantes 2026</h2>
+        <p>Página original del repositorio, ahora aislada en una carpeta propia para que no aparezca como portada principal.</p>
+        <a class="btn alt" href="perfil-estudiantes-2026/">Abrir recurso</a>
       </article>
-      <article class="metric-card">
-        <h3>Universidad de Chile</h3>
-        <div class="big">7.324</div>
-        <p>Cohorte institucional 2026 usada como referencia general.</p>
+      <article class="card">
+        <h2>Otros recursos</h2>
+        <p>Repositorio de trabajo para páginas y visualizaciones puntuales de la Facultad de Gobierno.</p>
       </article>
     </section>
-
-    <section class="tabs">
-      <input type="radio" name="tabs" id="tab1" checked>
-      <input type="radio" name="tabs" id="tab2">
-      <input type="radio" name="tabs" id="tab3">
-      <input type="radio" name="tabs" id="tab4">
-      <input type="radio" name="tabs" id="tab5">
-      <input type="radio" name="tabs" id="tab6">
-
-      <div class="tab-labels">
-        <label for="tab1">Resumen</label>
-        <label for="tab2">Perfil social</label>
-        <label for="tab3">Trayectoria</label>
-        <label for="tab4">Puntajes</label>
-        <label for="tab5">Vocación</label>
-        <label for="tab6">Cómo presentarlo</label>
-      </div>
-
-      <div class="panels">
-        <section id="panel1" class="panel">
-          <h2>Idea central</h2>
-          <p class="lead">La Facultad de Gobierno recibe dos perfiles estudiantiles distintos. Ciencia Política aparece más cercana a un perfil académico-humanista tradicional y altamente competitivo. Administración Pública aparece como una carrera de mayor diversidad social, movilidad y trayectorias menos lineales.</p>
-
-          <div class="compare">
-            <article class="profile cipol">
-              <h3>Ciencia Política</h3>
-              <span class="tag">Más PAES humanista</span>
-              <span class="tag">Más ingreso inmediato</span>
-              <span class="tag">Menos TP</span>
-              <span class="tag">Más perfil académico</span>
-              <p>Perfil de estudiante más homogéneo, con mayor continuidad desde la enseñanza media y mejores resultados relativos en Lectura e Historia.</p>
-            </article>
-            <article class="profile ap">
-              <h3>Administración Pública</h3>
-              <span class="tag">Más diversidad social</span>
-              <span class="tag">Más TP</span>
-              <span class="tag">Más transición</span>
-              <span class="tag">Más movilidad social</span>
-              <p>Perfil más heterogéneo, con mayor presencia de colegios públicos/subvencionados y estudiantes con trayectorias previas más diversas.</p>
-            </article>
-          </div>
-
-          <div class="insight"><strong>Lectura rápida:</strong> CIPOL parece representar más una vocación político-intelectual; AP combina vocación pública, empleabilidad, movilidad social y orientación práctica hacia el Estado.</div>
-        </section>
-
-        <section id="panel2" class="panel">
-          <h2>Perfil social y escolar</h2>
-          <p class="lead">La principal diferencia estructural está en el origen escolar. AP concentra más estudiantes de establecimientos públicos y subvencionados, mientras CIPOL tiene mayor peso relativo de particulares pagados.</p>
-          <div class="data-grid">
-            <div class="data"><div class="num">33,0%</div><div class="label">AP: colegios públicos</div></div>
-            <div class="data"><div class="num">16,2%</div><div class="label">AP: particular pagado</div></div>
-            <div class="data"><div class="num">26,2%</div><div class="label">CIPOL: colegios públicos</div></div>
-            <div class="data"><div class="num">28,7%</div><div class="label">CIPOL: particular pagado</div></div>
-          </div>
-          <table>
-            <thead><tr><th>Indicador</th><th>CIPOL</th><th>AP</th><th>Lectura</th></tr></thead>
-            <tbody>
-              <tr><td>Colegios públicos</td><td>26,2%</td><td>33,0%</td><td>AP tiene mayor presencia pública.</td></tr>
-              <tr><td>Particulares subvencionados</td><td>40,0%</td><td>49,2%</td><td>AP se concentra más en subvencionados.</td></tr>
-              <tr><td>Particulares pagados</td><td>28,7%</td><td>16,2%</td><td>CIPOL tiene mayor peso de colegios pagados.</td></tr>
-              <tr><td>Enseñanza técnico-profesional</td><td>3,8%</td><td>11,4%</td><td>AP tiene casi el triple de presencia TP.</td></tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section id="panel3" class="panel">
-          <h2>Trayectorias de ingreso</h2>
-          <p class="lead">CIPOL muestra una trayectoria más directa desde la enseñanza media. AP tiene más estudiantes que ingresan después de uno o más años, lo que sugiere experiencias previas diversas.</p>
-          <div class="data-grid">
-            <div class="data"><div class="num">72,5%</div><div class="label">CIPOL: ingreso inmediato</div></div>
-            <div class="data"><div class="num">57,3%</div><div class="label">AP: ingreso inmediato</div></div>
-            <div class="data"><div class="num">7,6%</div><div class="label">AP: 5 años o más</div></div>
-            <div class="data"><div class="num">2,5%</div><div class="label">CIPOL: 5 años o más</div></div>
-          </div>
-          <div class="insight"><strong>Interpretación:</strong> AP probablemente requiere apoyos más diferenciados, porque no todos llegan con la misma continuidad escolar ni con el mismo ritmo académico reciente.</div>
-        </section>
-
-        <section id="panel4" class="panel">
-          <h2>Puntajes y preparación académica</h2>
-          <p class="lead">CIPOL tiene mejores indicadores PAES en Lectura e Historia, mientras AP muestra mayor heterogeneidad interna. En ambas carreras, las mujeres tienen mejores NEM/Ranking y los hombres mejores puntajes PAES en varias pruebas.</p>
-          <table>
-            <thead><tr><th>Indicador promedio</th><th>CIPOL</th><th>AP</th><th>Diferencia</th></tr></thead>
-            <tbody>
-              <tr><td>Puntaje ponderado</td><td>823,3</td><td>795,4</td><td>CIPOL +27,9</td></tr>
-              <tr><td>Competencia Lectora</td><td>792,9</td><td>760,4</td><td>CIPOL +32,5</td></tr>
-              <tr><td>Matemática M1</td><td>752,3</td><td>743,3</td><td>CIPOL +9,0</td></tr>
-              <tr><td>Historia y Cs. Sociales</td><td>784,2</td><td>733,1</td><td>CIPOL +51,1</td></tr>
-              <tr><td>NEM</td><td>878,5</td><td>851,6</td><td>CIPOL +26,9</td></tr>
-              <tr><td>Ranking</td><td>898,7</td><td>876,1</td><td>CIPOL +22,6</td></tr>
-            </tbody>
-          </table>
-          <div class="insight"><strong>Clave:</strong> La brecha más fuerte está en Historia y Ciencias Sociales, lo que refuerza el carácter humanista-político de CIPOL.</div>
-        </section>
-
-        <section id="panel5" class="panel">
-          <h2>Vocación y elección de carrera</h2>
-          <p class="lead">AP aparece como una elección más claramente priorizada en la postulación. CIPOL, aunque vocacional, tiene una menor proporción de estudiantes que la marcaron como primera preferencia.</p>
-          <div class="data-grid">
-            <div class="data"><div class="num">70,8%</div><div class="label">AP: primera preferencia</div></div>
-            <div class="data"><div class="num">45,0%</div><div class="label">CIPOL: primera preferencia</div></div>
-            <div class="data"><div class="num">94,5%</div><div class="label">AP: espera graduarse</div></div>
-            <div class="data"><div class="num">87,9%</div><div class="label">CIPOL: espera graduarse</div></div>
-          </div>
-          <div class="compare">
-            <article class="profile cipol">
-              <h3>CIPOL</h3>
-              <p>Puede tener un perfil más exploratorio: interés político, académico e intelectual, pero no siempre como primera opción absoluta.</p>
-            </article>
-            <article class="profile ap">
-              <h3>AP</h3>
-              <p>Aparece como elección más definida, posiblemente asociada a vocación pública, empleabilidad estatal y proyecto profesional más concreto.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="panel6" class="panel">
-          <h2>Forma sugerida de presentación</h2>
-          <p class="lead">Para presentarlo a un tercero, conviene evitar una exposición larga de tablas. La mejor forma es una narrativa visual en tres capas.</p>
-          <div class="cards3">
-            <article class="small-card">
-              <h3>1. Una frase inicial</h3>
-              <p>“La Facultad recibe dos perfiles distintos: CIPOL más académico-humanista; AP más diverso y orientado a movilidad social.”</p>
-            </article>
-            <article class="small-card">
-              <h3>2. Tres contrastes</h3>
-              <p>Origen escolar, trayectoria de ingreso y puntajes. Eso basta para que el público entienda la diferencia.</p>
-            </article>
-            <article class="small-card">
-              <h3>3. Implicancias</h3>
-              <p>Docencia, acompañamiento, inducción, nivelación y comunicación deberían adaptarse a ambos perfiles.</p>
-            </article>
-          </div>
-          <div class="insight"><strong>Formato recomendado:</strong> usar esta página como micrositio. Para reunión, convertirla en 5 diapositivas: Resumen, Perfil social, Trayectoria, Puntajes, Implicancias.</div>
-        </section>
-      </div>
+    <section class="notice">
+      <strong>Importante:</strong> esta portada no restringe acceso ni vuelve privadas las páginas. Solo ordena la navegación pública del repositorio. Para privacidad real se debe usar una plataforma con control de acceso o un repositorio/sitio separado con permisos adecuados.
     </section>
-
-    <footer>
-      Elaboración sintética a partir de informes EUA 2026: Universidad de Chile, Ciencia Política y Administración Pública.
-    </footer>
   </main>
+  <footer>Facultad de Gobierno · Universidad de Chile</footer>
 </body>
 </html>
