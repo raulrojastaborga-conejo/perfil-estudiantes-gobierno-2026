@@ -132,6 +132,32 @@
       margin-bottom: 28px;
       font-weight: 700;
     }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .section-head h2 { margin-bottom: 16px; }
+    .section-head .section-intro { margin-bottom: 0; }
+    .section-art {
+      width: 100%;
+      max-width: 260px;
+      justify-self: end;
+      background: white;
+      border: 2px solid var(--borde);
+      border-radius: 30px;
+      padding: 12px;
+      box-shadow: var(--sombra);
+    }
+    .section-art img {
+      display: block;
+      width: 100%;
+      max-height: 240px;
+      object-fit: contain;
+      border-radius: 22px;
+    }
     .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
     .card {
@@ -330,7 +356,8 @@
     @media (max-width: 920px) {
       body { font-size: 21px; }
       header { min-height: 60vh; }
-      .grid, .grid-3, .timeline { grid-template-columns: 1fr; }
+      .grid, .grid-3, .timeline, .section-head { grid-template-columns: 1fr; }
+      .section-art { justify-self: start; max-width: 220px; }
       nav.quick { position: static; }
       .buttons a, .btn { font-size: 18px; }
       .step { grid-template-columns: 1fr; }
@@ -361,8 +388,15 @@
 
   <main class="wrap">
     <section id="inicio">
-      <h2>Primero: ubícate en la ruta</h2>
-      <p class="section-intro">El VIII semestre tiene tres momentos. No todos los trámites ocurren al final: algunos se hacen antes de que empiece o justo al inicio.</p>
+      <div class="section-head">
+        <div>
+          <h2>Primero: ubícate en la ruta</h2>
+          <p class="section-intro">El VIII semestre tiene tres momentos. No todos los trámites ocurren al final: algunos se hacen antes de que empiece o justo al inicio.</p>
+        </div>
+        <figure class="section-art" aria-label="Ilustración de orientación inicial">
+          <img src="Cuyipito-idontknow.jpeg" alt="Cuyipito confundido, para introducir la orientación de ruta del VIII semestre" />
+        </figure>
+      </div>
       <div class="timeline">
         <div class="moment">
           <div class="big-date">Julio aprox.</div>
@@ -379,7 +413,7 @@
         <div class="moment">
           <div class="big-date">Cierre del semestre</div>
           <h3>Final del VIII semestre</h3>
-          <p><strong>Licenciatura, solo si el plan está aprobado y las notas están cerradas.</strong></p>
+          <p><strong>Licenciatura, solo si el plan de licenciatura está completamente aprobado y con notas cerradas.</strong></p>
           <p class="small">El trámite toma en promedio 3 semanas.</p>
         </div>
       </div>
@@ -469,8 +503,15 @@
     </section>
 
     <section id="continuidad">
-      <h2>Continuidad de estudios</h2>
-      <p class="section-intro">Aplica para estudiantes de Administración Pública y Ciencia Política durante la mitad del VIII semestre.</p>
+      <div class="section-head">
+        <div>
+          <h2>Continuidad de estudios</h2>
+          <p class="section-intro">Aplica para estudiantes de Administración Pública y Ciencia Política durante la mitad del VIII semestre.</p>
+        </div>
+        <figure class="section-art" aria-label="Ilustración de continuidad de estudios">
+          <img src="Cuyipito-continuidad.jpeg" alt="Cuyipito acompañando la sección de continuidad de estudios" />
+        </figure>
+      </div>
       <div class="grid-3">
         <div class="card common"><span class="tag">Octubre</span><h3>Postulas</h3><p>La postulación se realiza mediante formulario en Ucampus.</p></div>
         <div class="card common"><span class="tag">Noviembre</span><h3>Entrevistas</h3><p>Se realizan las entrevistas del proceso.</p></div>
@@ -560,8 +601,15 @@
     </section>
 
     <section id="prueba">
-      <h2>Mini prueba: evita estos errores</h2>
-      <p class="section-intro">Respondamos rápido. La idea es detectar los errores antes de que pasen.</p>
+      <div class="section-head">
+        <div>
+          <h2>Mini prueba: evita estos errores</h2>
+          <p class="section-intro">Respondamos rápido. La idea es detectar los errores antes de que pasen.</p>
+        </div>
+        <figure class="section-art" aria-label="Ilustración de mini prueba">
+          <img src="Cuyipito-test.jpeg" alt="Cuyipito para la mini prueba de control" />
+        </figure>
+      </div>
 
       <div class="quiz-card">
         <h3>1. Soy AP y escogí mención Gestión Pública. ¿Qué debe pasar con mi Seminario y Simulación?</h3>
