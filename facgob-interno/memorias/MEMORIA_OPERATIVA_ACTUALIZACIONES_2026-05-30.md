@@ -252,3 +252,165 @@ Flujo:
 - Confundir notas pendientes con problema de Secretaría.
 - Presentar el proceso como gestión de pagos docentes.
 - Confundir Ucampus con U-Cursos.
+
+---
+
+## 3. Flexibilidad académica y justificativos institucionales
+
+### Alcance
+
+La página interna se actualizó desde “PCS y flexibilidad académica” a **Flexibilidad académica y justificativos institucionales**.
+
+Debe cubrir:
+
+- PCS / Protocolo de Corresponsabilidad Social;
+- flexibilidad académica de pregrado;
+- flexibilidad académica de postgrado;
+- deportistas;
+- Senado Universitario;
+- JOE y otras actividades institucionales autorizadas;
+- justificativos institucionales masivos.
+
+### Distinción conceptual
+
+- PCS es una vía de acceso a flexibilidad académica, pero no es lo mismo que flexibilidad académica.
+- La flexibilidad académica puede provenir de PCS u otras condiciones reconocidas institucionalmente.
+- Un justificativo institucional no es necesariamente una situación académica ni equivale siempre a flexibilidad académica.
+- La justificación de inasistencia opera por Ucampus cuando el estudiante ingresa solicitud y adjunta respaldo; cuando Secretaría informa directamente al docente, puede no quedar registrada como solicitud Ucampus.
+
+### Pregrado — PCS y flexibilidad
+
+Flujo operativo:
+
+1. Estudiante solicita o activa caso ante Unidad de Equidad, Inclusión y Género.
+2. Jordanna / Unidad EIG revisa antecedentes y envía nómina o constancia a Secretaría.
+3. Romina registra situación académica base en Ucampus, sin adjuntos.
+4. Si existe medida concreta, Jordanna envía constancia con estudiante, curso, docente y medida solicitada.
+5. Romina registra situación de flexibilidad académica, sin adjuntos.
+6. Romina prepara carta por docente/curso.
+7. Raúl firma.
+8. Romina envía a docente.
+9. Romina copia a Asuntos Estudiantiles, Unidad/Dirección EIG y Raúl.
+10. No copia a Coordinación Docente ni Jefatura de Carrera como regla actual.
+
+No hay resolución en flexibilidad académica de pregrado.
+
+### No retroactividad
+
+La carta de flexibilidad o justificativo aplica desde su emisión/envío hacia adelante. No cubre situaciones anteriores al envío formal.
+
+### Postgrado — protocolos de corresponsabilidad y salud mental
+
+Flujo según flujograma validado:
+
+1. Estudiante ingresa solicitud por sistema de solicitudes académicas / formulario Ucampus.
+2. Secretaría de Estudios acusa recibo.
+3. Secretaría envía antecedentes a:
+   - profesional de apoyo del programa;
+   - Secretario/a Académico/a de Postgrado;
+   - Director/a de Postgrado;
+   - Dirección de Género, Equidad e Inclusión;
+   - Comité Académico del programa.
+4. Secretario/a Académico/a de Postgrado convoca comité ad hoc.
+5. Comité ad hoc revisa y emite acta.
+6. El acta puede aceptar y proponer medidas o rechazar con motivo.
+7. Secretario/a académico/a envía acta a Secretaría de Estudios y profesional del programa.
+8. María Teresa registra flexibilidad académica en Ucampus/U-Cursos.
+9. María Teresa escribe detalle de la flexibilidad.
+10. María Teresa adjunta acta del comité.
+11. María Teresa informa al estudiante por correo, con copia al profesional de coordinación del magíster.
+12. El profesional de apoyo del programa informa a docentes del trimestre/semestre.
+
+No hay resolución en flexibilidad académica de postgrado. El respaldo es el acta del comité ad hoc.
+
+### Plazos sugeridos postgrado
+
+- Acuse y envío de antecedentes: 4 días hábiles.
+- Convocar comité ad hoc: 3 días hábiles desde recepción de antecedentes.
+- Comité y acta: 7 días hábiles desde convocatoria.
+- Respuesta final: 15 días hábiles desde acuse.
+
+### Duración postgrado
+
+En postgrado, la flexibilidad académica opera por todo el programa, salvo que el acta o una nueva decisión indiquen otra cosa.
+
+### Registro Ucampus / U-Cursos
+
+Criterios:
+
+- Debe registrarse la situación general de flexibilidad académica cuando hay medidas vigentes.
+- Cuando corresponda, debe registrarse además la categoría institucional base que habilita la flexibilidad.
+- En pregrado, no se adjuntan documentos para estos registros.
+- En postgrado, se adjunta el acta del comité ad hoc al registro de flexibilidad.
+- Para deportistas, buena práctica: adjuntar respaldo formal, como acta, nómina, memo u otro documento institucional.
+
+### Visibilidad docente y confidencialidad
+
+Algunas marcas pueden ser visibles para docentes en U-Cursos, especialmente en vistas de caracterización. Por ello:
+
+- registrar solo categorías institucionales;
+- no incluir diagnósticos;
+- no incluir antecedentes clínicos;
+- no registrar detalles sensibles innecesarios.
+
+### Prioridad en toma de ramos
+
+Algunas situaciones registradas pueden activar prioridad por sistema en toma de ramos. Está pendiente confirmar con Ucampus duración exacta y efectos automáticos.
+
+### Deportistas
+
+Hay tres vías:
+
+1. Prioridad académica deportiva local: Asuntos Estudiantiles envía acta o nómina; Romina registra situación académica de deportista.
+2. Documento central DDAF: Dirección de Deportes y Actividad Física o nivel central envía documento formal; Secretaría registra o actualiza condición.
+3. Competencia específica: DDAF envía memorándum puntual; Secretaría gestiona justificativo/flexibilidad para fechas concretas cuando corresponde.
+
+Romina informó haber emitido justificativos de deportistas. Falta revisar formato concreto si aparece un ejemplo.
+
+### Senado Universitario
+
+Estudiantes integrantes del Senado Universitario pueden requerir facilidades para ejercer su mandato.
+
+Flujo:
+
+1. Llega oficio o documento formal del Senado/nivel central.
+2. Secretaría identifica estudiante.
+3. Romina prepara justificativo/carta.
+4. Raúl firma.
+5. Romina envía al docente.
+
+### Justificativos institucionales masivos
+
+Incluyen JOE, Alianza del Pacífico y otras actividades autorizadas por Escuela, Facultad, Universidad o unidades centrales.
+
+Flujo actual:
+
+1. Snélida / unidad correspondiente solicita justificativos.
+2. Llega lista de estudiantes, usualmente con período definido.
+3. Romina revisa en Ucampus cursos y docentes.
+4. Romina prepara justificativos.
+5. Raúl firma.
+6. Romina envía a docentes.
+
+Mejora operativa: idealmente trabajar con matriz previa de estudiante, curso, docente y correo docente, para evitar búsqueda manual caso a caso.
+
+### Registro de justificativos en Ucampus
+
+Los justificativos institucionales no quedan registrados por Secretaría como situación académica.
+
+Si se requiere formalizar una justificación de inasistencia, el estudiante debe ingresar a Ucampus, módulo Solicitudes, tipo justificativo de inasistencia, y adjuntar el documento. En la práctica, muchas veces Secretaría informa directamente al docente y el estudiante no ingresa la solicitud.
+
+### Qué no debe hacer Secretaría
+
+- No resolver evaluaciones académicas sin competencia.
+- No comunicar medidas no validadas.
+- No registrar antecedentes sensibles.
+- No transformar todo justificativo en situación académica.
+- No asumir que acuerdos informales reemplazan comunicación institucional.
+
+### Pendientes técnicos
+
+- Confirmar con Ucampus duración exacta de cada situación y sus efectos automáticos.
+- Confirmar visibilidad docente de cada categoría en U-Cursos.
+- Revisar ejemplo concreto de justificativo de deportista si aparece.
+- Revisar si el flujo postgrado requiere ajustes posteriores desde Dirección de Postgrado.
