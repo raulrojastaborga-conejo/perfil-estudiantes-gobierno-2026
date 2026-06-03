@@ -134,8 +134,8 @@
     }
     .section-head {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 260px;
-      gap: 30px;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 34px;
       align-items: center;
       margin-bottom: 28px;
     }
@@ -143,20 +143,20 @@
     .section-head .section-intro { margin-bottom: 0; }
     .section-art {
       width: 100%;
-      max-width: 260px;
+      max-width: 340px;
       justify-self: end;
       background: white;
       border: 2px solid var(--borde);
-      border-radius: 30px;
+      border-radius: 32px;
       padding: 12px;
       box-shadow: var(--sombra);
     }
     .section-art img {
       display: block;
       width: 100%;
-      max-height: 240px;
+      max-height: 320px;
       object-fit: contain;
-      border-radius: 22px;
+      border-radius: 24px;
     }
     .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
@@ -357,7 +357,7 @@
       body { font-size: 21px; }
       header { min-height: 60vh; }
       .grid, .grid-3, .timeline, .section-head { grid-template-columns: 1fr; }
-      .section-art { justify-self: start; max-width: 220px; }
+      .section-art { justify-self: start; max-width: 290px; }
       nav.quick { position: static; }
       .buttons a, .btn { font-size: 18px; }
       .step { grid-template-columns: 1fr; }
@@ -421,26 +421,26 @@
 
     <section id="ap">
       <h2>Si eres de Administración Pública</h2>
-      <p class="section-intro">Tu gran tarea al inicio del VIII semestre es armar correctamente el <strong>pack de mención</strong>.</p>
+      <p class="section-intro">Tu gran tarea al inicio del VIII semestre es <strong>escoger correctamente la mención</strong>. Ojo: no es solo marcar una opción en Ucampus; también deben calzar el Seminario de Investigación Aplicada y Simulación de Asesoría.</p>
       <div class="grid">
         <article class="card highlight">
           <span class="tag">Inicio VIII semestre</span>
-          <h3>El pack debe calzar</h3>
-          <p>En Administración Pública, la mención aplica a la licenciatura. Por eso, estos tres elementos deben ser de la misma mención:</p>
+          <h3>Escoger la mención: tres acciones</h3>
+          <p>En Administración Pública, la mención aplica a la licenciatura. Por eso, escoger la mención significa completar correctamente estas tres acciones:</p>
           <div class="steps">
-            <div class="step"><div><strong>Escoger mención</strong><br>Ucampus → Solicitudes → Escoger especialidad.</div></div>
-            <div class="step"><div><strong>Seminario de Investigación Aplicada</strong><br>Se solicita por formulario Ucampus.</div></div>
-            <div class="step"><div><strong>Simulación de Asesoría</strong><br>Se inscribe en la toma de ramos normal.</div></div>
+            <div class="step"><div><strong>Seleccionar la mención</strong><br>Ucampus → Solicitudes → Escoger especialidad.</div></div>
+            <div class="step"><div><strong>Inscribir Seminario de Investigación Aplicada</strong><br>Por formulario Ucampus, de la misma mención.</div></div>
+            <div class="step"><div><strong>Inscribir Simulación de Asesoría</strong><br>Por toma de ramos normal, de la misma mención.</div></div>
           </div>
-          <div class="error-box"><strong>Error típico:</strong> escoger una mención, pero tomar Seminario o Simulación de otra. Ese pack no queda coherente.</div>
+          <div class="error-box"><strong>Error típico:</strong> seleccionar una mención, pero tomar Seminario o Simulación de otra. La elección de mención no queda coherente.</div>
         </article>
         <article class="card blue">
           <span class="tag">Menciones AP</span>
           <h3>Dos opciones</h3>
           <p>Las menciones disponibles son:</p>
           <p><span class="pill">Ciencia Política</span><span class="pill">Gestión Pública</span></p>
-          <p>Escoger la mención en Ucampus demora aproximadamente <strong>2 minutos</strong>.</p>
-          <button class="btn" onclick="openModal('modal-ap')">Ver ejemplo de pack correcto</button>
+          <p>Seleccionar la mención en Ucampus demora aproximadamente <strong>2 minutos</strong>.</p>
+          <button class="btn" onclick="openModal('modal-ap')">Ver ejemplo de elección correcta</button>
         </article>
       </div>
 
@@ -587,11 +587,11 @@
     </section>
 
     <section id="resumen">
-      <h2>Resumen brutalmente simple</h2>
+      <h2>Resumen en simple</h2>
       <table class="mini-table">
         <thead><tr><th>Si estás en...</th><th>Recuerda esto</th></tr></thead>
         <tbody>
-          <tr><td>Administración Pública</td><td>Mención + Seminario de Investigación Aplicada + Simulación de Asesoría deben calzar.</td></tr>
+          <tr><td>Administración Pública</td><td>Escoger la mención implica tres acciones coherentes: seleccionar la mención, inscribir Seminario de Investigación Aplicada y tomar Simulación de Asesoría de esa misma mención.</td></tr>
           <tr><td>Ciencia Política</td><td>Completa el formulario de Seminario de Investigación; eso proyecta también Investigación Aplicada del IX semestre.</td></tr>
           <tr><td>Continuidad</td><td>Octubre: postulación. Noviembre: entrevistas. Diciembre: resultados.</td></tr>
           <tr><td>Licenciatura</td><td>Solo se inicia con todo aprobado y todas las notas cerradas en Ucampus.</td></tr>
@@ -662,11 +662,11 @@
   <div id="modal-ap" class="modal-backdrop" onclick="closeModal(event)">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-ap-title">
       <button class="close" onclick="closeModal(event)">Cerrar</button>
-      <h2 id="modal-ap-title">Ejemplo de pack correcto AP</h2>
-      <p><strong>Ejemplo correcto:</strong> escoges mención Gestión Pública, solicitas Seminario de Investigación Aplicada de Gestión Pública y tomas Simulación de Asesoría de Gestión Pública.</p>
-      <div class="ok-box">Resultado: el pack queda coherente con la mención de la licenciatura.</div>
-      <p><strong>Ejemplo incorrecto:</strong> escoges mención Ciencia Política, pero tomas Simulación de Asesoría de Gestión Pública.</p>
-      <div class="error-box">Resultado: el pack no calza. Ese ramo puede no servir para completar correctamente esa línea.</div>
+      <h2 id="modal-ap-title">Ejemplo de elección de mención correcta AP</h2>
+      <p><strong>Ejemplo correcto:</strong> seleccionas mención Gestión Pública, solicitas Seminario de Investigación Aplicada de Gestión Pública y tomas Simulación de Asesoría de Gestión Pública.</p>
+      <div class="ok-box">Resultado: la elección queda coherente con la mención de la licenciatura.</div>
+      <p><strong>Ejemplo incorrecto:</strong> seleccionas mención Ciencia Política, pero tomas Simulación de Asesoría de Gestión Pública.</p>
+      <div class="error-box">Resultado: la elección no calza. Ese ramo puede no servir para completar correctamente esa línea.</div>
     </div>
   </div>
 
