@@ -2,7 +2,7 @@ import json
 import pathlib
 import re
 import urllib.request
-from datetime import datetime, timezone, date, time
+from datetime import datetime, timezone, date, timedelta
 from zoneinfo import ZoneInfo
 
 DATA = pathlib.Path("centro-mundial-2026/data")
@@ -59,16 +59,12 @@ def parse_time_zone(value):
     m = re.match(r"^(\d{1,2}):(\d{2})\s+UTC([+-]\d+)$", value.strip())
     if not m:
         return None
-    hour = int(m.group(1))
-    minute = int(m.group(2))
-    offset = int(m.group(3))
-    return hour, minute, offset
+    return int(m.group(1)), int(m.group(2)), int(m.group(3))
 
 
 def to_chile_datetime(match_date, hour, minute, offset):
-    source_tz = timezone.utc if offset == 0 else timezone.utc
-    # Local time with UTC offset converted manually to UTC, then to America/Santiago.
-    utc_dt = datetime(match_date.year, match_date.month, match_date.day, hour - offset, minute, tzinfo=timezone.utc)
+    local_naive = datetime(match_date.year, match_date.month, match_date.day, hour, minute)
+    utc_dt = (local_naive - timedelta(hours=offset)).replace(tzinfo=timezone.utc)
     cl = utc_dt.astimezone(ZoneInfo("America/Santiago"))
     return cl.isoformat(), cl.strftime("%d-%m-%Y %H:%M")
 
@@ -105,7 +101,6 @@ def parse_fixture_block(text):
         stage_m = re.match(r"^▪\s+(.+)$", line)
         if stage_m:
             current_group = None
-            current_stage = stage_m.group(1)
             continue
 
         d = parse_date_line(line)
