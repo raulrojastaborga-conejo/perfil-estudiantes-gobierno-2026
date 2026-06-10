@@ -1,120 +1,65 @@
 {
-  "updated_at": "2026-06-10T22:48:37.688049+00:00",
+  "updated_at": "2026-06-10T22:50:34.706057+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
-      "id": "wikipedia_2026_world_cup",
-      "name": "Wikipedia - Copa Mundial de Fútbol de 2026",
-      "url": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2026",
-      "type": "fixture_reference",
-      "robots_allowed": false,
+      "id": "openfootball_worldcup_repo",
+      "name": "OpenFootball - World Cup repository",
+      "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/README.md",
+      "type": "open_dataset_reference",
+      "robots_allowed": true,
       "ok": true,
       "summary": {
-        "line_count": 7554,
+        "line_count": 145,
         "keywords": [
           {
             "keyword": "Chile",
-            "count": 3
-          },
-          {
-            "keyword": "fixture",
-            "count": 4
-          },
-          {
-            "keyword": "horario",
-            "count": 4
-          },
-          {
-            "keyword": "schedule",
             "count": 1
-          }
-        ],
-        "sample_dates": [
-          "1 de julio de 2026",
-          "1 de junio de 2026",
-          "1 de mayo de 2026",
-          "10 de abril de 2026",
-          "10 de julio de 2026",
-          "10 de junio de 2026",
-          "10 jun 2026",
-          "11 de julio de 2026",
-          "11 de junio de 2026",
-          "12 de junio de 2026",
-          "12 de marzo de 2026",
-          "13 de junio de 2026",
-          "13 de mayo de 2026",
-          "14 de enero de 2026",
-          "14 de julio de 2026",
-          "14 de junio de 2026",
-          "15 de enero de 2026",
-          "15 de julio de 2026",
-          "15 de junio de 2026",
-          "15 de mayo de 2026",
-          "16 de junio de 2026",
-          "16 de marzo de 2026",
-          "17 de abril de 2026",
-          "17 de junio de 2026",
-          "17 de marzo de 2026",
-          "18 de julio de 2026",
-          "18 de junio de 2026",
-          "18 de mayo de 2026",
-          "19 de julio de 2026",
-          "19 de junio de 2026",
-          "19 de mayo de 2026",
-          "2 de julio de 2026",
-          "20 de abril de 2026",
-          "20 de junio de 2026",
-          "20 de marzo de 2026",
-          "21 de junio de 2026",
-          "21 de marzo de 2026",
-          "21 de mayo de 2026",
-          "22 de abril de 2026",
-          "22 de junio de 2026"
-        ],
-        "sample_text": "Copa Mundial de Fútbol de 2026 - Wikipedia, la enciclopedia libre\nIr al contenido\nMenú principal\nMenú principal\nmover a la barra lateral\nocultar\nNavegación\nPortada\nPortal de la comunidad\nActualidad\nCambios recientes\nPáginas nuevas\nPágina aleatoria\nAyuda\nNotificar un error\nPáginas especiales\nBuscar\nBuscar\nApariencia\nDonaciones\nCrear una cuenta\nAcceder\nHerramientas personales\nDonaciones\nCrear una cuenta\nAcceder\nContenidos\nmover a la barra lateral\nocultar\nInicio\n1\nAntecedentes\nAlternar subsección Antecedentes\n1.1\nNuevos formatos para la fase final\n1.2\nAsignación de cupos y nuevo sistema de repesca\n2\nProceso de elección de la sede\nAlternar subsección Proceso de elección de la sede"
-      }
-    },
-    {
-      "id": "wikipedia_2026_squads",
-      "name": "Wikipedia - 2026 FIFA World Cup squads",
-      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads",
-      "type": "squads_reference",
-      "robots_allowed": false,
-      "ok": true,
-      "summary": {
-        "line_count": 17366,
-        "keywords": [
-          {
-            "keyword": "Chile",
-            "count": 2
           },
           {
             "keyword": "group",
-            "count": 50
+            "count": 40
           },
           {
             "keyword": "Group",
-            "count": 50
-          },
+            "count": 40
+          }
+        ],
+        "sample_dates": [],
+        "sample_text": "# World Cup\n## What's `football.db`?\nA free open public domain football database & schema\nfor use in any (programming) language - with (structured) text datasets using the (future-proof and evergreen) Football.TXT format.\nMore [`football.db` Project Site »](http://openfootball.github.io)\n## Intro\nFree open public domain football data for the World Cup (e.g. Canada/USA/Mexico 2026, Qatar 2022, Russia 2018, Brazil 2014, etc.)\nand the World Cup Quali(fiers). Football.TXT example:\n```\n= World Cup 2026      # in Canada, USA, and Mexico\nGroup A | Mexico \t      South Africa    South Korea\t   Czech Republic\nGroup B | Canada      Bosnia & Herzegovina  Qatar    Switzerland\nGroup C | Brazil          Morocco      Haiti   Scotland\nGroup D | USA   Paraguay     Australia   Turkey\nGroup E | Germany         Curaçao      Ivory Coast   Ecuador\nGroup F | Netherlands\t  Japan        Sweden  Tunisia\nGroup G | Belgium         Egypt        Iran        New Zealand\nGroup H | Spain           Cape Verde   Saudi Arabia   Uruguay\nGroup I | France      Senegal   Iraq   Norway\nGroup J | Argentina\t   Algeria   Austria   Jordan\nGroup K | Portugal   DR Congo   Uzbekistan  Colombia\nGroup L | England    Croatia     Ghana   Panama\n▪ Group A\nThu June 11\n13:00 UTC-6  Mexico       v South Africa        @ Mexico City\n20:00 UTC-6  South Korea  v Czech Republic      @ Guadalajara (Zapopan)\n...\n▪ Match for third place\nSat Jul 18\n17:00 UTC-4  L101 v L102    @ Miami (Miami Gardens)\n▪ Final\nSun Jul 19\n15:00 UTC-4  W101 v W102    @ New York/New Jersey (East Rutherford)\n```\nor\n```\n= World Cup 2022    # in Qatar, November 20 - December 18\nGroup A  | Qatar      Ecuador        Senegal        Netherlands\nGroup B  | England    Iran           USA            Wales\nGroup C  | Argentina  Saudi Arabia   Mexico         Poland"
+      }
+    },
+    {
+      "id": "football_json_worldcup_repo",
+      "name": "football.json - world cup repository",
+      "url": "https://raw.githubusercontent.com/openfootball/football.json/master/README.md",
+      "type": "open_dataset_reference",
+      "robots_allowed": true,
+      "ok": true,
+      "summary": {
+        "line_count": 93,
+        "keywords": [
           {
-            "keyword": "squads",
-            "count": 16
+            "keyword": "fixture",
+            "count": 2
           },
           {
             "keyword": "schedule",
             "count": 1
-          },
-          {
-            "keyword": "injury",
-            "count": 11
           }
         ],
-        "sample_dates": [
-          "10 June 2026",
-          "26\nThe\n2026"
-        ],
-        "sample_text": "2026 FIFA World Cup squads - Wikipedia\nJump to content\nMain menu\nMain menu\nmove to sidebar\nhide\nNavigation\nMain page\nContents\nCurrent events\nRandom article\nAbout Wikipedia\nContact us\nContribute\nHelp\nLearn to edit\nCommunity portal\nRecent changes\nUpload file\nSpecial pages\nSearch\nSearch\nAppearance\nDonate\nCreate account\nLog in\nPersonal tools\nDonate\nCreate account\nLog in\nContents\nmove to sidebar\nhide\n(Top)\n1\nGroup A\nToggle Group A subsection\n1.1\nCzech Republic\n1.2"
+        "sample_dates": [],
+        "sample_text": "## What's News?\nYou can use the [`fbtxt2json` command-line tool](https://github.com/sportdb/footty/tree/master/fbtxt2json) to convert any (match data) file in the Football.TXT format to JSON.\nLet's try to convert the English Premier League 2025/26\nin the Football.TXT format (see [`england/2025-26/1-premierleague.txt`](https://github.com/openfootball/england/blob/master/2025-26/1-premierleague.txt)) to JSON:\n```\n$ fbtxt2json england/2025-26/1-premierleague.txt -o en.1.json\n```\nTip - Or try to convert the complete [`/england`](https://github.com/openfootball/england) repo at once:\n```\n$ fbtxt2json . -o ./_site   # run inside /england; output json datasets to _site directory\n```\n# football.json\nFree open public domain football (match fixtures & results) data in the JSON (JavaScript Object Notation)\ndata interchange format.\nLeagues include:\n- English Premier League, Championship, League One, League Two\n- Deutsche Bundesliga, 2. Bundesliga, 3. Liga\n- Spanish Primera División (\"La Liga\"), Segunda División\n- Italian Serie A, Serie B\n- French Ligue 1, Ligue 2\n- and much more\nExample - Premier League 2015/16 Match Schedule (Fixtures and Results) - [`2015-16/en.1.json`](https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json):\n``` json\n{\n\"name\": \"Premier League 2015/16\",\n\"matches\": [\n{\n\"round\": \"Matchday 1\",\n\"date\":  \"2015-08-08\",\n\"team1\": \"Manchester United\",\n\"team2\": \"Tottenham Hotspur\",\n\"score\": { \"ft\": [1, 0] }\n},\n{\n\"round\": \"Matchday 1\",\n\"date\":  \"2015-08-09\",\n\"team1\": \"Arsenal\",\n\"team2\": \"West Ham United\",\n\"score\": { \"ft\": [0, 2] }\n},"
       }
+    },
+    {
+      "id": "wikidata_sparql_worldcup_2026",
+      "name": "Wikidata SPARQL - 2026 FIFA World Cup entity",
+      "url": "https://query.wikidata.org/sparql?query=SELECT%20%3Fitem%20%3FitemLabel%20WHERE%20%7B%20VALUES%20%3Fitem%20%7B%20wd%3AQ5020214%20%7D%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%5C%22es%2Cen%5C%22.%20%7D%20%7D&format=json",
+      "type": "sparql_json",
+      "robots_allowed": false,
+      "ok": false,
+      "error": "HTTP Error 400: Bad Request"
     }
   ]
 }
