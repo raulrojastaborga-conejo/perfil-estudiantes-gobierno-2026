@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centro Mundial 2026</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <div class="hero">
+      <span class="tag">⚽ Centro Mundial 2026 · Chile continental</span>
+      <h1>El Mundial en una sola pantalla</h1>
+      <p class="lead">Calendario, resultados editables, tablas automáticas por grupo, base inicial de jugadores y estructura lista para conectar una API de datos deportivos.</p>
+      <div class="stats">
+        <div class="stat"><b>48</b><span>selecciones</span></div>
+        <div class="stat"><b>12</b><span>grupos</span></div>
+        <div class="stat"><b>104</b><span>partidos</span></div>
+        <div class="stat"><b>2</b><span>modos: oficial/simulador</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav class="tabs">
+      <button class="tab active" data-tab="calendario">Calendario</button>
+      <button class="tab" data-tab="tablas">Tablas</button>
+      <button class="tab" data-tab="jugadores">Jugadores</button>
+      <button class="tab" data-tab="api">API</button>
+    </nav>
+    <section id="calendario" class="section active">
+      <div class="card">
+        <h2>Calendario y resultados</h2>
+        <p class="mini">Ingresa marcadores y canales. Se guardan en este navegador.</p>
+        <input id="search" placeholder="Buscar selección, grupo, fecha o canal" oninput="renderMatches()">
+        <div id="matches"></div>
+        <p><button class="tab" onclick="resetSim()">Reiniciar simulación</button></p>
+      </div>
+    </section>
+    <section id="tablas" class="section">
+      <div class="grid" id="standings"></div>
+    </section>
+    <section id="jugadores" class="section">
+      <div class="card">
+        <h2>Jugadores</h2>
+        <p class="mini">Base inicial demostrativa. Luego se puede completar por selección, posición, estado, tarjetas, lesiones y suspensión.</p>
+        <div id="players"></div>
+      </div>
+    </section>
+    <section id="api" class="section">
+      <div class="card notice">
+        <h2>Preparado para API</h2>
+        <p>La arquitectura permite conectar proveedores como API-Football o Balldontlie FIFA para resultados, eventos, alineaciones, jugadores, tarjetas y lesiones.</p>
+        <p class="mini">Plan recomendado: mantener datos locales como respaldo y consumir API solo cuando el dato esté disponible.</p>
+      </div>
+    </section>
+  </main>
+  <footer>Proyecto personal no afiliado a FIFA. Diseño futbolero propio.</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
