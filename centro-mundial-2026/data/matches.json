@@ -1,0 +1,12 @@
+[
+  {"id":"A1","group":"A","date":"2026-06-11","time_cl":"20:00","home":"México","away":"Sudáfrica","channel":"Por definir","gh":"","ga":""},
+  {"id":"A2","group":"A","date":"2026-06-12","time_cl":"17:00","home":"Corea del Sur","away":"Ganador playoff","channel":"Por definir","gh":"","ga":""},
+  {"id":"A3","group":"A","date":"2026-06-17","time_cl":"20:00","home":"México","away":"Corea del Sur","channel":"Por definir","gh":"","ga":""},
+  {"id":"A4","group":"A","date":"2026-06-18","time_cl":"17:00","home":"Sudáfrica","away":"Ganador playoff","channel":"Por definir","gh":"","ga":""},
+  {"id":"A5","group":"A","date":"2026-06-24","time_cl":"16:00","home":"México","away":"Ganador playoff","channel":"Por definir","gh":"","ga":""},
+  {"id":"A6","group":"A","date":"2026-06-24","time_cl":"16:00","home":"Sudáfrica","away":"Corea del Sur","channel":"Por definir","gh":"","ga":""},
+  {"id":"C1","group":"C","date":"2026-06-13","time_cl":"20:00","home":"Brasil","away":"Marruecos","channel":"Por definir","gh":"","ga":""},
+  {"id":"C2","group":"C","date":"2026-06-14","time_cl":"17:00","home":"Haití","away":"Escocia","channel":"Por definir","gh":"","ga":""},
+  {"id":"J1","group":"J","date":"2026-06-16","time_cl":"20:00","home":"Argentina","away":"Argelia","channel":"Por definir","gh":"","ga":""},
+  {"id":"J2","group":"J","date":"2026-06-17","time_cl":"17:00","home":"Austria","away":"Jordania","channel":"Por definir","gh":"","ga":""}
+]
