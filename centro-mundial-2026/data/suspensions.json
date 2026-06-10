@@ -1,0 +1,6 @@
+{
+  "updated_at": "2026-06-10",
+  "mode": "manual_y_calculado",
+  "note": "Los suspendidos pueden mantenerse manualmente al inicio y luego calcularse desde tarjetas/eventos cuando existan datos confiables por partido.",
+  "suspensions": []
+}
