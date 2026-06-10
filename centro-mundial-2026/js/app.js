@@ -8,7 +8,8 @@ async function load(){
   const ofMatches=await getJson('data/openfootball_matches.json',null);
   teamsData=unwrap(ofTeams,'groups')||await getJson('data/teams.json',[]);
   const base=(unwrap(ofMatches,'matches')||await getJson('data/matches.json',[])).map(normalizeMatch);
-  const playersPayload=await getJson('data/players.json',{players:[]});
+  const squadPayload=await getJson('data/squads_crosscheck.json',null);
+  const playersPayload=squadPayload||await getJson('data/players.json',{players:[]});
   players=Array.isArray(playersPayload)?playersPayload:(playersPayload.players||[]);
   playersMeta=Array.isArray(playersPayload)?{}:playersPayload;
   odds=await getJson('data/odds.json',[]);
@@ -30,7 +31,7 @@ function table(body){return '<div class="third-table"><table><thead><tr><th>Equi
 function renderStandings(){const b=$('#standings');if(b)b.innerHTML=teamsData.map(g=>'<div class="card"><h3>Grupo '+g.group+'</h3>'+table(rows(calcGroup(g.group)))+'</div>').join('')}
 function getThirds(){return teamsData.map(g=>calcGroup(g.group)[2]).filter(Boolean).sort((a,b)=>b.pts-a.pts||b.dg-a.dg||b.gf-a.gf)}
 function renderThirds(){const b=$('#thirds');if(b)b.innerHTML=table(rows(getThirds(),true))}
-function renderPlayers(){const b=$('#players');if(!b)return;if(!players.length){b.innerHTML='<div class="card"><h3>Planteles oficiales pendientes</h3><p class="mini">'+(playersMeta.note||'Aún no hay jugadores verificados para mostrar.')+'</p><p class="mini">La sección usará solo jugadores con fuente explícita y fecha de verificación. No se muestran jugadores demo para evitar información engañosa.</p></div>';return}b.innerHTML=players.map(p=>'<div class="player"><b>'+p.team+'</b><span>'+p.name+'</span><span class="badge">'+p.position+'</span><span class="badge">'+p.status+'</span><span class="mini">'+(p.source_id||'sin fuente')+' · '+(p.verified_at||'sin fecha')+'</span></div>').join('')}
+function renderPlayers(){const b=$('#players');if(!b)return;if(!players.length){b.innerHTML='<div class="card"><h3>Convocatorias pendientes</h3><p class="mini">'+(playersMeta.note||'Aún no hay jugadores verificados para mostrar.')+'</p></div>';return}const intro='<div class="card"><h3>Convocatorias referenciales cruzadas</h3><p class="mini">'+(playersMeta.note||'Datos preliminares.')+'</p></div>';b.innerHTML=intro+players.map(p=>'<div class="player"><b>'+p.team+'</b><span>'+p.name+'</span><span class="badge">'+p.position+'</span><span class="badge">'+(p.squad_status||p.status||'sin estado')+'</span><span class="mini">Club: '+(p.club||'s/d')+' · Fuente base: '+(p.source_primary||p.source_id||'sin fuente')+' · Confianza: '+(p.confidence||'s/d')+'</span></div>').join('')}
 function renderBracket(){const b=$('#bracket');if(!b)return;const q=[...teamsData.flatMap(g=>calcGroup(g.group).slice(0,2)),...getThirds().slice(0,8)];b.innerHTML='<div class="bracket-note"><b>Clasificados simulados: '+q.length+'/32</b><p class="mini">Cruces exactos pendientes de regla oficial FIFA.</p>'+q.map(x=>'<span class="badge">'+x.team+'</span> ').join('')+'</div>'}
 document.addEventListener('click',e=>{if(e.target.classList.contains('tab')){document.querySelectorAll('.tab,.section').forEach(x=>x.classList.remove('active'));e.target.classList.add('active');const t=document.getElementById(e.target.dataset.tab);if(t)t.classList.add('active')}});
 window.resetSim=()=>{localStorage.removeItem('wc26_matches');location.reload()};
