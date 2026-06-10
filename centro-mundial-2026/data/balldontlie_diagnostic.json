@@ -1,0 +1,60 @@
+{
+  "updated_at": "2026-06-10T22:31:13.674129+00:00",
+  "source": "Balldontlie FIFA",
+  "base_url": "https://fifa.balldontlie.io",
+  "data": {
+    "status": {
+      "ok": false,
+      "url": "https://fifa.balldontlie.io/",
+      "error": "Expecting value: line 2 column 1 (char 1)"
+    },
+    "teams": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/teams?season=2026",
+      "error": "Not Found\n"
+    },
+    "players": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/players?season=2026",
+      "error": "Not Found\n"
+    },
+    "matches": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/matches?season=2026",
+      "error": "Not Found\n"
+    },
+    "games": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/games?season=2026",
+      "error": "Not Found\n"
+    },
+    "standings": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/standings?season=2026",
+      "error": "Not Found\n"
+    },
+    "lineups": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/lineups?season=2026",
+      "error": "Not Found\n"
+    },
+    "events": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/events?season=2026",
+      "error": "Not Found\n"
+    },
+    "rosters": {
+      "ok": false,
+      "status": 404,
+      "url": "https://fifa.balldontlie.io/rosters?season=2026",
+      "error": "Not Found\n"
+    }
+  }
+}
