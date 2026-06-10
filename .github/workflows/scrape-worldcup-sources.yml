@@ -1,0 +1,40 @@
+name: Scrape World Cup Sources
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 */12 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-worldcup-sources:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Scrape public sources in diagnostic mode
+        run: python scripts/scrape_worldcup_sources.py
+
+      - name: Commit and push scrape diagnostic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add centro-mundial-2026/data/scrape_diagnostic.json
+          if git diff --cached --quiet; then
+            echo "No scrape changes to commit"
+          else
+            git commit -m "Actualiza diagnóstico scraping Mundial 2026"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
