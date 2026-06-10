@@ -1,13 +1,20 @@
 {
-  "updated_at": "2026-06-10T22:14:28.676661+00:00",
+  "updated_at": "2026-06-10T22:25:43.252091+00:00",
   "source": "API-Football / API-Sports",
   "data": {
     "ok": true,
-    "updated_at": "2026-06-10T22:14:28.332864+00:00",
+    "updated_at": "2026-06-10T22:25:42.702165+00:00",
     "provider": "API-Football / API-Sports",
-    "message": "Conexión API exitosa. Revisar api_leagues_worldcup.json para confirmar league id y season.",
+    "league_id": 1,
+    "season": 2026,
+    "message": "Actualización finalizada. Puede haber warnings por endpoints no incluidos en el plan gratis.",
     "files": [
-      "api_leagues_worldcup.json"
-    ]
+      "api_leagues_worldcup.json",
+      "live_matches.json",
+      "live_standings.json",
+      "live_odds.json",
+      "live_predictions_sample.json"
+    ],
+    "warnings": []
   }
 }
