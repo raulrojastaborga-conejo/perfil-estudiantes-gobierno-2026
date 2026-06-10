@@ -3,6 +3,7 @@ import os
 import pathlib
 import urllib.parse
 import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 
 BASE_URL = "https://v3.football.api-sports.io"
@@ -12,45 +13,47 @@ LEAGUE_ID = 1
 SEASON = 2026
 
 
-def api_get(path, params=None):
-    if not KEY:
-        raise RuntimeError("Falta API_FOOTBALL_KEY")
-    query = ""
-    if params:
-        query = "?" + urllib.parse.urlencode(params)
-    req = urllib.request.Request(
-        BASE_URL + path + query,
-        headers={"x-apisports-key": KEY}
-    )
-    with urllib.request.urlopen(req, timeout=30) as response:
-        return json.loads(response.read().decode("utf-8"))
+def now():
+    return datetime.now(timezone.utc).isoformat()
 
 
 def write_json(name, data, source="API-Football / API-Sports"):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "source": source,
-        "data": data,
-    }
+    payload = {"updated_at": now(), "source": source, "data": data}
     (OUT_DIR / name).write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def add_status(status, name, fn):
+def api_get(path, params=None):
+    if not KEY:
+        raise RuntimeError("Falta API_FOOTBALL_KEY")
+    url = BASE_URL + path
+    if params:
+        url += "?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, headers={"x-apisports-key": KEY})
     try:
-        data = fn()
-        write_json(name, data)
-        status["files"].append(name)
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"HTTP {e.code} en {path}: {body[:500]}")
+
+
+def try_endpoint(status, filename, path, params):
+    try:
+        data = api_get(path, params)
+        write_json(filename, data)
+        status["files"].append(filename)
         return data
     except Exception as e:
-        status["warnings"].append({"file": name, "error": str(e)})
+        status["warnings"].append({"file": filename, "endpoint": path, "error": str(e)})
+        write_json(filename, {"error": str(e), "response": []})
         return None
 
 
 def main():
     status = {
         "ok": False,
-        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "updated_at": now(),
         "provider": "API-Football / API-Sports",
         "league_id": LEAGUE_ID,
         "season": SEASON,
@@ -59,26 +62,31 @@ def main():
         "warnings": []
     }
 
-    leagues = add_status(status, "api_leagues_worldcup.json", lambda: api_get("/leagues", {"search": "World Cup"}))
-    fixtures = add_status(status, "live_matches.json", lambda: api_get("/fixtures", {"league": LEAGUE_ID, "season": SEASON}))
-    standings = add_status(status, "live_standings.json", lambda: api_get("/standings", {"league": LEAGUE_ID, "season": SEASON}))
-    odds = add_status(status, "live_odds.json", lambda: api_get("/odds", {"league": LEAGUE_ID, "season": SEASON}))
-
-    prediction_samples = []
+    fixtures = None
     try:
-        if fixtures and fixtures.get("response"):
-            for item in fixtures["response"][:5]:
-                fixture_id = item.get("fixture", {}).get("id")
-                if fixture_id:
-                    prediction_samples.append(api_get("/predictions", {"fixture": fixture_id}))
-        write_json("live_predictions_sample.json", prediction_samples)
-        status["files"].append("live_predictions_sample.json")
-    except Exception as e:
-        status["warnings"].append({"file": "live_predictions_sample.json", "error": str(e)})
+        try_endpoint(status, "api_leagues_worldcup.json", "/leagues", {"search": "World Cup"})
+        fixtures = try_endpoint(status, "live_matches.json", "/fixtures", {"league": LEAGUE_ID, "season": SEASON})
+        try_endpoint(status, "live_standings.json", "/standings", {"league": LEAGUE_ID, "season": SEASON})
+        try_endpoint(status, "live_odds.json", "/odds", {"league": LEAGUE_ID, "season": SEASON})
 
-    status["ok"] = len(status["files"]) > 0
-    status["message"] = "Actualización finalizada. Revisar warnings si algún endpoint no respondió."
-    write_json("api_status.json", status)
+        samples = []
+        if fixtures and fixtures.get("response"):
+            for item in fixtures["response"][:3]:
+                fid = item.get("fixture", {}).get("id")
+                if fid:
+                    try:
+                        samples.append(api_get("/predictions", {"fixture": fid}))
+                    except Exception as e:
+                        samples.append({"fixture": fid, "error": str(e)})
+        write_json("live_predictions_sample.json", samples)
+        status["files"].append("live_predictions_sample.json")
+
+        status["ok"] = True
+        status["message"] = "Actualización finalizada. Puede haber warnings por endpoints no incluidos en el plan gratis."
+    except Exception as e:
+        status["message"] = "Error general: " + str(e)
+    finally:
+        write_json("api_status.json", status)
 
 
 if __name__ == "__main__":
