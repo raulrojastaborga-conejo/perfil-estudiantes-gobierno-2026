@@ -1,24 +1,9 @@
-let teamsData=[];let matches=[];let players=[];let odds=[];let playersMeta={};
+let teamsData=[];let matches=[];let players=[];let odds=[];let playersMeta={};let selectedTeam='';
 const $=s=>document.querySelector(s);
 async function getJson(url,fb){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(url);return await r.json()}catch(e){return fb}}
 function unwrap(payload,key){return payload&&payload.data&&payload.data[key]?payload.data[key]:payload}
 function normalizeMatch(m){return Object.assign({},m,{gh:m.gh??m.score_home??'',ga:m.ga??m.score_away??''})}
-async function load(){
-  const ofTeams=await getJson('data/openfootball_teams.json',null);
-  const ofMatches=await getJson('data/openfootball_matches.json',null);
-  teamsData=unwrap(ofTeams,'groups')||await getJson('data/teams.json',[]);
-  const base=(unwrap(ofMatches,'matches')||await getJson('data/matches.json',[])).map(normalizeMatch);
-  const squadPayload=await getJson('data/squads_crosscheck.json',null);
-  const playersPayload=squadPayload||await getJson('data/players.json',{players:[]});
-  players=Array.isArray(playersPayload)?playersPayload:(playersPayload.players||[]);
-  playersMeta=Array.isArray(playersPayload)?{}:playersPayload;
-  odds=await getJson('data/odds.json',[]);
-  const saved=JSON.parse(localStorage.getItem('wc26_matches')||'null');
-  matches=(saved&&saved.length?mergeSaved(base,saved):base);
-  const gf=$('#groupFilter');
-  if(gf) gf.innerHTML='<option value="">Todos los grupos</option>'+teamsData.map(g=>'<option value="'+g.group+'">Grupo '+g.group+'</option>').join('');
-  renderAll();
-}
+async function load(){const ofTeams=await getJson('data/openfootball_teams.json',null);const ofMatches=await getJson('data/openfootball_matches.json',null);teamsData=unwrap(ofTeams,'groups')||await getJson('data/teams.json',[]);const base=(unwrap(ofMatches,'matches')||await getJson('data/matches.json',[])).map(normalizeMatch);const squadPayload=await getJson('data/squads_crosscheck.json',null);const playersPayload=squadPayload||await getJson('data/players.json',{players:[]});players=Array.isArray(playersPayload)?playersPayload:(playersPayload.players||[]);playersMeta=Array.isArray(playersPayload)?{}:playersPayload;odds=await getJson('data/odds.json',[]);const saved=JSON.parse(localStorage.getItem('wc26_matches')||'null');matches=(saved&&saved.length?mergeSaved(base,saved):base);const gf=$('#groupFilter');if(gf)gf.innerHTML='<option value="">Todos los grupos</option>'+teamsData.map(g=>'<option value="'+g.group+'">Grupo '+g.group+'</option>').join('');renderAll()}
 function mergeSaved(base,saved){const byId=Object.fromEntries(saved.map(m=>[m.id,m]));return base.map(m=>Object.assign({},m,{gh:byId[m.id]?.gh??m.gh??'',ga:byId[m.id]?.ga??m.ga??'',channel:byId[m.id]?.channel??m.channel}))}
 function save(){localStorage.setItem('wc26_matches',JSON.stringify(matches))}
 function renderAll(){renderMatches();renderStandings();renderPlayers();renderThirds();renderBracket()}
@@ -31,7 +16,8 @@ function table(body){return '<div class="third-table"><table><thead><tr><th>Equi
 function renderStandings(){const b=$('#standings');if(b)b.innerHTML=teamsData.map(g=>'<div class="card"><h3>Grupo '+g.group+'</h3>'+table(rows(calcGroup(g.group)))+'</div>').join('')}
 function getThirds(){return teamsData.map(g=>calcGroup(g.group)[2]).filter(Boolean).sort((a,b)=>b.pts-a.pts||b.dg-a.dg||b.gf-a.gf)}
 function renderThirds(){const b=$('#thirds');if(b)b.innerHTML=table(rows(getThirds(),true))}
-function renderPlayers(){const b=$('#players');if(!b)return;if(!players.length){b.innerHTML='<div class="card"><h3>Convocatorias pendientes</h3><p class="mini">'+(playersMeta.note||'Aún no hay jugadores verificados para mostrar.')+'</p></div>';return}const intro='<div class="card"><h3>Convocatorias referenciales cruzadas</h3><p class="mini">'+(playersMeta.note||'Datos preliminares.')+'</p></div>';b.innerHTML=intro+players.map(p=>'<div class="player"><b>'+p.team+'</b><span>'+p.name+'</span><span class="badge">'+p.position+'</span><span class="badge">'+(p.squad_status||p.status||'sin estado')+'</span><span class="mini">Club: '+(p.club||'s/d')+' · Fuente base: '+(p.source_primary||p.source_id||'sin fuente')+' · Confianza: '+(p.confidence||'s/d')+'</span></div>').join('')}
+function allTeams(){return teamsData.flatMap(g=>g.teams).sort((a,b)=>a.localeCompare(b))}
+function renderPlayers(){const b=$('#players');if(!b)return;if(!players.length){b.innerHTML='<div class="card"><h3>Convocatorias pendientes</h3><p class="mini">'+(playersMeta.note||'Aún no hay jugadores verificados para mostrar.')+'</p></div>';return}const teams=allTeams();if(!selectedTeam)selectedTeam=teams.find(t=>players.some(p=>p.team===t))||teams[0]||'';const count=players.filter(p=>p.team===selectedTeam).length;const selector='<div class="card"><h3>Convocatorias por selección</h3><p class="mini">'+(playersMeta.note||'Datos preliminares.')+'</p><label class="mini">Selecciona país</label><select onchange="selectedTeam=this.value;renderPlayers()">'+teams.map(t=>'<option value="'+t+'" '+(t===selectedTeam?'selected':'')+'>'+t+' ('+players.filter(p=>p.team===t).length+')</option>').join('')+'</select><p class="mini">Mostrando '+count+' jugador(es) cargado(s) para '+selectedTeam+'. Si aparece 0, esa selección aún no fue cargada.</p></div>';const list=players.filter(p=>p.team===selectedTeam).map(p=>'<div class="player"><b>'+p.name+'</b><span>'+p.position+'</span><span class="badge">'+(p.squad_status||p.status||'sin estado')+'</span><span class="mini">Club: '+(p.club||'s/d')+' · Fuente base: '+(p.source_primary||p.source_id||'sin fuente')+' · Confianza: '+(p.confidence||'s/d')+'</span></div>').join('')||'<div class="card"><h3>'+selectedTeam+'</h3><p class="mini">Aún no hay jugadores cargados para esta selección.</p></div>';b.innerHTML=selector+list}
 function renderBracket(){const b=$('#bracket');if(!b)return;const q=[...teamsData.flatMap(g=>calcGroup(g.group).slice(0,2)),...getThirds().slice(0,8)];b.innerHTML='<div class="bracket-note"><b>Clasificados simulados: '+q.length+'/32</b><p class="mini">Cruces exactos pendientes de regla oficial FIFA.</p>'+q.map(x=>'<span class="badge">'+x.team+'</span> ').join('')+'</div>'}
 document.addEventListener('click',e=>{if(e.target.classList.contains('tab')){document.querySelectorAll('.tab,.section').forEach(x=>x.classList.remove('active'));e.target.classList.add('active');const t=document.getElementById(e.target.dataset.tab);if(t)t.classList.add('active')}});
 window.resetSim=()=>{localStorage.removeItem('wc26_matches');location.reload()};
