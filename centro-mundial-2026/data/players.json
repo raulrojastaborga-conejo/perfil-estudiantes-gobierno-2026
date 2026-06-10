@@ -1,8 +1,6 @@
-[
-  {"team":"Argentina","name":"Lionel Messi","position":"Delantero","status":"Disponible"},
-  {"team":"Francia","name":"Kylian Mbappé","position":"Delantero","status":"Disponible"},
-  {"team":"Brasil","name":"Vinícius Jr.","position":"Delantero","status":"Disponible"},
-  {"team":"Portugal","name":"Cristiano Ronaldo","position":"Delantero","status":"Disponible"},
-  {"team":"Inglaterra","name":"Jude Bellingham","position":"Mediocampista","status":"Disponible"},
-  {"team":"España","name":"Lamine Yamal","position":"Extremo","status":"Disponible"}
-]
+{
+  "updated_at": "2026-06-10",
+  "mode": "manual_auditado",
+  "note": "Planteles oficiales del Mundial 2026 pendientes de publicación/verificación. No se muestran jugadores demo para evitar información engañosa.",
+  "players": []
+}
