@@ -1,19 +1,25 @@
 let teamsData=[];let matches=[];let players=[];let odds=[];
 const $=s=>document.querySelector(s);
-async function getJson(url,fb){try{return await (await fetch(url,{cache:'no-store'})).json()}catch(e){return fb}}
+async function getJson(url,fb){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(url);return await r.json()}catch(e){return fb}}
+function unwrap(payload,key){return payload&&payload.data&&payload.data[key]?payload.data[key]:payload}
+function normalizeMatch(m){return Object.assign({},m,{gh:m.gh??m.score_home??'',ga:m.ga??m.score_away??''})}
 async function load(){
-  teamsData=await getJson('data/teams.json',[]);
-  const base=await getJson('data/matches.json',[]);
+  const ofTeams=await getJson('data/openfootball_teams.json',null);
+  const ofMatches=await getJson('data/openfootball_matches.json',null);
+  teamsData=unwrap(ofTeams,'groups')||await getJson('data/teams.json',[]);
+  const base=(unwrap(ofMatches,'matches')||await getJson('data/matches.json',[])).map(normalizeMatch);
   players=await getJson('data/players.json',[]);
   odds=await getJson('data/odds.json',[]);
-  matches=JSON.parse(localStorage.getItem('wc26_matches')||'null')||base;
+  const saved=JSON.parse(localStorage.getItem('wc26_matches')||'null');
+  matches=(saved&&saved.length?mergeSaved(base,saved):base);
   const gf=$('#groupFilter');
   if(gf) gf.innerHTML='<option value="">Todos los grupos</option>'+teamsData.map(g=>'<option value="'+g.group+'">Grupo '+g.group+'</option>').join('');
   renderAll();
 }
+function mergeSaved(base,saved){const byId=Object.fromEntries(saved.map(m=>[m.id,m]));return base.map(m=>Object.assign({},m,{gh:byId[m.id]?.gh??m.gh??'',ga:byId[m.id]?.ga??m.ga??'',channel:byId[m.id]?.channel??m.channel}))}
 function save(){localStorage.setItem('wc26_matches',JSON.stringify(matches))}
 function renderAll(){renderMatches();renderStandings();renderPlayers();renderThirds();renderBracket()}
-function updateMatch(id,k,v){matches=matches.map(m=>m.id===id?Object.assign({},m,{[k]:v}):m);save();renderStandings();renderThirds();renderBracket()}
+function updateMatch(id,k,v){matches=matches.map(m=>m.id===id?Object.assign({},m,{[k]:v}):m);save();renderMatches();renderStandings();renderThirds();renderBracket()}
 function oddsHtml(m){
  const o=odds.find(x=>x.match_id===m.id);
  if(!o) return '<div class="odds"><b>Pronóstico</b><div class="mini">Sin probabilidades cargadas.</div></div>';
@@ -23,7 +29,7 @@ function oddsHtml(m){
 function renderMatches(){
  const box=$('#matches'); if(!box) return;
  const q=($('#search')?.value||'').toLowerCase(), g=$('#groupFilter')?.value||'', d=$('#dateFilter')?.value||'';
- box.innerHTML=matches.filter(m=>(!g||m.group===g)&&(!d||m.date===d)&&[m.group,m.home,m.away,m.channel,m.date].join(' ').toLowerCase().includes(q)).map(m=>'<div class="match"><div><b>Grupo '+m.group+'</b><div class="mini">'+m.date+' · '+m.time_cl+' Chile</div></div><div class="score"><span class="team">'+m.home+'</span><input value="'+(m.gh||'')+'" oninput="updateMatch(\''+m.id+'\',\'gh\',this.value)"><input value="'+(m.ga||'')+'" oninput="updateMatch(\''+m.id+'\',\'ga\',this.value)"><span class="team">'+m.away+'</span></div><div><input value="'+(m.channel||'Por definir')+'" oninput="updateMatch(\''+m.id+'\',\'channel\',this.value)"></div>'+oddsHtml(m)+'</div>').join('')||'<p class="mini">No hay partidos para mostrar.</p>';
+ box.innerHTML=matches.filter(m=>(!g||m.group===g)&&(!d||m.date===d)&&[m.group,m.home,m.away,m.channel,m.date,m.venue].join(' ').toLowerCase().includes(q)).map(m=>'<div class="match"><div><b>Grupo '+m.group+'</b><div class="mini">'+m.date+' · '+m.time_cl+' Chile · '+(m.venue||'Sede por confirmar')+'</div></div><div class="score"><span class="team">'+m.home+'</span><input value="'+(m.gh||'')+'" oninput="updateMatch(\''+m.id+'\',\'gh\',this.value)"><input value="'+(m.ga||'')+'" oninput="updateMatch(\''+m.id+'\',\'ga\',this.value)"><span class="team">'+m.away+'</span></div><div><input value="'+(m.channel||'Por definir')+'" oninput="updateMatch(\''+m.id+'\',\'channel\',this.value)"></div>'+oddsHtml(m)+'</div>').join('')||'<p class="mini">No hay partidos para mostrar.</p>';
 }
 function calcGroup(group){
  const gi=teamsData.find(x=>x.group===group); if(!gi) return [];
