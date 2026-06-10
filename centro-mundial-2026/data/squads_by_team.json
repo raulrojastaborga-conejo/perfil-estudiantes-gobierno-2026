@@ -4,87 +4,13 @@
   "note": "Planteles referenciales por selección. No equivalen a convocatoria oficial final FIFA ni a alineación por partido. Se completarán país por país y luego se compararán con FIFA/federaciones cuando existan nóminas oficiales.",
   "default_status": "referencial_transfermarkt",
   "teams": {
-    "Mexico": {
-      "group": "A",
-      "squad_status": "plantel_referencial_parcial",
-      "source_primary": "Transfermarkt",
-      "fifa_status": "pendiente_comparacion",
-      "players": [
-        {"name":"Guillermo Ochoa","position":"Arquero","club":"AVS","confidence":"media"},
-        {"name":"Luis Ángel Malagón","position":"Arquero","club":"América","confidence":"media"},
-        {"name":"Johan Vásquez","position":"Defensa","club":"Genoa","confidence":"media"},
-        {"name":"César Montes","position":"Defensa","club":"Lokomotiv Moscow","confidence":"media"},
-        {"name":"Jesús Gallardo","position":"Defensa","club":"Toluca","confidence":"media"},
-        {"name":"Jorge Sánchez","position":"Defensa","club":"Cruz Azul","confidence":"media"},
-        {"name":"Edson Álvarez","position":"Mediocampista","club":"West Ham United","confidence":"media"},
-        {"name":"Luis Chávez","position":"Mediocampista","club":"Dynamo Moscow","confidence":"media"},
-        {"name":"Orbelín Pineda","position":"Mediocampista","club":"AEK Athens","confidence":"media"},
-        {"name":"Erick Sánchez","position":"Mediocampista","club":"América","confidence":"media"},
-        {"name":"Uriel Antuna","position":"Extremo","club":"Tigres UANL","confidence":"media"},
-        {"name":"Hirving Lozano","position":"Extremo","club":"San Diego FC","confidence":"media"},
-        {"name":"Alexis Vega","position":"Extremo","club":"Toluca","confidence":"media"},
-        {"name":"Santiago Giménez","position":"Delantero","club":"AC Milan","confidence":"media"},
-        {"name":"Henry Martín","position":"Delantero","club":"América","confidence":"media"}
-      ]
-    },
-    "South Africa": {
-      "group": "A",
-      "squad_status": "plantel_referencial_parcial",
-      "source_primary": "Transfermarkt",
-      "fifa_status": "pendiente_comparacion",
-      "players": [
-        {"name":"Ronwen Williams","position":"Arquero","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Aubrey Modiba","position":"Defensa","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Mothobi Mvala","position":"Defensa","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Grant Kekana","position":"Defensa","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Siyanda Xulu","position":"Defensa","club":"SuperSport United","confidence":"media"},
-        {"name":"Teboho Mokoena","position":"Mediocampista","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Sphephelo Sithole","position":"Mediocampista","club":"Tondela","confidence":"media"},
-        {"name":"Themba Zwane","position":"Mediocampista","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Thapelo Maseko","position":"Extremo","club":"Mamelodi Sundowns","confidence":"media"},
-        {"name":"Percy Tau","position":"Delantero","club":"Qatar SC","confidence":"media"},
-        {"name":"Lyle Foster","position":"Delantero","club":"Burnley","confidence":"media"},
-        {"name":"Evidence Makgopa","position":"Delantero","club":"Orlando Pirates","confidence":"media"}
-      ]
-    },
-    "South Korea": {
-      "group": "A",
-      "squad_status": "plantel_referencial_parcial",
-      "source_primary": "Transfermarkt",
-      "fifa_status": "pendiente_comparacion",
-      "players": [
-        {"name":"Kim Seung-gyu","position":"Arquero","club":"Al Shabab","confidence":"media"},
-        {"name":"Jo Hyeon-woo","position":"Arquero","club":"Ulsan HD","confidence":"media"},
-        {"name":"Kim Min-jae","position":"Defensa","club":"Bayern Munich","confidence":"media"},
-        {"name":"Kim Young-gwon","position":"Defensa","club":"Ulsan HD","confidence":"media"},
-        {"name":"Seol Young-woo","position":"Defensa","club":"Red Star Belgrade","confidence":"media"},
-        {"name":"Lee Jae-sung","position":"Mediocampista","club":"Mainz 05","confidence":"media"},
-        {"name":"Hwang In-beom","position":"Mediocampista","club":"Feyenoord","confidence":"media"},
-        {"name":"Lee Kang-in","position":"Mediocampista","club":"Paris Saint-Germain","confidence":"media"},
-        {"name":"Son Heung-min","position":"Delantero","club":"Tottenham Hotspur","confidence":"media"},
-        {"name":"Hwang Hee-chan","position":"Delantero","club":"Wolverhampton Wanderers","confidence":"media"},
-        {"name":"Cho Gue-sung","position":"Delantero","club":"Midtjylland","confidence":"media"},
-        {"name":"Oh Hyeon-gyu","position":"Delantero","club":"Genk","confidence":"media"}
-      ]
-    },
-    "Czech Republic": {
-      "group": "A",
-      "squad_status": "plantel_referencial_parcial",
-      "source_primary": "Transfermarkt",
-      "fifa_status": "pendiente_comparacion",
-      "players": [
-        {"name":"Jindřich Staněk","position":"Arquero","club":"Slavia Prague","confidence":"media"},
-        {"name":"Tomáš Vaclík","position":"Arquero","club":"s/d","confidence":"baja"},
-        {"name":"Ladislav Krejčí","position":"Defensa","club":"Girona","confidence":"media"},
-        {"name":"David Zima","position":"Defensa","club":"Slavia Prague","confidence":"media"},
-        {"name":"Vladimír Coufal","position":"Defensa","club":"West Ham United","confidence":"media"},
-        {"name":"Tomáš Souček","position":"Mediocampista","club":"West Ham United","confidence":"media"},
-        {"name":"Antonín Barák","position":"Mediocampista","club":"Fiorentina","confidence":"media"},
-        {"name":"Alex Král","position":"Mediocampista","club":"Union Berlin","confidence":"media"},
-        {"name":"Adam Hložek","position":"Delantero","club":"Hoffenheim","confidence":"media"},
-        {"name":"Patrik Schick","position":"Delantero","club":"Bayer Leverkusen","confidence":"media"},
-        {"name":"Mojmír Chytil","position":"Delantero","club":"Slavia Prague","confidence":"media"}
-      ]
-    }
+    "Mexico": {"group":"A","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt","fifa_status":"pendiente_comparacion","players":[{"name":"Guillermo Ochoa","position":"Arquero","club":"AVS","confidence":"media"},{"name":"Luis Ángel Malagón","position":"Arquero","club":"América","confidence":"media"},{"name":"Johan Vásquez","position":"Defensa","club":"Genoa","confidence":"media"},{"name":"César Montes","position":"Defensa","club":"Lokomotiv Moscow","confidence":"media"},{"name":"Jesús Gallardo","position":"Defensa","club":"Toluca","confidence":"media"},{"name":"Jorge Sánchez","position":"Defensa","club":"Cruz Azul","confidence":"media"},{"name":"Edson Álvarez","position":"Mediocampista","club":"West Ham United","confidence":"media"},{"name":"Luis Chávez","position":"Mediocampista","club":"Dynamo Moscow","confidence":"media"},{"name":"Orbelín Pineda","position":"Mediocampista","club":"AEK Athens","confidence":"media"},{"name":"Erick Sánchez","position":"Mediocampista","club":"América","confidence":"media"},{"name":"Uriel Antuna","position":"Extremo","club":"Tigres UANL","confidence":"media"},{"name":"Hirving Lozano","position":"Extremo","club":"San Diego FC","confidence":"media"},{"name":"Alexis Vega","position":"Extremo","club":"Toluca","confidence":"media"},{"name":"Santiago Giménez","position":"Delantero","club":"AC Milan","confidence":"media"},{"name":"Henry Martín","position":"Delantero","club":"América","confidence":"media"}]},
+    "South Africa": {"group":"A","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt","fifa_status":"pendiente_comparacion","players":[{"name":"Ronwen Williams","position":"Arquero","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Aubrey Modiba","position":"Defensa","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Mothobi Mvala","position":"Defensa","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Grant Kekana","position":"Defensa","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Siyanda Xulu","position":"Defensa","club":"SuperSport United","confidence":"media"},{"name":"Teboho Mokoena","position":"Mediocampista","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Sphephelo Sithole","position":"Mediocampista","club":"Tondela","confidence":"media"},{"name":"Themba Zwane","position":"Mediocampista","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Thapelo Maseko","position":"Extremo","club":"Mamelodi Sundowns","confidence":"media"},{"name":"Percy Tau","position":"Delantero","club":"Qatar SC","confidence":"media"},{"name":"Lyle Foster","position":"Delantero","club":"Burnley","confidence":"media"},{"name":"Evidence Makgopa","position":"Delantero","club":"Orlando Pirates","confidence":"media"}]},
+    "South Korea": {"group":"A","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt","fifa_status":"pendiente_comparacion","players":[{"name":"Kim Seung-gyu","position":"Arquero","club":"Al Shabab","confidence":"media"},{"name":"Jo Hyeon-woo","position":"Arquero","club":"Ulsan HD","confidence":"media"},{"name":"Kim Min-jae","position":"Defensa","club":"Bayern Munich","confidence":"media"},{"name":"Kim Young-gwon","position":"Defensa","club":"Ulsan HD","confidence":"media"},{"name":"Seol Young-woo","position":"Defensa","club":"Red Star Belgrade","confidence":"media"},{"name":"Lee Jae-sung","position":"Mediocampista","club":"Mainz 05","confidence":"media"},{"name":"Hwang In-beom","position":"Mediocampista","club":"Feyenoord","confidence":"media"},{"name":"Lee Kang-in","position":"Mediocampista","club":"Paris Saint-Germain","confidence":"media"},{"name":"Son Heung-min","position":"Delantero","club":"Tottenham Hotspur","confidence":"media"},{"name":"Hwang Hee-chan","position":"Delantero","club":"Wolverhampton Wanderers","confidence":"media"},{"name":"Cho Gue-sung","position":"Delantero","club":"Midtjylland","confidence":"media"},{"name":"Oh Hyeon-gyu","position":"Delantero","club":"Genk","confidence":"media"}]},
+    "Czech Republic": {"group":"A","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt","fifa_status":"pendiente_comparacion","players":[{"name":"Jindřich Staněk","position":"Arquero","club":"Slavia Prague","confidence":"media"},{"name":"Tomáš Vaclík","position":"Arquero","club":"s/d","confidence":"baja"},{"name":"Ladislav Krejčí","position":"Defensa","club":"Girona","confidence":"media"},{"name":"David Zima","position":"Defensa","club":"Slavia Prague","confidence":"media"},{"name":"Vladimír Coufal","position":"Defensa","club":"West Ham United","confidence":"media"},{"name":"Tomáš Souček","position":"Mediocampista","club":"West Ham United","confidence":"media"},{"name":"Antonín Barák","position":"Mediocampista","club":"Fiorentina","confidence":"media"},{"name":"Alex Král","position":"Mediocampista","club":"Union Berlin","confidence":"media"},{"name":"Adam Hložek","position":"Delantero","club":"Hoffenheim","confidence":"media"},{"name":"Patrik Schick","position":"Delantero","club":"Bayer Leverkusen","confidence":"media"},{"name":"Mojmír Chytil","position":"Delantero","club":"Slavia Prague","confidence":"media"}]},
+    "Canada": {"group":"B","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt / prensa","fifa_status":"pendiente_comparacion","players":[{"name":"Maxime Crépeau","position":"Arquero","club":"Portland Timbers","confidence":"media"},{"name":"Alphonso Davies","position":"Defensa / Extremo","club":"Bayern Munich","confidence":"media"},{"name":"Jonathan David","position":"Delantero","club":"Lille","confidence":"media"},{"name":"Tajon Buchanan","position":"Extremo","club":"Inter Milan","confidence":"media"},{"name":"Stephen Eustáquio","position":"Mediocampista","club":"Porto","confidence":"media"},{"name":"Ismaël Koné","position":"Mediocampista","club":"Marseille","confidence":"media"},{"name":"Cyle Larin","position":"Delantero","club":"Mallorca","confidence":"media"},{"name":"Moïse Bombito","position":"Defensa","club":"Nice","confidence":"media"},{"name":"Alistair Johnston","position":"Defensa","club":"Celtic","confidence":"media"},{"name":"Jonathan Osorio","position":"Mediocampista","club":"Toronto FC","confidence":"media"},{"name":"Liam Millar","position":"Extremo","club":"Hull City","confidence":"media"},{"name":"Jacob Shaffelburg","position":"Extremo","club":"Nashville SC","confidence":"media"}]},
+    "Bosnia & Herzegovina": {"group":"B","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt / prensa","fifa_status":"pendiente_comparacion","players":[{"name":"Edin Džeko","position":"Delantero","club":"s/d","confidence":"media"},{"name":"Sead Kolašinac","position":"Defensa","club":"Atalanta","confidence":"media"},{"name":"Ermedin Demirović","position":"Delantero","club":"Stuttgart","confidence":"media"},{"name":"Benjamin Tahirović","position":"Mediocampista","club":"Ajax","confidence":"media"},{"name":"Amar Dedić","position":"Defensa","club":"Marseille","confidence":"media"},{"name":"Anel Ahmedhodžić","position":"Defensa","club":"Sheffield United","confidence":"media"},{"name":"Rade Krunić","position":"Mediocampista","club":"Red Star Belgrade","confidence":"media"},{"name":"Armin Gigović","position":"Mediocampista","club":"Holstein Kiel","confidence":"media"},{"name":"Esmir Bajraktarević","position":"Extremo","club":"PSV","confidence":"media"},{"name":"Haris Tabaković","position":"Delantero","club":"Hoffenheim","confidence":"media"}]},
+    "Qatar": {"group":"B","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt","fifa_status":"pendiente_comparacion","players":[{"name":"Meshaal Barsham","position":"Arquero","club":"Al Sadd","confidence":"media"},{"name":"Saad Al Sheeb","position":"Arquero","club":"Al Sadd","confidence":"media"},{"name":"Abdelkarim Hassan","position":"Defensa","club":"Al Wakrah","confidence":"media"},{"name":"Boualem Khoukhi","position":"Defensa","club":"Al Sadd","confidence":"media"},{"name":"Pedro Miguel","position":"Defensa","club":"Al Sadd","confidence":"media"},{"name":"Assim Madibo","position":"Mediocampista","club":"Al Duhail","confidence":"media"},{"name":"Hassan Al-Haydos","position":"Mediocampista","club":"Al Sadd","confidence":"media"},{"name":"Akram Afif","position":"Delantero","club":"Al Sadd","confidence":"media"},{"name":"Almoez Ali","position":"Delantero","club":"Al Duhail","confidence":"media"},{"name":"Mohammed Muntari","position":"Delantero","club":"Al Duhail","confidence":"media"}]},
+    "Switzerland": {"group":"B","squad_status":"plantel_referencial_parcial","source_primary":"Transfermarkt","fifa_status":"pendiente_comparacion","players":[{"name":"Yann Sommer","position":"Arquero","club":"Inter Milan","confidence":"media"},{"name":"Gregor Kobel","position":"Arquero","club":"Borussia Dortmund","confidence":"media"},{"name":"Manuel Akanji","position":"Defensa","club":"Manchester City","confidence":"media"},{"name":"Nico Elvedi","position":"Defensa","club":"Borussia Mönchengladbach","confidence":"media"},{"name":"Ricardo Rodríguez","position":"Defensa","club":"Betis","confidence":"media"},{"name":"Granit Xhaka","position":"Mediocampista","club":"Bayer Leverkusen","confidence":"media"},{"name":"Remo Freuler","position":"Mediocampista","club":"Bologna","confidence":"media"},{"name":"Denis Zakaria","position":"Mediocampista","club":"Monaco","confidence":"media"},{"name":"Xherdan Shaqiri","position":"Mediocampista / Extremo","club":"Basel","confidence":"media"},{"name":"Breel Embolo","position":"Delantero","club":"Monaco","confidence":"media"},{"name":"Noah Okafor","position":"Delantero","club":"AC Milan","confidence":"media"},{"name":"Zeki Amdouni","position":"Delantero","club":"Burnley","confidence":"media"}]}
   }
 }
