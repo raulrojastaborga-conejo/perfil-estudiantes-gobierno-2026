@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: update-worldcup-data
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update-worldcup-data:
@@ -19,13 +19,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
-
-      - name: Sync with latest main
-        run: |
-          git fetch origin main
-          git checkout main
-          git pull --rebase origin main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -37,10 +32,15 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: python scripts/update_worldcup_data.py
 
-      - name: Commit generated data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Actualiza datos API Mundial 2026"
-          file_pattern: centro-mundial-2026/data/api_*.json centro-mundial-2026/data/live_*.json
-          commit_user_name: github-actions[bot]
-          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Commit and push generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add centro-mundial-2026/data/api_*.json centro-mundial-2026/data/live_*.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "Actualiza datos API Mundial 2026"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
