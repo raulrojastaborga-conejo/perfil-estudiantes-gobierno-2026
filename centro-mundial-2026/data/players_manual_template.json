@@ -1,0 +1,19 @@
+{
+  "updated_at": "2026-06-10",
+  "mode": "manual_auditado",
+  "note": "Plantilla para cargar jugadores solo con fuente explícita y fecha de verificación.",
+  "players": [
+    {
+      "team": "Ejemplo",
+      "name": "Nombre Apellido",
+      "position": "Arquero / Defensa / Mediocampista / Delantero",
+      "club": "Club",
+      "shirt_number": null,
+      "status": "preliminar / oficial / baja / duda",
+      "source_id": "fifa_squads",
+      "source_url": "",
+      "verified_at": "YYYY-MM-DD",
+      "notes": ""
+    }
+  ]
+}
