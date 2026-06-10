@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fifa_squads",
+    "name": "FIFA - planteles oficiales del Mundial 2026",
+    "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+    "priority": 1,
+    "use": "Fuente primaria cuando FIFA publique planteles oficiales, convocatorias, perfiles o match centre.",
+    "scraping": "no_automatico_por_defecto",
+    "status": "pendiente_publicacion_final"
+  },
+  {
+    "id": "federaciones_nacionales",
+    "name": "Federaciones nacionales clasificadas",
+    "url": "",
+    "priority": 2,
+    "use": "Fuente primaria por selección para convocatorias, partes médicos y comunicados oficiales.",
+    "scraping": "manual_o_selectivo",
+    "status": "por_completar_por_equipo"
+  },
+  {
+    "id": "reuters_squads",
+    "name": "Reuters - listas de planteles Mundial 2026",
+    "url": "https://www.reuters.com/sports/soccer/",
+    "priority": 3,
+    "use": "Fuente periodística confiable para contrastar planteles finales.",
+    "scraping": "no_automatico_por_defecto",
+    "status": "referencia_manual"
+  },
+  {
+    "id": "wikipedia_squads_reference",
+    "name": "Wikipedia - 2026 FIFA World Cup squads",
+    "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads",
+    "priority": 4,
+    "use": "Referencia secundaria para revisión humana, no como scraping automático.",
+    "scraping": "desactivado",
+    "status": "referencia_manual"
+  }
+]
