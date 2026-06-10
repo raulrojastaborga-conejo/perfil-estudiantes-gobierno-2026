@@ -1,0 +1,16 @@
+[
+  {
+    "id": "wikipedia_2026_world_cup",
+    "name": "Wikipedia - Copa Mundial de Fútbol de 2026",
+    "url": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2026",
+    "type": "fixture_reference",
+    "enabled": true
+  },
+  {
+    "id": "wikipedia_2026_squads",
+    "name": "Wikipedia - 2026 FIFA World Cup squads",
+    "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads",
+    "type": "squads_reference",
+    "enabled": true
+  }
+]
