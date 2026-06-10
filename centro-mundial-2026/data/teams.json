@@ -1,0 +1,14 @@
+[
+  {"group":"A","teams":["México","Sudáfrica","Corea del Sur","Ganador playoff"]},
+  {"group":"B","teams":["Canadá","Suiza","Qatar","Ganador playoff"]},
+  {"group":"C","teams":["Brasil","Marruecos","Haití","Escocia"]},
+  {"group":"D","teams":["Estados Unidos","Paraguay","Australia","Ganador playoff"]},
+  {"group":"E","teams":["Alemania","Curazao","Costa de Marfil","Ecuador"]},
+  {"group":"F","teams":["Países Bajos","Japón","Túnez","Ganador playoff"]},
+  {"group":"G","teams":["Bélgica","Egipto","Irán","Nueva Zelanda"]},
+  {"group":"H","teams":["España","Cabo Verde","Arabia Saudita","Uruguay"]},
+  {"group":"I","teams":["Francia","Senegal","Noruega","Ganador playoff"]},
+  {"group":"J","teams":["Argentina","Argelia","Austria","Jordania"]},
+  {"group":"K","teams":["Inglaterra","Croacia","Ghana","Panamá"]},
+  {"group":"L","teams":["Portugal","Colombia","Uzbekistán","Ganador playoff"]}
+]
