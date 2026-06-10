@@ -3,14 +3,37 @@
     "id": "wikipedia_2026_world_cup",
     "name": "Wikipedia - Copa Mundial de Fútbol de 2026",
     "url": "https://es.wikipedia.org/wiki/Copa_Mundial_de_F%C3%BAtbol_de_2026",
-    "type": "fixture_reference",
-    "enabled": true
+    "type": "fixture_reference_html",
+    "enabled": false,
+    "note": "Desactivada para scraping automático porque robots.txt no autorizó el bot diagnóstico. Usar solo como referencia manual."
   },
   {
     "id": "wikipedia_2026_squads",
     "name": "Wikipedia - 2026 FIFA World Cup squads",
     "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads",
-    "type": "squads_reference",
+    "type": "squads_reference_html",
+    "enabled": false,
+    "note": "Desactivada para scraping automático porque robots.txt no autorizó el bot diagnóstico. Usar solo como referencia manual."
+  },
+  {
+    "id": "openfootball_worldcup_repo",
+    "name": "OpenFootball - World Cup repository",
+    "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/README.md",
+    "type": "open_dataset_reference",
+    "enabled": true
+  },
+  {
+    "id": "football_json_worldcup_repo",
+    "name": "football.json - world cup repository",
+    "url": "https://raw.githubusercontent.com/openfootball/football.json/master/README.md",
+    "type": "open_dataset_reference",
+    "enabled": true
+  },
+  {
+    "id": "wikidata_sparql_worldcup_2026",
+    "name": "Wikidata SPARQL - 2026 FIFA World Cup entity",
+    "url": "https://query.wikidata.org/sparql?query=SELECT%20%3Fitem%20%3FitemLabel%20WHERE%20%7B%20VALUES%20%3Fitem%20%7B%20wd%3AQ5020214%20%7D%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%5C%22es%2Cen%5C%22.%20%7D%20%7D&format=json",
+    "type": "sparql_json",
     "enabled": true
   }
 ]
