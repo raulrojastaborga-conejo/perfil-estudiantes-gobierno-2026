@@ -1,0 +1,8 @@
+[
+  {"match_id":"A1","home_win":55,"draw":26,"away_win":19,"source":"manual inicial","updated_at":"2026-06-10"},
+  {"match_id":"A2","home_win":48,"draw":29,"away_win":23,"source":"manual inicial","updated_at":"2026-06-10"},
+  {"match_id":"C1","home_win":62,"draw":23,"away_win":15,"source":"manual inicial","updated_at":"2026-06-10"},
+  {"match_id":"C2","home_win":35,"draw":30,"away_win":35,"source":"manual inicial","updated_at":"2026-06-10"},
+  {"match_id":"J1","home_win":70,"draw":19,"away_win":11,"source":"manual inicial","updated_at":"2026-06-10"},
+  {"match_id":"J2","home_win":51,"draw":28,"away_win":21,"source":"manual inicial","updated_at":"2026-06-10"}
+]
