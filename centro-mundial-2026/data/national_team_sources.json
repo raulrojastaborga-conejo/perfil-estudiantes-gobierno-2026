@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-06-10",
+  "note": "Fuentes por selección para construir convocatorias referenciales. Transfermarkt se usa como fuente base/validación individual, y se cruza con federación, FIFA y medios cuando existan nóminas oficiales o preliminares.",
+  "teams": [
+    {"team":"Mexico","group":"A","transfermarkt":"https://www.transfermarkt.com/mexiko/startseite/verein/6303","federation":"https://miseleccion.mx/","status":"pendiente"},
+    {"team":"South Africa","group":"A","transfermarkt":"https://www.transfermarkt.com/sudafrika/startseite/verein/3806","federation":"https://www.safa.net/","status":"pendiente"},
+    {"team":"South Korea","group":"A","transfermarkt":"https://www.transfermarkt.com/sudkorea/startseite/verein/3589","federation":"https://www.kfa.or.kr/","status":"pendiente"},
+    {"team":"Czech Republic","group":"A","transfermarkt":"https://www.transfermarkt.com/tschechien/startseite/verein/3666","federation":"https://www.fotbal.cz/","status":"pendiente"},
+
+    {"team":"Canada","group":"B","transfermarkt":"https://www.transfermarkt.com/kanada/startseite/verein/3510","federation":"https://canadasoccer.com/","status":"pendiente"},
+    {"team":"Bosnia & Herzegovina","group":"B","transfermarkt":"https://www.transfermarkt.com/bosnien-herzegowina/startseite/verein/3446","federation":"https://www.nfsbih.ba/","status":"pendiente"},
+    {"team":"Qatar","group":"B","transfermarkt":"https://www.transfermarkt.com/katar/startseite/verein/14156","federation":"https://www.qfa.qa/","status":"pendiente"},
+    {"team":"Switzerland","group":"B","transfermarkt":"https://www.transfermarkt.com/schweiz/startseite/verein/3384","federation":"https://www.football.ch/","status":"pendiente"},
+
+    {"team":"Brazil","group":"C","transfermarkt":"https://www.transfermarkt.com/brasilien/startseite/verein/3439","federation":"https://www.cbf.com.br/","status":"piloto_parcial"},
+    {"team":"Morocco","group":"C","transfermarkt":"https://www.transfermarkt.com/marokko/startseite/verein/3575","federation":"https://frmf.ma/","status":"pendiente"},
+    {"team":"Haiti","group":"C","transfermarkt":"https://www.transfermarkt.com/haiti/startseite/verein/3503","federation":"https://fhf.ht/","status":"pendiente"},
+    {"team":"Scotland","group":"C","transfermarkt":"https://www.transfermarkt.com/schottland/startseite/verein/3380","federation":"https://www.scottishfa.co.uk/","status":"pendiente"},
+
+    {"team":"USA","group":"D","transfermarkt":"https://www.transfermarkt.com/vereinigte-staaten/startseite/verein/3505","federation":"https://www.ussoccer.com/","status":"pendiente"},
+    {"team":"Paraguay","group":"D","transfermarkt":"https://www.transfermarkt.com/paraguay/startseite/verein/3442","federation":"https://www.apf.org.py/","status":"pendiente"},
+    {"team":"Australia","group":"D","transfermarkt":"https://www.transfermarkt.com/australien/startseite/verein/3433","federation":"https://www.footballaustralia.com.au/","status":"pendiente"},
+    {"team":"Turkey","group":"D","transfermarkt":"https://www.transfermarkt.com/turkei/startseite/verein/3381","federation":"https://www.tff.org/","status":"pendiente"},
+
+    {"team":"Germany","group":"E","transfermarkt":"https://www.transfermarkt.com/deutschland/startseite/verein/3262","federation":"https://www.dfb.de/","status":"pendiente"},
+    {"team":"Curaçao","group":"E","transfermarkt":"https://www.transfermarkt.com/curacao/startseite/verein/16844","federation":"https://www.ffk.cw/","status":"pendiente"},
+    {"team":"Ivory Coast","group":"E","transfermarkt":"https://www.transfermarkt.com/elfenbeinkuste/startseite/verein/3591","federation":"https://www.fifciv.com/","status":"pendiente"},
+    {"team":"Ecuador","group":"E","transfermarkt":"https://www.transfermarkt.com/ecuador/startseite/verein/5750","federation":"https://www.fef.ec/","status":"pendiente"},
+
+    {"team":"Netherlands","group":"F","transfermarkt":"https://www.transfermarkt.com/niederlande/startseite/verein/3379","federation":"https://www.onsoranje.nl/","status":"pendiente"},
+    {"team":"Japan","group":"F","transfermarkt":"https://www.transfermarkt.com/japan/startseite/verein/3435","federation":"https://www.jfa.jp/","status":"pendiente"},
+    {"team":"Sweden","group":"F","transfermarkt":"https://www.transfermarkt.com/schweden/startseite/verein/3557","federation":"https://www.svenskfotboll.se/","status":"pendiente"},
+    {"team":"Tunisia","group":"F","transfermarkt":"https://www.transfermarkt.com/tunesien/startseite/verein/3672","federation":"https://www.ftf.org.tn/","status":"pendiente"},
+
+    {"team":"Belgium","group":"G","transfermarkt":"https://www.transfermarkt.com/belgien/startseite/verein/3382","federation":"https://www.rbfa.be/","status":"pendiente"},
+    {"team":"Egypt","group":"G","transfermarkt":"https://www.transfermarkt.com/agypten/startseite/verein/3673","federation":"https://www.efa.com.eg/","status":"pendiente"},
+    {"team":"Iran","group":"G","transfermarkt":"https://www.transfermarkt.com/iran/startseite/verein/3582","federation":"https://the-ffiri.com/","status":"pendiente"},
+    {"team":"New Zealand","group":"G","transfermarkt":"https://www.transfermarkt.com/neuseeland/startseite/verein/3574","federation":"https://www.nzfootball.co.nz/","status":"pendiente"},
+
+    {"team":"Spain","group":"H","transfermarkt":"https://www.transfermarkt.com/spanien/startseite/verein/3375","federation":"https://rfef.es/","status":"piloto_parcial"},
+    {"team":"Cape Verde","group":"H","transfermarkt":"https://www.transfermarkt.com/kap-verde/startseite/verein/17265","federation":"https://fcf.cv/","status":"pendiente"},
+    {"team":"Saudi Arabia","group":"H","transfermarkt":"https://www.transfermarkt.com/saudi-arabien/startseite/verein/3807","federation":"https://www.saff.com.sa/","status":"pendiente"},
+    {"team":"Uruguay","group":"H","transfermarkt":"https://www.transfermarkt.com/uruguay/startseite/verein/3449","federation":"https://www.auf.org.uy/","status":"pendiente"},
+
+    {"team":"France","group":"I","transfermarkt":"https://www.transfermarkt.com/frankreich/startseite/verein/3377","federation":"https://www.fff.fr/","status":"piloto_parcial"},
+    {"team":"Senegal","group":"I","transfermarkt":"https://www.transfermarkt.com/senegal/startseite/verein/3499","federation":"https://fsfoot.sn/","status":"pendiente"},
+    {"team":"Iraq","group":"I","transfermarkt":"https://www.transfermarkt.com/irak/startseite/verein/3647","federation":"https://ifa.iq/","status":"pendiente"},
+    {"team":"Norway","group":"I","transfermarkt":"https://www.transfermarkt.com/norwegen/startseite/verein/3440","federation":"https://www.fotball.no/","status":"pendiente"},
+
+    {"team":"Argentina","group":"J","transfermarkt":"https://www.transfermarkt.com/argentinien/startseite/verein/3437","federation":"https://www.afa.com.ar/","status":"piloto_parcial"},
+    {"team":"Algeria","group":"J","transfermarkt":"https://www.transfermarkt.com/algerien/startseite/verein/3614","federation":"https://www.faf.dz/","status":"pendiente"},
+    {"team":"Austria","group":"J","transfermarkt":"https://www.transfermarkt.com/osterreich/startseite/verein/3383","federation":"https://www.oefb.at/","status":"pendiente"},
+    {"team":"Jordan","group":"J","transfermarkt":"https://www.transfermarkt.com/jordanien/startseite/verein/3586","federation":"https://www.jfa.jo/","status":"pendiente"},
+
+    {"team":"Portugal","group":"K","transfermarkt":"https://www.transfermarkt.com/portugal/startseite/verein/3300","federation":"https://www.fpf.pt/","status":"piloto_parcial"},
+    {"team":"DR Congo","group":"K","transfermarkt":"https://www.transfermarkt.com/dr-kongo/startseite/verein/3850","federation":"https://fecofa.cd/","status":"pendiente"},
+    {"team":"Uzbekistan","group":"K","transfermarkt":"https://www.transfermarkt.com/usbekistan/startseite/verein/3588","federation":"https://ufa.uz/","status":"pendiente"},
+    {"team":"Colombia","group":"K","transfermarkt":"https://www.transfermarkt.com/kolumbien/startseite/verein/3816","federation":"https://fcf.com.co/","status":"pendiente"},
+
+    {"team":"England","group":"L","transfermarkt":"https://www.transfermarkt.com/england/startseite/verein/3299","federation":"https://www.englandfootball.com/","status":"piloto_parcial"},
+    {"team":"Croatia","group":"L","transfermarkt":"https://www.transfermarkt.com/kroatien/startseite/verein/3556","federation":"https://hns.team/","status":"pendiente"},
+    {"team":"Ghana","group":"L","transfermarkt":"https://www.transfermarkt.com/ghana/startseite/verein/3441","federation":"https://www.ghanafa.org/","status":"pendiente"},
+    {"team":"Panama","group":"L","transfermarkt":"https://www.transfermarkt.com/panama/startseite/verein/3576","federation":"https://fepafut.com/","status":"pendiente"}
+  ]
+}
