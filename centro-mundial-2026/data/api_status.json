@@ -1,0 +1,13 @@
+{
+  "updated_at": "2026-06-10T22:14:28.676661+00:00",
+  "source": "API-Football / API-Sports",
+  "data": {
+    "ok": true,
+    "updated_at": "2026-06-10T22:14:28.332864+00:00",
+    "provider": "API-Football / API-Sports",
+    "message": "Conexión API exitosa. Revisar api_leagues_worldcup.json para confirmar league id y season.",
+    "files": [
+      "api_leagues_worldcup.json"
+    ]
+  }
+}
