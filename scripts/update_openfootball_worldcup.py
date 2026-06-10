@@ -6,7 +6,7 @@ from datetime import datetime, timezone, date, timedelta
 from zoneinfo import ZoneInfo
 
 DATA = pathlib.Path("centro-mundial-2026/data")
-SOURCE_URL = "https://raw.githubusercontent.com/openfootball/worldcup/master/README.md"
+SOURCE_URL = "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt"
 
 MONTHS = {
     "jan": 1, "january": 1,
@@ -38,7 +38,7 @@ def write_json(name, data):
     DATA.mkdir(parents=True, exist_ok=True)
     payload = {
         "updated_at": now(),
-        "source": "OpenFootball worldcup README",
+        "source": "OpenFootball worldcup 2026 cup.txt",
         "source_url": SOURCE_URL,
         "data": data,
     }
@@ -82,9 +82,7 @@ def parse_fixture_block(text):
         if line.startswith("= World Cup 2026"):
             in_block = True
             continue
-        if in_block and line.startswith("= World Cup 2022"):
-            break
-        if not in_block or not line:
+        if not in_block or not line or line.startswith("#"):
             continue
 
         gm = re.match(r"^Group\s+([A-L])\s*\|\s*(.+)$", line)
