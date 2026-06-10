@@ -1,0 +1,118 @@
+{
+  "updated_at": "2026-06-10T22:58:14.330968+00:00",
+  "source": "OpenFootball worldcup README",
+  "source_url": "https://raw.githubusercontent.com/openfootball/worldcup/master/README.md",
+  "data": {
+    "groups": [
+      {
+        "group": "A",
+        "teams": [
+          "Mexico",
+          "South Africa",
+          "South Korea",
+          "Czech Republic"
+        ]
+      },
+      {
+        "group": "B",
+        "teams": [
+          "Canada",
+          "Bosnia & Herzegovina",
+          "Qatar",
+          "Switzerland"
+        ]
+      },
+      {
+        "group": "C",
+        "teams": [
+          "Brazil",
+          "Morocco",
+          "Haiti",
+          "Scotland"
+        ]
+      },
+      {
+        "group": "D",
+        "teams": [
+          "USA",
+          "Paraguay",
+          "Australia",
+          "Turkey"
+        ]
+      },
+      {
+        "group": "E",
+        "teams": [
+          "Germany",
+          "Curaçao",
+          "Ivory Coast",
+          "Ecuador"
+        ]
+      },
+      {
+        "group": "F",
+        "teams": [
+          "Netherlands",
+          "Japan",
+          "Sweden",
+          "Tunisia"
+        ]
+      },
+      {
+        "group": "G",
+        "teams": [
+          "Belgium",
+          "Egypt",
+          "Iran",
+          "New Zealand"
+        ]
+      },
+      {
+        "group": "H",
+        "teams": [
+          "Spain",
+          "Cape Verde",
+          "Saudi Arabia",
+          "Uruguay"
+        ]
+      },
+      {
+        "group": "I",
+        "teams": [
+          "France",
+          "Senegal",
+          "Iraq",
+          "Norway"
+        ]
+      },
+      {
+        "group": "J",
+        "teams": [
+          "Argentina",
+          "Algeria",
+          "Austria",
+          "Jordan"
+        ]
+      },
+      {
+        "group": "K",
+        "teams": [
+          "Portugal",
+          "DR Congo",
+          "Uzbekistan",
+          "Colombia"
+        ]
+      },
+      {
+        "group": "L",
+        "teams": [
+          "England",
+          "Croatia",
+          "Ghana",
+          "Panama"
+        ]
+      }
+    ],
+    "count_groups": 12
+  }
+}
