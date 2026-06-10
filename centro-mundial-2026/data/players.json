@@ -1,0 +1,8 @@
+[
+  {"team":"Argentina","name":"Lionel Messi","position":"Delantero","status":"Disponible"},
+  {"team":"Francia","name":"Kylian Mbappé","position":"Delantero","status":"Disponible"},
+  {"team":"Brasil","name":"Vinícius Jr.","position":"Delantero","status":"Disponible"},
+  {"team":"Portugal","name":"Cristiano Ronaldo","position":"Delantero","status":"Disponible"},
+  {"team":"Inglaterra","name":"Jude Bellingham","position":"Mediocampista","status":"Disponible"},
+  {"team":"España","name":"Lamine Yamal","position":"Extremo","status":"Disponible"}
+]
