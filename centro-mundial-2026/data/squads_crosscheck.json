@@ -1,0 +1,37 @@
+{
+  "updated_at": "2026-06-10",
+  "mode": "crosscheck_manual",
+  "note": "Base inicial de jugadores referenciales por selección. No equivale a alineación ni a nómina oficial final FIFA. Transfermarkt se considera fuente de validación individual; las convocatorias deben cruzarse con FIFA, federaciones y medios confiables antes de marcarse como oficiales.",
+  "status_levels": {
+    "oficial_final": "Nómina final confirmada por FIFA o federación.",
+    "preliminar_oficial": "Prelista o convocatoria preliminar confirmada por federación.",
+    "periodistico_no_oficial": "Lista publicada por medio confiable, pendiente de confirmación oficial.",
+    "referencial_transfermarkt": "Jugador asociado a la selección o selección actual; no confirma convocatoria mundialista."
+  },
+  "players": [
+    {"team":"Argentina","name":"Lionel Messi","position":"Delantero","club":"Inter Miami","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["AFA","FIFA","Reuters","FourFourTwo"],"verified_at":"2026-06-10","notes":"Figura referencial; pendiente de confirmar en nómina final."},
+    {"team":"Argentina","name":"Emiliano Martínez","position":"Arquero","club":"Aston Villa","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["AFA","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Argentina","name":"Cristian Romero","position":"Defensa","club":"Tottenham Hotspur","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["AFA","FIFA","FourFourTwo"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Argentina","name":"Enzo Fernández","position":"Mediocampista","club":"Chelsea","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["AFA","FIFA","FourFourTwo"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+
+    {"team":"Brazil","name":"Vinícius Júnior","position":"Delantero","club":"Real Madrid","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["CBF","FIFA","FourFourTwo"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Brazil","name":"Rodrygo","position":"Delantero","club":"Real Madrid","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["CBF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Brazil","name":"Alisson","position":"Arquero","club":"Liverpool","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["CBF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+
+    {"team":"France","name":"Kylian Mbappé","position":"Delantero","club":"Real Madrid","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FFF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"France","name":"Antoine Griezmann","position":"Delantero / Mediocampista","club":"Atlético de Madrid","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FFF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"France","name":"Aurélien Tchouaméni","position":"Mediocampista","club":"Real Madrid","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FFF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+
+    {"team":"England","name":"Jude Bellingham","position":"Mediocampista","club":"Real Madrid","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FA","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"England","name":"Harry Kane","position":"Delantero","club":"Bayern Munich","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FA","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"England","name":"Bukayo Saka","position":"Extremo","club":"Arsenal","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FA","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+
+    {"team":"Portugal","name":"Cristiano Ronaldo","position":"Delantero","club":"Al Nassr","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FPF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Portugal","name":"Bruno Fernandes","position":"Mediocampista","club":"Manchester United","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FPF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Portugal","name":"Bernardo Silva","position":"Mediocampista","club":"Manchester City","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["FPF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+
+    {"team":"Spain","name":"Lamine Yamal","position":"Extremo","club":"Barcelona","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["RFEF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Spain","name":"Pedri","position":"Mediocampista","club":"Barcelona","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["RFEF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."},
+    {"team":"Spain","name":"Rodri","position":"Mediocampista","club":"Manchester City","squad_status":"referencial_transfermarkt","confidence":"media","source_primary":"Transfermarkt","crosscheck_sources":["RFEF","FIFA"],"verified_at":"2026-06-10","notes":"Pendiente de confirmar en nómina final."}
+  ]
+}
