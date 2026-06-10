@@ -1,0 +1,40 @@
+name: Update Balldontlie FIFA Data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-balldontlie-fifa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch Balldontlie FIFA diagnostic data
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python scripts/update_balldontlie_fifa.py
+
+      - name: Commit and push generated Balldontlie data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add centro-mundial-2026/data/balldontlie_*.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "Actualiza diagnóstico Balldontlie FIFA"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
