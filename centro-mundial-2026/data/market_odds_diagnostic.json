@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-06-11T00:55:31.878069+00:00",
+  "ok": true,
+  "message": "Consulta completada.",
+  "status_code": 200,
+  "sport_key": "soccer_fifa_world_cup",
+  "regions": "us,eu,uk",
+  "markets": "h2h",
+  "odds_format": "decimal",
+  "has_api_key": true,
+  "events_received": 72,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "708791",
+    "Connection": "close",
+    "Date": "Thu, 11 Jun 2026 00:55:31 GMT",
+    "X-Amzn-Trace-Id": "Root=1-6a2a0782-255a66101a75ba8920a2e6c9;Parent=150525a7d553900f;Sampled=0;Lineage=1:92ec0d90:0",
+    "x-amzn-RequestId": "082b5100-b05d-461a-820c-6aaf5d2db340",
+    "x-requests-remaining": "494",
+    "x-amzn-Remapped-content-length": "708791",
+    "x-requests-last": "3",
+    "x-requests-used": "6",
+    "vary": "Accept-Encoding",
+    "X-Cache": "Miss from cloudfront",
+    "Via": "1.1 a2eb08d83c216edb471d369425d11dd8.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Pop": "SFO5-P3",
+    "Alt-Svc": "h3=\":443\"; ma=86400",
+    "X-Amz-Cf-Id": "IFHIRHEo929Nyq8atG0XrmzNGKqEphZpXxmLM7XsxTbQgOxaCY8R5g==",
+    "Vary": "Accept-Encoding"
+  }
+}
