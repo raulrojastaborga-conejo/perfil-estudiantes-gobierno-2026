@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-06-11",
+  "policy": "Scraping responsable. Revisar robots.txt y términos de uso antes de activar extracción automática. No publicar como oficial datos sin fuente confiable.",
+  "sources": [
+    {
+      "name": "OpenFootball World Cup",
+      "type": "fixture_open_data",
+      "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
+      "enabled": true,
+      "confidence": "alta_para_fixture",
+      "notes": "Fuente abierta para calendario base, no para alineaciones oficiales."
+    },
+    {
+      "name": "Manual review queue",
+      "type": "manual",
+      "url": "",
+      "enabled": true,
+      "confidence": "depende_de_fuente",
+      "notes": "Cola para registrar lesiones, sanciones y alineaciones confirmadas con fuente visible."
+    }
+  ]
+}
