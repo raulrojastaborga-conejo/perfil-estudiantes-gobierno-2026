@@ -17,6 +17,7 @@ BASE = Path(__file__).resolve().parents[1]
 CONFIG = BASE / "data" / "busquedas-ia.json"
 PRODUCTS = BASE / "data" / "productos.json"
 STATUS = BASE / "data" / "actualizacion-ia.json"
+BACKUP = BASE / "data" / "productos-backup.json"
 
 ALLOWED_DOMAINS = ["mercadolibre.cl", "falabella.com", "ripley.cl", "paris.cl", "dbs.cl", "maicao.cl", "preunic.cl"]
 BAD_PATH_PARTS = ["/shop/", "/category/", "/categor", "/listado", "/ofertas", "/search", "/tienda", "/cart", "/login", "/ayuda", "/help", "/seller", "/brand", "/browse"]
@@ -27,7 +28,7 @@ def now() -> str:
 
 
 def get(url: str, accept: str = "text/html") -> str | None:
-    req = Request(url, headers={"User-Agent": "Mozilla/5.0 DatoBBBSearch/1.1", "Accept": accept, "Accept-Language": "es-CL,es;q=0.9"})
+    req = Request(url, headers={"User-Agent": "Mozilla/5.0 DatoBBBSearch/1.2", "Accept": accept, "Accept-Language": "es-CL,es;q=0.9"})
     try:
         with urlopen(req, timeout=25) as r:
             return r.read().decode("utf-8", errors="replace")
@@ -71,8 +72,7 @@ def normalize_url(url: str) -> str:
         qs = parse_qs(urlparse(url).query)
         if qs.get("url"):
             url = qs["url"][0]
-    url = unquote(url).split("#", 1)[0]
-    return url
+    return unquote(url).split("#", 1)[0]
 
 
 def search_brave(query: str) -> list[str]:
@@ -192,7 +192,8 @@ def load_json(path: Path, default: Any) -> Any:
 def main() -> None:
     config = load_json(CONFIG, [])
     existing = load_json(PRODUCTS, [])
-    existing_valid = [p for p in existing if is_product_url(str(p.get("url", ""))) and not str(p.get("id", "")).startswith("demo-")]
+    backup = load_json(BACKUP, [])
+    existing_valid = [p for p in existing if is_product_url(str(p.get("url", ""))) and not str(p.get("id", "")).startswith("demo-") and not str(p.get("id", "")).startswith("respaldo-")]
     collected = []
     status = {"updated_at": now(), "queries": len(config), "urls_found": 0, "products_found": 0, "existing_before": len(existing), "existing_valid": len(existing_valid), "notes": []}
     for item in config:
@@ -202,15 +203,33 @@ def main() -> None:
             p = product_from_url(url, item["category"], item["subcategory"])
             if p:
                 collected.append(p)
+    if not collected and not existing_valid:
+        restore = backup or existing
+        if restore:
+            status["notes"].append("sin productos nuevos y sin productos validos; se conserva respaldo para no dejar la pagina vacia")
+            PRODUCTS.write_text(json.dumps(restore, ensure_ascii=False, indent=2), encoding="utf-8")
+            status["products_found"] = 0
+            status["final"] = len(restore)
+            STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(json.dumps(status, ensure_ascii=False, indent=2))
+            return
     by_url = {p.get("url"): p for p in existing_valid if p.get("url")}
     for p in collected:
         by_url[p["url"]] = p
     final = list(by_url.values())
+    if not final:
+        status["notes"].append("sin resultados; no se sobrescribe productos.json")
+        status["products_found"] = 0
+        status["final"] = len(existing)
+        STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(json.dumps(status, ensure_ascii=False, indent=2))
+        return
     final.sort(key=lambda p: (-(float(p.get("bbb") or 0)), int(p.get("price") or 999999999)))
     PRODUCTS.write_text(json.dumps(final[:150], ensure_ascii=False, indent=2), encoding="utf-8")
+    BACKUP.write_text(json.dumps(final[:150], ensure_ascii=False, indent=2), encoding="utf-8")
     status["products_found"] = len(collected)
     status["final"] = len(final[:150])
-    status["notes"].append("Filtro endurecido: se eliminan categorias/shop y demos; solo URLs de producto probable")
+    status["notes"].append("Filtro endurecido; nunca se publica vacio")
     STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(status, ensure_ascii=False, indent=2))
 
