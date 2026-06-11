@@ -1,0 +1,32 @@
+[
+  {
+    "category": "ropa",
+    "subcategory": "casual",
+    "query": "oferta ropa mujer casual Chile polera blusa pantalon"
+  },
+  {
+    "category": "ropa",
+    "subcategory": "vestir",
+    "query": "oferta blazer mujer pantalon vestir oficina Chile"
+  },
+  {
+    "category": "make-up",
+    "subcategory": "maquillaje",
+    "query": "oferta maquillaje mujer Chile labial mascara base"
+  },
+  {
+    "category": "capilar",
+    "subcategory": "tratamiento",
+    "query": "oferta mascarilla capilar shampoo tratamiento pelo Chile"
+  },
+  {
+    "category": "zapatos",
+    "subcategory": "formales",
+    "query": "oferta zapatos mujer oficina Chile"
+  },
+  {
+    "category": "zapatos",
+    "subcategory": "zapatillas",
+    "query": "oferta zapatillas mujer Chile"
+  }
+]
