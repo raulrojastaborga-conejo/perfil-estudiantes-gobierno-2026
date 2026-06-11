@@ -27,12 +27,20 @@
       "caption": "Canadá será una de las tres sedes nacionales del torneo."
     },
     {
-      "title": "Cancha de fútbol",
-      "url": "assets/img/cancha.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/Category:Association_football_pitches",
+      "title": "Hinchada mundialera",
+      "url": "assets/img/hinchada.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Association_football_supporters",
       "author": "Fuente libre cargada localmente",
       "license": "Consultar fuente original",
-      "caption": "Imagen genérica de cancha para acompañar análisis y datos."
+      "caption": "Ambiente de estadio y público para darle carácter futbolero a la portada."
+    },
+    {
+      "title": "Kansas City, sede mundialista",
+      "url": "assets/img/kansas.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Kansas_City,_Missouri",
+      "author": "Fuente libre cargada localmente",
+      "license": "Consultar fuente original",
+      "caption": "Una de las ciudades sede del Mundial 2026 en Estados Unidos."
     }
   ]
 }
