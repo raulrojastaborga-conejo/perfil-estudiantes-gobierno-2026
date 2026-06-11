@@ -54,5 +54,19 @@
     "url": "https://www.mercadolibre.cl/",
     "updated_at": "2026-06-11",
     "ratings": { "bueno": 4, "bonito": 3, "barato": 5 }
+  },
+  {
+    "id": "demo-zapatos-001",
+    "name": "Zapatos mujer cómodos para oficina",
+    "category": "zapatos",
+    "subcategory": "formales",
+    "store": "Ejemplo zapatos",
+    "price": 19990,
+    "old_price": 32990,
+    "discount": 39,
+    "image": "https://placehold.co/800x600/fef3c7/92400e?text=Zapatos",
+    "url": "https://www.mercadolibre.cl/",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 4, "bonito": 4, "barato": 4 }
   }
 ]
