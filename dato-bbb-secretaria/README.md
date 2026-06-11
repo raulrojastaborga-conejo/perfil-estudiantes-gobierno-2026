@@ -8,6 +8,7 @@ Categorias:
 - Ropa de vestir
 - Make up
 - Productos capilares
+- Zapatos
 
 Cada producto muestra:
 
