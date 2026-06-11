@@ -11,7 +11,7 @@
     <div class="hero">
       <span class="tag">⚽ Centro Mundial 2026 · Chile continental</span>
       <h1>El Mundial en una sola pantalla</h1>
-      <p class="lead">Calendario, resultados editables, tablas automáticas por grupo, mejores terceros, base inicial de jugadores y estructura lista para conectar una API de datos deportivos.</p>
+      <p class="lead">Calendario, resultados editables, tablas automáticas por grupo, mejores terceros, cuotas de mercado, base inicial de jugadores y visualización pensada para seguir el torneo desde Chile.</p>
       <div class="stats">
         <div class="stat"><b>48</b><span>selecciones</span></div>
         <div class="stat"><b>12</b><span>grupos</span></div>
@@ -21,6 +21,7 @@
     </div>
   </header>
   <main class="wrap">
+    <section class="visual-strip" id="imageGallery"></section>
     <nav class="tabs">
       <button class="tab active" data-tab="calendario">Calendario</button>
       <button class="tab" data-tab="tablas">Tablas</button>
@@ -44,11 +45,11 @@
     </section>
     <section id="tablas" class="section"><div class="grid" id="standings"></div></section>
     <section id="terceros" class="section"><div class="card"><h2>Ranking de terceros</h2><p class="mini">Clasifican los 8 mejores terceros, según puntos, diferencia de gol y goles a favor.</p><div id="thirds"></div></div></section>
-    <section id="jugadores" class="section"><div class="card"><h2>Jugadores</h2><p class="mini">Base inicial demostrativa. Luego se puede completar por selección, posición, estado, tarjetas, lesiones y suspensión.</p><div id="players"></div></div></section>
+    <section id="jugadores" class="section"><div class="card"><h2>Jugadores</h2><p class="mini">Planteles referenciales, no nóminas oficiales FIFA. Sirven como base inicial de seguimiento y auditoría.</p><div id="players"></div></div></section>
     <section id="llaves" class="section"><div class="card notice"><h2>Llaves eliminatorias</h2><p>Próxima etapa: generar cruces automáticos de 32avos una vez estén definidos los criterios oficiales exactos de emparejamiento.</p><div id="bracket"></div></div></section>
-    <section id="api" class="section"><div class="card notice"><h2>Preparado para API</h2><p>La arquitectura permite conectar proveedores como API-Football o Balldontlie FIFA para resultados, eventos, alineaciones, jugadores, tarjetas y lesiones.</p><p class="mini">Plan recomendado: mantener datos locales como respaldo y consumir API solo cuando el dato esté disponible.</p></div></section>
+    <section id="api" class="section"><div class="card notice"><h2>Preparado para API</h2><p>La arquitectura permite conectar proveedores como OpenFootball, API-Football y The Odds API para calendario, cuotas, resultados, eventos, alineaciones, jugadores, tarjetas y lesiones.</p><p class="mini">Plan recomendado: mantener datos locales como respaldo y consumir API solo cuando el dato esté disponible.</p></div></section>
   </main>
-  <footer>Proyecto personal no afiliado a FIFA. Diseño futbolero propio.</footer>
+  <footer>Proyecto personal no afiliado a FIFA. Diseño futbolero propio. Imágenes libres con atribución a sus fuentes.</footer>
   <script src="js/app.js"></script>
 </body>
 </html>
