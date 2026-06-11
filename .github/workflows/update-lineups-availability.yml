@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   schedule:
     # GitHub Actions usa UTC. En junio, Chile continental suele estar en UTC-4.
-    # 18:40 UTC = 14:40 Chile continental, antes del bloque de 15:00.
-    # 01:40 UTC = 21:40 Chile continental del día anterior, antes del bloque de 22:00.
-    - cron: "40 18 * * *"
-    - cron: "40 1 * * *"
+    # 18:50 UTC = 14:50 Chile continental, antes del bloque de 15:00.
+    # 01:50 UTC = 21:50 Chile continental del día anterior, antes del bloque de 22:00.
+    - cron: "50 18 * * *"
+    - cron: "50 1 * * *"
 
 permissions:
   contents: write
