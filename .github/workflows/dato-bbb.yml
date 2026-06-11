@@ -5,11 +5,16 @@ on:
   schedule:
     - cron: '0 11 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   update-products:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -20,4 +25,5 @@ jobs:
           git config user.email bot@example.com
           git add dato-bbb-secretaria/data
           git diff --cached --quiet || git commit -m update-dato-bbb
+          git pull --rebase origin main
           git push
