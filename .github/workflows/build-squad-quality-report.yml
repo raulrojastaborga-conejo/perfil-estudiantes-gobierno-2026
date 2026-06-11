@@ -1,0 +1,31 @@
+name: Build Squad Quality Report
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "centro-mundial-2026/data/squads_by_team.json"
+      - "scripts/build_squad_quality_report.py"
+
+permissions:
+  contents: write
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build squad quality report
+        run: python scripts/build_squad_quality_report.py
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add centro-mundial-2026/data/squad_quality_report.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Actualiza reporte de calidad de planteles"
+          git pull --rebase
+          git push
