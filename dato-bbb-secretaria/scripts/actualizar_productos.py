@@ -2,25 +2,22 @@
 """
 Actualizador experimental de productos Dato BBB.
 
-Version inicial:
-- Consulta la API publica de Mercado Libre Chile.
-- Busca productos por categorias definidas.
-- Calcula estrellas BBB simples.
-- Escribe data/productos.json.
-
 Regla central:
 - Cada producto debe tener link directo a la oferta especifica.
 - Si no existe permalink del producto, el item se descarta.
+- Si Mercado Libre bloquea la consulta, el workflow no rompe la pagina: conserva el JSON existente.
 """
 
 from __future__ import annotations
 
 import json
 import math
+import os
 import re
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.error import HTTPError, URLError
 from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 
@@ -52,10 +49,28 @@ BLOCKED_HOME_URLS = {
 }
 
 
-def fetch_json(url: str) -> dict[str, Any]:
-    request = Request(url, headers={"User-Agent": "DatoBBBSecretaria/0.1"})
-    with urlopen(request, timeout=25) as response:
-        return json.loads(response.read().decode("utf-8"))
+def fetch_json(url: str) -> dict[str, Any] | None:
+    headers = {
+        "User-Agent": "Mozilla/5.0 DatoBBBSecretaria/0.2",
+        "Accept": "application/json",
+    }
+    token = os.getenv("MELI_ACCESS_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    request = Request(url, headers=headers)
+    try:
+        with urlopen(request, timeout=25) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except HTTPError as error:
+        print(f"AVISO: Mercado Libre respondio HTTP {error.code} para {url}")
+        return None
+    except URLError as error:
+        print(f"AVISO: problema de conexion consultando {url}: {error}")
+        return None
+    except TimeoutError:
+        print(f"AVISO: timeout consultando {url}")
+        return None
 
 
 def clean_text(value: str) -> str:
@@ -181,12 +196,19 @@ def main() -> None:
         limit = int(search["limit"])
         url = f"https://api.mercadolibre.com/sites/MLC/search?q={query}&limit={limit}"
         data = fetch_json(url)
+        if not data:
+            continue
         for item in data.get("results", []):
             product = normalize_item(item, search["category"], search["subcategory"])
             if not product or product["id"] in seen:
                 continue
             seen.add(product["id"])
             products.append(product)
+
+    if not products:
+        print("AVISO: no se obtuvieron productos nuevos. Se conserva data/productos.json existente.")
+        print("Sugerencia: si Mercado Libre sigue respondiendo 403 desde GitHub Actions, usar MELI_ACCESS_TOKEN o sumar otra fuente.")
+        return
 
     products.sort(key=lambda p: (-p["bbb"], p["price"]))
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
