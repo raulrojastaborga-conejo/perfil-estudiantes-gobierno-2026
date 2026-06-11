@@ -11,7 +11,8 @@ const state = {
 const categoryLabels = {
   ropa: 'Ropa',
   'make-up': 'Make up',
-  capilar: 'Productos capilares'
+  capilar: 'Productos capilares',
+  zapatos: 'Zapatos'
 };
 
 const subcategoryLabels = {
@@ -21,7 +22,11 @@ const subcategoryLabels = {
   shampoo: 'Shampoo',
   acondicionador: 'Acondicionador',
   tratamiento: 'Tratamiento',
-  accesorios: 'Accesorios'
+  accesorios: 'Accesorios',
+  zapatillas: 'Zapatillas',
+  formales: 'Formales',
+  sandalias: 'Sandalias',
+  botines: 'Botines'
 };
 
 function money(value) {
