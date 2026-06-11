@@ -1,0 +1,6 @@
+{
+  "updated_at": null,
+  "mode": "initial_manual_structure",
+  "note": "Base para disponibilidad de jugadores. Estados: disponible, duda, lesionado, baja, suspendido, sancionado. Cada dato debe tener fuente y confianza.",
+  "items": []
+}
