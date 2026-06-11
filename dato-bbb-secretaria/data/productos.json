@@ -1,0 +1,58 @@
+[
+  {
+    "id": "demo-ropa-casual-001",
+    "name": "Polera básica mujer algodón",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "Ejemplo tienda",
+    "price": 7990,
+    "old_price": 12990,
+    "discount": 38,
+    "image": "https://placehold.co/800x600/ffe4f1/9f2360?text=Ropa+casual",
+    "url": "https://www.mercadolibre.cl/",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 4, "bonito": 4, "barato": 5 }
+  },
+  {
+    "id": "demo-ropa-vestir-001",
+    "name": "Blazer negro mujer corte clásico",
+    "category": "ropa",
+    "subcategory": "vestir",
+    "store": "Ejemplo tienda",
+    "price": 24990,
+    "old_price": 39990,
+    "discount": 38,
+    "image": "https://placehold.co/800x600/fce7f3/831843?text=Ropa+de+vestir",
+    "url": "https://www.mercadolibre.cl/",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 4, "bonito": 5, "barato": 4 }
+  },
+  {
+    "id": "demo-makeup-001",
+    "name": "Máscara de pestañas efecto volumen",
+    "category": "make-up",
+    "subcategory": "maquillaje",
+    "store": "Ejemplo belleza",
+    "price": 5990,
+    "old_price": 8990,
+    "discount": 33,
+    "image": "https://placehold.co/800x600/fdf2f8/be185d?text=Make+up",
+    "url": "https://www.mercadolibre.cl/",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 4, "bonito": 5, "barato": 5 }
+  },
+  {
+    "id": "demo-capilar-001",
+    "name": "Mascarilla capilar reparación intensiva",
+    "category": "capilar",
+    "subcategory": "tratamiento",
+    "store": "Ejemplo capilar",
+    "price": 4990,
+    "old_price": 7990,
+    "discount": 38,
+    "image": "https://placehold.co/800x600/ecfeff/155e75?text=Capilar",
+    "url": "https://www.mercadolibre.cl/",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 4, "bonito": 3, "barato": 5 }
+  }
+]
