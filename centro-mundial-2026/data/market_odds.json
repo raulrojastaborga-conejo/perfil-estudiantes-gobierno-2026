@@ -1,0 +1,7 @@
+{
+  "updated_at": "2026-06-10",
+  "mode": "placeholder",
+  "source": "The Odds API / carga manual",
+  "note": "Cuotas informativas. No constituyen recomendación de apuesta. Este archivo será actualizado por script cuando exista THE_ODDS_API_KEY y el deporte/torneo esté disponible en la API.",
+  "matches": []
+}
