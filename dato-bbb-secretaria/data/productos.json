@@ -1,59 +1,203 @@
 [
   {
-    "id": "demo-ropa-casual-001",
-    "name": "Polera básica mujer algodón",
+    "id": "ia-7365465111923314239",
+    "name": "Poleras | Falabella Chile",
     "category": "ropa",
     "subcategory": "casual",
-    "store": "Ejemplo tienda",
-    "price": 7990,
-    "old_price": 12990,
-    "discount": 38,
-    "image": "https://placehold.co/800x600/ffe4f1/9f2360?text=Ropa+casual",
-    "url": "https://www.mercadolibre.cl/",
+    "store": "falabella.com",
+    "price": 4990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/shop/poleras",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 4, "bonito": 4, "barato": 5 }
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 5
+    },
+    "bbb": 3.8,
+    "source_method": "busqueda_ia_web"
   },
   {
-    "id": "demo-ropa-vestir-001",
-    "name": "Blazer negro mujer corte clásico",
+    "id": "ia-8250713119708274082",
+    "name": "Poleras Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "falabella.com",
+    "price": 4990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/category/CATG35031/Poleras-Mujer",
+    "updated_at": "2026-06-11",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 5
+    },
+    "bbb": 3.8,
+    "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-3105990237384089100",
+    "name": "Poleras de Algodon Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "falabella.com",
+    "price": 5990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/shop/poleras-de-algodon-mujer",
+    "updated_at": "2026-06-11",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 5
+    },
+    "bbb": 3.8,
+    "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-4926874156152370125",
+    "name": "Blazer Mujer | Falabella Chile",
     "category": "ropa",
     "subcategory": "vestir",
-    "store": "Ejemplo tienda",
-    "price": 24990,
-    "old_price": 39990,
-    "discount": 38,
-    "image": "https://placehold.co/800x600/fce7f3/831843?text=Ropa+de+vestir",
-    "url": "https://www.mercadolibre.cl/",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/category/cat850036/Abrigos-y-Chaquetas?f.product.attribute.Tipo=Blazers",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 4, "bonito": 5, "barato": 4 }
+    "ratings": {
+      "bueno": 3,
+      "bonito": 4,
+      "barato": 4
+    },
+    "bbb": 3.6,
+    "source_method": "busqueda_ia_web"
   },
   {
-    "id": "demo-makeup-001",
-    "name": "Máscara de pestañas efecto volumen",
-    "category": "make-up",
-    "subcategory": "maquillaje",
-    "store": "Ejemplo belleza",
-    "price": 5990,
-    "old_price": 8990,
-    "discount": 33,
-    "image": "https://placehold.co/800x600/fdf2f8/be185d?text=Make+up",
-    "url": "https://www.mercadolibre.cl/",
+    "id": "ia-8672682853910256135",
+    "name": "Blazer Negro Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "vestir",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/shop/blazer-negro-mujer",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 4, "bonito": 5, "barato": 5 }
+    "ratings": {
+      "bueno": 3,
+      "bonito": 4,
+      "barato": 4
+    },
+    "bbb": 3.6,
+    "source_method": "busqueda_ia_web"
   },
   {
-    "id": "demo-capilar-001",
-    "name": "Mascarilla capilar reparación intensiva",
-    "category": "capilar",
-    "subcategory": "tratamiento",
-    "store": "Ejemplo capilar",
-    "price": 4990,
-    "old_price": 7990,
-    "discount": 38,
-    "image": "https://placehold.co/800x600/ecfeff/155e75?text=Capilar",
-    "url": "https://www.mercadolibre.cl/",
+    "id": "ia-445179425679790113",
+    "name": "Blazer Oversize Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "vestir",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/shop/blazer-oversize-mujer",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 4, "bonito": 3, "barato": 5 }
+    "ratings": {
+      "bueno": 3,
+      "bonito": 4,
+      "barato": 4
+    },
+    "bbb": 3.6,
+    "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-3303217944309798916",
+    "name": "Pantalones Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "vestir",
+    "store": "falabella.com",
+    "price": 8990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/category/cat850040/Pantalones",
+    "updated_at": "2026-06-11",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 4
+    },
+    "bbb": 3.4,
+    "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-7459297779660186347",
+    "name": "Blusas Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/category/cat850030/Blusas-Mujer",
+    "updated_at": "2026-06-11",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 4
+    },
+    "bbb": 3.4,
+    "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-9206135340698670991",
+    "name": "Ropa Formal Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "vestir",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/shop/traje-formal-mujer",
+    "updated_at": "2026-06-11",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 4
+    },
+    "bbb": 3.4,
+    "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-1000705732999161858",
+    "name": "Pantalón de Vestir Mujer | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "vestir",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://images.falabella.com/v3/assets/blt7c5c2f2f888a7cc3/blt82dfb1aadb87635c/OG_Fcom.jpg",
+    "url": "https://www.falabella.com/falabella-cl/shop/pantalones-de-vestir-mujer",
+    "updated_at": "2026-06-11",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 4
+    },
+    "bbb": 3.4,
+    "source_method": "busqueda_ia_web"
   },
   {
     "id": "demo-zapatos-001",
@@ -67,6 +211,10 @@
     "image": "https://placehold.co/800x600/fef3c7/92400e?text=Zapatos",
     "url": "https://www.mercadolibre.cl/",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 4, "bonito": 4, "barato": 4 }
+    "ratings": {
+      "bueno": 4,
+      "bonito": 4,
+      "barato": 4
+    }
   }
 ]
