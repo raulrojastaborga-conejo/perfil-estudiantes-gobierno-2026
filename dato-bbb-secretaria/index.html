@@ -33,6 +33,10 @@
     </section>
 
     <section class="toolbar panel">
+      <div class="field field-wide">
+        <label for="searchInput">Buscar producto</label>
+        <input id="searchInput" type="search" placeholder="Ej: blazer, labial, shampoo, zapatos negros" />
+      </div>
       <div>
         <label for="categoryFilter">Categoría</label>
         <select id="categoryFilter">
@@ -46,6 +50,12 @@
       <div>
         <label for="subcategoryFilter">Subcategoría</label>
         <select id="subcategoryFilter">
+          <option value="todas">Todas</option>
+        </select>
+      </div>
+      <div>
+        <label for="storeFilter">Tienda</label>
+        <select id="storeFilter">
           <option value="todas">Todas</option>
         </select>
       </div>
@@ -69,9 +79,38 @@
           <option value="4.5">4,5+</option>
         </select>
       </div>
+      <div>
+        <label for="sortSelect">Ordenar por</label>
+        <select id="sortSelect">
+          <option value="bbb">Mejor BBB</option>
+          <option value="price-asc">Más barato</option>
+          <option value="discount-desc">Mayor descuento</option>
+          <option value="recent">Más reciente</option>
+          <option value="good">Más bueno</option>
+          <option value="pretty">Más bonito</option>
+        </select>
+      </div>
+      <div class="checkbox-field">
+        <label class="check-label"><input id="discountOnly" type="checkbox" /> Solo con descuento</label>
+        <label class="check-label"><input id="favoritesOnly" type="checkbox" /> Solo favoritos</label>
+      </div>
+      <div class="toolbar-actions">
+        <button class="btn btn-clear" id="clearFilters" type="button">Limpiar filtros</button>
+      </div>
     </section>
 
     <section class="summary" id="summary"></section>
+
+    <section class="compare-panel panel" id="comparePanel" hidden>
+      <div class="compare-head">
+        <div>
+          <h2>Comparador</h2>
+          <p>Selecciona hasta 3 productos para comparar precio y estrellas BBB.</p>
+        </div>
+        <button class="btn btn-clear" id="clearCompare" type="button">Vaciar comparador</button>
+      </div>
+      <div id="compareTable" class="compare-table"></div>
+    </section>
 
     <section class="products" id="productos" aria-live="polite"></section>
   </main>
