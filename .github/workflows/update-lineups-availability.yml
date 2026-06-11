@@ -1,0 +1,33 @@
+name: Update Lineups Availability Diagnostic
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */12 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run diagnostic
+        run: python scripts/update_lineups_availability.py
+
+      - name: Commit diagnostic output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add centro-mundial-2026/data/lineups.json centro-mundial-2026/data/player_availability.json centro-mundial-2026/data/lineups_availability_diagnostic.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Actualiza diagnóstico de alineaciones y disponibilidad"
+          git push
