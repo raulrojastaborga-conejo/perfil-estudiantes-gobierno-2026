@@ -2,18 +2,15 @@
 """
 Actualizador experimental de productos Dato BBB.
 
-Versión inicial:
-- Consulta la API pública de Mercado Libre Chile.
-- Busca productos por categorías definidas.
+Version inicial:
+- Consulta la API publica de Mercado Libre Chile.
+- Busca productos por categorias definidas.
 - Calcula estrellas BBB simples.
 - Escribe data/productos.json.
 
-Para producción conviene mejorar:
-- historial real de precios,
-- listas blancas de marcas,
-- exclusión de productos irrelevantes,
-- revisión de tiendas adicionales,
-- validación manual de categorías.
+Regla central:
+- Cada producto debe tener link directo a la oferta especifica.
+- Si no existe permalink del producto, el item se descarta.
 """
 
 from __future__ import annotations
@@ -47,6 +44,12 @@ GOOD_BRANDS = [
 ]
 
 BAD_WORDS = ["usado", "segunda mano", "repuesto", "mayorista", "lote", "pack x 50"]
+BLOCKED_HOME_URLS = {
+    "https://www.mercadolibre.cl/",
+    "https://www.mercadolibre.cl",
+    "https://mercadolibre.cl/",
+    "https://mercadolibre.cl",
+}
 
 
 def fetch_json(url: str) -> dict[str, Any]:
@@ -61,6 +64,13 @@ def clean_text(value: str) -> str:
 
 def clamp(value: float, min_value: int = 0, max_value: int = 5) -> int:
     return int(max(min_value, min(max_value, round(value))))
+
+
+def is_specific_offer_url(url: str) -> bool:
+    clean_url = (url or "").strip()
+    if not clean_url or clean_url in BLOCKED_HOME_URLS:
+        return False
+    return clean_url.startswith("https://") and len(clean_url) > 35
 
 
 def score_barato(price: int, category: str, discount: int) -> int:
@@ -121,6 +131,10 @@ def normalize_item(item: dict[str, Any], category: str, subcategory: str) -> dic
     if not title or any(word in title.lower() for word in BAD_WORDS):
         return None
 
+    permalink = clean_text(item.get("permalink", ""))
+    if not is_specific_offer_url(permalink):
+        return None
+
     price = int(item.get("price") or 0)
     if price <= 0:
         return None
@@ -151,7 +165,7 @@ def normalize_item(item: dict[str, Any], category: str, subcategory: str) -> dic
         "old_price": old_price,
         "discount": discount,
         "image": item.get("thumbnail") or "",
-        "url": item.get("permalink") or "https://www.mercadolibre.cl/",
+        "url": permalink,
         "updated_at": date.today().isoformat(),
         "ratings": ratings,
         "bbb": bbb,
