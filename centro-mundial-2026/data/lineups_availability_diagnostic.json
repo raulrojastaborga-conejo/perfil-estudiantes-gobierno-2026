@@ -1,0 +1,42 @@
+{
+  "updated_at": "2026-06-11T02:34:06.982695Z",
+  "mode": "diagnostic_only",
+  "summary": {
+    "sources_total": 2,
+    "sources_enabled": 2,
+    "lineups_items": 0,
+    "availability_items": 0
+  },
+  "diagnostics": [
+    {
+      "name": "OpenFootball World Cup",
+      "type": "fixture_open_data",
+      "enabled": true,
+      "url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
+      "robots": {
+        "ok": true,
+        "robots_url": "https://raw.githubusercontent.com/robots.txt"
+      },
+      "probe": {
+        "ok": true,
+        "status": 200,
+        "sample": "= World Cup 2026      # in Canada, USA, and Mexico\r\n\r\n#  104 matches featuring 48 teams played across 16 host cities in three countries\r\n\r\n# Stadiums:\r\n#  Mexico City,              Estadio Azteca\r\n#  Guadalajara (Zapopan),    Estadio Akron\r\n#  Monterrey (Guadalupe),    Estadio BBVA\r\n#  Atlanta,     "
+      },
+      "publish_mode": "diagnostic_only"
+    },
+    {
+      "name": "Manual review queue",
+      "type": "manual",
+      "enabled": true,
+      "url": "",
+      "robots": null,
+      "probe": null,
+      "publish_mode": "diagnostic_only"
+    }
+  ],
+  "next_steps": [
+    "Agregar fuentes específicas permitidas para alineaciones o disponibilidad.",
+    "Mantener publicación automática desactivada hasta validar calidad de fuente.",
+    "Publicar como oficial solo con FIFA, federación, reporte oficial o API confiable."
+  ]
+}
