@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "respaldo-ropa-casual-001",
+    "name": "Producto de respaldo ropa casual",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "Respaldo",
+    "price": 7990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://placehold.co/800x600/ffe4f1/9f2360?text=Ropa+casual",
+    "url": "https://www.falabella.com/falabella-cl",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 3, "bonito": 3, "barato": 5 },
+    "bbb": 3.8,
+    "source_method": "respaldo_temporal"
+  },
+  {
+    "id": "respaldo-zapatos-001",
+    "name": "Producto de respaldo zapatos",
+    "category": "zapatos",
+    "subcategory": "formales",
+    "store": "Respaldo",
+    "price": 19990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://placehold.co/800x600/fef3c7/92400e?text=Zapatos",
+    "url": "https://www.falabella.com/falabella-cl",
+    "updated_at": "2026-06-11",
+    "ratings": { "bueno": 3, "bonito": 4, "barato": 4 },
+    "bbb": 3.6,
+    "source_method": "respaldo_temporal"
+  }
+]
