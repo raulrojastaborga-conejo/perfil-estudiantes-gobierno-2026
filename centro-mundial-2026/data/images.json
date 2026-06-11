@@ -1,37 +1,37 @@
 {
-  "updated_at": "2026-06-10",
-  "source_policy": "Solo imágenes libres o con licencia abierta, con atribución visible. Evitar logos FIFA, escudos federativos y fotos oficiales de jugadores sin licencia clara.",
+  "updated_at": "2026-06-11",
+  "source_policy": "Imágenes locales cargadas en assets/img/. Mantener atribución visible. Evitar logos FIFA, escudos federativos y fotos oficiales de jugadores sin licencia clara.",
   "images": [
     {
       "title": "Estadio Azteca, Ciudad de México",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Estadio_Azteca_2022.jpg/1200px-Estadio_Azteca_2022.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Estadio_Azteca_2022.jpg",
-      "author": "Wikimedia Commons contributor",
-      "license": "Consultar ficha Wikimedia Commons",
+      "url": "assets/img/azteca.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Estadio_Azteca",
+      "author": "Fuente libre cargada localmente",
+      "license": "Consultar fuente original",
       "caption": "Una de las sedes emblemáticas del Mundial 2026."
     },
     {
       "title": "MetLife Stadium, Nueva Jersey",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/MetLife_Stadium_Meadowlands.jpg/1200px-MetLife_Stadium_Meadowlands.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:MetLife_Stadium_Meadowlands.jpg",
-      "author": "Wikimedia Commons contributor",
-      "license": "Consultar ficha Wikimedia Commons",
+      "url": "assets/img/metlife.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:MetLife_Stadium",
+      "author": "Fuente libre cargada localmente",
+      "license": "Consultar fuente original",
       "caption": "Estadio de referencia para la fase final del torneo."
     },
     {
       "title": "BMO Field, Toronto",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/BMO_Field_2023.jpg/1200px-BMO_Field_2023.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:BMO_Field_2023.jpg",
-      "author": "Wikimedia Commons contributor",
-      "license": "Consultar ficha Wikimedia Commons",
+      "url": "assets/img/bmo.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:BMO_Field",
+      "author": "Fuente libre cargada localmente",
+      "license": "Consultar fuente original",
       "caption": "Canadá será una de las tres sedes nacionales del torneo."
     },
     {
       "title": "Cancha de fútbol",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Football_pitch_metric.svg/1200px-Football_pitch_metric.svg.png",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Football_pitch_metric.svg",
-      "author": "Wikimedia Commons contributor",
-      "license": "Consultar ficha Wikimedia Commons",
+      "url": "assets/img/cancha.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/Category:Association_football_pitches",
+      "author": "Fuente libre cargada localmente",
+      "license": "Consultar fuente original",
       "caption": "Imagen genérica de cancha para acompañar análisis y datos."
     }
   ]
