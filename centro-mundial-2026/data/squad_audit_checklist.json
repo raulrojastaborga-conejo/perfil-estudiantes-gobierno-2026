@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-06-10",
+  "purpose": "Control de calidad para convertir planteles referenciales en nóminas verificadas.",
+  "audit_steps": [
+    "Verificar nombre del jugador contra FIFA o federación.",
+    "Verificar club actual contra fuente confiable.",
+    "Confirmar si aparece en convocatoria oficial o preliminar.",
+    "Marcar bajas por lesión, suspensión o reemplazo.",
+    "Eliminar jugadores retirados, no elegibles o sin actividad internacional reciente.",
+    "Actualizar confianza: alta, media, baja.",
+    "Cambiar squad_status solo cuando exista fuente oficial."
+  ],
+  "status_fields": {
+    "fifa_status": ["pendiente_comparacion", "coincide_fifa", "no_aparece_fifa", "baja_confirmada", "reemplazo_confirmado"],
+    "squad_status": ["plantel_referencial_parcial", "prelista_oficial", "nomina_oficial_final"]
+  },
+  "priority": [
+    "Jugadores con club s/d",
+    "Jugadores con confianza baja",
+    "Selecciones con menos de 10 jugadores",
+    "Selecciones con más riesgo de datos desactualizados",
+    "Comparación con FIFA/federación"
+  ]
+}
