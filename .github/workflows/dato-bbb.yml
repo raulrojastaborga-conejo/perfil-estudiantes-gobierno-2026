@@ -1,0 +1,22 @@
+name: Dato BBB
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * *'
+
+jobs:
+  update-products:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python dato-bbb-secretaria/scripts/actualizar_productos.py
+      - run: |
+          git config user.name bot
+          git config user.email bot@example.com
+          git add dato-bbb-secretaria/data/productos.json
+          git diff --cached --quiet || git commit -m update-dato-bbb
+          git push
