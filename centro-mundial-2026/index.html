@@ -26,6 +26,7 @@
       <button class="tab active" data-tab="calendario">Calendario</button>
       <button class="tab" data-tab="tablas">Tablas</button>
       <button class="tab" data-tab="terceros">Mejores terceros</button>
+      <button class="tab" data-tab="reglas">Reglas</button>
       <button class="tab" data-tab="jugadores">Jugadores</button>
       <button class="tab" data-tab="llaves">Llaves</button>
       <button class="tab" data-tab="api">API</button>
@@ -45,6 +46,14 @@
     </section>
     <section id="tablas" class="section"><div class="grid" id="standings"></div></section>
     <section id="terceros" class="section"><div class="card"><h2>Ranking de terceros</h2><p class="mini">Clasifican los 8 mejores terceros, según puntos, diferencia de gol y goles a favor.</p><div id="thirds"></div></div></section>
+    <section id="reglas" class="section">
+      <div class="grid">
+        <div class="card notice"><h2>Formato 2026</h2><p>Participan 48 selecciones, distribuidas en 12 grupos de 4 equipos. Avanzan a eliminación directa los dos primeros de cada grupo y los 8 mejores terceros, para formar una ronda de 32 equipos.</p></div>
+        <div class="card"><h3>Puntaje en fase de grupos</h3><p>Victoria: <b>3 puntos</b><br>Empate: <b>1 punto</b><br>Derrota: <b>0 puntos</b></p><p class="mini">La tabla de esta página calcula puntos, partidos jugados, goles a favor, goles en contra y diferencia de gol.</p></div>
+        <div class="card"><h3>Mejores terceros</h3><p>Los 12 terceros de grupo se ordenan en una tabla común. Clasifican los mejores 8.</p><p class="mini">Actualmente se ordenan por puntos, diferencia de gol y goles a favor. Los criterios finos adicionales deben verificarse contra el reglamento oficial FIFA vigente.</p></div>
+        <div class="card"><h3>Llaves eliminatorias</h3><p>La fase final comienza en 32avos. Los cruces con terceros dependen de qué grupos aporten a los 8 mejores terceros.</p><p class="mini">FIFA publicó combinaciones específicas para esos terceros en el Anexo C del reglamento del torneo. Esta página todavía muestra una simulación preliminar, no el cuadro oficial completo.</p></div>
+      </div>
+    </section>
     <section id="jugadores" class="section"><div class="card"><h2>Jugadores</h2><p class="mini">Planteles referenciales, no nóminas oficiales FIFA. Sirven como base inicial de seguimiento y auditoría.</p><div id="players"></div></div></section>
     <section id="llaves" class="section"><div class="card notice"><h2>Llaves eliminatorias</h2><p>Próxima etapa: generar cruces automáticos de 32avos una vez estén definidos los criterios oficiales exactos de emparejamiento.</p><div id="bracket"></div></div></section>
     <section id="api" class="section"><div class="card notice"><h2>Preparado para API</h2><p>La arquitectura permite conectar proveedores como OpenFootball, API-Football y The Odds API para calendario, cuotas, resultados, eventos, alineaciones, jugadores, tarjetas y lesiones.</p><p class="mini">Plan recomendado: mantener datos locales como respaldo y consumir API solo cuando el dato esté disponible.</p></div></section>
