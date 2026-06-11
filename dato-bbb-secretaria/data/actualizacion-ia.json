@@ -1,11 +1,12 @@
 {
-  "updated_at": "2026-06-11T14:45:48+00:00",
+  "updated_at": "2026-06-11T14:59:39+00:00",
   "queries": 6,
-  "urls_found": 20,
-  "products_found": 10,
-  "existing_before": 5,
+  "urls_found": 13,
+  "products_found": 0,
+  "existing_before": 11,
+  "existing_valid": 0,
   "notes": [
-    "Busqueda automatica IA finalizada; se fusiona con datos previos para no perder informacion"
+    "Filtro endurecido: se eliminan categorias/shop y demos; solo URLs de producto probable"
   ],
-  "final": 11
+  "final": 0
 }
