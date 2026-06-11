@@ -1,32 +1,38 @@
 [
-  {
-    "category": "ropa",
-    "subcategory": "casual",
-    "query": "oferta ropa mujer casual Chile polera blusa pantalon"
-  },
-  {
-    "category": "ropa",
-    "subcategory": "vestir",
-    "query": "oferta blazer mujer pantalon vestir oficina Chile"
-  },
-  {
-    "category": "make-up",
-    "subcategory": "maquillaje",
-    "query": "oferta maquillaje mujer Chile labial mascara base"
-  },
-  {
-    "category": "capilar",
-    "subcategory": "tratamiento",
-    "query": "oferta mascarilla capilar shampoo tratamiento pelo Chile"
-  },
-  {
-    "category": "zapatos",
-    "subcategory": "formales",
-    "query": "oferta zapatos mujer oficina Chile"
-  },
-  {
-    "category": "zapatos",
-    "subcategory": "zapatillas",
-    "query": "oferta zapatillas mujer Chile"
-  }
+  { "category": "ropa", "subcategory": "casual", "query": "oferta ropa mujer casual Chile polera blusa pantalon" },
+  { "category": "ropa", "subcategory": "vestir", "query": "oferta blazer mujer pantalon vestir oficina Chile" },
+  { "category": "make-up", "subcategory": "maquillaje", "query": "oferta maquillaje mujer Chile labial mascara base" },
+  { "category": "capilar", "subcategory": "tratamiento", "query": "oferta mascarilla capilar shampoo tratamiento pelo Chile" },
+  { "category": "zapatos", "subcategory": "formales", "query": "oferta zapatos mujer oficina Chile" },
+  { "category": "zapatos", "subcategory": "zapatillas", "query": "oferta zapatillas mujer Chile" },
+
+  { "category": "ropa", "subcategory": "casual", "query": "site:falabella.com/falabella-cl/product polera mujer oferta" },
+  { "category": "ropa", "subcategory": "vestir", "query": "site:falabella.com/falabella-cl/product blazer mujer oferta" },
+  { "category": "zapatos", "subcategory": "formales", "query": "site:falabella.com/falabella-cl/product zapatos mujer oficina oferta" },
+  { "category": "zapatos", "subcategory": "zapatillas", "query": "site:falabella.com/falabella-cl/product zapatillas mujer oferta" },
+
+  { "category": "ropa", "subcategory": "casual", "query": "site:ripley.cl/producto polera mujer oferta" },
+  { "category": "ropa", "subcategory": "vestir", "query": "site:ripley.cl/producto blazer mujer oferta" },
+  { "category": "zapatos", "subcategory": "formales", "query": "site:ripley.cl/producto zapatos mujer oficina oferta" },
+  { "category": "zapatos", "subcategory": "zapatillas", "query": "site:ripley.cl/producto zapatillas mujer oferta" },
+
+  { "category": "ropa", "subcategory": "casual", "query": "site:paris.cl producto polera mujer oferta" },
+  { "category": "ropa", "subcategory": "vestir", "query": "site:paris.cl producto blazer mujer oferta" },
+  { "category": "zapatos", "subcategory": "formales", "query": "site:paris.cl producto zapatos mujer oficina oferta" },
+  { "category": "zapatos", "subcategory": "zapatillas", "query": "site:paris.cl producto zapatillas mujer oferta" },
+
+  { "category": "make-up", "subcategory": "maquillaje", "query": "site:dbs.cl producto labial mascara base maquillaje oferta" },
+  { "category": "make-up", "subcategory": "maquillaje", "query": "site:maicao.cl producto labial mascara base maquillaje oferta" },
+  { "category": "make-up", "subcategory": "maquillaje", "query": "site:preunic.cl producto labial mascara base maquillaje oferta" },
+
+  { "category": "capilar", "subcategory": "tratamiento", "query": "site:dbs.cl producto mascarilla capilar shampoo oferta" },
+  { "category": "capilar", "subcategory": "tratamiento", "query": "site:maicao.cl producto mascarilla capilar shampoo oferta" },
+  { "category": "capilar", "subcategory": "tratamiento", "query": "site:preunic.cl producto mascarilla capilar shampoo oferta" },
+
+  { "category": "ropa", "subcategory": "casual", "query": "site:articulo.mercadolibre.cl polera mujer oferta" },
+  { "category": "ropa", "subcategory": "vestir", "query": "site:articulo.mercadolibre.cl blazer mujer oferta" },
+  { "category": "zapatos", "subcategory": "formales", "query": "site:articulo.mercadolibre.cl zapatos mujer oficina oferta" },
+  { "category": "zapatos", "subcategory": "zapatillas", "query": "site:articulo.mercadolibre.cl zapatillas mujer oferta" },
+  { "category": "make-up", "subcategory": "maquillaje", "query": "site:articulo.mercadolibre.cl maquillaje mujer oferta" },
+  { "category": "capilar", "subcategory": "tratamiento", "query": "site:articulo.mercadolibre.cl shampoo mascarilla capilar oferta" }
 ]
