@@ -14,6 +14,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: python dato-bbb-secretaria/scripts/actualizar_productos_v2.py
+      - run: python dato-bbb-secretaria/scripts/busqueda_ia_ofertas.py
       - run: |
           git config user.name bot
           git config user.email bot@example.com
