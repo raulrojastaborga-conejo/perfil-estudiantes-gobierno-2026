@@ -28,7 +28,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add centro-mundial-2026/data/market_odds.json
+          git add centro-mundial-2026/data/market_odds.json centro-mundial-2026/data/market_odds_diagnostic.json
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Actualiza cuotas de mercado"
           git pull --rebase
