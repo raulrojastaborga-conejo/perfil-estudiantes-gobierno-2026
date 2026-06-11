@@ -1,0 +1,655 @@
+{
+  "generated_at": "2026-06-11T00:41:41Z",
+  "source": "data/squads_by_team.json",
+  "summary": {
+    "teams_loaded": 48,
+    "players_loaded": 471,
+    "teams_under_10_players": 21,
+    "teams_under_15_players": 47,
+    "players_with_club_sd": 40,
+    "players_with_low_confidence": 3,
+    "high_priority_teams": 21
+  },
+  "teams": [
+    {
+      "team": "Czech Republic",
+      "group": "A",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Mexico",
+      "group": "A",
+      "players": 15,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "baja",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "South Africa",
+      "group": "A",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "South Korea",
+      "group": "A",
+      "players": 12,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Bosnia & Herzegovina",
+      "group": "B",
+      "players": 10,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "Edin Džeko"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Canada",
+      "group": "B",
+      "players": 11,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Qatar",
+      "group": "B",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Switzerland",
+      "group": "B",
+      "players": 11,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Brazil",
+      "group": "C",
+      "players": 12,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Haiti",
+      "group": "C",
+      "players": 8,
+      "club_sd": 3,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Johny Placide",
+        "Carnejy Antoine",
+        "Leverton Pierre"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Morocco",
+      "group": "C",
+      "players": 10,
+      "club_sd": 2,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "Romain Saïss",
+        "Hakim Ziyech"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Scotland",
+      "group": "C",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Australia",
+      "group": "D",
+      "players": 10,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "Ajdin Hrustić"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Paraguay",
+      "group": "D",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Turkey",
+      "group": "D",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "USA",
+      "group": "D",
+      "players": 11,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Curaçao",
+      "group": "E",
+      "players": 8,
+      "club_sd": 8,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Eloy Room",
+        "Cuco Martina",
+        "Jurien Gaari",
+        "Leandro Bacuna",
+        "Juninho Bacuna",
+        "Brandley Kuwas",
+        "Rangelo Janga",
+        "Kenji Gorré"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Ecuador",
+      "group": "E",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Germany",
+      "group": "E",
+      "players": 12,
+      "club_sd": 0,
+      "confidence_low": 1,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": [
+        "Toni Kroos"
+      ]
+    },
+    {
+      "team": "Ivory Coast",
+      "group": "E",
+      "players": 10,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "Nicolas Pépé"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Japan",
+      "group": "F",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Netherlands",
+      "group": "F",
+      "players": 10,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "Memphis Depay"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Sweden",
+      "group": "F",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Tunisia",
+      "group": "F",
+      "players": 9,
+      "club_sd": 2,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Aymen Dahmen",
+        "Dylan Bronn"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Belgium",
+      "group": "G",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Egypt",
+      "group": "G",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Iran",
+      "group": "G",
+      "players": 8,
+      "club_sd": 2,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Saman Ghoddos",
+        "Alireza Jahanbakhsh"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "New Zealand",
+      "group": "G",
+      "players": 9,
+      "club_sd": 2,
+      "confidence_low": 1,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Winston Reid",
+        "Sarpreet Singh"
+      ],
+      "players_with_low_confidence": [
+        "Winston Reid"
+      ]
+    },
+    {
+      "team": "Cape Verde",
+      "group": "H",
+      "players": 9,
+      "club_sd": 3,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Vozinha",
+        "Garry Rodrigues",
+        "Bebé"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Saudi Arabia",
+      "group": "H",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Spain",
+      "group": "H",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Uruguay",
+      "group": "H",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "France",
+      "group": "I",
+      "players": 11,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Iraq",
+      "group": "I",
+      "players": 8,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Rebin Sulaka"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Norway",
+      "group": "I",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Senegal",
+      "group": "I",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Algeria",
+      "group": "J",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Argentina",
+      "group": "J",
+      "players": 11,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Austria",
+      "group": "J",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Jordan",
+      "group": "J",
+      "players": 8,
+      "club_sd": 4,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Yazan Al-Arab",
+        "Nizar Al-Rashdan",
+        "Noor Al-Rawabdeh",
+        "Ali Olwan"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Colombia",
+      "group": "K",
+      "players": 10,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "James Rodríguez"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "DR Congo",
+      "group": "K",
+      "players": 9,
+      "club_sd": 2,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Samuel Moutoussamy",
+        "Gaël Kakuta"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Portugal",
+      "group": "K",
+      "players": 11,
+      "club_sd": 1,
+      "confidence_low": 1,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [
+        "Pepe"
+      ],
+      "players_with_low_confidence": [
+        "Pepe"
+      ]
+    },
+    {
+      "team": "Uzbekistan",
+      "group": "K",
+      "players": 8,
+      "club_sd": 1,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Otabek Shukurov"
+      ],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Croatia",
+      "group": "L",
+      "players": 10,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "England",
+      "group": "L",
+      "players": 11,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "media",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Ghana",
+      "group": "L",
+      "players": 9,
+      "club_sd": 0,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [],
+      "players_with_low_confidence": []
+    },
+    {
+      "team": "Panama",
+      "group": "L",
+      "players": 9,
+      "club_sd": 4,
+      "confidence_low": 0,
+      "squad_status": "plantel_referencial_parcial",
+      "fifa_status": "pendiente_comparacion",
+      "audit_priority": "alta",
+      "players_with_club_sd": [
+        "Luis Mejía",
+        "Fidel Escobar",
+        "José Fajardo",
+        "Cecilio Waterman"
+      ],
+      "players_with_low_confidence": []
+    }
+  ]
+}
