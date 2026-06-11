@@ -35,12 +35,15 @@ SEARCHES = [
     {"category": "ropa", "subcategory": "vestir", "query": "blazer blusa pantalon vestir mujer oferta", "limit": 8},
     {"category": "make-up", "subcategory": "maquillaje", "query": "makeup maquillaje mujer oferta", "limit": 8},
     {"category": "capilar", "subcategory": "tratamiento", "query": "mascarilla shampoo capilar oferta", "limit": 8},
+    {"category": "zapatos", "subcategory": "formales", "query": "zapatos mujer oficina oferta", "limit": 8},
+    {"category": "zapatos", "subcategory": "zapatillas", "query": "zapatillas mujer oferta", "limit": 8},
 ]
 
 GOOD_BRANDS = [
     "maybelline", "loreal", "l'oréal", "garnier", "elvive", "revlon", "vogue", "nivea",
     "tresemme", "pantene", "dove", "head", "wella", "kerastase", "kérastase",
-    "zara", "h&m", "mango", "basement", "sybilla", "alaniz"
+    "zara", "h&m", "mango", "basement", "sybilla", "alaniz", "bata", "via uno",
+    "azaleia", "skechers", "nike", "adidas", "puma", "new balance"
 ]
 
 BAD_WORDS = ["usado", "segunda mano", "repuesto", "mayorista", "lote", "pack x 50"]
@@ -65,6 +68,7 @@ def score_barato(price: int, category: str, discount: int) -> int:
         "ropa": [8000, 15000, 25000, 40000],
         "make-up": [5000, 9000, 15000, 25000],
         "capilar": [5000, 9000, 14000, 22000],
+        "zapatos": [12000, 20000, 35000, 55000],
     }
     limits = thresholds.get(category, [5000, 10000, 20000, 30000])
     if price <= limits[0]:
@@ -101,10 +105,13 @@ def score_bueno(title: str, sold_quantity: int, rating: float | None) -> int:
 def score_bonito(title: str, category: str) -> int:
     title_lower = title.lower()
     score = 3
-    pretty_words = ["elegante", "moderno", "bonito", "glow", "set", "kit", "blazer", "vestido", "negro", "nude", "rosa"]
+    pretty_words = [
+        "elegante", "moderno", "bonito", "glow", "set", "kit", "blazer", "vestido",
+        "negro", "nude", "rosa", "cuero", "botin", "botín", "sandalia", "taco", "oficina"
+    ]
     if any(word in title_lower for word in pretty_words):
         score += 1
-    if category in {"make-up", "ropa"}:
+    if category in {"make-up", "ropa", "zapatos"}:
         score += 0.5
     return clamp(score)
 
