@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T02:31:59.756853+00:00",
+  "updated_at": "2026-06-12T09:55:48.824114+00:00",
   "source": "API-Football / API-Sports",
   "data": {
     "get": "leagues",
@@ -121,16 +121,16 @@
             "current": true,
             "coverage": {
               "fixtures": {
-                "events": false,
-                "lineups": false,
-                "statistics_fixtures": false,
-                "statistics_players": false
+                "events": true,
+                "lineups": true,
+                "statistics_fixtures": true,
+                "statistics_players": true
               },
               "standings": true,
-              "players": false,
-              "top_scorers": false,
-              "top_assists": false,
-              "top_cards": false,
+              "players": true,
+              "top_scorers": true,
+              "top_assists": true,
+              "top_cards": true,
               "injuries": false,
               "predictions": true,
               "odds": true
