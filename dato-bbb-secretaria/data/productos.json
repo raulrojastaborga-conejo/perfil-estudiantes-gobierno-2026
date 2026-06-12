@@ -11,7 +11,11 @@
     "image": "https://placehold.co/800x600/ffe4f1/9f2360?text=Ropa+casual",
     "url": "https://www.falabella.com/falabella-cl",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 3, "bonito": 3, "barato": 5 },
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 5
+    },
     "bbb": 3.8,
     "source_method": "respaldo_temporal"
   },
@@ -27,7 +31,11 @@
     "image": "https://placehold.co/800x600/fef3c7/92400e?text=Zapatos",
     "url": "https://www.falabella.com/falabella-cl",
     "updated_at": "2026-06-11",
-    "ratings": { "bueno": 3, "bonito": 4, "barato": 4 },
+    "ratings": {
+      "bueno": 3,
+      "bonito": 4,
+      "barato": 4
+    },
     "bbb": 3.6,
     "source_method": "respaldo_temporal"
   }

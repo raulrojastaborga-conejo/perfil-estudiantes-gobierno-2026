@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-11T15:13:16+00:00",
+  "updated_at": "2026-06-12T13:57:44+00:00",
   "queries": 30,
-  "urls_found": 11,
+  "urls_found": 12,
   "products_found": 0,
-  "existing_before": 0,
+  "existing_before": 2,
   "existing_valid": 0,
   "notes": [
-    "Filtro endurecido: se eliminan categorias/shop y demos; solo URLs de producto probable"
+    "sin productos nuevos y sin productos validos; se conserva respaldo para no dejar la pagina vacia"
   ],
-  "final": 0
+  "final": 2
 }
