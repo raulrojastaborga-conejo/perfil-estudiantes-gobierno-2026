@@ -42,6 +42,9 @@ main{padding:28px 48px 42px}
   border-radius:18px;
   box-shadow:0 8px 28px rgba(15,23,42,.06);
 }
+.upload{padding:20px;margin-bottom:22px}
+.upload p{margin-top:0;color:#334155}
+.upload input{display:block;margin-top:12px}
 .filters{padding:20px;margin-bottom:22px}
 .section-title{display:flex;justify-content:space-between;align-items:center;gap:16px}
 h2{font-size:1.05rem;margin:0 0 14px;color:var(--azul)}
