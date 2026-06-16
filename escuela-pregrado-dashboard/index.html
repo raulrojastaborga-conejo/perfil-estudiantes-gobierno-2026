@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Escuela de Pregrado FACGOB</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div>
+    <p class="eyebrow">Facultad de Gobierno · Universidad de Chile</p>
+    <h1>Dashboard Escuela de Pregrado</h1>
+    <p class="lead">Matrícula y titulaciones de Administración Pública y Ciencia Política.</p>
+  </div>
+  <div class="hero-card">
+    <span>Fuente</span>
+    <strong id="sourceFile">Excel pregrado</strong>
+    <small>Datos agregados, sin RUT, nombres ni correos.</small>
+  </div>
+</header>
+
+<main>
+  <section class="filters panel">
+    <div class="section-title">
+      <h2>Filtros</h2>
+      <button id="resetFilters" class="ghost">Limpiar filtros</button>
+    </div>
+    <div class="filter-grid">
+      <label>Años matrícula
+        <select id="yearFilter" multiple></select>
+      </label>
+      <label>Carrera
+        <select id="careerFilter" multiple></select>
+      </label>
+      <label>Descripción matrícula
+        <select id="descFilter" multiple></select>
+      </label>
+      <label>Tipo estudiante
+        <select id="tipoFilter" multiple></select>
+      </label>
+      <label>Sexo
+        <select id="sexFilter" multiple></select>
+      </label>
+    </div>
+    <p class="hint">Tip: mantén Ctrl presionado para seleccionar más de una opción. Si no seleccionas nada, se consideran todas las opciones.</p>
+  </section>
+
+  <section class="kpis">
+    <article class="kpi"><span>Matrículas filtradas</span><strong id="kpiMatricula">0</strong></article>
+    <article class="kpi"><span>Titulados/as deduplicados</span><strong id="kpiTitulados">0</strong></article>
+    <article class="kpi"><span>Carreras</span><strong id="kpiCarreras">0</strong></article>
+    <article class="kpi"><span>Periodo matrícula</span><strong id="kpiPeriodo">—</strong></article>
+  </section>
+
+  <section class="grid">
+    <article class="panel chart-panel">
+      <h2>Matrícula por año</h2>
+      <canvas id="chartMatriculaAnio"></canvas>
+    </article>
+    <article class="panel chart-panel">
+      <h2>Matrícula por carrera</h2>
+      <canvas id="chartMatriculaCarrera"></canvas>
+    </article>
+    <article class="panel chart-panel">
+      <h2>Descripción de matrícula</h2>
+      <canvas id="chartDescripcion"></canvas>
+    </article>
+    <article class="panel chart-panel">
+      <h2>Titulados/as por año</h2>
+      <canvas id="chartTituladosAnio"></canvas>
+    </article>
+  </section>
+
+  <section class="grid two">
+    <article class="panel">
+      <h2>Resumen matrícula</h2>
+      <div class="table-wrap">
+        <table id="tableMatricula">
+          <thead><tr><th>Año</th><th>Carrera</th><th>Descripción</th><th>Total</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+    <article class="panel">
+      <h2>Resumen titulados/as</h2>
+      <div class="table-wrap">
+        <table id="tableTitulados">
+          <thead><tr><th>Año</th><th>Carrera</th><th>Total</th><th>Nota final promedio</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel notes">
+    <h2>Notas metodológicas</h2>
+    <ul>
+      <li>La hoja <strong>Titulados</strong> venía con una fila por profesor/rol de comisión; por eso se deduplicó por matrícula, RUT y fecha de resolución antes de agregar.</li>
+      <li>La hoja <strong>Matrícula</strong> se trabaja con la columna <strong>descripcion</strong> como filtro obligatorio para los reportes de matrícula.</li>
+      <li>No se publican datos personales. El tablero usa solo datos agregados.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <span>Dashboard estático para GitHub Pages · Secretaría de Estudios / Escuela de Pregrado</span>
+</footer>
+
+<script src="data/dashboard-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
