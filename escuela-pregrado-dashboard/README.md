@@ -22,7 +22,20 @@ Todos los reportes de matrícula consideran la columna:
 descripcion
 ```
 
-Este filtro permite seleccionar todos, uno, varios o ninguno de los tipos de matrícula.
+Este campo funciona como filtro global. No se usa como eje X/Y ni como gráfico independiente.
+
+## Reportes incluidos
+
+- Matrícula total por año.
+- Matrícula nueva por año, usando `TIPO = NUEVO/A`.
+- Matrícula por región de origen.
+- Matrícula por tipo de ingreso, por ejemplo PACE, ingreso regular u otras vías registradas en la base.
+- Matrícula por carrera.
+- Titulados/as por año.
+
+## Región de origen
+
+El tablero usa `REGION`. Cuando viene vacía o como `0`, usa `REGION PSU` como respaldo y la convierte a nombre de región.
 
 ## Nota sobre titulados
 
