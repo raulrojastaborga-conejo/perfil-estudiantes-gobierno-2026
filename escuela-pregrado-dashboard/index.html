@@ -25,7 +25,7 @@
 <main>
   <section class="panel upload">
     <h2>Cargar base Excel</h2>
-    <p>Usa un archivo con dos hojas: <strong>Matricula 2026 a 2016</strong> y <strong>Titulados</strong>. La columna <strong>descripcion</strong> será filtro obligatorio para matrícula.</p>
+    <p>Usa un archivo con dos hojas: <strong>Matricula 2026 a 2016</strong> y <strong>Titulados</strong>. La columna <strong>descripcion</strong> funciona solo como filtro global de matrícula.</p>
     <input type="file" id="fileInput" accept=".xlsx,.xls">
     <p id="loadStatus" class="hint">Aún no hay datos cargados.</p>
   </section>
@@ -48,6 +48,12 @@
       <label>Tipo estudiante
         <select id="tipoFilter" multiple></select>
       </label>
+      <label>Tipo de ingreso
+        <select id="tipoIngresoFilter" multiple></select>
+      </label>
+      <label>Región de origen
+        <select id="regionFilter" multiple></select>
+      </label>
       <label>Sexo
         <select id="sexFilter" multiple></select>
       </label>
@@ -57,23 +63,31 @@
 
   <section class="kpis">
     <article class="kpi"><span>Matrículas filtradas</span><strong id="kpiMatricula">0</strong></article>
+    <article class="kpi"><span>Matrículas nuevas</span><strong id="kpiNuevos">0</strong></article>
     <article class="kpi"><span>Titulados/as deduplicados</span><strong id="kpiTitulados">0</strong></article>
-    <article class="kpi"><span>Carreras</span><strong id="kpiCarreras">0</strong></article>
     <article class="kpi"><span>Periodo matrícula</span><strong id="kpiPeriodo">—</strong></article>
   </section>
 
   <section class="grid">
     <article class="panel chart-panel">
-      <h2>Matrícula por año</h2>
+      <h2>Matrícula total por año</h2>
       <canvas id="chartMatriculaAnio"></canvas>
+    </article>
+    <article class="panel chart-panel">
+      <h2>Matrícula nueva por año</h2>
+      <canvas id="chartNuevosAnio"></canvas>
+    </article>
+    <article class="panel chart-panel">
+      <h2>Matrícula por región de origen</h2>
+      <canvas id="chartRegion"></canvas>
+    </article>
+    <article class="panel chart-panel">
+      <h2>Matrícula por tipo de ingreso</h2>
+      <canvas id="chartTipoIngreso"></canvas>
     </article>
     <article class="panel chart-panel">
       <h2>Matrícula por carrera</h2>
       <canvas id="chartMatriculaCarrera"></canvas>
-    </article>
-    <article class="panel chart-panel">
-      <h2>Descripción de matrícula</h2>
-      <canvas id="chartDescripcion"></canvas>
     </article>
     <article class="panel chart-panel">
       <h2>Titulados/as por año</h2>
@@ -86,7 +100,7 @@
       <h2>Resumen matrícula</h2>
       <div class="table-wrap">
         <table id="tableMatricula">
-          <thead><tr><th>Año</th><th>Carrera</th><th>Descripción</th><th>Total</th></tr></thead>
+          <thead><tr><th>Año</th><th>Carrera</th><th>Descripción</th><th>Tipo ingreso</th><th>Región</th><th>Total</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -105,8 +119,10 @@
   <section class="panel notes">
     <h2>Notas metodológicas</h2>
     <ul>
+      <li><strong>descripcion</strong> se usa solo como filtro global de matrícula; no se muestra como gráfico ni como eje principal.</li>
+      <li>La matrícula nueva se identifica con la columna <strong>TIPO</strong>, filtrando registros marcados como <strong>NUEVO/A</strong>.</li>
+      <li>La región de origen se toma desde <strong>REGION</strong>; si viene vacía o como 0, se usa <strong>REGION PSU</strong> como respaldo.</li>
       <li>La hoja <strong>Titulados</strong> puede venir con una fila por profesor/rol de comisión; se deduplica por matrícula, RUT y fecha de resolución antes de agregar.</li>
-      <li>La hoja <strong>Matrícula</strong> usa <strong>descripcion</strong> como filtro obligatorio para todos los reportes de matrícula.</li>
       <li>El procesamiento ocurre localmente en el navegador. El repo no publica datos personales.</li>
     </ul>
   </section>
