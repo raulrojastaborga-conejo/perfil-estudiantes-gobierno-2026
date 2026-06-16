@@ -1,37 +1,103 @@
-const DATA = window.DASHBOARD_DATA;
-const M = DATA.matricula_agg;
-const T = DATA.titulados_agg;
-const META = DATA.metadata;
-
+let M = [];
+let T = [];
+let sourceName = "Cargar Excel";
 const fmt = new Intl.NumberFormat('es-CL');
 const charts = {};
 
-document.getElementById('sourceFile').textContent = META.source_file;
+const ids = ['yearFilter','careerFilter','descFilter','tipoFilter','sexFilter'];
+ids.forEach(id => document.getElementById(id).addEventListener('change', render));
+document.getElementById('resetFilters').addEventListener('click', () => {
+  ids.forEach(id => [...document.getElementById(id).options].forEach(o => o.selected = false));
+  render();
+});
+document.getElementById('fileInput').addEventListener('change', handleFile);
 
+function normalizeKey(k){ return String(k || '').trim(); }
+function cleanCareer(s){
+  if(!s) return 'Sin dato';
+  return String(s).replace(/^\d+\s+/, '').trim();
+}
+function asInt(v){
+  if(v === null || v === undefined || v === '') return null;
+  const n = parseInt(String(v).replace(',','.'), 10);
+  return Number.isFinite(n) ? n : null;
+}
+function asFloat(v){
+  if(v === null || v === undefined || v === '') return null;
+  const n = parseFloat(String(v).replace(',','.'));
+  return Number.isFinite(n) ? n : null;
+}
+function yearFromDate(v){
+  if(v instanceof Date) return v.getFullYear();
+  const s = String(v || '');
+  const m = s.match(/(\d{4})/);
+  return m ? Number(m[1]) : null;
+}
 function uniq(arr){ return [...new Set(arr.filter(v => v !== null && v !== undefined && v !== ""))].sort((a,b)=>String(a).localeCompare(String(b),'es',{numeric:true})); }
 function selected(id){ return [...document.getElementById(id).selectedOptions].map(o => o.value); }
 function includesOrAll(values, value){ return values.length === 0 || values.includes(String(value)); }
-
 function fillSelect(id, values){
   const el = document.getElementById(id);
   el.innerHTML = values.map(v => `<option value="${String(v).replaceAll('"','&quot;')}">${v}</option>`).join('');
 }
 
-fillSelect('yearFilter', uniq(M.map(r => r.anio)));
-fillSelect('careerFilter', uniq(M.map(r => r.carrera)));
-fillSelect('descFilter', uniq(M.map(r => r.descripcion)));
-fillSelect('tipoFilter', uniq(M.map(r => r.tipo)));
-fillSelect('sexFilter', uniq(M.map(r => r.sexo)));
+async function handleFile(ev){
+  const file = ev.target.files[0];
+  if(!file) return;
+  sourceName = file.name;
+  document.getElementById('sourceFile').textContent = file.name;
+  document.getElementById('loadStatus').textContent = 'Leyendo archivo...';
 
-['yearFilter','careerFilter','descFilter','tipoFilter','sexFilter'].forEach(id => {
-  document.getElementById(id).addEventListener('change', render);
-});
-document.getElementById('resetFilters').addEventListener('click', () => {
-  ['yearFilter','careerFilter','descFilter','tipoFilter','sexFilter'].forEach(id => {
-    [...document.getElementById(id).options].forEach(o => o.selected = false);
-  });
+  const buffer = await file.arrayBuffer();
+  const wb = XLSX.read(buffer, {type:'array', cellDates:true});
+  const matSheetName = wb.SheetNames.find(n => n.toLowerCase().includes('matricula')) || wb.SheetNames[0];
+  const titSheetName = wb.SheetNames.find(n => n.toLowerCase().includes('titulado')) || wb.SheetNames[1];
+
+  const matRows = XLSX.utils.sheet_to_json(wb.Sheets[matSheetName], {defval:null});
+  const titRows = XLSX.utils.sheet_to_json(wb.Sheets[titSheetName], {defval:null});
+
+  M = matRows.map(r => ({
+    anio: asInt(r['AÑO MATRICULA']),
+    carrera: cleanCareer(r['carrera']),
+    descripcion: normalizeKey(r['descripcion']) || 'Sin dato',
+    sexo: normalizeKey(r['SEXO']) || 'Sin dato',
+    tipo: normalizeKey(r['TIPO']) || 'Sin dato',
+    tipo_ingreso: normalizeKey(r['TIPO INGRESO']) || 'Sin dato',
+    tipo_establecimiento: normalizeKey(r['TIPO ESTABLECIMIENTO']) || 'Sin dato',
+    cohorte: asInt(r['Cohorte']),
+    n: 1
+  })).filter(r => r.anio);
+
+  const seen = new Map();
+  for(const r of titRows){
+    const key = `${r['MATRICULA'] || ''}|${r['RUT'] || ''}|${r['FECHA_RESOLUCION'] || ''}`;
+    if(!seen.has(key)){
+      seen.set(key, {
+        anio: yearFromDate(r['FECHA_RESOLUCION']),
+        carrera: cleanCareer(r['CARRERA']),
+        sexo: normalizeKey(r['SEXO']) || 'Sin dato',
+        cohorte: asInt(r['COHORTE']),
+        estado: normalizeKey(r['ESTADO']) || 'Sin dato',
+        tesis: normalizeKey(r['TESIS']) || 'Sin dato',
+        nota_final: asFloat(r['NOTA_FINAL']),
+        n: 1
+      });
+    }
+  }
+  T = [...seen.values()].filter(r => r.anio);
+
+  fillFilters();
+  document.getElementById('loadStatus').textContent = `Archivo cargado: ${fmt.format(M.length)} registros de matrícula y ${fmt.format(T.length)} titulados/as deduplicados/as.`;
   render();
-});
+}
+
+function fillFilters(){
+  fillSelect('yearFilter', uniq(M.map(r => r.anio)));
+  fillSelect('careerFilter', uniq(M.map(r => r.carrera)));
+  fillSelect('descFilter', uniq(M.map(r => r.descripcion)));
+  fillSelect('tipoFilter', uniq(M.map(r => r.tipo)));
+  fillSelect('sexFilter', uniq(M.map(r => r.sexo)));
+}
 
 function filteredMatricula(){
   const years = selected('yearFilter');
@@ -47,7 +113,6 @@ function filteredMatricula(){
     includesOrAll(sex, r.sexo)
   );
 }
-
 function filteredTitulados(){
   const years = selected('yearFilter');
   const careers = selected('careerFilter');
@@ -58,24 +123,12 @@ function filteredTitulados(){
     includesOrAll(sex, r.sexo)
   );
 }
-
 function sumBy(rows, key){
   const out = {};
   for(const r of rows){ out[r[key] ?? 'Sin dato'] = (out[r[key] ?? 'Sin dato'] || 0) + r.n; }
   return out;
 }
-function sumBy2(rows, k1, k2){
-  const out = {};
-  for(const r of rows){
-    const a = r[k1] ?? 'Sin dato', b = r[k2] ?? 'Sin dato';
-    const key = `${a}|||${b}`;
-    out[key] = (out[key] || 0) + r.n;
-  }
-  return out;
-}
-function topEntries(obj, n=15){
-  return Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,n);
-}
+function topEntries(obj, n=15){ return Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,n); }
 
 function chart(id, type, labels, values, title){
   if(charts[id]) charts[id].destroy();
@@ -93,26 +146,31 @@ function chart(id, type, labels, values, title){
 }
 
 function renderTables(matRows, titRows){
-  const mat = topEntries(sumBy2(matRows, 'anio', 'carrera'), 100)
-    .map(([k,n]) => {
-      const [anio,carrera] = k.split('|||');
-      return {anio,carrera,n};
-    })
-    .sort((a,b)=> Number(b.anio)-Number(a.anio) || a.carrera.localeCompare(b.carrera,'es'));
+  const matGrouped = {};
+  for(const r of matRows){
+    const key = `${r.anio}|${r.carrera}|${r.descripcion}`;
+    matGrouped[key] = (matGrouped[key] || 0) + r.n;
+  }
+  const mat = Object.entries(matGrouped).map(([k,n]) => {
+    const [anio,carrera,descripcion] = k.split('|');
+    return {anio,carrera,descripcion,n};
+  }).sort((a,b)=> Number(b.anio)-Number(a.anio) || a.carrera.localeCompare(b.carrera,'es')).slice(0,150);
   document.querySelector('#tableMatricula tbody').innerHTML = mat.map(r =>
-    `<tr><td>${r.anio}</td><td>${r.carrera}</td><td>Según filtros</td><td>${fmt.format(r.n)}</td></tr>`
+    `<tr><td>${r.anio}</td><td>${r.carrera}</td><td>${r.descripcion}</td><td>${fmt.format(r.n)}</td></tr>`
   ).join('');
 
-  const tit = topEntries(sumBy2(titRows, 'anio', 'carrera'), 100)
-    .map(([k,n]) => {
-      const [anio,carrera] = k.split('|||');
-      const detail = titRows.filter(r => String(r.anio)===String(anio) && String(r.carrera)===String(carrera));
-      const notaN = detail.reduce((a,r)=>a+(r.n_nota_final||0),0);
-      const notaSum = detail.reduce((a,r)=>a+((r.promedio_nota_final||0)*(r.n_nota_final||0)),0);
-      const prom = notaN ? (notaSum/notaN).toFixed(2) : '—';
-      return {anio,carrera,n,prom};
-    })
-    .sort((a,b)=> Number(b.anio)-Number(a.anio) || a.carrera.localeCompare(b.carrera,'es'));
+  const titGrouped = {};
+  const nota = {};
+  for(const r of titRows){
+    const key = `${r.anio}|${r.carrera}`;
+    titGrouped[key] = (titGrouped[key] || 0) + r.n;
+    if(r.nota_final){ nota[key] = nota[key] || {sum:0,n:0}; nota[key].sum += r.nota_final; nota[key].n += 1; }
+  }
+  const tit = Object.entries(titGrouped).map(([k,n]) => {
+    const [anio,carrera] = k.split('|');
+    const prom = nota[k]?.n ? (nota[k].sum/nota[k].n).toFixed(2) : '—';
+    return {anio,carrera,n,prom};
+  }).sort((a,b)=> Number(b.anio)-Number(a.anio) || a.carrera.localeCompare(b.carrera,'es')).slice(0,150);
   document.querySelector('#tableTitulados tbody').innerHTML = tit.map(r =>
     `<tr><td>${r.anio}</td><td>${r.carrera}</td><td>${fmt.format(r.n)}</td><td>${r.prom}</td></tr>`
   ).join('');
@@ -134,9 +192,8 @@ function render(){
   const yearLabels = Object.keys(byYear).sort((a,b)=>Number(a)-Number(b));
   chart('chartMatriculaAnio','line',yearLabels,yearLabels.map(y=>byYear[y]),'Matrícula');
 
-  const byCareer = sumBy(matRows,'carrera');
-  const careerEntries = topEntries(byCareer,10);
-  chart('chartMatriculaCarrera','doughnut',careerEntries.map(e=>e[0]),careerEntries.map(e=>e[1]),'Matrícula');
+  const byCareer = topEntries(sumBy(matRows,'carrera'),10);
+  chart('chartMatriculaCarrera','doughnut',byCareer.map(e=>e[0]),byCareer.map(e=>e[1]),'Matrícula');
 
   const byDesc = topEntries(sumBy(matRows,'descripcion'),12);
   chart('chartDescripcion','bar',byDesc.map(e=>e[0]),byDesc.map(e=>e[1]),'Matrícula');
@@ -147,4 +204,6 @@ function render(){
 
   renderTables(matRows, titRows);
 }
+
+fillFilters();
 render();
