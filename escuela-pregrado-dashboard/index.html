@@ -6,6 +6,7 @@
   <title>Dashboard Escuela de Pregrado FACGOB</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
 <header class="hero">
@@ -16,12 +17,19 @@
   </div>
   <div class="hero-card">
     <span>Fuente</span>
-    <strong id="sourceFile">Excel pregrado</strong>
-    <small>Datos agregados, sin RUT, nombres ni correos.</small>
+    <strong id="sourceFile">Cargar Excel</strong>
+    <small>El archivo se procesa en tu navegador; no se suben RUT, nombres ni correos.</small>
   </div>
 </header>
 
 <main>
+  <section class="panel upload">
+    <h2>Cargar base Excel</h2>
+    <p>Usa un archivo con dos hojas: <strong>Matricula 2026 a 2016</strong> y <strong>Titulados</strong>. La columna <strong>descripcion</strong> será filtro obligatorio para matrícula.</p>
+    <input type="file" id="fileInput" accept=".xlsx,.xls">
+    <p id="loadStatus" class="hint">Aún no hay datos cargados.</p>
+  </section>
+
   <section class="filters panel">
     <div class="section-title">
       <h2>Filtros</h2>
@@ -97,9 +105,9 @@
   <section class="panel notes">
     <h2>Notas metodológicas</h2>
     <ul>
-      <li>La hoja <strong>Titulados</strong> venía con una fila por profesor/rol de comisión; por eso se deduplicó por matrícula, RUT y fecha de resolución antes de agregar.</li>
-      <li>La hoja <strong>Matrícula</strong> se trabaja con la columna <strong>descripcion</strong> como filtro obligatorio para los reportes de matrícula.</li>
-      <li>No se publican datos personales. El tablero usa solo datos agregados.</li>
+      <li>La hoja <strong>Titulados</strong> puede venir con una fila por profesor/rol de comisión; se deduplica por matrícula, RUT y fecha de resolución antes de agregar.</li>
+      <li>La hoja <strong>Matrícula</strong> usa <strong>descripcion</strong> como filtro obligatorio para todos los reportes de matrícula.</li>
+      <li>El procesamiento ocurre localmente en el navegador. El repo no publica datos personales.</li>
     </ul>
   </section>
 </main>
@@ -108,7 +116,6 @@
   <span>Dashboard estático para GitHub Pages · Secretaría de Estudios / Escuela de Pregrado</span>
 </footer>
 
-<script src="data/dashboard-data.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
