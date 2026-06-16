@@ -4,13 +4,32 @@ let sourceName = "Cargar Excel";
 const fmt = new Intl.NumberFormat('es-CL');
 const charts = {};
 
-const ids = ['yearFilter','careerFilter','descFilter','tipoFilter','sexFilter'];
+const ids = ['yearFilter','careerFilter','descFilter','tipoFilter','tipoIngresoFilter','regionFilter','sexFilter'];
 ids.forEach(id => document.getElementById(id).addEventListener('change', render));
 document.getElementById('resetFilters').addEventListener('click', () => {
   ids.forEach(id => [...document.getElementById(id).options].forEach(o => o.selected = false));
   render();
 });
 document.getElementById('fileInput').addEventListener('change', handleFile);
+
+const REGION_BY_CODE = {
+  1:'Región de Tarapacá',
+  2:'Región de Antofagasta',
+  3:'Región de Atacama',
+  4:'Región de Coquimbo',
+  5:'Región de Valparaíso',
+  6:"Región del Libertador General Bernardo O'Higgins",
+  7:'Región del Maule',
+  8:'Región del Biobío',
+  9:'Región de La Araucanía',
+  10:'Región de Los Lagos',
+  11:'Región de Aysén del General Carlos Ibáñez del Campo',
+  12:'Región de Magallanes y de la Antártica Chilena',
+  13:'Región Metropolitana de Santiago',
+  14:'Región de Los Ríos',
+  15:'Región de Arica y Parinacota',
+  16:'Región de Ñuble'
+};
 
 function normalizeKey(k){ return String(k || '').trim(); }
 function cleanCareer(s){
@@ -26,6 +45,15 @@ function asFloat(v){
   if(v === null || v === undefined || v === '') return null;
   const n = parseFloat(String(v).replace(',','.'));
   return Number.isFinite(n) ? n : null;
+}
+function normalizeRegion(region, regionPsu){
+  const raw = normalizeKey(region);
+  if(raw && raw !== '0' && raw.toLowerCase() !== 'nan') return raw;
+  const code = asInt(regionPsu);
+  return REGION_BY_CODE[code] || 'Sin dato';
+}
+function isNuevo(tipo){
+  return normalizeKey(tipo).toUpperCase().includes('NUEVO');
 }
 function yearFromDate(v){
   if(v instanceof Date) return v.getFullYear();
@@ -62,8 +90,10 @@ async function handleFile(ev){
     descripcion: normalizeKey(r['descripcion']) || 'Sin dato',
     sexo: normalizeKey(r['SEXO']) || 'Sin dato',
     tipo: normalizeKey(r['TIPO']) || 'Sin dato',
+    nuevo: isNuevo(r['TIPO']),
     tipo_ingreso: normalizeKey(r['TIPO INGRESO']) || 'Sin dato',
     tipo_establecimiento: normalizeKey(r['TIPO ESTABLECIMIENTO']) || 'Sin dato',
+    region: normalizeRegion(r['REGION'], r['REGION PSU']),
     cohorte: asInt(r['Cohorte']),
     n: 1
   })).filter(r => r.anio);
@@ -96,6 +126,8 @@ function fillFilters(){
   fillSelect('careerFilter', uniq(M.map(r => r.carrera)));
   fillSelect('descFilter', uniq(M.map(r => r.descripcion)));
   fillSelect('tipoFilter', uniq(M.map(r => r.tipo)));
+  fillSelect('tipoIngresoFilter', uniq(M.map(r => r.tipo_ingreso)));
+  fillSelect('regionFilter', uniq(M.map(r => r.region)));
   fillSelect('sexFilter', uniq(M.map(r => r.sexo)));
 }
 
@@ -104,12 +136,16 @@ function filteredMatricula(){
   const careers = selected('careerFilter');
   const desc = selected('descFilter');
   const tipos = selected('tipoFilter');
+  const tipoIngreso = selected('tipoIngresoFilter');
+  const regiones = selected('regionFilter');
   const sex = selected('sexFilter');
   return M.filter(r =>
     includesOrAll(years, r.anio) &&
     includesOrAll(careers, r.carrera) &&
     includesOrAll(desc, r.descripcion) &&
     includesOrAll(tipos, r.tipo) &&
+    includesOrAll(tipoIngreso, r.tipo_ingreso) &&
+    includesOrAll(regiones, r.region) &&
     includesOrAll(sex, r.sexo)
   );
 }
@@ -139,8 +175,12 @@ function chart(id, type, labels, values, title){
     options: {
       responsive:true,
       maintainAspectRatio:false,
+      indexAxis: id === 'chartRegion' ? 'y' : 'x',
       plugins:{ legend:{display:false}, tooltip:{callbacks:{label:(c)=>`${title}: ${fmt.format(c.raw)}`}}},
-      scales: type === 'doughnut' ? {} : { y:{beginAtZero:true,ticks:{callback:v=>fmt.format(v)}} }
+      scales: type === 'doughnut' ? {} : {
+        x:{ticks:{autoSkip:false, maxRotation:id === 'chartTipoIngreso' ? 45 : 0, minRotation:0}},
+        y:{beginAtZero:true,ticks:{callback:v=>fmt.format(v)}}
+      }
     }
   });
 }
@@ -148,15 +188,15 @@ function chart(id, type, labels, values, title){
 function renderTables(matRows, titRows){
   const matGrouped = {};
   for(const r of matRows){
-    const key = `${r.anio}|${r.carrera}|${r.descripcion}`;
+    const key = `${r.anio}|${r.carrera}|${r.descripcion}|${r.tipo_ingreso}|${r.region}`;
     matGrouped[key] = (matGrouped[key] || 0) + r.n;
   }
   const mat = Object.entries(matGrouped).map(([k,n]) => {
-    const [anio,carrera,descripcion] = k.split('|');
-    return {anio,carrera,descripcion,n};
+    const [anio,carrera,descripcion,tipo_ingreso,region] = k.split('|');
+    return {anio,carrera,descripcion,tipo_ingreso,region,n};
   }).sort((a,b)=> Number(b.anio)-Number(a.anio) || a.carrera.localeCompare(b.carrera,'es')).slice(0,150);
   document.querySelector('#tableMatricula tbody').innerHTML = mat.map(r =>
-    `<tr><td>${r.anio}</td><td>${r.carrera}</td><td>${r.descripcion}</td><td>${fmt.format(r.n)}</td></tr>`
+    `<tr><td>${r.anio}</td><td>${r.carrera}</td><td>${r.descripcion}</td><td>${r.tipo_ingreso}</td><td>${r.region}</td><td>${fmt.format(r.n)}</td></tr>`
   ).join('');
 
   const titGrouped = {};
@@ -179,24 +219,33 @@ function renderTables(matRows, titRows){
 function render(){
   const matRows = filteredMatricula();
   const titRows = filteredTitulados();
+  const nuevosRows = matRows.filter(r => r.nuevo);
 
   const totalMat = matRows.reduce((a,r)=>a+r.n,0);
+  const totalNuevos = nuevosRows.reduce((a,r)=>a+r.n,0);
   const totalTit = titRows.reduce((a,r)=>a+r.n,0);
   document.getElementById('kpiMatricula').textContent = fmt.format(totalMat);
+  document.getElementById('kpiNuevos').textContent = fmt.format(totalNuevos);
   document.getElementById('kpiTitulados').textContent = fmt.format(totalTit);
-  document.getElementById('kpiCarreras').textContent = fmt.format(uniq(matRows.map(r=>r.carrera)).length);
   const years = uniq(matRows.map(r=>r.anio)).map(Number);
   document.getElementById('kpiPeriodo').textContent = years.length ? `${Math.min(...years)}–${Math.max(...years)}` : '—';
 
   const byYear = sumBy(matRows,'anio');
   const yearLabels = Object.keys(byYear).sort((a,b)=>Number(a)-Number(b));
-  chart('chartMatriculaAnio','line',yearLabels,yearLabels.map(y=>byYear[y]),'Matrícula');
+  chart('chartMatriculaAnio','line',yearLabels,yearLabels.map(y=>byYear[y]),'Matrícula total');
+
+  const byNuevoYear = sumBy(nuevosRows,'anio');
+  const nuevoLabels = Object.keys(byNuevoYear).sort((a,b)=>Number(a)-Number(b));
+  chart('chartNuevosAnio','bar',nuevoLabels,nuevoLabels.map(y=>byNuevoYear[y]),'Matrícula nueva');
+
+  const byRegion = topEntries(sumBy(matRows,'region'),16).reverse();
+  chart('chartRegion','bar',byRegion.map(e=>e[0]),byRegion.map(e=>e[1]),'Matrícula');
+
+  const byTipoIngreso = topEntries(sumBy(matRows,'tipo_ingreso'),14);
+  chart('chartTipoIngreso','bar',byTipoIngreso.map(e=>e[0]),byTipoIngreso.map(e=>e[1]),'Matrícula');
 
   const byCareer = topEntries(sumBy(matRows,'carrera'),10);
   chart('chartMatriculaCarrera','doughnut',byCareer.map(e=>e[0]),byCareer.map(e=>e[1]),'Matrícula');
-
-  const byDesc = topEntries(sumBy(matRows,'descripcion'),12);
-  chart('chartDescripcion','bar',byDesc.map(e=>e[0]),byDesc.map(e=>e[1]),'Matrícula');
 
   const byTitYear = sumBy(titRows,'anio');
   const titLabels = Object.keys(byTitYear).sort((a,b)=>Number(a)-Number(b));
