@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17T16:03:32.532068+00:00",
+  "updated_at": "2026-06-18T05:01:49.807558+00:00",
   "source": "OpenFootball worldcup 2026 cup.txt",
   "source_url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
   "data": {
@@ -689,40 +689,6 @@
         "source_id": "openfootball_041",
         "group": "K",
         "stage": "Group",
-        "date": "2026-06-17",
-        "time_source": "12:00 UTC-5",
-        "datetime_cl": "2026-06-17T13:00:00-04:00",
-        "time_cl": "17-06-2026 13:00",
-        "home": "Portugal",
-        "away": "DR Congo",
-        "venue": "Houston",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF042",
-        "source_id": "openfootball_042",
-        "group": "K",
-        "stage": "Group",
-        "date": "2026-06-17",
-        "time_source": "20:00 UTC-6",
-        "datetime_cl": "2026-06-17T22:00:00-04:00",
-        "time_cl": "17-06-2026 22:00",
-        "home": "Uzbekistan",
-        "away": "Colombia",
-        "venue": "Mexico City",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF043",
-        "source_id": "openfootball_043",
-        "group": "K",
-        "stage": "Group",
         "date": "2026-06-23",
         "time_source": "12:00 UTC-5",
         "datetime_cl": "2026-06-23T13:00:00-04:00",
@@ -736,8 +702,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF044",
-        "source_id": "openfootball_044",
+        "id": "OF042",
+        "source_id": "openfootball_042",
         "group": "K",
         "stage": "Group",
         "date": "2026-06-23",
@@ -753,8 +719,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF045",
-        "source_id": "openfootball_045",
+        "id": "OF043",
+        "source_id": "openfootball_043",
         "group": "K",
         "stage": "Group",
         "date": "2026-06-27",
@@ -770,8 +736,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF046",
-        "source_id": "openfootball_046",
+        "id": "OF044",
+        "source_id": "openfootball_044",
         "group": "K",
         "stage": "Group",
         "date": "2026-06-27",
@@ -787,42 +753,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF047",
-        "source_id": "openfootball_047",
-        "group": "L",
-        "stage": "Group",
-        "date": "2026-06-17",
-        "time_source": "15:00 UTC-5",
-        "datetime_cl": "2026-06-17T16:00:00-04:00",
-        "time_cl": "17-06-2026 16:00",
-        "home": "England",
-        "away": "Croatia",
-        "venue": "Dallas (Arlington)",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF048",
-        "source_id": "openfootball_048",
-        "group": "L",
-        "stage": "Group",
-        "date": "2026-06-17",
-        "time_source": "19:00 UTC-4",
-        "datetime_cl": "2026-06-17T19:00:00-04:00",
-        "time_cl": "17-06-2026 19:00",
-        "home": "Ghana",
-        "away": "Panama",
-        "venue": "Toronto",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF049",
-        "source_id": "openfootball_049",
+        "id": "OF045",
+        "source_id": "openfootball_045",
         "group": "L",
         "stage": "Group",
         "date": "2026-06-23",
@@ -838,8 +770,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF050",
-        "source_id": "openfootball_050",
+        "id": "OF046",
+        "source_id": "openfootball_046",
         "group": "L",
         "stage": "Group",
         "date": "2026-06-23",
@@ -855,8 +787,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF051",
-        "source_id": "openfootball_051",
+        "id": "OF047",
+        "source_id": "openfootball_047",
         "group": "L",
         "stage": "Group",
         "date": "2026-06-27",
@@ -872,8 +804,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF052",
-        "source_id": "openfootball_052",
+        "id": "OF048",
+        "source_id": "openfootball_048",
         "group": "L",
         "stage": "Group",
         "date": "2026-06-27",
@@ -889,6 +821,6 @@
         "status": "scheduled"
       }
     ],
-    "count_matches": 52
+    "count_matches": 48
   }
 }
