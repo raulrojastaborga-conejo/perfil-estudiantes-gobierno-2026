@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T04:42:38.339433+00:00",
+  "updated_at": "2026-06-20T09:44:40.446158+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -9,55 +9,11 @@
   "note": "Cuotas informativas. No constituyen recomendación de apuesta. Probabilidades normalizadas calculadas desde cuotas promedio decimales.",
   "matches": [
     {
-      "api_id": "f955d4b3395ce6e3b5ac1031ca52ca4e",
-      "commence_time": "2026-06-20T03:00:00Z",
-      "home_team": "Turkey",
-      "away_team": "Paraguay",
-      "bookmakers_count": 35,
-      "bookmakers_sample": [
-        "Grosvenor",
-        "Unibet (NL)",
-        "Unibet (SE)",
-        "Virgin Bet",
-        "LeoVegas",
-        "Winamax (FR)",
-        "LeoVegas (SE)",
-        "Casumo"
-      ],
-      "last_update": "2026-06-20T04:42:37Z",
-      "outcomes": [
-        {
-          "name": "Turkey",
-          "avg_price": 5.378,
-          "best_price": 6.4,
-          "bookmakers": 36,
-          "raw_probability": 18.6,
-          "normalized_probability": 17.5
-        },
-        {
-          "name": "Draw",
-          "avg_price": 2.764,
-          "best_price": 3.4,
-          "bookmakers": 36,
-          "raw_probability": 36.2,
-          "normalized_probability": 34.1
-        },
-        {
-          "name": "Paraguay",
-          "avg_price": 1.944,
-          "best_price": 3.75,
-          "bookmakers": 36,
-          "raw_probability": 51.5,
-          "normalized_probability": 48.5
-        }
-      ]
-    },
-    {
       "api_id": "4f0c518545b0096c68326daf25bffc1e",
       "commence_time": "2026-06-20T17:00:00Z",
       "home_team": "Netherlands",
       "away_team": "Sweden",
-      "bookmakers_count": 46,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Grosvenor",
         "BetRivers",
@@ -68,30 +24,30 @@
         "LeoVegas",
         "Unibet (FR)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Netherlands",
-          "avg_price": 1.714,
-          "best_price": 1.77,
-          "bookmakers": 47,
-          "raw_probability": 58.3,
-          "normalized_probability": 55.7
+          "avg_price": 1.778,
+          "best_price": 4.9,
+          "bookmakers": 48,
+          "raw_probability": 56.3,
+          "normalized_probability": 54.9
         },
         {
           "name": "Draw",
-          "avg_price": 4.025,
-          "best_price": 4.3,
-          "bookmakers": 47,
-          "raw_probability": 24.8,
-          "normalized_probability": 23.7
+          "avg_price": 3.948,
+          "best_price": 4.2,
+          "bookmakers": 48,
+          "raw_probability": 25.3,
+          "normalized_probability": 24.7
         },
         {
           "name": "Sweden",
-          "avg_price": 4.655,
-          "best_price": 5.0,
-          "bookmakers": 47,
-          "raw_probability": 21.5,
+          "avg_price": 4.765,
+          "best_price": 8.7,
+          "bookmakers": 48,
+          "raw_probability": 21.0,
           "normalized_probability": 20.5
         }
       ]
@@ -101,7 +57,7 @@
       "commence_time": "2026-06-20T20:00:00Z",
       "home_team": "Germany",
       "away_team": "Ivory Coast",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "Grosvenor",
         "BetRivers",
@@ -112,31 +68,31 @@
         "LeoVegas",
         "Unibet (FR)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Germany",
-          "avg_price": 1.51,
-          "best_price": 1.57,
-          "bookmakers": 48,
-          "raw_probability": 66.2,
-          "normalized_probability": 63.2
+          "avg_price": 1.561,
+          "best_price": 4.0,
+          "bookmakers": 49,
+          "raw_probability": 64.1,
+          "normalized_probability": 62.3
         },
         {
           "name": "Draw",
-          "avg_price": 4.621,
-          "best_price": 4.85,
-          "bookmakers": 48,
-          "raw_probability": 21.6,
-          "normalized_probability": 20.6
+          "avg_price": 4.5,
+          "best_price": 4.8,
+          "bookmakers": 49,
+          "raw_probability": 22.2,
+          "normalized_probability": 21.6
         },
         {
           "name": "Ivory Coast",
-          "avg_price": 5.897,
-          "best_price": 6.75,
-          "bookmakers": 48,
-          "raw_probability": 17.0,
-          "normalized_probability": 16.2
+          "avg_price": 6.038,
+          "best_price": 10.75,
+          "bookmakers": 49,
+          "raw_probability": 16.6,
+          "normalized_probability": 16.1
         }
       ]
     },
@@ -145,7 +101,7 @@
       "commence_time": "2026-06-21T00:00:00Z",
       "home_team": "Ecuador",
       "away_team": "Curaçao",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "Winamax (DE)",
         "Grosvenor",
@@ -156,31 +112,31 @@
         "Virgin Bet",
         "LeoVegas"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Ecuador",
-          "avg_price": 1.113,
-          "best_price": 1.15,
-          "bookmakers": 48,
-          "raw_probability": 89.8,
-          "normalized_probability": 86.0
+          "avg_price": 1.171,
+          "best_price": 3.52,
+          "bookmakers": 49,
+          "raw_probability": 85.4,
+          "normalized_probability": 84.6
         },
         {
           "name": "Draw",
-          "avg_price": 9.618,
-          "best_price": 11.5,
-          "bookmakers": 48,
-          "raw_probability": 10.4,
-          "normalized_probability": 10.0
+          "avg_price": 9.124,
+          "best_price": 10.5,
+          "bookmakers": 49,
+          "raw_probability": 11.0,
+          "normalized_probability": 10.9
         },
         {
           "name": "Curaçao",
-          "avg_price": 23.633,
+          "avg_price": 21.978,
           "best_price": 31.0,
-          "bookmakers": 48,
-          "raw_probability": 4.2,
-          "normalized_probability": 4.0
+          "bookmakers": 49,
+          "raw_probability": 4.6,
+          "normalized_probability": 4.6
         }
       ]
     },
@@ -189,7 +145,7 @@
       "commence_time": "2026-06-21T04:00:00Z",
       "home_team": "Tunisia",
       "away_team": "Japan",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "Grosvenor",
         "BetRivers",
@@ -200,31 +156,31 @@
         "LeoVegas",
         "Unibet (FR)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Tunisia",
-          "avg_price": 6.454,
-          "best_price": 7.5,
-          "bookmakers": 48,
-          "raw_probability": 15.5,
-          "normalized_probability": 14.8
+          "avg_price": 6.368,
+          "best_price": 9.4,
+          "bookmakers": 49,
+          "raw_probability": 15.7,
+          "normalized_probability": 15.3
         },
         {
           "name": "Draw",
-          "avg_price": 4.019,
-          "best_price": 4.3,
-          "bookmakers": 48,
-          "raw_probability": 24.9,
-          "normalized_probability": 23.8
+          "avg_price": 3.897,
+          "best_price": 4.2,
+          "bookmakers": 49,
+          "raw_probability": 25.7,
+          "normalized_probability": 25.0
         },
         {
           "name": "Japan",
-          "avg_price": 1.556,
-          "best_price": 1.63,
-          "bookmakers": 48,
-          "raw_probability": 64.3,
-          "normalized_probability": 61.4
+          "avg_price": 1.629,
+          "best_price": 4.6,
+          "bookmakers": 49,
+          "raw_probability": 61.4,
+          "normalized_probability": 59.8
         }
       ]
     },
@@ -233,7 +189,7 @@
       "commence_time": "2026-06-21T16:00:00Z",
       "home_team": "Spain",
       "away_team": "Saudi Arabia",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "1xBet",
         "PMU (FR)",
@@ -244,31 +200,31 @@
         "Casumo",
         "Unibet (FR)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Spain",
-          "avg_price": 1.099,
+          "avg_price": 1.092,
           "best_price": 1.14,
-          "bookmakers": 48,
-          "raw_probability": 91.0,
-          "normalized_probability": 87.0
+          "bookmakers": 49,
+          "raw_probability": 91.6,
+          "normalized_probability": 87.6
         },
         {
           "name": "Draw",
-          "avg_price": 10.349,
-          "best_price": 12.3,
-          "bookmakers": 48,
-          "raw_probability": 9.7,
-          "normalized_probability": 9.3
+          "avg_price": 10.682,
+          "best_price": 12.7,
+          "bookmakers": 49,
+          "raw_probability": 9.4,
+          "normalized_probability": 9.0
         },
         {
           "name": "Saudi Arabia",
-          "avg_price": 25.765,
+          "avg_price": 27.567,
           "best_price": 36.0,
-          "bookmakers": 48,
-          "raw_probability": 3.9,
-          "normalized_probability": 3.7
+          "bookmakers": 49,
+          "raw_probability": 3.6,
+          "normalized_probability": 3.4
         }
       ]
     },
@@ -277,7 +233,7 @@
       "commence_time": "2026-06-21T19:00:00Z",
       "home_team": "Belgium",
       "away_team": "Iran",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "Pinnacle",
         "Tipico",
@@ -288,31 +244,31 @@
         "Winamax (FR)",
         "1xBet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Belgium",
-          "avg_price": 1.417,
+          "avg_price": 1.424,
           "best_price": 1.48,
-          "bookmakers": 48,
-          "raw_probability": 70.6,
-          "normalized_probability": 67.3
+          "bookmakers": 49,
+          "raw_probability": 70.2,
+          "normalized_probability": 66.8
         },
         {
           "name": "Draw",
-          "avg_price": 4.675,
-          "best_price": 5.1,
-          "bookmakers": 48,
-          "raw_probability": 21.4,
-          "normalized_probability": 20.4
+          "avg_price": 4.609,
+          "best_price": 4.8,
+          "bookmakers": 49,
+          "raw_probability": 21.7,
+          "normalized_probability": 20.7
         },
         {
           "name": "Iran",
-          "avg_price": 7.741,
-          "best_price": 9.5,
-          "bookmakers": 48,
-          "raw_probability": 12.9,
-          "normalized_probability": 12.3
+          "avg_price": 7.616,
+          "best_price": 8.5,
+          "bookmakers": 49,
+          "raw_probability": 13.1,
+          "normalized_probability": 12.5
         }
       ]
     },
@@ -321,7 +277,7 @@
       "commence_time": "2026-06-21T22:00:00Z",
       "home_team": "Uruguay",
       "away_team": "Cape Verde",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "PMU (FR)",
         "Unibet (NL)",
@@ -332,31 +288,31 @@
         "Tipico",
         "Virgin Bet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Uruguay",
-          "avg_price": 1.443,
+          "avg_price": 1.438,
           "best_price": 1.49,
-          "bookmakers": 48,
-          "raw_probability": 69.3,
-          "normalized_probability": 65.9
+          "bookmakers": 49,
+          "raw_probability": 69.6,
+          "normalized_probability": 66.2
         },
         {
           "name": "Draw",
-          "avg_price": 4.248,
+          "avg_price": 4.24,
           "best_price": 4.5,
-          "bookmakers": 48,
-          "raw_probability": 23.5,
+          "bookmakers": 49,
+          "raw_probability": 23.6,
           "normalized_probability": 22.4
         },
         {
           "name": "Cape Verde",
-          "avg_price": 8.152,
-          "best_price": 9.4,
-          "bookmakers": 48,
-          "raw_probability": 12.3,
-          "normalized_probability": 11.7
+          "avg_price": 8.297,
+          "best_price": 9.8,
+          "bookmakers": 49,
+          "raw_probability": 12.1,
+          "normalized_probability": 11.5
         }
       ]
     },
@@ -365,7 +321,7 @@
       "commence_time": "2026-06-22T01:00:00Z",
       "home_team": "New Zealand",
       "away_team": "Egypt",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "PMU (FR)",
         "Unibet (NL)",
@@ -376,30 +332,30 @@
         "BetRivers",
         "LeoVegas (SE)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "New Zealand",
-          "avg_price": 5.648,
+          "avg_price": 5.639,
           "best_price": 6.25,
-          "bookmakers": 48,
+          "bookmakers": 49,
           "raw_probability": 17.7,
           "normalized_probability": 16.9
         },
         {
           "name": "Draw",
-          "avg_price": 4.075,
+          "avg_price": 4.066,
           "best_price": 4.35,
-          "bookmakers": 48,
-          "raw_probability": 24.5,
+          "bookmakers": 49,
+          "raw_probability": 24.6,
           "normalized_probability": 23.4
         },
         {
           "name": "Egypt",
-          "avg_price": 1.597,
+          "avg_price": 1.596,
           "best_price": 1.65,
-          "bookmakers": 48,
-          "raw_probability": 62.6,
+          "bookmakers": 49,
+          "raw_probability": 62.7,
           "normalized_probability": 59.7
         }
       ]
@@ -409,7 +365,7 @@
       "commence_time": "2026-06-22T17:00:00Z",
       "home_team": "Argentina",
       "away_team": "Austria",
-      "bookmakers_count": 47,
+      "bookmakers_count": 48,
       "bookmakers_sample": [
         "Unibet (UK)",
         "PMU (FR)",
@@ -420,29 +376,29 @@
         "Unibet (SE)",
         "Virgin Bet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Argentina",
-          "avg_price": 1.577,
+          "avg_price": 1.575,
           "best_price": 1.65,
-          "bookmakers": 48,
-          "raw_probability": 63.4,
+          "bookmakers": 49,
+          "raw_probability": 63.5,
           "normalized_probability": 60.3
         },
         {
           "name": "Draw",
-          "avg_price": 3.947,
+          "avg_price": 3.934,
           "best_price": 4.2,
-          "bookmakers": 48,
-          "raw_probability": 25.3,
+          "bookmakers": 49,
+          "raw_probability": 25.4,
           "normalized_probability": 24.1
         },
         {
           "name": "Austria",
-          "avg_price": 6.102,
-          "best_price": 6.63,
-          "bookmakers": 48,
+          "avg_price": 6.114,
+          "best_price": 6.8,
+          "bookmakers": 49,
           "raw_probability": 16.4,
           "normalized_probability": 15.6
         }
@@ -464,7 +420,7 @@
         "Unibet (SE)",
         "Virgin Bet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "France",
@@ -472,19 +428,19 @@
           "best_price": 1.12,
           "bookmakers": 48,
           "raw_probability": 91.9,
-          "normalized_probability": 88.0
+          "normalized_probability": 88.1
         },
         {
           "name": "Draw",
-          "avg_price": 10.974,
+          "avg_price": 11.071,
           "best_price": 13.0,
           "bookmakers": 48,
-          "raw_probability": 9.1,
-          "normalized_probability": 8.7
+          "raw_probability": 9.0,
+          "normalized_probability": 8.6
         },
         {
           "name": "Iraq",
-          "avg_price": 29.309,
+          "avg_price": 29.701,
           "best_price": 42.0,
           "bookmakers": 48,
           "raw_probability": 3.4,
@@ -508,7 +464,7 @@
         "Unibet (SE)",
         "BetRivers"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Norway",
@@ -520,19 +476,19 @@
         },
         {
           "name": "Draw",
-          "avg_price": 3.466,
+          "avg_price": 3.455,
           "best_price": 3.6,
           "bookmakers": 48,
-          "raw_probability": 28.8,
-          "normalized_probability": 27.4
+          "raw_probability": 28.9,
+          "normalized_probability": 27.5
         },
         {
           "name": "Senegal",
-          "avg_price": 3.08,
+          "avg_price": 3.09,
           "best_price": 3.3,
           "bookmakers": 48,
-          "raw_probability": 32.5,
-          "normalized_probability": 30.9
+          "raw_probability": 32.4,
+          "normalized_probability": 30.8
         }
       ]
     },
@@ -552,11 +508,11 @@
         "Unibet (SE)",
         "Tipico"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Jordan",
-          "avg_price": 5.879,
+          "avg_price": 5.882,
           "best_price": 6.5,
           "bookmakers": 48,
           "raw_probability": 17.0,
@@ -564,19 +520,19 @@
         },
         {
           "name": "Draw",
-          "avg_price": 4.112,
+          "avg_price": 4.106,
           "best_price": 4.3,
           "bookmakers": 48,
-          "raw_probability": 24.3,
-          "normalized_probability": 23.1
+          "raw_probability": 24.4,
+          "normalized_probability": 23.2
         },
         {
           "name": "Algeria",
-          "avg_price": 1.571,
+          "avg_price": 1.572,
           "best_price": 1.62,
           "bookmakers": 48,
-          "raw_probability": 63.7,
-          "normalized_probability": 60.7
+          "raw_probability": 63.6,
+          "normalized_probability": 60.6
         }
       ]
     },
@@ -596,11 +552,11 @@
         "Unibet (SE)",
         "LeoVegas"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Portugal",
-          "avg_price": 1.2,
+          "avg_price": 1.201,
           "best_price": 1.25,
           "bookmakers": 48,
           "raw_probability": 83.3,
@@ -608,15 +564,15 @@
         },
         {
           "name": "Draw",
-          "avg_price": 6.82,
-          "best_price": 7.8,
+          "avg_price": 6.802,
+          "best_price": 7.6,
           "bookmakers": 48,
           "raw_probability": 14.7,
           "normalized_probability": 14.0
         },
         {
           "name": "Uzbekistan",
-          "avg_price": 14.867,
+          "avg_price": 14.832,
           "best_price": 19.0,
           "bookmakers": 48,
           "raw_probability": 6.7,
@@ -640,31 +596,31 @@
         "Casumo",
         "Unibet (SE)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "England",
-          "avg_price": 1.219,
+          "avg_price": 1.215,
           "best_price": 1.25,
           "bookmakers": 48,
-          "raw_probability": 82.0,
-          "normalized_probability": 78.2
+          "raw_probability": 82.3,
+          "normalized_probability": 78.6
         },
         {
           "name": "Draw",
-          "avg_price": 6.401,
+          "avg_price": 6.51,
           "best_price": 7.0,
           "bookmakers": 48,
-          "raw_probability": 15.6,
-          "normalized_probability": 14.9
+          "raw_probability": 15.4,
+          "normalized_probability": 14.7
         },
         {
           "name": "Ghana",
-          "avg_price": 13.76,
-          "best_price": 16.5,
+          "avg_price": 14.099,
+          "best_price": 17.5,
           "bookmakers": 48,
-          "raw_probability": 7.3,
-          "normalized_probability": 7.0
+          "raw_probability": 7.1,
+          "normalized_probability": 6.8
         }
       ]
     },
@@ -684,11 +640,11 @@
         "Virgin Bet",
         "Casumo"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Panama",
-          "avg_price": 6.695,
+          "avg_price": 6.69,
           "best_price": 7.5,
           "bookmakers": 48,
           "raw_probability": 14.9,
@@ -696,7 +652,7 @@
         },
         {
           "name": "Draw",
-          "avg_price": 3.984,
+          "avg_price": 3.989,
           "best_price": 4.2,
           "bookmakers": 48,
           "raw_probability": 25.1,
@@ -704,7 +660,7 @@
         },
         {
           "name": "Croatia",
-          "avg_price": 1.535,
+          "avg_price": 1.536,
           "best_price": 1.59,
           "bookmakers": 48,
           "raw_probability": 65.1,
@@ -728,7 +684,7 @@
         "BetRivers",
         "Winamax (FR)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Colombia",
@@ -740,7 +696,7 @@
         },
         {
           "name": "Draw",
-          "avg_price": 4.16,
+          "avg_price": 4.165,
           "best_price": 4.35,
           "bookmakers": 46,
           "raw_probability": 24.0,
@@ -748,7 +704,7 @@
         },
         {
           "name": "DR Congo",
-          "avg_price": 7.088,
+          "avg_price": 7.076,
           "best_price": 8.0,
           "bookmakers": 46,
           "raw_probability": 14.1,
@@ -772,19 +728,19 @@
         "GTbets",
         "Unibet (UK)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Bosnia & Herzegovina",
-          "avg_price": 1.431,
+          "avg_price": 1.432,
           "best_price": 1.49,
           "bookmakers": 47,
-          "raw_probability": 69.9,
-          "normalized_probability": 66.4
+          "raw_probability": 69.8,
+          "normalized_probability": 66.3
         },
         {
           "name": "Draw",
-          "avg_price": 4.784,
+          "avg_price": 4.789,
           "best_price": 5.05,
           "bookmakers": 47,
           "raw_probability": 20.9,
@@ -792,8 +748,8 @@
         },
         {
           "name": "Qatar",
-          "avg_price": 6.869,
-          "best_price": 7.75,
+          "avg_price": 6.865,
+          "best_price": 7.5,
           "bookmakers": 47,
           "raw_probability": 14.6,
           "normalized_probability": 13.9
@@ -816,7 +772,7 @@
         "FanDuel",
         "Paddy Power"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Switzerland",
@@ -828,7 +784,7 @@
         },
         {
           "name": "Draw",
-          "avg_price": 3.06,
+          "avg_price": 3.059,
           "best_price": 3.2,
           "bookmakers": 47,
           "raw_probability": 32.7,
@@ -836,7 +792,7 @@
         },
         {
           "name": "Canada",
-          "avg_price": 3.174,
+          "avg_price": 3.173,
           "best_price": 3.35,
           "bookmakers": 47,
           "raw_probability": 31.5,
@@ -849,7 +805,7 @@
       "commence_time": "2026-06-24T22:00:00Z",
       "home_team": "Scotland",
       "away_team": "Brazil",
-      "bookmakers_count": 42,
+      "bookmakers_count": 45,
       "bookmakers_sample": [
         "PMU (FR)",
         "Unibet (NL)",
@@ -860,31 +816,31 @@
         "Unibet (SE)",
         "LiveScore Bet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Scotland",
-          "avg_price": 7.459,
+          "avg_price": 7.733,
           "best_price": 9.0,
-          "bookmakers": 43,
-          "raw_probability": 13.4,
-          "normalized_probability": 12.7
+          "bookmakers": 46,
+          "raw_probability": 12.9,
+          "normalized_probability": 12.2
         },
         {
           "name": "Draw",
-          "avg_price": 4.979,
-          "best_price": 5.5,
-          "bookmakers": 43,
-          "raw_probability": 20.1,
-          "normalized_probability": 19.1
+          "avg_price": 5.043,
+          "best_price": 5.53,
+          "bookmakers": 46,
+          "raw_probability": 19.8,
+          "normalized_probability": 18.8
         },
         {
           "name": "Brazil",
-          "avg_price": 1.389,
-          "best_price": 1.44,
-          "bookmakers": 43,
-          "raw_probability": 72.0,
-          "normalized_probability": 68.2
+          "avg_price": 1.377,
+          "best_price": 1.42,
+          "bookmakers": 46,
+          "raw_probability": 72.6,
+          "normalized_probability": 68.9
         }
       ]
     },
@@ -893,42 +849,42 @@
       "commence_time": "2026-06-24T22:00:00Z",
       "home_team": "Morocco",
       "away_team": "Haiti",
-      "bookmakers_count": 40,
+      "bookmakers_count": 45,
       "bookmakers_sample": [
         "Tipico",
         "Unibet (UK)",
         "Unibet (FR)",
         "Betfred (UK)",
+        "Coolbet",
         "Winamax (FR)",
         "FanDuel",
-        "Winamax (DE)",
-        "GTbets"
+        "Winamax (DE)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Morocco",
-          "avg_price": 1.201,
-          "best_price": 1.24,
-          "bookmakers": 41,
-          "raw_probability": 83.2,
-          "normalized_probability": 79.0
+          "avg_price": 1.199,
+          "best_price": 1.23,
+          "bookmakers": 46,
+          "raw_probability": 83.4,
+          "normalized_probability": 79.3
         },
         {
           "name": "Draw",
-          "avg_price": 6.628,
-          "best_price": 7.2,
-          "bookmakers": 41,
-          "raw_probability": 15.1,
+          "avg_price": 6.673,
+          "best_price": 7.5,
+          "bookmakers": 46,
+          "raw_probability": 15.0,
           "normalized_probability": 14.3
         },
         {
           "name": "Haiti",
-          "avg_price": 14.163,
-          "best_price": 19.0,
-          "bookmakers": 41,
-          "raw_probability": 7.1,
-          "normalized_probability": 6.7
+          "avg_price": 14.793,
+          "best_price": 19.5,
+          "bookmakers": 46,
+          "raw_probability": 6.8,
+          "normalized_probability": 6.5
         }
       ]
     },
@@ -948,31 +904,31 @@
         "Sky Bet",
         "Paddy Power"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Czech Republic",
-          "avg_price": 3.396,
-          "best_price": 3.6,
+          "avg_price": 3.515,
+          "best_price": 3.75,
           "bookmakers": 43,
-          "raw_probability": 29.4,
-          "normalized_probability": 27.8
+          "raw_probability": 28.4,
+          "normalized_probability": 26.9
         },
         {
           "name": "Draw",
-          "avg_price": 3.663,
+          "avg_price": 3.677,
           "best_price": 4.1,
           "bookmakers": 43,
-          "raw_probability": 27.3,
-          "normalized_probability": 25.9
+          "raw_probability": 27.2,
+          "normalized_probability": 25.8
         },
         {
           "name": "Mexico",
-          "avg_price": 2.048,
-          "best_price": 2.16,
+          "avg_price": 2.005,
+          "best_price": 2.1,
           "bookmakers": 43,
-          "raw_probability": 48.8,
-          "normalized_probability": 46.2
+          "raw_probability": 49.9,
+          "normalized_probability": 47.3
         }
       ]
     },
@@ -992,7 +948,7 @@
         "Sky Bet",
         "Paddy Power"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "South Africa",
@@ -1012,11 +968,11 @@
         },
         {
           "name": "South Korea",
-          "avg_price": 1.605,
+          "avg_price": 1.604,
           "best_price": 1.67,
           "bookmakers": 44,
           "raw_probability": 62.3,
-          "normalized_probability": 59.2
+          "normalized_probability": 59.1
         }
       ]
     },
@@ -1036,7 +992,7 @@
         "Paddy Power",
         "Betfair"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Curaçao",
@@ -1080,31 +1036,31 @@
         "FanDuel",
         "Smarkets"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Ecuador",
-          "avg_price": 4.864,
-          "best_price": 5.23,
+          "avg_price": 4.94,
+          "best_price": 5.25,
           "bookmakers": 43,
-          "raw_probability": 20.6,
-          "normalized_probability": 19.5
+          "raw_probability": 20.2,
+          "normalized_probability": 19.1
         },
         {
           "name": "Draw",
-          "avg_price": 3.797,
+          "avg_price": 3.82,
           "best_price": 4.04,
           "bookmakers": 43,
-          "raw_probability": 26.3,
-          "normalized_probability": 24.9
+          "raw_probability": 26.2,
+          "normalized_probability": 24.8
         },
         {
           "name": "Germany",
-          "avg_price": 1.7,
+          "avg_price": 1.686,
           "best_price": 1.78,
           "bookmakers": 43,
-          "raw_probability": 58.8,
-          "normalized_probability": 55.6
+          "raw_probability": 59.3,
+          "normalized_probability": 56.1
         }
       ]
     },
@@ -1124,15 +1080,15 @@
         "GTbets",
         "Sky Bet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Japan",
-          "avg_price": 2.165,
+          "avg_price": 2.166,
           "best_price": 2.3,
           "bookmakers": 43,
           "raw_probability": 46.2,
-          "normalized_probability": 43.6
+          "normalized_probability": 43.7
         },
         {
           "name": "Draw",
@@ -1144,10 +1100,10 @@
         },
         {
           "name": "Sweden",
-          "avg_price": 3.315,
+          "avg_price": 3.324,
           "best_price": 3.5,
           "bookmakers": 43,
-          "raw_probability": 30.2,
+          "raw_probability": 30.1,
           "normalized_probability": 28.5
         }
       ]
@@ -1168,31 +1124,31 @@
         "FanDuel",
         "GTbets"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Tunisia",
-          "avg_price": 9.383,
-          "best_price": 11.0,
+          "avg_price": 9.736,
+          "best_price": 11.5,
           "bookmakers": 43,
-          "raw_probability": 10.7,
-          "normalized_probability": 10.1
+          "raw_probability": 10.3,
+          "normalized_probability": 9.7
         },
         {
           "name": "Draw",
-          "avg_price": 5.347,
-          "best_price": 6.2,
+          "avg_price": 5.408,
+          "best_price": 6.0,
           "bookmakers": 43,
-          "raw_probability": 18.7,
-          "normalized_probability": 17.7
+          "raw_probability": 18.5,
+          "normalized_probability": 17.5
         },
         {
           "name": "Netherlands",
-          "avg_price": 1.311,
+          "avg_price": 1.3,
           "best_price": 1.35,
           "bookmakers": 43,
-          "raw_probability": 76.3,
-          "normalized_probability": 72.2
+          "raw_probability": 77.0,
+          "normalized_probability": 72.8
         }
       ]
     },
@@ -1201,42 +1157,42 @@
       "commence_time": "2026-06-26T02:00:00Z",
       "home_team": "Paraguay",
       "away_team": "Australia",
-      "bookmakers_count": 32,
+      "bookmakers_count": 42,
       "bookmakers_sample": [
+        "Winamax (DE)",
+        "Winamax (FR)",
         "Tipico",
+        "Unibet (UK)",
         "FanDuel",
         "GTbets",
         "Sky Bet",
-        "Paddy Power",
-        "Betfair",
-        "Betfred (UK)",
-        "Smarkets"
+        "Paddy Power"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Paraguay",
-          "avg_price": 2.158,
-          "best_price": 2.28,
-          "bookmakers": 33,
-          "raw_probability": 46.3,
-          "normalized_probability": 44.0
+          "avg_price": 2.728,
+          "best_price": 2.92,
+          "bookmakers": 43,
+          "raw_probability": 36.7,
+          "normalized_probability": 34.6
         },
         {
           "name": "Draw",
-          "avg_price": 3.291,
-          "best_price": 3.47,
-          "bookmakers": 33,
-          "raw_probability": 30.4,
-          "normalized_probability": 28.9
+          "avg_price": 2.341,
+          "best_price": 2.46,
+          "bookmakers": 43,
+          "raw_probability": 42.7,
+          "normalized_probability": 40.3
         },
         {
           "name": "Australia",
-          "avg_price": 3.51,
-          "best_price": 3.67,
-          "bookmakers": 33,
-          "raw_probability": 28.5,
-          "normalized_probability": 27.1
+          "avg_price": 3.744,
+          "best_price": 4.08,
+          "bookmakers": 43,
+          "raw_probability": 26.7,
+          "normalized_probability": 25.2
         }
       ]
     },
@@ -1245,42 +1201,42 @@
       "commence_time": "2026-06-26T02:00:00Z",
       "home_team": "Turkey",
       "away_team": "USA",
-      "bookmakers_count": 31,
+      "bookmakers_count": 41,
       "bookmakers_sample": [
+        "Winamax (FR)",
         "GTbets",
+        "Coolbet",
+        "Unibet (UK)",
         "Betfred (UK)",
         "Sky Bet",
         "FanDuel",
-        "Smarkets",
-        "Paddy Power",
-        "Betfair",
-        "Marathon Bet"
+        "Smarkets"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Turkey",
-          "avg_price": 2.766,
-          "best_price": 3.05,
-          "bookmakers": 32,
-          "raw_probability": 36.2,
-          "normalized_probability": 34.4
+          "avg_price": 3.041,
+          "best_price": 3.2,
+          "bookmakers": 42,
+          "raw_probability": 32.9,
+          "normalized_probability": 31.1
         },
         {
           "name": "Draw",
-          "avg_price": 3.838,
+          "avg_price": 3.882,
           "best_price": 4.1,
-          "bookmakers": 32,
-          "raw_probability": 26.1,
-          "normalized_probability": 24.8
+          "bookmakers": 42,
+          "raw_probability": 25.8,
+          "normalized_probability": 24.4
         },
         {
           "name": "USA",
-          "avg_price": 2.32,
-          "best_price": 2.47,
-          "bookmakers": 32,
-          "raw_probability": 43.1,
-          "normalized_probability": 40.9
+          "avg_price": 2.12,
+          "best_price": 2.25,
+          "bookmakers": 42,
+          "raw_probability": 47.2,
+          "normalized_probability": 44.6
         }
       ]
     },
@@ -1300,14 +1256,14 @@
         "Coolbet",
         "FanDuel"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Norway",
-          "avg_price": 4.225,
-          "best_price": 4.45,
+          "avg_price": 4.232,
+          "best_price": 4.5,
           "bookmakers": 42,
-          "raw_probability": 23.7,
+          "raw_probability": 23.6,
           "normalized_probability": 22.3
         },
         {
@@ -1344,31 +1300,31 @@
         "Smarkets",
         "Winamax (DE)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Senegal",
-          "avg_price": 1.298,
+          "avg_price": 1.292,
           "best_price": 1.37,
           "bookmakers": 42,
-          "raw_probability": 77.1,
-          "normalized_probability": 72.9
+          "raw_probability": 77.4,
+          "normalized_probability": 73.2
         },
         {
           "name": "Draw",
-          "avg_price": 5.272,
-          "best_price": 5.7,
+          "avg_price": 5.336,
+          "best_price": 5.8,
           "bookmakers": 42,
-          "raw_probability": 19.0,
-          "normalized_probability": 18.0
+          "raw_probability": 18.7,
+          "normalized_probability": 17.7
         },
         {
           "name": "Iraq",
-          "avg_price": 10.19,
-          "best_price": 11.75,
+          "avg_price": 10.474,
+          "best_price": 12.25,
           "bookmakers": 42,
-          "raw_probability": 9.8,
-          "normalized_probability": 9.3
+          "raw_probability": 9.5,
+          "normalized_probability": 9.0
         }
       ]
     },
@@ -1388,7 +1344,7 @@
         "Sky Bet",
         "Betfred (UK)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Cape Verde",
@@ -1400,7 +1356,7 @@
         },
         {
           "name": "Draw",
-          "avg_price": 3.57,
+          "avg_price": 3.575,
           "best_price": 3.84,
           "bookmakers": 42,
           "raw_probability": 28.0,
@@ -1408,7 +1364,7 @@
         },
         {
           "name": "Saudi Arabia",
-          "avg_price": 2.404,
+          "avg_price": 2.405,
           "best_price": 2.55,
           "bookmakers": 42,
           "raw_probability": 41.6,
@@ -1432,31 +1388,31 @@
         "Smarkets",
         "FanDuel"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Uruguay",
-          "avg_price": 5.933,
+          "avg_price": 5.947,
           "best_price": 6.5,
           "bookmakers": 42,
-          "raw_probability": 16.9,
+          "raw_probability": 16.8,
           "normalized_probability": 15.9
         },
         {
           "name": "Draw",
-          "avg_price": 4.144,
-          "best_price": 4.47,
+          "avg_price": 4.151,
+          "best_price": 4.5,
           "bookmakers": 42,
           "raw_probability": 24.1,
-          "normalized_probability": 22.7
+          "normalized_probability": 22.8
         },
         {
           "name": "Spain",
-          "avg_price": 1.538,
+          "avg_price": 1.539,
           "best_price": 1.61,
           "bookmakers": 42,
           "raw_probability": 65.0,
-          "normalized_probability": 61.3
+          "normalized_probability": 61.4
         }
       ]
     },
@@ -1476,31 +1432,31 @@
         "Paddy Power",
         "Sky Bet"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "New Zealand",
-          "avg_price": 12.051,
-          "best_price": 14.25,
+          "avg_price": 12.11,
+          "best_price": 14.75,
           "bookmakers": 42,
           "raw_probability": 8.3,
           "normalized_probability": 7.8
         },
         {
           "name": "Draw",
-          "avg_price": 6.152,
+          "avg_price": 6.159,
           "best_price": 6.5,
           "bookmakers": 42,
-          "raw_probability": 16.3,
-          "normalized_probability": 15.3
+          "raw_probability": 16.2,
+          "normalized_probability": 15.2
         },
         {
           "name": "Belgium",
           "avg_price": 1.223,
           "best_price": 1.3,
           "bookmakers": 42,
-          "raw_probability": 81.7,
-          "normalized_probability": 76.9
+          "raw_probability": 81.8,
+          "normalized_probability": 77.0
         }
       ]
     },
@@ -1520,30 +1476,30 @@
         "Sky Bet",
         "Paddy Power"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Egypt",
-          "avg_price": 2.076,
+          "avg_price": 2.078,
           "best_price": 2.15,
           "bookmakers": 42,
-          "raw_probability": 48.2,
+          "raw_probability": 48.1,
           "normalized_probability": 45.3
         },
         {
           "name": "Draw",
-          "avg_price": 3.12,
-          "best_price": 3.3,
+          "avg_price": 3.132,
+          "best_price": 3.35,
           "bookmakers": 42,
-          "raw_probability": 32.1,
-          "normalized_probability": 30.2
+          "raw_probability": 31.9,
+          "normalized_probability": 30.0
         },
         {
           "name": "Iran",
-          "avg_price": 3.82,
+          "avg_price": 3.831,
           "best_price": 4.1,
           "bookmakers": 42,
-          "raw_probability": 26.2,
+          "raw_probability": 26.1,
           "normalized_probability": 24.6
         }
       ]
@@ -1564,7 +1520,7 @@
         "Sky Bet",
         "Betfred (UK)"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Croatia",
@@ -1572,23 +1528,23 @@
           "best_price": 1.68,
           "bookmakers": 41,
           "raw_probability": 62.0,
-          "normalized_probability": 58.5
+          "normalized_probability": 58.6
         },
         {
           "name": "Draw",
-          "avg_price": 3.812,
-          "best_price": 4.12,
+          "avg_price": 3.822,
+          "best_price": 4.1,
           "bookmakers": 41,
           "raw_probability": 26.2,
           "normalized_probability": 24.7
         },
         {
           "name": "Ghana",
-          "avg_price": 5.617,
+          "avg_price": 5.649,
           "best_price": 6.25,
           "bookmakers": 41,
-          "raw_probability": 17.8,
-          "normalized_probability": 16.8
+          "raw_probability": 17.7,
+          "normalized_probability": 16.7
         }
       ]
     },
@@ -1608,31 +1564,31 @@
         "Winamax (DE)",
         "GTbets"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Panama",
-          "avg_price": 10.488,
+          "avg_price": 10.831,
           "best_price": 13.0,
           "bookmakers": 41,
-          "raw_probability": 9.5,
-          "normalized_probability": 9.0
+          "raw_probability": 9.2,
+          "normalized_probability": 8.7
         },
         {
           "name": "Draw",
-          "avg_price": 6.286,
+          "avg_price": 6.386,
           "best_price": 7.4,
           "bookmakers": 41,
-          "raw_probability": 15.9,
-          "normalized_probability": 15.0
+          "raw_probability": 15.7,
+          "normalized_probability": 14.8
         },
         {
           "name": "England",
-          "avg_price": 1.242,
-          "best_price": 1.29,
+          "avg_price": 1.235,
+          "best_price": 1.26,
           "bookmakers": 41,
-          "raw_probability": 80.5,
-          "normalized_probability": 76.0
+          "raw_probability": 81.0,
+          "normalized_probability": 76.5
         }
       ]
     },
@@ -1652,11 +1608,11 @@
         "Virgin Bet",
         "Casumo"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Colombia",
-          "avg_price": 3.516,
+          "avg_price": 3.52,
           "best_price": 3.75,
           "bookmakers": 41,
           "raw_probability": 28.4,
@@ -1664,19 +1620,19 @@
         },
         {
           "name": "Draw",
-          "avg_price": 3.403,
+          "avg_price": 3.424,
           "best_price": 3.7,
           "bookmakers": 41,
-          "raw_probability": 29.4,
-          "normalized_probability": 27.7
+          "raw_probability": 29.2,
+          "normalized_probability": 27.5
         },
         {
           "name": "Portugal",
-          "avg_price": 2.062,
-          "best_price": 2.2,
+          "avg_price": 2.056,
+          "best_price": 2.17,
           "bookmakers": 41,
-          "raw_probability": 48.5,
-          "normalized_probability": 45.6
+          "raw_probability": 48.6,
+          "normalized_probability": 45.7
         }
       ]
     },
@@ -1696,31 +1652,31 @@
         "FanDuel",
         "GTbets"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "DR Congo",
-          "avg_price": 2.108,
-          "best_price": 2.24,
+          "avg_price": 2.064,
+          "best_price": 2.14,
           "bookmakers": 41,
-          "raw_probability": 47.4,
-          "normalized_probability": 44.6
+          "raw_probability": 48.4,
+          "normalized_probability": 45.5
         },
         {
           "name": "Draw",
-          "avg_price": 3.545,
-          "best_price": 3.75,
+          "avg_price": 3.602,
+          "best_price": 4.0,
           "bookmakers": 41,
-          "raw_probability": 28.2,
-          "normalized_probability": 26.5
+          "raw_probability": 27.8,
+          "normalized_probability": 26.2
         },
         {
           "name": "Uzbekistan",
-          "avg_price": 3.259,
-          "best_price": 3.42,
+          "avg_price": 3.328,
+          "best_price": 3.6,
           "bookmakers": 41,
-          "raw_probability": 30.7,
-          "normalized_probability": 28.9
+          "raw_probability": 30.1,
+          "normalized_probability": 28.3
         }
       ]
     },
@@ -1740,19 +1696,19 @@
         "Betfred (UK)",
         "Paddy Power"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Algeria",
-          "avg_price": 3.038,
+          "avg_price": 3.034,
           "best_price": 3.25,
           "bookmakers": 41,
-          "raw_probability": 32.9,
-          "normalized_probability": 30.9
+          "raw_probability": 33.0,
+          "normalized_probability": 31.0
         },
         {
           "name": "Draw",
-          "avg_price": 3.041,
+          "avg_price": 3.043,
           "best_price": 3.2,
           "bookmakers": 41,
           "raw_probability": 32.9,
@@ -1760,8 +1716,8 @@
         },
         {
           "name": "Austria",
-          "avg_price": 2.46,
-          "best_price": 2.58,
+          "avg_price": 2.463,
+          "best_price": 2.6,
           "bookmakers": 41,
           "raw_probability": 40.6,
           "normalized_probability": 38.1
@@ -1784,7 +1740,7 @@
         "Smarkets",
         "GTbets"
       ],
-      "last_update": "2026-06-20T04:42:37Z",
+      "last_update": "2026-06-20T09:44:38Z",
       "outcomes": [
         {
           "name": "Jordan",
@@ -1796,18 +1752,18 @@
         },
         {
           "name": "Draw",
-          "avg_price": 6.717,
-          "best_price": 7.5,
+          "avg_price": 6.727,
+          "best_price": 7.6,
           "bookmakers": 41,
           "raw_probability": 14.9,
           "normalized_probability": 14.1
         },
         {
           "name": "Argentina",
-          "avg_price": 1.194,
+          "avg_price": 1.196,
           "best_price": 1.22,
           "bookmakers": 41,
-          "raw_probability": 83.7,
+          "raw_probability": 83.6,
           "normalized_probability": 79.0
         }
       ]
