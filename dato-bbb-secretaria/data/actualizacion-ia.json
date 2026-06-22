@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-06-21T13:00:34+00:00",
+  "updated_at": "2026-06-22T15:47:01+00:00",
   "queries": 30,
-  "urls_found": 11,
-  "products_found": 0,
+  "urls_found": 13,
+  "products_found": 1,
   "existing_before": 2,
   "existing_valid": 0,
   "notes": [
-    "sin productos nuevos y sin productos validos; se conserva respaldo para no dejar la pagina vacia"
+    "Filtro endurecido; nunca se publica vacio"
   ],
-  "final": 2
+  "final": 1
 }
