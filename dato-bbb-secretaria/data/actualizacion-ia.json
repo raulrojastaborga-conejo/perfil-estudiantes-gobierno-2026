@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-22T15:47:01+00:00",
+  "updated_at": "2026-06-23T13:34:58+00:00",
   "queries": 30,
-  "urls_found": 13,
-  "products_found": 1,
-  "existing_before": 2,
-  "existing_valid": 0,
+  "urls_found": 11,
+  "products_found": 0,
+  "existing_before": 1,
+  "existing_valid": 1,
   "notes": [
     "Filtro endurecido; nunca se publica vacio"
   ],
