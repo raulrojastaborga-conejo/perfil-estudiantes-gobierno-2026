@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T14:47:19.948941+00:00",
+  "updated_at": "2026-06-27T04:15:38.878126+00:00",
   "source": "OpenFootball worldcup 2026 cup.txt",
   "source_url": "https://raw.githubusercontent.com/openfootball/worldcup/master/2026--usa/cup.txt",
   "data": {
@@ -41,74 +41,6 @@
       {
         "id": "OF003",
         "source_id": "openfootball_003",
-        "group": "H",
-        "stage": "Group",
-        "date": "2026-06-26",
-        "time_source": "19:00 UTC-5",
-        "datetime_cl": "2026-06-26T20:00:00-04:00",
-        "time_cl": "26-06-2026 20:00",
-        "home": "Cape Verde",
-        "away": "Saudi Arabia",
-        "venue": "Houston",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF004",
-        "source_id": "openfootball_004",
-        "group": "H",
-        "stage": "Group",
-        "date": "2026-06-26",
-        "time_source": "18:00 UTC-6",
-        "datetime_cl": "2026-06-26T20:00:00-04:00",
-        "time_cl": "26-06-2026 20:00",
-        "home": "Uruguay",
-        "away": "Spain",
-        "venue": "Guadalajara (Zapopan)",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF005",
-        "source_id": "openfootball_005",
-        "group": "I",
-        "stage": "Group",
-        "date": "2026-06-26",
-        "time_source": "15:00 UTC-4",
-        "datetime_cl": "2026-06-26T15:00:00-04:00",
-        "time_cl": "26-06-2026 15:00",
-        "home": "Norway",
-        "away": "France",
-        "venue": "Boston (Foxborough)",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF006",
-        "source_id": "openfootball_006",
-        "group": "I",
-        "stage": "Group",
-        "date": "2026-06-26",
-        "time_source": "15:00 UTC-4",
-        "datetime_cl": "2026-06-26T15:00:00-04:00",
-        "time_cl": "26-06-2026 15:00",
-        "home": "Senegal",
-        "away": "Iraq",
-        "venue": "Toronto",
-        "channel": "Chilevisión / señal por confirmar",
-        "score_home": null,
-        "score_away": null,
-        "status": "scheduled"
-      },
-      {
-        "id": "OF007",
-        "source_id": "openfootball_007",
         "group": "J",
         "stage": "Group",
         "date": "2026-06-27",
@@ -124,8 +56,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF008",
-        "source_id": "openfootball_008",
+        "id": "OF004",
+        "source_id": "openfootball_004",
         "group": "J",
         "stage": "Group",
         "date": "2026-06-27",
@@ -141,8 +73,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF009",
-        "source_id": "openfootball_009",
+        "id": "OF005",
+        "source_id": "openfootball_005",
         "group": "K",
         "stage": "Group",
         "date": "2026-06-27",
@@ -158,8 +90,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF010",
-        "source_id": "openfootball_010",
+        "id": "OF006",
+        "source_id": "openfootball_006",
         "group": "K",
         "stage": "Group",
         "date": "2026-06-27",
@@ -175,8 +107,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF011",
-        "source_id": "openfootball_011",
+        "id": "OF007",
+        "source_id": "openfootball_007",
         "group": "L",
         "stage": "Group",
         "date": "2026-06-27",
@@ -192,8 +124,8 @@
         "status": "scheduled"
       },
       {
-        "id": "OF012",
-        "source_id": "openfootball_012",
+        "id": "OF008",
+        "source_id": "openfootball_008",
         "group": "L",
         "stage": "Group",
         "date": "2026-06-27",
@@ -209,6 +141,6 @@
         "status": "scheduled"
       }
     ],
-    "count_matches": 12
+    "count_matches": 8
   }
 }
