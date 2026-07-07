@@ -18,5 +18,25 @@
     },
     "bbb": 3.8,
     "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "ia-4536830358552313596",
+    "name": "S COCCI Polera Mujer S Cocci | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "falabella.com",
+    "price": 10000,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://media.falabella.com/falabellaCL/883785645_1/public",
+    "url": "https://www.falabella.com/falabella-cl/product/883785635/poleras-mujer-s-cocci/883785645",
+    "updated_at": "2026-07-07",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 4
+    },
+    "bbb": 3.4,
+    "source_method": "busqueda_ia_web"
   }
 ]
