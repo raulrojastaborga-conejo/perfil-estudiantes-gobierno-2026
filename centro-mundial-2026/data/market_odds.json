@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T15:35:43.079143+00:00",
+  "updated_at": "2026-07-09T20:06:48.259088+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -13,7 +13,7 @@
       "commence_time": "2026-07-09T20:00:00Z",
       "home_team": "France",
       "away_team": "Morocco",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Unibet (UK)",
         "BetMGM",
@@ -24,31 +24,31 @@
         "Coral",
         "LiveScore Bet"
       ],
-      "last_update": "2026-07-09T15:35:33Z",
+      "last_update": "2026-07-09T20:06:43Z",
       "outcomes": [
         {
           "name": "France",
-          "avg_price": 1.584,
-          "best_price": 1.64,
-          "bookmakers": 49,
-          "raw_probability": 63.1,
-          "normalized_probability": 60.4
+          "avg_price": 1.57,
+          "best_price": 1.63,
+          "bookmakers": 48,
+          "raw_probability": 63.7,
+          "normalized_probability": 59.9
         },
         {
           "name": "Draw",
-          "avg_price": 3.877,
+          "avg_price": 3.78,
           "best_price": 4.0,
-          "bookmakers": 49,
-          "raw_probability": 25.8,
-          "normalized_probability": 24.7
+          "bookmakers": 48,
+          "raw_probability": 26.5,
+          "normalized_probability": 24.9
         },
         {
           "name": "Morocco",
-          "avg_price": 6.434,
-          "best_price": 7.2,
-          "bookmakers": 49,
-          "raw_probability": 15.5,
-          "normalized_probability": 14.8
+          "avg_price": 6.191,
+          "best_price": 7.8,
+          "bookmakers": 48,
+          "raw_probability": 16.2,
+          "normalized_probability": 15.2
         }
       ]
     },
@@ -57,7 +57,7 @@
       "commence_time": "2026-07-10T19:00:00Z",
       "home_team": "Spain",
       "away_team": "Belgium",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Pinnacle",
         "GTbets",
@@ -68,29 +68,29 @@
         "Marathon Bet",
         "Unibet (FR)"
       ],
-      "last_update": "2026-07-09T15:35:33Z",
+      "last_update": "2026-07-09T20:06:43Z",
       "outcomes": [
         {
           "name": "Spain",
-          "avg_price": 1.639,
+          "avg_price": 1.636,
           "best_price": 1.69,
-          "bookmakers": 49,
-          "raw_probability": 61.0,
-          "normalized_probability": 58.3
+          "bookmakers": 48,
+          "raw_probability": 61.1,
+          "normalized_probability": 58.4
         },
         {
           "name": "Draw",
-          "avg_price": 3.938,
-          "best_price": 4.1,
-          "bookmakers": 49,
-          "raw_probability": 25.4,
-          "normalized_probability": 24.3
+          "avg_price": 3.951,
+          "best_price": 4.15,
+          "bookmakers": 48,
+          "raw_probability": 25.3,
+          "normalized_probability": 24.2
         },
         {
           "name": "Belgium",
-          "avg_price": 5.468,
+          "avg_price": 5.476,
           "best_price": 6.0,
-          "bookmakers": 49,
+          "bookmakers": 48,
           "raw_probability": 18.3,
           "normalized_probability": 17.5
         }
@@ -101,7 +101,7 @@
       "commence_time": "2026-07-11T21:00:00Z",
       "home_team": "Norway",
       "away_team": "England",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Virgin Bet",
         "Winamax (FR)",
@@ -112,29 +112,29 @@
         "Winamax (DE)",
         "Unibet (FR)"
       ],
-      "last_update": "2026-07-09T15:35:33Z",
+      "last_update": "2026-07-09T20:06:43Z",
       "outcomes": [
         {
           "name": "Norway",
-          "avg_price": 4.185,
+          "avg_price": 4.176,
           "best_price": 4.5,
-          "bookmakers": 49,
+          "bookmakers": 48,
           "raw_probability": 23.9,
           "normalized_probability": 22.8
         },
         {
           "name": "Draw",
-          "avg_price": 3.688,
+          "avg_price": 3.679,
           "best_price": 3.85,
-          "bookmakers": 49,
-          "raw_probability": 27.1,
+          "bookmakers": 48,
+          "raw_probability": 27.2,
           "normalized_probability": 25.9
         },
         {
           "name": "England",
-          "avg_price": 1.858,
+          "avg_price": 1.86,
           "best_price": 1.93,
-          "bookmakers": 49,
+          "bookmakers": 48,
           "raw_probability": 53.8,
           "normalized_probability": 51.3
         }
@@ -145,7 +145,7 @@
       "commence_time": "2026-07-12T01:00:00Z",
       "home_team": "Argentina",
       "away_team": "Switzerland",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Unibet (NL)",
         "Virgin Bet",
@@ -156,29 +156,29 @@
         "BetRivers",
         "Unibet (SE)"
       ],
-      "last_update": "2026-07-09T15:35:33Z",
+      "last_update": "2026-07-09T20:06:43Z",
       "outcomes": [
         {
           "name": "Argentina",
-          "avg_price": 1.699,
+          "avg_price": 1.693,
           "best_price": 1.75,
-          "bookmakers": 49,
-          "raw_probability": 58.9,
-          "normalized_probability": 56.2
+          "bookmakers": 48,
+          "raw_probability": 59.1,
+          "normalized_probability": 56.4
         },
         {
           "name": "Draw",
-          "avg_price": 3.576,
-          "best_price": 3.7,
-          "bookmakers": 49,
-          "raw_probability": 28.0,
-          "normalized_probability": 26.7
+          "avg_price": 3.58,
+          "best_price": 3.75,
+          "bookmakers": 48,
+          "raw_probability": 27.9,
+          "normalized_probability": 26.6
         },
         {
           "name": "Switzerland",
-          "avg_price": 5.583,
-          "best_price": 6.2,
-          "bookmakers": 49,
+          "avg_price": 5.595,
+          "best_price": 6.25,
+          "bookmakers": 48,
           "raw_probability": 17.9,
           "normalized_probability": 17.1
         }
