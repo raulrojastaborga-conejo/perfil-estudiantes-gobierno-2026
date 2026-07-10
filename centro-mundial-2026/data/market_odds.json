@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T04:17:44.662944+00:00",
+  "updated_at": "2026-07-10T09:54:22.049912+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -13,7 +13,7 @@
       "commence_time": "2026-07-10T19:00:00Z",
       "home_team": "Spain",
       "away_team": "Belgium",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Pinnacle",
         "GTbets",
@@ -24,31 +24,31 @@
         "Marathon Bet",
         "Unibet (FR)"
       ],
-      "last_update": "2026-07-10T04:17:35Z",
+      "last_update": "2026-07-10T09:54:19Z",
       "outcomes": [
         {
           "name": "Spain",
-          "avg_price": 1.638,
-          "best_price": 1.69,
-          "bookmakers": 49,
-          "raw_probability": 61.0,
-          "normalized_probability": 58.3
+          "avg_price": 1.627,
+          "best_price": 1.68,
+          "bookmakers": 48,
+          "raw_probability": 61.5,
+          "normalized_probability": 58.7
         },
         {
           "name": "Draw",
-          "avg_price": 3.933,
-          "best_price": 4.1,
-          "bookmakers": 49,
-          "raw_probability": 25.4,
-          "normalized_probability": 24.3
+          "avg_price": 3.946,
+          "best_price": 4.12,
+          "bookmakers": 48,
+          "raw_probability": 25.3,
+          "normalized_probability": 24.2
         },
         {
           "name": "Belgium",
-          "avg_price": 5.509,
-          "best_price": 6.0,
-          "bookmakers": 49,
-          "raw_probability": 18.2,
-          "normalized_probability": 17.4
+          "avg_price": 5.591,
+          "best_price": 6.2,
+          "bookmakers": 48,
+          "raw_probability": 17.9,
+          "normalized_probability": 17.1
         }
       ]
     },
@@ -57,7 +57,7 @@
       "commence_time": "2026-07-11T21:00:00Z",
       "home_team": "Norway",
       "away_team": "England",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Virgin Bet",
         "Winamax (FR)",
@@ -68,29 +68,29 @@
         "Winamax (DE)",
         "Unibet (FR)"
       ],
-      "last_update": "2026-07-10T04:17:35Z",
+      "last_update": "2026-07-10T09:54:19Z",
       "outcomes": [
         {
           "name": "Norway",
-          "avg_price": 4.144,
+          "avg_price": 4.136,
           "best_price": 4.4,
-          "bookmakers": 49,
-          "raw_probability": 24.1,
-          "normalized_probability": 23.0
+          "bookmakers": 48,
+          "raw_probability": 24.2,
+          "normalized_probability": 23.1
         },
         {
           "name": "Draw",
-          "avg_price": 3.673,
+          "avg_price": 3.676,
           "best_price": 3.85,
-          "bookmakers": 49,
+          "bookmakers": 48,
           "raw_probability": 27.2,
           "normalized_probability": 25.9
         },
         {
           "name": "England",
           "avg_price": 1.868,
-          "best_price": 1.93,
-          "bookmakers": 49,
+          "best_price": 1.94,
+          "bookmakers": 48,
           "raw_probability": 53.5,
           "normalized_probability": 51.0
         }
@@ -101,7 +101,7 @@
       "commence_time": "2026-07-12T01:00:00Z",
       "home_team": "Argentina",
       "away_team": "Switzerland",
-      "bookmakers_count": 48,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Unibet (NL)",
         "Virgin Bet",
@@ -112,31 +112,31 @@
         "BetRivers",
         "Unibet (SE)"
       ],
-      "last_update": "2026-07-10T04:17:35Z",
+      "last_update": "2026-07-10T09:54:19Z",
       "outcomes": [
         {
           "name": "Argentina",
-          "avg_price": 1.692,
+          "avg_price": 1.691,
           "best_price": 1.74,
-          "bookmakers": 49,
+          "bookmakers": 48,
           "raw_probability": 59.1,
-          "normalized_probability": 56.3
+          "normalized_probability": 56.4
         },
         {
           "name": "Draw",
-          "avg_price": 3.559,
-          "best_price": 3.75,
-          "bookmakers": 49,
+          "avg_price": 3.563,
+          "best_price": 3.7,
+          "bookmakers": 48,
           "raw_probability": 28.1,
           "normalized_probability": 26.8
         },
         {
           "name": "Switzerland",
-          "avg_price": 5.649,
-          "best_price": 6.25,
-          "bookmakers": 49,
-          "raw_probability": 17.7,
-          "normalized_probability": 16.9
+          "avg_price": 5.671,
+          "best_price": 6.4,
+          "bookmakers": 48,
+          "raw_probability": 17.6,
+          "normalized_probability": 16.8
         }
       ]
     }
