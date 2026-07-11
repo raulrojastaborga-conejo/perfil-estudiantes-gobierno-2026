@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T03:45:03.802891+00:00",
+  "updated_at": "2026-07-11T08:15:36.855360+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -24,31 +24,31 @@
         "Winamax (DE)",
         "Unibet (FR)"
       ],
-      "last_update": "2026-07-11T03:44:51Z",
+      "last_update": "2026-07-11T08:15:21Z",
       "outcomes": [
         {
           "name": "Norway",
-          "avg_price": 3.998,
-          "best_price": 4.2,
+          "avg_price": 3.88,
+          "best_price": 4.1,
           "bookmakers": 49,
-          "raw_probability": 25.0,
-          "normalized_probability": 23.9
+          "raw_probability": 25.8,
+          "normalized_probability": 24.7
         },
         {
           "name": "Draw",
-          "avg_price": 3.678,
+          "avg_price": 3.702,
           "best_price": 3.9,
           "bookmakers": 49,
-          "raw_probability": 27.2,
-          "normalized_probability": 26.0
+          "raw_probability": 27.0,
+          "normalized_probability": 25.8
         },
         {
           "name": "England",
-          "avg_price": 1.904,
-          "best_price": 1.97,
+          "avg_price": 1.93,
+          "best_price": 2.0,
           "bookmakers": 49,
-          "raw_probability": 52.5,
-          "normalized_probability": 50.1
+          "raw_probability": 51.8,
+          "normalized_probability": 49.5
         }
       ]
     },
@@ -68,27 +68,27 @@
         "BetRivers",
         "Unibet (SE)"
       ],
-      "last_update": "2026-07-11T03:44:51Z",
+      "last_update": "2026-07-11T08:15:21Z",
       "outcomes": [
         {
           "name": "Argentina",
-          "avg_price": 1.688,
-          "best_price": 1.74,
+          "avg_price": 1.687,
+          "best_price": 1.75,
           "bookmakers": 49,
           "raw_probability": 59.3,
-          "normalized_probability": 56.6
+          "normalized_probability": 56.7
         },
         {
           "name": "Draw",
-          "avg_price": 3.56,
-          "best_price": 3.75,
+          "avg_price": 3.584,
+          "best_price": 3.8,
           "bookmakers": 49,
-          "raw_probability": 28.1,
-          "normalized_probability": 26.8
+          "raw_probability": 27.9,
+          "normalized_probability": 26.7
         },
         {
           "name": "Switzerland",
-          "avg_price": 5.737,
+          "avg_price": 5.756,
           "best_price": 6.4,
           "bookmakers": 49,
           "raw_probability": 17.4,
@@ -101,7 +101,7 @@
       "commence_time": "2026-07-14T19:00:00Z",
       "home_team": "France",
       "away_team": "Spain",
-      "bookmakers_count": 45,
+      "bookmakers_count": 47,
       "bookmakers_sample": [
         "Smarkets",
         "Coral",
@@ -112,31 +112,31 @@
         "Pinnacle",
         "LeoVegas"
       ],
-      "last_update": "2026-07-11T03:44:51Z",
+      "last_update": "2026-07-11T08:15:21Z",
       "outcomes": [
         {
           "name": "France",
-          "avg_price": 2.305,
-          "best_price": 2.46,
-          "bookmakers": 46,
-          "raw_probability": 43.4,
-          "normalized_probability": 41.3
+          "avg_price": 2.328,
+          "best_price": 2.44,
+          "bookmakers": 48,
+          "raw_probability": 43.0,
+          "normalized_probability": 40.9
         },
         {
           "name": "Draw",
-          "avg_price": 3.279,
+          "avg_price": 3.24,
           "best_price": 3.4,
-          "bookmakers": 46,
-          "raw_probability": 30.5,
-          "normalized_probability": 29.0
+          "bookmakers": 48,
+          "raw_probability": 30.9,
+          "normalized_probability": 29.4
         },
         {
           "name": "Spain",
-          "avg_price": 3.213,
-          "best_price": 3.45,
-          "bookmakers": 46,
-          "raw_probability": 31.1,
-          "normalized_probability": 29.6
+          "avg_price": 3.203,
+          "best_price": 3.4,
+          "bookmakers": 48,
+          "raw_probability": 31.2,
+          "normalized_probability": 29.7
         }
       ]
     }
