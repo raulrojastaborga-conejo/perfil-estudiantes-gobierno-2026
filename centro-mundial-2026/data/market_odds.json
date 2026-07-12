@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T08:32:21.356656+00:00",
+  "updated_at": "2026-07-12T13:58:08.565096+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -13,42 +13,42 @@
       "commence_time": "2026-07-14T19:00:00Z",
       "home_team": "France",
       "away_team": "Spain",
-      "bookmakers_count": 47,
+      "bookmakers_count": 49,
       "bookmakers_sample": [
         "Smarkets",
         "Coral",
         "Casumo",
+        "William Hill",
         "LiveScore Bet",
         "Tipico",
         "Pinnacle",
-        "LeoVegas",
-        "888sport"
+        "LeoVegas"
       ],
-      "last_update": "2026-07-12T08:32:12Z",
+      "last_update": "2026-07-12T13:58:02Z",
       "outcomes": [
         {
           "name": "France",
-          "avg_price": 2.3,
+          "avg_price": 2.314,
           "best_price": 2.42,
-          "bookmakers": 48,
-          "raw_probability": 43.5,
-          "normalized_probability": 41.5
+          "bookmakers": 50,
+          "raw_probability": 43.2,
+          "normalized_probability": 41.2
         },
         {
           "name": "Draw",
-          "avg_price": 3.239,
-          "best_price": 3.4,
-          "bookmakers": 48,
-          "raw_probability": 30.9,
-          "normalized_probability": 29.5
+          "avg_price": 3.254,
+          "best_price": 3.38,
+          "bookmakers": 50,
+          "raw_probability": 30.7,
+          "normalized_probability": 29.3
         },
         {
           "name": "Spain",
-          "avg_price": 3.289,
-          "best_price": 3.5,
-          "bookmakers": 48,
-          "raw_probability": 30.4,
-          "normalized_probability": 29.0
+          "avg_price": 3.248,
+          "best_price": 3.4,
+          "bookmakers": 50,
+          "raw_probability": 30.8,
+          "normalized_probability": 29.4
         }
       ]
     },
@@ -57,7 +57,7 @@
       "commence_time": "2026-07-15T19:00:00Z",
       "home_team": "England",
       "away_team": "Argentina",
-      "bookmakers_count": 46,
+      "bookmakers_count": 49,
       "bookmakers_sample": [
         "Pinnacle",
         "LiveScore Bet",
@@ -68,31 +68,31 @@
         "Unibet (SE)",
         "Grosvenor"
       ],
-      "last_update": "2026-07-12T08:32:12Z",
+      "last_update": "2026-07-12T13:58:02Z",
       "outcomes": [
         {
           "name": "England",
-          "avg_price": 2.518,
-          "best_price": 2.64,
-          "bookmakers": 47,
-          "raw_probability": 39.7,
-          "normalized_probability": 37.7
+          "avg_price": 2.545,
+          "best_price": 2.66,
+          "bookmakers": 50,
+          "raw_probability": 39.3,
+          "normalized_probability": 37.4
         },
         {
           "name": "Draw",
-          "avg_price": 3.04,
-          "best_price": 3.16,
-          "bookmakers": 47,
-          "raw_probability": 32.9,
-          "normalized_probability": 31.3
+          "avg_price": 3.021,
+          "best_price": 3.15,
+          "bookmakers": 50,
+          "raw_probability": 33.1,
+          "normalized_probability": 31.5
         },
         {
           "name": "Argentina",
-          "avg_price": 3.072,
+          "avg_price": 3.059,
           "best_price": 3.25,
-          "bookmakers": 47,
-          "raw_probability": 32.6,
-          "normalized_probability": 31.0
+          "bookmakers": 50,
+          "raw_probability": 32.7,
+          "normalized_probability": 31.1
         }
       ]
     }
