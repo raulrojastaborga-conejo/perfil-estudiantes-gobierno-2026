@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T13:58:08.565096+00:00",
+  "updated_at": "2026-07-12T19:33:25.710675+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -24,31 +24,31 @@
         "Pinnacle",
         "LeoVegas"
       ],
-      "last_update": "2026-07-12T13:58:02Z",
+      "last_update": "2026-07-12T19:33:20Z",
       "outcomes": [
         {
           "name": "France",
-          "avg_price": 2.314,
-          "best_price": 2.42,
+          "avg_price": 2.318,
+          "best_price": 2.44,
           "bookmakers": 50,
-          "raw_probability": 43.2,
-          "normalized_probability": 41.2
+          "raw_probability": 43.1,
+          "normalized_probability": 41.1
         },
         {
           "name": "Draw",
-          "avg_price": 3.254,
-          "best_price": 3.38,
+          "avg_price": 3.253,
+          "best_price": 3.4,
           "bookmakers": 50,
           "raw_probability": 30.7,
           "normalized_probability": 29.3
         },
         {
           "name": "Spain",
-          "avg_price": 3.248,
+          "avg_price": 3.237,
           "best_price": 3.4,
           "bookmakers": 50,
-          "raw_probability": 30.8,
-          "normalized_probability": 29.4
+          "raw_probability": 30.9,
+          "normalized_probability": 29.5
         }
       ]
     },
@@ -68,31 +68,31 @@
         "Unibet (SE)",
         "Grosvenor"
       ],
-      "last_update": "2026-07-12T13:58:02Z",
+      "last_update": "2026-07-12T19:33:20Z",
       "outcomes": [
         {
           "name": "England",
-          "avg_price": 2.545,
-          "best_price": 2.66,
+          "avg_price": 2.593,
+          "best_price": 2.72,
           "bookmakers": 50,
-          "raw_probability": 39.3,
-          "normalized_probability": 37.4
+          "raw_probability": 38.6,
+          "normalized_probability": 36.8
         },
         {
           "name": "Draw",
-          "avg_price": 3.021,
-          "best_price": 3.15,
+          "avg_price": 2.985,
+          "best_price": 3.12,
           "bookmakers": 50,
-          "raw_probability": 33.1,
-          "normalized_probability": 31.5
+          "raw_probability": 33.5,
+          "normalized_probability": 31.9
         },
         {
           "name": "Argentina",
-          "avg_price": 3.059,
-          "best_price": 3.25,
+          "avg_price": 3.038,
+          "best_price": 3.2,
           "bookmakers": 50,
-          "raw_probability": 32.7,
-          "normalized_probability": 31.1
+          "raw_probability": 32.9,
+          "normalized_probability": 31.3
         }
       ]
     }
