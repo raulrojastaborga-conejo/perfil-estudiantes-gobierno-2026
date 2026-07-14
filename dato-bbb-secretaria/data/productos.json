@@ -1,5 +1,25 @@
 [
   {
+    "id": "ia-8653530771039438381",
+    "name": "BASEMENT Polera Sin Mangas Basement Mujer Casual | Falabella Chile",
+    "category": "ropa",
+    "subcategory": "casual",
+    "store": "falabella.com",
+    "price": 4990,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://media.falabella.com/falabellaCL/882900888_1/public",
+    "url": "https://www.falabella.com/falabella-cl/product/882900885/Polera-Casual-Mujer-Poliamida/882900890",
+    "updated_at": "2026-07-14",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 5
+    },
+    "bbb": 3.8,
+    "source_method": "busqueda_ia_web"
+  },
+  {
     "id": "ia-2825394864035551328",
     "name": "Labios | Maicao",
     "category": "make-up",
