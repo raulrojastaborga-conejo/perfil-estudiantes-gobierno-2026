@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T14:25:33.847571+00:00",
+  "updated_at": "2026-07-16T19:35:29.205616+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -13,7 +13,7 @@
       "commence_time": "2026-07-18T21:00:00Z",
       "home_team": "France",
       "away_team": "England",
-      "bookmakers_count": 47,
+      "bookmakers_count": 49,
       "bookmakers_sample": [
         "Winamax (DE)",
         "Winamax (FR)",
@@ -24,31 +24,31 @@
         "Grosvenor",
         "BetRivers"
       ],
-      "last_update": "2026-07-16T14:25:29Z",
+      "last_update": "2026-07-16T19:35:21Z",
       "outcomes": [
         {
           "name": "France",
-          "avg_price": 1.9,
+          "avg_price": 1.899,
           "best_price": 1.99,
-          "bookmakers": 48,
-          "raw_probability": 52.6,
-          "normalized_probability": 50.2
+          "bookmakers": 50,
+          "raw_probability": 52.7,
+          "normalized_probability": 50.3
         },
         {
           "name": "Draw",
-          "avg_price": 3.837,
-          "best_price": 4.03,
-          "bookmakers": 48,
-          "raw_probability": 26.1,
-          "normalized_probability": 24.9
+          "avg_price": 3.888,
+          "best_price": 4.1,
+          "bookmakers": 50,
+          "raw_probability": 25.7,
+          "normalized_probability": 24.5
         },
         {
           "name": "England",
-          "avg_price": 3.831,
-          "best_price": 4.1,
-          "bookmakers": 48,
-          "raw_probability": 26.1,
-          "normalized_probability": 24.9
+          "avg_price": 3.792,
+          "best_price": 4.05,
+          "bookmakers": 50,
+          "raw_probability": 26.4,
+          "normalized_probability": 25.2
         }
       ]
     },
@@ -57,7 +57,7 @@
       "commence_time": "2026-07-19T19:00:00Z",
       "home_team": "Spain",
       "away_team": "Argentina",
-      "bookmakers_count": 47,
+      "bookmakers_count": 49,
       "bookmakers_sample": [
         "Betfair",
         "Tipico",
@@ -66,31 +66,31 @@
         "Paddy Power",
         "Betfair Sportsbook",
         "Betfred (UK)",
-        "BetRivers"
+        "LowVig.ag"
       ],
-      "last_update": "2026-07-16T14:25:29Z",
+      "last_update": "2026-07-16T19:35:21Z",
       "outcomes": [
         {
           "name": "Spain",
-          "avg_price": 2.297,
-          "best_price": 2.37,
-          "bookmakers": 48,
-          "raw_probability": 43.5,
-          "normalized_probability": 41.5
+          "avg_price": 2.295,
+          "best_price": 2.38,
+          "bookmakers": 50,
+          "raw_probability": 43.6,
+          "normalized_probability": 41.6
         },
         {
           "name": "Draw",
-          "avg_price": 3.013,
-          "best_price": 3.15,
-          "bookmakers": 48,
-          "raw_probability": 33.2,
-          "normalized_probability": 31.7
+          "avg_price": 3.026,
+          "best_price": 3.17,
+          "bookmakers": 50,
+          "raw_probability": 33.1,
+          "normalized_probability": 31.6
         },
         {
           "name": "Argentina",
-          "avg_price": 3.563,
+          "avg_price": 3.564,
           "best_price": 3.8,
-          "bookmakers": 48,
+          "bookmakers": 50,
           "raw_probability": 28.1,
           "normalized_probability": 26.8
         }
