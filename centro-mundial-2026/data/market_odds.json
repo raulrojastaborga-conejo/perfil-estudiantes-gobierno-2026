@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T13:55:44.952399+00:00",
+  "updated_at": "2026-07-19T19:34:46.715568+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -10,10 +10,10 @@
   "matches": [
     {
       "api_id": "fb30113e43d113f1ace48b8563ba1ee9",
-      "commence_time": "2026-07-19T19:00:00Z",
+      "commence_time": "2026-07-19T19:05:00Z",
       "home_team": "Spain",
       "away_team": "Argentina",
-      "bookmakers_count": 49,
+      "bookmakers_count": 37,
       "bookmakers_sample": [
         "Betfair",
         "Tipico",
@@ -21,34 +21,34 @@
         "FanDuel",
         "Paddy Power",
         "Betfair Sportsbook",
-        "Betfred (UK)",
-        "LowVig.ag"
+        "BetRivers",
+        "LiveScore Bet"
       ],
-      "last_update": "2026-07-19T13:55:44Z",
+      "last_update": "2026-07-19T19:34:40Z",
       "outcomes": [
         {
           "name": "Spain",
-          "avg_price": 2.291,
+          "avg_price": 2.229,
           "best_price": 2.38,
-          "bookmakers": 50,
-          "raw_probability": 43.6,
-          "normalized_probability": 41.7
+          "bookmakers": 38,
+          "raw_probability": 44.9,
+          "normalized_probability": 41.9
         },
         {
           "name": "Draw",
-          "avg_price": 3.016,
-          "best_price": 3.15,
-          "bookmakers": 50,
-          "raw_probability": 33.2,
-          "normalized_probability": 31.7
+          "avg_price": 2.717,
+          "best_price": 2.85,
+          "bookmakers": 38,
+          "raw_probability": 36.8,
+          "normalized_probability": 34.3
         },
         {
           "name": "Argentina",
-          "avg_price": 3.592,
-          "best_price": 3.8,
-          "bookmakers": 50,
-          "raw_probability": 27.8,
-          "normalized_probability": 26.6
+          "avg_price": 3.904,
+          "best_price": 4.5,
+          "bookmakers": 38,
+          "raw_probability": 25.6,
+          "normalized_probability": 23.9
         }
       ]
     }
