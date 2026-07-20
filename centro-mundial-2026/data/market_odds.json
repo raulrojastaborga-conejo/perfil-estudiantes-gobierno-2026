@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T19:34:46.715568+00:00",
+  "updated_at": "2026-07-20T04:07:25.383398+00:00",
   "mode": "api_compact",
   "source": "The Odds API",
   "sport_key": "soccer_fifa_world_cup",
@@ -7,50 +7,5 @@
   "markets": "h2h",
   "odds_format": "decimal",
   "note": "Cuotas informativas. No constituyen recomendación de apuesta. Probabilidades normalizadas calculadas desde cuotas promedio decimales.",
-  "matches": [
-    {
-      "api_id": "fb30113e43d113f1ace48b8563ba1ee9",
-      "commence_time": "2026-07-19T19:05:00Z",
-      "home_team": "Spain",
-      "away_team": "Argentina",
-      "bookmakers_count": 37,
-      "bookmakers_sample": [
-        "Betfair",
-        "Tipico",
-        "Sky Bet",
-        "FanDuel",
-        "Paddy Power",
-        "Betfair Sportsbook",
-        "BetRivers",
-        "LiveScore Bet"
-      ],
-      "last_update": "2026-07-19T19:34:40Z",
-      "outcomes": [
-        {
-          "name": "Spain",
-          "avg_price": 2.229,
-          "best_price": 2.38,
-          "bookmakers": 38,
-          "raw_probability": 44.9,
-          "normalized_probability": 41.9
-        },
-        {
-          "name": "Draw",
-          "avg_price": 2.717,
-          "best_price": 2.85,
-          "bookmakers": 38,
-          "raw_probability": 36.8,
-          "normalized_probability": 34.3
-        },
-        {
-          "name": "Argentina",
-          "avg_price": 3.904,
-          "best_price": 4.5,
-          "bookmakers": 38,
-          "raw_probability": 25.6,
-          "normalized_probability": 23.9
-        }
-      ]
-    }
-  ]
+  "matches": []
 }
