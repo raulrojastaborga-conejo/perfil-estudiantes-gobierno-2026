@@ -1,16 +1,15 @@
 {
-  "updated_at": "2026-07-19T11:47:40.868443+00:00",
+  "updated_at": "2026-07-20T12:59:31.707313+00:00",
   "api": 0,
-  "public_page": 0,
+  "public_page": 8,
   "existing_before": 3,
-  "final": 3,
+  "final": 11,
   "notes": [
     "sin datos nuevos: ropa mujer casual oferta",
     "sin datos nuevos: blazer mujer oferta",
     "sin datos nuevos: maquillaje mujer oferta",
     "sin datos nuevos: mascarilla capilar oferta",
-    "sin datos nuevos: zapatos mujer oficina oferta",
     "sin datos nuevos: zapatillas mujer oferta",
-    "se conserva la data anterior"
+    "data fusionada; no se borro informacion previa"
   ]
 }

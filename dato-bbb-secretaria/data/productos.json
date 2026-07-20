@@ -58,5 +58,25 @@
     },
     "bbb": 3.4,
     "source_method": "busqueda_ia_web"
+  },
+  {
+    "id": "MLC-4183335902",
+    "name": "Anterior",
+    "category": "zapatos",
+    "subcategory": "formales",
+    "store": "Mercado Libre",
+    "price": 46978,
+    "old_price": null,
+    "discount": 0,
+    "image": "https://http2.mlstatic.com/D_Q_NP_2X_806927-CBT78638449432_092024-E-hombres-moda-casual-zapatos-de-cuero-mocasines-oficina-boda.webp",
+    "url": "https://articulo.mercadolibre.cl/MLC-4183335902-hombres-moda-casual-zapatos-de-cuero-mocasines-oficina-boda-_JM",
+    "updated_at": "2026-07-20",
+    "ratings": {
+      "bueno": 3,
+      "bonito": 3,
+      "barato": 2
+    },
+    "bbb": 2.6,
+    "source_method": "public_page"
   }
 ]
