@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T03:54:53.333140+00:00",
+  "updated_at": "2026-07-21T14:33:51.088100+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
@@ -10,7 +10,7 @@
       "robots_allowed": true,
       "ok": true,
       "summary": {
-        "line_count": 145,
+        "line_count": 151,
         "keywords": [
           {
             "keyword": "Chile",
@@ -26,7 +26,7 @@
           }
         ],
         "sample_dates": [],
-        "sample_text": "# World Cup\n## What's `football.db`?\nA free open public domain football database & schema\nfor use in any (programming) language - with (structured) text datasets using the (future-proof and evergreen) Football.TXT format.\nMore [`football.db` Project Site »](http://openfootball.github.io)\n## Intro\nFree open public domain football data for the World Cup (e.g. Canada/USA/Mexico 2026, Qatar 2022, Russia 2018, Brazil 2014, etc.)\nand the World Cup Quali(fiers). Football.TXT example:\n```\n= World Cup 2026      # in Canada, USA, and Mexico\nGroup A | Mexico \t      South Africa    South Korea\t   Czech Republic\nGroup B | Canada      Bosnia & Herzegovina  Qatar    Switzerland\nGroup C | Brazil          Morocco      Haiti   Scotland\nGroup D | USA   Paraguay     Australia   Turkey\nGroup E | Germany         Curaçao      Ivory Coast   Ecuador\nGroup F | Netherlands\t  Japan        Sweden  Tunisia\nGroup G | Belgium         Egypt        Iran        New Zealand\nGroup H | Spain           Cape Verde   Saudi Arabia   Uruguay\nGroup I | France      Senegal   Iraq   Norway\nGroup J | Argentina\t   Algeria   Austria   Jordan\nGroup K | Portugal   DR Congo   Uzbekistan  Colombia\nGroup L | England    Croatia     Ghana   Panama\n▪ Group A\nThu June 11\n13:00 UTC-6  Mexico       v South Africa        @ Mexico City\n20:00 UTC-6  South Korea  v Czech Republic      @ Guadalajara (Zapopan)\n...\n▪ Match for third place\nSat Jul 18\n17:00 UTC-4  L101 v L102    @ Miami (Miami Gardens)\n▪ Final\nSun Jul 19\n15:00 UTC-4  W101 v W102    @ New York/New Jersey (East Rutherford)\n```\nor\n```\n= World Cup 2022    # in Qatar, November 20 - December 18\nGroup A  | Qatar      Ecuador        Senegal        Netherlands\nGroup B  | England    Iran           USA            Wales\nGroup C  | Argentina  Saudi Arabia   Mexico         Poland"
+        "sample_text": "# World Cup\n## What's `football.db`?\nA free open public domain football database & schema\nfor use in any (programming) language - with (structured) text datasets using the (future-proof and evergreen) Football.TXT format.\nMore [`football.db` Project Site »](http://openfootball.github.io)\n## Intro\nFree open public domain football data for the World Cup (e.g. Canada/USA/Mexico 2026, Qatar 2022, Russia 2018, Brazil 2014, etc.)\nand the World Cup Quali(fiers). Football.TXT example:\n```\n= World Cup 2026      # in Canada, USA, and Mexico\nGroup A | Mexico \t      South Africa    South Korea\t   Czech Republic\nGroup B | Canada      Bosnia & Herzegovina  Qatar    Switzerland\nGroup C | Brazil          Morocco      Haiti   Scotland\nGroup D | USA   Paraguay     Australia   Turkey\nGroup E | Germany         Curaçao      Ivory Coast   Ecuador\nGroup F | Netherlands\t  Japan        Sweden  Tunisia\nGroup G | Belgium         Egypt        Iran        New Zealand\nGroup H | Spain           Cape Verde   Saudi Arabia   Uruguay\nGroup I | France      Senegal   Iraq   Norway\nGroup J | Argentina\t   Algeria   Austria   Jordan\nGroup K | Portugal   DR Congo   Uzbekistan  Colombia\nGroup L | England    Croatia     Ghana   Panama\n▪ Group A, Matchday 1\nThu June 11\n13:00 UTC-6   Mexico v South Africa    2-0 (1-0)         @ Mexico City\n(Julián Quiñones 9' Raúl Jiménez 67')\n20:00 UTC-6   South Korea v Czech Republic   2-1 (0-0)     @ Guadalajara (Zapopan)\n(Hwang In-Beom 67' Oh Hyeon-Gyu 80';\nLadislav Krejcí 59')\n...\n▪ Match for third place\nSat Jul 18\n17:00 UTC-4   France v England   4-6 (0-4)    @ Miami (Miami Gardens)\n(Kylian Mbappé 48',66' Bradley Barcola 54' Ousmane Dembélé 90+6';\nDeclan Rice 3' Ezri Konsa 18' Bukayo Saka 37', 45+1', 87'(p) Jude Bellingham 90+8')\n▪ Final\nSun Jul 19\n15:00 UTC-4   Spain v Argentina  1-0 a.e.t. (0-0, 0-0)   @ New York/New Jersey (East Rutherford)\n(Ferran Torres 106')\n```"
       }
     },
     {
