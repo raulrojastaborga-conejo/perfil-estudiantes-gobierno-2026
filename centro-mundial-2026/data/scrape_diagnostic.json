@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T13:52:22.728378+00:00",
+  "updated_at": "2026-08-12T03:03:23.650846+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
@@ -10,7 +10,7 @@
       "robots_allowed": true,
       "ok": true,
       "summary": {
-        "line_count": 151,
+        "line_count": 148,
         "keywords": [
           {
             "keyword": "Chile",
