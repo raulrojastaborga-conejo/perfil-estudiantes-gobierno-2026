@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-08-13T07:55:59.794177+00:00",
+  "checked_at": "2026-08-13T13:50:21.464888+00:00",
   "ok": true,
   "message": "Consulta completada y compactada.",
   "status_code": 200,
@@ -14,19 +14,19 @@
     "Content-Type": "application/json; charset=utf-8",
     "Content-Length": "3",
     "Connection": "close",
-    "Date": "Thu, 13 Aug 2026 07:55:59 GMT",
-    "X-Amzn-Trace-Id": "Root=1-6a7d788f-60ad02ff2c6d243636c058c8;Parent=58a4ae3397ea1420;Sampled=0;Lineage=1:92ec0d90:0",
-    "x-amzn-RequestId": "6aff869c-321c-4ccc-8385-7b0a3384a838",
+    "Date": "Thu, 13 Aug 2026 13:50:21 GMT",
+    "X-Amzn-Trace-Id": "Root=1-6a7dcb9d-53688a6371fbc7d1305f5afd;Parent=115a701b6c28ef18;Sampled=0;Lineage=1:92ec0d90:0",
+    "x-amzn-RequestId": "ade077f0-17ba-4cbc-a36f-ef3a4870e17f",
     "x-requests-remaining": "500",
     "x-amzn-Remapped-content-length": "3",
     "x-requests-last": "0",
     "x-requests-used": "0",
     "vary": "Accept-Encoding",
     "X-Cache": "Miss from cloudfront",
-    "Via": "1.1 39c7ffec9631618c04161def4d940d54.cloudfront.net (CloudFront)",
+    "Via": "1.1 1b3830d707f4ac60e56d5750ec483784.cloudfront.net (CloudFront)",
     "X-Amz-Cf-Pop": "SFO53-P10",
     "Alt-Svc": "h3=\":443\"; ma=86400",
-    "X-Amz-Cf-Id": "7soY5E-FMB5186vZBW6AeSlIHNfmDehCWMmCfPA9NErw8oJ8sSkXjg==",
+    "X-Amz-Cf-Id": "CRa3jjEfoaTLZEw55_i13BhXMvDftbrGy-ac4ML7XTb0PIXV9CAl3w==",
     "Vary": "Accept-Encoding"
   }
 }
