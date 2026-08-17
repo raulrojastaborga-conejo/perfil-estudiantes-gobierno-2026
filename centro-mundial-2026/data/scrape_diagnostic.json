@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T13:08:42.559196+00:00",
+  "updated_at": "2026-08-17T02:01:54.760088+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
@@ -37,11 +37,11 @@
       "robots_allowed": true,
       "ok": true,
       "summary": {
-        "line_count": 93,
+        "line_count": 97,
         "keywords": [
           {
             "keyword": "fixture",
-            "count": 2
+            "count": 4
           },
           {
             "keyword": "schedule",
