@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T11:37:20.330605+00:00",
+  "updated_at": "2026-08-28T22:31:00.558555+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
@@ -61,7 +61,7 @@
       "type": "sparql_json",
       "robots_allowed": false,
       "ok": false,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "The read operation timed out"
     }
   ]
 }
