@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T20:38:48.244937+00:00",
+  "updated_at": "2026-10-06T06:40:15.412387+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
@@ -61,7 +61,7 @@
       "type": "sparql_json",
       "robots_allowed": false,
       "ok": false,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "HTTP Error 429: Too Many Requests"
     }
   ]
 }
