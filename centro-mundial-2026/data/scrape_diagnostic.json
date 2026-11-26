@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T21:54:01.055127+00:00",
+  "updated_at": "2026-11-26T08:43:46.242483+00:00",
   "mode": "diagnostic_only",
   "sources": [
     {
@@ -61,7 +61,7 @@
       "type": "sparql_json",
       "robots_allowed": false,
       "ok": false,
-      "error": "HTTP Error 429: Too many requests - for unthrottling, contact noc@wikimedia.org to discuss a less disruptive approach (f2a14e0)"
+      "error": "HTTP Error 400: Bad Request"
     }
   ]
 }
